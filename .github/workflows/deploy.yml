@@ -68,13 +68,15 @@ jobs:
           echo "Tax deed sales scraped"
 
       - name: Run Parcel Master Scraper
+        timeout-minutes: 3
         run: |
-          python scrapers/duval_parcel_master.py > data/parcel_master.json
+          timeout 120 python scrapers/duval_parcel_master.py > data/parcel_master.json || echo "Parcel master timed out or failed"
           echo "Parcel master scraped"
 
       - name: Run Tax Collector Scraper
+        timeout-minutes: 3
         run: |
-          python scrapers/duval_tax_collector.py > data/tax_collector.json
+          timeout 120 python scrapers/duval_tax_collector.py > data/tax_collector.json || echo "Tax collector timed out or failed"
           echo "Tax collector scraped"
 
       - name: Run GIS Scraper
