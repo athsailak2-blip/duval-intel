@@ -1,16 +1,19 @@
 #!/usr/bin/env python3
 """
-Duval County Official Records Scraper - Playwright Enhanced
+Duval County Official Records Scraper
 Source: https://or.duvalclerk.com/
-Portal Type: Tyler Technologies / Kendo UI (requires JavaScript)
+Portal Type: Tyler Technologies / Kendo UI (requires JavaScript + Browserless)
+
+Uses Browserless API for cloud-based Playwright execution.
 """
 import json
 import os
+import requests
 from datetime import datetime, timedelta
 from typing import List, Dict, Optional
 
-# Check if running in GitHub Actions (no browser available)
-IN_GITHUB_ACTIONS = os.environ.get('GITHUB_ACTIONS') == 'true'
+BROWSERLESS_TOKEN = os.environ.get('BROWSERLESS_TOKEN', '2UfCnQNj9ioAEV89f55a786fd64722a5ae97b27921bf39df1')
+BROWSERLESS_URL = os.environ.get('BROWSERLESS_URL', 'https://chrome.browserless.io')
 
 class DuvalOfficialRecordsScraper:
     SOURCE_ID = "duval_official_records"
@@ -36,129 +39,95 @@ class DuvalOfficialRecordsScraper:
     def __init__(self, config: Dict):
         self.config = config
     
-    def _scrape_with_playwright(self, doc_type_id: str, start_date: str, end_date: str) -> List[Dict]:
-        """Scrape using Playwright browser automation."""
+    def _scrape_with_browserless(self, doc_type_id: str, start_date: str, end_date: str) -> List[Dict]:
+        """Scrape using Browserless API for cloud-based browser automation."""
         records = []
+        
+        # Browserless script to navigate and extract data
+        script = f"""
+        async ({{ page }}) => {{
+            const records = [];
+            try {{
+                // Navigate and accept disclaimer
+                await page.goto('{self.BASE_URL}/', {{ waitUntil: 'networkidle' }});
+                await page.locator('input[type="submit"]').first.click();
+                await page.waitForLoadState('networkidle');
+                
+                // Go to Doc Type search
+                await page.goto('{self.BASE_URL}/search/SearchTypeDocType', {{ waitUntil: 'networkidle' }});
+                
+                // Set Kendo ComboBox value via JavaScript
+                await page.evaluate((docTypeId) => {{
+                    const combo = $("#DocTypesDisplay").data("kendoComboBox");
+                    if (combo) {{
+                        combo.value(docTypeId);
+                        combo.trigger("change");
+                    }}
+                }}, '{doc_type_id}');
+                await page.waitForTimeout(500);
+                
+                // Fill dates (MM/DD/YYYY format)
+                await page.locator('#RecordDateFrom').first.fill('{start_date}');
+                await page.locator('#RecordDateTo').first.fill('{end_date}');
+                
+                // Submit
+                await page.locator('input[type="submit"]').first.click();
+                await page.waitForLoadState('networkidle');
+                await page.waitForTimeout(3000);
+                
+                // Extract data from Kendo Grid
+                const gridData = await page.evaluate(() => {{
+                    const grid = $("#RsltsGrid").data("kendoGrid");
+                    if (grid) {{
+                        const data = grid.dataSource.data();
+                        return data.map(item => ({{
+                            instrument_number: item.InstrumentNumber || '',
+                            record_date: item.RecordDate || '',
+                            doc_type: item.DocTypeDescription || '',
+                            direct_name: item.DirectName || '',
+                            indirect_name: item.IndirectName || '',
+                            book_page: item.BookPage || '',
+                            book_type: item.BookType || '',
+                            consideration: item.Consideration || '',
+                            legal_description: item.DocLegalDescription || ''
+                        }}));
+                    }}
+                    return [];
+                }});
+                
+                records.push(...gridData);
+            }} catch (e) {{
+                console.error('Error:', e.message);
+            }}
+            return records;
+        }}
+        """
         
         try:
-            from playwright.sync_api import sync_playwright
+            response = requests.post(
+                f"{BROWSERLESS_URL}/function",
+                headers={
+                    "Authorization": f"Bearer {BROWSERLESS_TOKEN}",
+                    "Content-Type": "application/json"
+                },
+                json={
+                    "code": script,
+                    "context": {}
+                },
+                timeout=120
+            )
             
-            with sync_playwright() as p:
-                browser = p.chromium.launch(headless=True)
-                context = browser.new_context(
-                    user_agent='Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
-                )
-                page = context.new_page()
+            if response.status_code == 200:
+                result = response.json()
+                if isinstance(result, list):
+                    records = result
+                elif isinstance(result, dict) and 'data' in result:
+                    records = result['data']
+            else:
+                print(f"Browserless error: {response.status_code} - {response.text[:200]}")
                 
-                try:
-                    # Navigate and accept disclaimer
-                    page.goto(f"{self.BASE_URL}/", wait_until="networkidle")
-                    page.locator('input[type="submit"]').first.click()
-                    page.wait_for_load_state('networkidle')
-                    
-                    # Go to Doc Type search
-                    page.goto(f"{self.BASE_URL}/search/SearchTypeDocType", wait_until="networkidle")
-                    
-                    # Set Kendo ComboBox value via JavaScript
-                    page.evaluate(f'''() => {{
-                        var combo = $("#DocTypesDisplay").data("kendoComboBox");
-                        if (combo) {{
-                            combo.value("{doc_type_id}");
-                            combo.trigger("change");
-                        }}
-                    }}''')
-                    page.wait_for_timeout(500)
-                    
-                    # Fill dates (MM/DD/YYYY format)
-                    page.locator('#RecordDateFrom').first.fill(start_date)
-                    page.locator('#RecordDateTo').first.fill(end_date)
-                    
-                    # Submit
-                    page.locator('input[type="submit"]').first.click()
-                    page.wait_for_load_state('networkidle')
-                    page.wait_for_timeout(3000)
-                    
-                    # Extract data from Kendo Grid
-                    grid_data = page.evaluate('''() => {
-                        var grid = $("#RsltsGrid").data("kendoGrid");
-                        if (grid) {
-                            var data = grid.dataSource.data();
-                            var records = [];
-                            for (var i = 0; i < data.length; i++) {
-                                var item = data[i];
-                                records.push({
-                                    instrument_number: item.InstrumentNumber || '',
-                                    record_date: item.RecordDate || '',
-                                    doc_type: item.DocTypeDescription || '',
-                                    direct_name: item.DirectName || '',
-                                    indirect_name: item.IndirectName || '',
-                                    book_page: item.BookPage || '',
-                                    book_type: item.BookType || '',
-                                    consideration: item.Consideration || '',
-                                    legal_description: item.DocLegalDescription || ''
-                                });
-                            }
-                            return records;
-                        }
-                        return [];
-                    }''')
-                    
-                    records.extend(grid_data)
-                    
-                finally:
-                    browser.close()
-                    
-        except ImportError:
-            pass  # Playwright not available
-            return []
         except Exception as e:
-            pass  # Playwright error logged
-            return []
-        
-        return records
-    
-    def _generate_fallback_data(self, start_date: str, end_date: str) -> List[Dict]:
-        """Generate synthetic fallback data when Playwright is unavailable (CI environment)."""
-        import random
-        from datetime import datetime, timedelta
-        
-        records = []
-        start_dt = datetime.strptime(start_date, '%Y-%m-%d')
-        end_dt = datetime.strptime(end_date, '%Y-%m-%d')
-        days = (end_dt - start_dt).days + 1
-        
-        # Document types that indicate distress
-        distress_types = [
-            'LIS PENDENS', 'MORTGAGE', 'LIEN', 'JUDGMENT',
-            'FORECLOSURE', 'NOTICE', 'DEED', 'QUIT CLAIM',
-            'TRUST', 'PROBATE', 'ASSIGNMENT', 'SATISFACTION', 'RELEASE'
-        ]
-        
-        # Generate 5-15 records per day
-        for day_offset in range(days):
-            current_date = start_dt + timedelta(days=day_offset)
-            date_str = current_date.strftime('%Y-%m-%d')
-            
-            num_records = random.randint(5, 15)
-            for i in range(num_records):
-                doc_type = random.choice(distress_types)
-                instrument_num = f"2026{current_date.strftime('%m%d')}{i+1:04d}"
-                
-                records.append({
-                    'instrument_number': instrument_num,
-                    'record_date': date_str,
-                    'doc_type': doc_type,
-                    'direct_name': f"Owner {day_offset*10 + i + 1}",
-                    'indirect_name': f"Bank {day_offset*10 + i + 1}",
-                    'book_page': f"{random.randint(1000, 9999)}/{random.randint(1, 500)}",
-                    'book_type': 'OR',
-                    'consideration': f"${random.randint(50000, 500000):,}",
-                    'legal_description': f'Lot {random.randint(1, 100)} Block {random.randint(1, 50)}',
-                    'source_id': self.SOURCE_ID,
-                    'search_doc_type': doc_type,
-                    'scraped_at': datetime.now().isoformat(),
-                    'is_fallback': True
-                })
+            print(f"Browserless request failed: {e}")
         
         return records
     
@@ -186,15 +155,7 @@ class DuvalOfficialRecordsScraper:
                 continue
             
             try:
-                
-                if IN_GITHUB_ACTIONS:
-                    fallback = self._generate_fallback_data(start_date, end_date)
-                    # Filter to only this doc type
-                    filtered = [r for r in fallback if r['doc_type'] == doc_type]
-                    records.extend(filtered)
-                    continue
-                
-                parsed_records = self._scrape_with_playwright(
+                parsed_records = self._scrape_with_browserless(
                     doc_type_id, start_formatted, end_formatted
                 )
                 
@@ -238,11 +199,11 @@ class DuvalOfficialRecordsScraper:
                 'start': start_date,
                 'end': end_date
             },
-            'note': 'Requires Playwright browser automation (Kendo UI portal)'
+            'note': 'Using Browserless API for cloud-based scraping'
         }
 
 if __name__ == '__main__':
     config = {'source_url': 'https://or.duvalclerk.com/'}
     scraper = DuvalOfficialRecordsScraper(config)
-    result = scraper.refresh(days_back=30)
+    result = scraper.refresh(days_back=1)
     print(json.dumps(result, indent=2))

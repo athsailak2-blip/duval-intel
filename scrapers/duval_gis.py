@@ -3,10 +3,10 @@
 Duval County GIS Property Map Scraper
 Source: https://maps.coj.net/duvalproperty/
 Portal Type: ArcGIS / ESRI
-Status: ArcGIS detected - REST API may require authentication
 """
 import json
 import os
+import requests
 from datetime import datetime, timedelta
 from typing import List, Dict, Optional
 

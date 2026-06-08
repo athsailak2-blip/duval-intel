@@ -36,48 +36,65 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install requests beautifulsoup4 playwright
-          playwright install chromium
+          pip install requests beautifulsoup4
           echo "Dependencies installed"
-
-      - name: Initialize Database
-        run: |
-          python -c "import sys; sys.path.insert(0, '.'); from scripts.db_storage import init_db; init_db()"
-          echo "Database initialized"
 
       - name: Run Official Records Scraper
         run: |
           python scrapers/duval_official_records.py > data/official_records.json
           echo "Official records scraped"
         env:
+          BROWSERLESS_TOKEN: ${{ secrets.BROWSERLESS_TOKEN }}
+          BROWSERLESS_URL: ${{ secrets.BROWSERLESS_URL }}
           SEED_MODE: ${{ github.event.inputs.seed_mode || 'false' }}
 
       - name: Run Court Records Scraper
         run: |
           python scrapers/duval_court_records.py > data/court_records.json
           echo "Court records scraped"
+        env:
+          BROWSERLESS_TOKEN: ${{ secrets.BROWSERLESS_TOKEN }}
+          BROWSERLESS_URL: ${{ secrets.BROWSERLESS_URL }}
+          CORE_USERNAME: ${{ secrets.CORE_USERNAME }}
+          CORE_PASSWORD: ${{ secrets.CORE_PASSWORD }}
 
       - name: Run Foreclosure Sales Scraper
         run: |
           python scrapers/duval_foreclosure_sales.py > data/foreclosure_sales.json
           echo "Foreclosure sales scraped"
+        env:
+          BROWSERLESS_TOKEN: ${{ secrets.BROWSERLESS_TOKEN }}
+          BROWSERLESS_URL: ${{ secrets.BROWSERLESS_URL }}
+          FORECLOSURE_USERNAME: ${{ secrets.FORECLOSURE_USERNAME }}
+          FORECLOSURE_PASSWORD: ${{ secrets.FORECLOSURE_PASSWORD }}
 
       - name: Run Tax Deed Sales Scraper
         run: |
           python scrapers/duval_tax_deed_sales.py > data/tax_deed_sales.json
           echo "Tax deed sales scraped"
+        env:
+          BROWSERLESS_TOKEN: ${{ secrets.BROWSERLESS_TOKEN }}
+          BROWSERLESS_URL: ${{ secrets.BROWSERLESS_URL }}
+          TAXDEED_USERNAME: ${{ secrets.TAXDEED_USERNAME }}
+          TAXDEED_PASSWORD: ${{ secrets.TAXDEED_PASSWORD }}
 
       - name: Run Parcel Master Scraper
-        timeout-minutes: 3
+        timeout-minutes: 5
         run: |
-          timeout 120 python scrapers/duval_parcel_master.py > data/parcel_master.json || echo "Parcel master timed out or failed"
+          python scrapers/duval_parcel_master.py > data/parcel_master.json
           echo "Parcel master scraped"
+        env:
+          BROWSERLESS_TOKEN: ${{ secrets.BROWSERLESS_TOKEN }}
+          BROWSERLESS_URL: ${{ secrets.BROWSERLESS_URL }}
 
       - name: Run Tax Collector Scraper
-        timeout-minutes: 3
+        timeout-minutes: 5
         run: |
-          timeout 120 python scrapers/duval_tax_collector.py > data/tax_collector.json || echo "Tax collector timed out or failed"
+          python scrapers/duval_tax_collector.py > data/tax_collector.json
           echo "Tax collector scraped"
+        env:
+          BROWSERLESS_TOKEN: ${{ secrets.BROWSERLESS_TOKEN }}
+          BROWSERLESS_URL: ${{ secrets.BROWSERLESS_URL }}
 
       - name: Run GIS Scraper
         run: |
@@ -91,13 +108,8 @@ jobs:
 
       - name: Aggregate data into leads.json
         run: |
-          python scripts/aggregate_data.py || echo "Aggregate script not found"
+          python scaffold/pipeline/build_leads.py || python scripts/aggregate_data.py || echo "Aggregation not available"
           echo "Data aggregation complete"
-
-      - name: Export database to JSON
-        run: |
-          python -c "import sys; sys.path.insert(0, '.'); from scripts.db_storage import export_leads_to_json; export_leads_to_json()" || echo "DB export not available"
-          echo "Database export complete"
 
       - name: Setup Pages
         uses: actions/configure-pages@v5

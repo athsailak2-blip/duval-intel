@@ -4,14 +4,14 @@ Duval County Tax Collector Lien Info Scraper
 Source: https://tclieninfo.coj.net/
 Portal Type: Custom Web
 """
-import requests
 import json
 import os
+import requests
 from datetime import datetime, timedelta
 from typing import List, Dict, Optional
-import re
-from bs4 import BeautifulSoup
-import time
+
+BROWSERLESS_TOKEN = os.environ.get('BROWSERLESS_TOKEN', '2UfCnQNj9ioAEV89f55a786fd64722a5ae97b27921bf39df1')
+BROWSERLESS_URL = os.environ.get('BROWSERLESS_URL', 'https://chrome.browserless.io')
 
 class DuvalTaxCollectorScraper:
     SOURCE_ID = "duval_tax_collector"
@@ -19,165 +19,94 @@ class DuvalTaxCollectorScraper:
     
     def __init__(self, config: Dict):
         self.config = config
-        self.session = requests.Session()
-        self.session.headers.update({
-            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
-            'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
-            'Accept-Language': 'en-US,en;q=0.5',
-            'Accept-Encoding': 'gzip, deflate, br',
-            'Connection': 'keep-alive',
-        })
     
-    def _get_search_page(self) -> str:
-        """Get the search page."""
-        try:
-            response = self.session.get(f"{self.BASE_URL}/Search.aspx", timeout=30)
-            response.raise_for_status()
-            return response.text
-        except Exception as e:
-            pass  # Error logged
-            return ""
-    
-    def search_by_parcel(self, re_number: str) -> Dict:
-        """Search tax lien info by parcel ID (RE Number)."""
-        lien_info = {}
-        try:
-            search_url = f"{self.BASE_URL}/Search.aspx"
-            search_page = self._get_search_page()
-            soup = BeautifulSoup(search_page, 'html.parser')
-            form = soup.find('form', id='aspnetForm') or soup.find('form')
-            
-            payload = {'RENumber': re_number}
-            
-            if form:
-                hidden_fields = form.find_all('input', type='hidden')
-                for field in hidden_fields:
-                    if field.get('name'):
-                        payload[field['name']] = field.get('value', '')
-            
-            response = self.session.post(search_url, data=payload, timeout=60)
-            if response.status_code == 200:
-                lien_info = self._parse_tax_results(response.text, re_number)
-                pass
-            else:
-                pass
-        except Exception as e:
-            pass  # Error logged
-        return lien_info
-    
-    def _parse_tax_results(self, html_content: str, re_number: str) -> Dict:
-        """Parse HTML tax results into structured lien info."""
-        lien_info = {
-            're_number': re_number,
-            'source_id': self.SOURCE_ID,
-            'scraped_at': datetime.now().isoformat()
-        }
-        try:
-            soup = BeautifulSoup(html_content, 'html.parser')
-            tax_tables = soup.find_all('table', class_=re.compile(r'tax|lien|amount|due', re.I))
-            if not tax_tables:
-                tax_tables = soup.find_all('table')
-            
-            for table in tax_tables:
-                rows = table.find_all('tr')
-                for row in rows:
-                    cells = row.find_all(['td', 'th'])
-                    if len(cells) >= 2:
-                        label = cells[0].get_text(strip=True).lower()
-                        value = cells[1].get_text(strip=True)
-                        if 'amount' in label or 'due' in label or 'balance' in label:
-                            lien_info['amount_due'] = value
-                        elif 'year' in label or 'tax year' in label:
-                            lien_info['tax_year'] = value
-                        elif 'status' in label or 'delinquent' in label:
-                            lien_info['status'] = value
-                        elif 'owner' in label:
-                            lien_info['owner_name'] = value
-                        elif 'address' in label or 'situs' in label:
-                            lien_info['property_address'] = value
-            
-            if not lien_info.get('amount_due'):
-                info_divs = soup.find_all('div', class_=re.compile(r'info|detail|field', re.I))
-                for div in info_divs:
-                    text = div.get_text(strip=True)
-                    if ':' in text:
-                        key, value = text.split(':', 1)
-                        key = key.strip().lower()
-                        value = value.strip()
-                        if 'amount' in key or 'due' in key or 'balance' in key:
-                            lien_info['amount_due'] = value
-                        elif 'year' in key:
-                            lien_info['tax_year'] = value
-                        elif 'status' in key:
-                            lien_info['status'] = value
-            
-            lien_info['raw_html'] = html_content[:3000]
-        except Exception as e:
-            pass  # Error logged
-        return lien_info
-    
-    def bulk_extract_by_parcel_list(self, parcel_ids: List[str]) -> List[Dict]:
-        """Bulk extract tax lien info for a list of parcel IDs."""
+    def _scrape_with_browserless(self, parcel_ids: List[str]) -> List[Dict]:
+        """Scrape using Browserless API."""
         all_liens = []
-        for i, re_number in enumerate(parcel_ids):
+        
+        for parcel_id in parcel_ids:
+            script = f"""
+            async ({{ page }}) => {{
+                const lien = {{}};
+                try {{
+                    // Navigate to search
+                    await page.goto('{self.BASE_URL}/Search.aspx', {{ waitUntil: 'networkidle' }});
+                    await page.waitForTimeout(1000);
+                    
+                    // Search by RE Number
+                    await page.fill('#RENumber', '{parcel_id}');
+                    await page.click('input[type="submit"]');
+                    await page.waitForLoadState('networkidle');
+                    await page.waitForTimeout(2000);
+                    
+                    // Extract results
+                    const result = await page.evaluate(() => {{
+                        const tables = document.querySelectorAll('table');
+                        let data = {{}};
+                        for (const table of tables) {{
+                            const rows = table.querySelectorAll('tr');
+                            for (const row of rows) {{
+                                const cells = row.querySelectorAll('td, th');
+                                if (cells.length >= 2) {{
+                                    const label = cells[0].textContent?.trim()?.toLowerCase() || '';
+                                    const value = cells[1].textContent?.trim() || '';
+                                    if (label.includes('amount') || label.includes('due')) data.amount_due = value;
+                                    if (label.includes('year')) data.tax_year = value;
+                                    if (label.includes('status')) data.status = value;
+                                    if (label.includes('owner')) data.owner_name = value;
+                                    if (label.includes('address')) data.property_address = value;
+                                }}
+                            }}
+                        }}
+                        return data;
+                    }});
+                    
+                    lien.re_number = '{parcel_id}';
+                    Object.assign(lien, result);
+                }} catch (e) {{
+                    console.error('Error:', e.message);
+                }}
+                return lien;
+            }}
+            """
+            
             try:
-                pass
-                lien = self.search_by_parcel(re_number)
-                if lien and lien.get('amount_due'):
-                    all_liens.append(lien)
-                time.sleep(0.3)
+                response = requests.post(
+                    f"{BROWSERLESS_URL}/function",
+                    headers={
+                        "Authorization": f"Bearer {BROWSERLESS_TOKEN}",
+                        "Content-Type": "application/json"
+                    },
+                    json={
+                        "code": script,
+                        "context": {}
+                    },
+                    timeout=60
+                )
+                
+                if response.status_code == 200:
+                    result = response.json()
+                    if isinstance(result, dict) and result.get('amount_due'):
+                        all_liens.append(result)
+                        
             except Exception as e:
-                pass  # Error logged
-        return all_liens
-    
-    def bulk_extract_by_address_patterns(self, street_patterns: List[str],
-                                         number_ranges: List[tuple]) -> List[Dict]:
-        """Bulk extract by address patterns and number ranges."""
-        all_liens = []
-        for pattern in street_patterns:
-            for start, end in number_ranges:
-                for num in range(start, end + 1, 50):
-                    try:
-                        pass
-                        # Use parcel master to find RE numbers, then check tax
-                        # This is a placeholder - real implementation would integrate with parcel master
-                        time.sleep(0.3)
-                    except Exception as e:
-                        pass  # Error logged
+                print(f"Browserless request failed for parcel {parcel_id}: {e}")
+                continue
+        
         return all_liens
     
     def refresh(self, cursor: Optional[str] = None, days_back: int = None) -> Dict:
         """Run weekly refresh for tax collector data."""
-        # Check for seed mode from environment
-        if days_back is None:
-            seed_mode = os.environ.get('SEED_MODE', 'false').lower() == 'true'
-            days_back = 30 if seed_mode else 7
+        # Use sample RE numbers for Duval County
+        sample_parcels = [
+            '02-00-00-001-000-000-0', '02-00-00-002-000-000-0',
+            '02-00-00-003-000-000-0', '02-00-00-004-000-000-0',
+            '02-00-00-005-000-000-0', '02-00-00-006-000-000-0',
+            '02-00-00-007-000-000-0', '02-00-00-008-000-000-0',
+            '02-00-00-009-000-000-0', '02-00-00-010-000-000-0'
+        ]
         
-        # Try to load known parcels from existing data and check them
-        known_parcels = []
-        try:
-            if os.path.exists('data/parcel_master.json'):
-                with open('data/parcel_master.json', 'r') as f:
-                    data = json.load(f)
-                    for rec in data.get('new_records', []):
-                        re_num = rec.get('re_number')
-                        if re_num:
-                            known_parcels.append(re_num)
-        except Exception as e:
-            pass  # Error logged
-        
-        # If no parcels known, use sample RE numbers for Duval County
-        if not known_parcels:
-            known_parcels = [
-                '02-00-00-001-000-000-0', '02-00-00-002-000-000-0',
-                '02-00-00-003-000-000-0', '02-00-00-004-000-000-0',
-                '02-00-00-005-000-000-0', '02-00-00-006-000-000-0',
-                '02-00-00-007-000-000-0', '02-00-00-008-000-000-0',
-                '02-00-00-009-000-000-0', '02-00-00-010-000-000-0'
-            ]
-        
-        pass
-        liens = self.bulk_extract_by_parcel_list(known_parcels[:50])
+        liens = self._scrape_with_browserless(sample_parcels)
         
         return {
             'source_id': self.SOURCE_ID,
@@ -186,7 +115,7 @@ class DuvalTaxCollectorScraper:
             'updated_cursor': datetime.now().strftime('%Y-%m-%d'),
             'errors': [],
             'timestamp': datetime.now().isoformat(),
-            'note': f'Bulk extracted {len(liens)} tax liens from {len(known_parcels)} parcels'
+            'note': f'Bulk extracted {len(liens)} tax liens from {len(sample_parcels)} parcels using Browserless'
         }
 
 if __name__ == '__main__':

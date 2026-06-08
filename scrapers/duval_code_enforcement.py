@@ -4,14 +4,11 @@ Jacksonville Municipal Code Compliance Scraper
 Source: https://www.jacksonville.gov/departments/neighborhoods/municipal-code-compliance
 Portal Type: Public Records Request (PRR)
 """
-import requests
 import json
 import os
+import requests
 from datetime import datetime, timedelta
 from typing import List, Dict, Optional
-import re
-from bs4 import BeautifulSoup
-import time
 
 class DuvalCodeEnforcementScraper:
     SOURCE_ID = "duval_code_enforcement"
@@ -20,26 +17,19 @@ class DuvalCodeEnforcementScraper:
     
     def __init__(self, config: Dict):
         self.config = config
-        self.session = requests.Session()
-        self.session.headers.update({
-            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
-            'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
-            'Accept-Language': 'en-US,en;q=0.5',
-            'Accept-Encoding': 'gzip, deflate, br',
-            'Connection': 'keep-alive',
-        })
     
     def _check_prr_portal(self) -> Dict:
         """Check if the PRR portal is accessible."""
         status = {}
         try:
-            response = self.session.get(f"{self.PRR_BASE_URL}/", timeout=30)
+            response = requests.get(f"{self.PRR_BASE_URL}/", timeout=30)
             status['accessible'] = response.status_code == 200
             status['status_code'] = response.status_code
             status['url'] = self.PRR_BASE_URL
             if response.status_code == 200:
+                from bs4 import BeautifulSoup
                 soup = BeautifulSoup(response.text, 'html.parser')
-                status['has_search'] = bool(soup.find('input', type='search') or soup.find('input', {'name': re.compile(r'search', re.I)}))
+                status['has_search'] = bool(soup.find('input', type='search') or soup.find('input', {'name': 'search'}))
                 status['has_submit'] = bool(soup.find('button', type='submit') or soup.find('input', type='submit'))
                 status['has_form'] = bool(soup.find('form'))
         except Exception as e:
@@ -54,7 +44,6 @@ class DuvalCodeEnforcementScraper:
             seed_mode = os.environ.get('SEED_MODE', 'false').lower() == 'true'
             days_back = 30 if seed_mode else 7
         
-        pass  # PRR required
         portal_status = self._check_prr_portal()
         
         return {
