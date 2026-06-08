@@ -6,10 +6,10 @@
   "errors": [
     "PRR required - manual process"
   ],
-  "timestamp": "2026-06-08T15:22:59.220225",
+  "timestamp": "2026-06-08T15:49:55.605276",
   "prr_portal_status": {
     "accessible": false,
-    "error": "HTTPSConnectionPool(host='records.coj.net', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='records.coj.net', port=443) at 0x7f48a9838a10>, 'Connection to records.coj.net timed out. (connect timeout=30)'))"
+    "error": "HTTPSConnectionPool(host='records.coj.net', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='records.coj.net', port=443) at 0x7f2269abc260>, 'Connection to records.coj.net timed out. (connect timeout=30)'))"
   },
   "note": "Code enforcement data requires Public Records Request (PRR) submission"
 }
