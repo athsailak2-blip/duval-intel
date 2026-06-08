@@ -55,7 +55,8 @@ class DuvalOfficialRecordsScraper:
             )
             return response.status_code == 200
         except Exception as e:
-            print(f"Disclaimer error: {e}")
+            import sys
+            print(f"Disclaimer error: {e}", file=sys.stderr)
             return False
     
     def _get_grid_results(self, doc_type_id: str, start_date: str, end_date: str) -> List[Dict]:
@@ -92,11 +93,13 @@ class DuvalOfficialRecordsScraper:
                 data = grid_response.json()
                 return data.get('Data', [])
             else:
-                print(f"GridResults error: {grid_response.status_code}")
+                import sys
+                print(f"GridResults error: {grid_response.status_code}", file=sys.stderr)
                 return []
                 
         except Exception as e:
-            print(f"Grid results error: {e}")
+            import sys
+            print(f"Grid results error: {e}", file=sys.stderr)
             return []
     
     def _parse_record(self, raw_record: Dict, doc_type_name: str) -> Dict:
@@ -123,7 +126,8 @@ class DuvalOfficialRecordsScraper:
         
         # Accept disclaimer first
         if not self._accept_disclaimer():
-            print("Failed to accept disclaimer")
+            import sys
+            print("Failed to accept disclaimer", file=sys.stderr)
             return []
         
         # Document types that indicate distress
