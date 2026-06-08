@@ -67,9 +67,8 @@ class DuvalPropertyAppraiserScraper:
             
             try:
                 response = requests.post(
-                    f"{BROWSERLESS_URL}/function",
+                    f"{BROWSERLESS_URL}/function?token={BROWSERLESS_TOKEN}",
                     headers={
-                        "Authorization": f"Bearer {BROWSERLESS_TOKEN}",
                         "Content-Type": "application/json"
                     },
                     json={

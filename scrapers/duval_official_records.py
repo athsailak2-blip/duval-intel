@@ -5,6 +5,7 @@ Source: https://or.duvalclerk.com/
 Portal Type: Tyler Technologies / Kendo UI (requires JavaScript + Browserless)
 
 Uses Browserless API for cloud-based Playwright execution.
+Token passed as query parameter: ?token=...
 """
 import json
 import os
@@ -105,9 +106,8 @@ class DuvalOfficialRecordsScraper:
         
         try:
             response = requests.post(
-                f"{BROWSERLESS_URL}/function",
+                f"{BROWSERLESS_URL}/function?token={BROWSERLESS_TOKEN}",
                 headers={
-                    "Authorization": f"Bearer {BROWSERLESS_TOKEN}",
                     "Content-Type": "application/json"
                 },
                 json={
@@ -199,7 +199,7 @@ class DuvalOfficialRecordsScraper:
                 'start': start_date,
                 'end': end_date
             },
-            'note': 'Using Browserless API for cloud-based scraping'
+            'note': 'Using Browserless API with token query parameter'
         }
 
 if __name__ == '__main__':

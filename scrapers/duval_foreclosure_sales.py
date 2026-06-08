@@ -72,9 +72,8 @@ class DuvalForeclosureSalesScraper:
         
         try:
             response = requests.post(
-                f"{BROWSERLESS_URL}/function",
+                f"{BROWSERLESS_URL}/function?token={BROWSERLESS_TOKEN}",
                 headers={
-                    "Authorization": f"Bearer {BROWSERLESS_TOKEN}",
                     "Content-Type": "application/json"
                 },
                 json={
@@ -119,7 +118,7 @@ class DuvalForeclosureSalesScraper:
                 'start': datetime.now().strftime('%Y-%m-%d'),
                 'end': end_date
             },
-            'note': 'Using Browserless API with login credentials'
+            'note': 'Using Browserless API with token query parameter and login credentials'
         }
 
 if __name__ == '__main__':
