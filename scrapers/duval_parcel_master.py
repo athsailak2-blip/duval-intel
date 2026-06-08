@@ -1,117 +1,138 @@
 #!/usr/bin/env python3
 """
-Duval County Property Appraiser Scraper
-Source: https://paopropertysearch.coj.net/
-Portal Type: Custom Web
+Duval County Parcel Master Scraper
+Source: https://paopropertysearch.coj.net
+Portal Type: PAO Property Search
+
+Uses Browserless /content API for cloud-based browser execution.
 """
 import json
 import os
 import requests
 from datetime import datetime, timedelta
 from typing import List, Dict, Optional
+from bs4 import BeautifulSoup
 
 BROWSERLESS_TOKEN = os.environ.get('BROWSERLESS_TOKEN', '2UfCnQNj9ioAEV89f55a786fd64722a5ae97b27921bf39df1')
-BROWSERLESS_URL = os.environ.get('BROWSERLESS_URL', 'https://chrome.browserless.io')
+BROWSERLESS_URL = os.environ.get('BROWSERLESS_URL', 'https://production-sfo.browserless.io')
 
-class DuvalPropertyAppraiserScraper:
+class DuvalParcelMasterScraper:
     SOURCE_ID = "duval_parcel_master"
     BASE_URL = "https://paopropertysearch.coj.net"
     
     def __init__(self, config: Dict):
         self.config = config
     
-    def _scrape_with_browserless(self, zip_codes: List[str], max_per_zip: int = 20) -> List[Dict]:
-        """Scrape using Browserless API."""
-        all_parcels = []
+    def _fetch_page(self, url: str) -> Optional[str]:
+        """Fetch page HTML using Browserless /content endpoint."""
+        try:
+            response = requests.post(
+                f"{BROWSERLESS_URL}/content?token={BROWSERLESS_TOKEN}",
+                headers={"Content-Type": "application/json"},
+                json={"url": url},
+                timeout=60
+            )
+            if response.status_code == 200:
+                return response.text
+            else:
+                print(f"Browserless error: {response.status_code} - {response.text[:200]}")
+                return None
+        except Exception as e:
+            print(f"Browserless request failed: {e}")
+            return None
+    
+    def _parse_records(self, html: str) -> List[Dict]:
+        """Parse HTML to extract parcel data."""
+        records = []
+        soup = BeautifulSoup(html, 'html.parser')
         
-        for zip_code in zip_codes:
-            script = f"""
-            async ({{ page }}) => {{
-                const parcels = [];
-                try {{
-                    // Navigate to search
-                    await page.goto('{self.BASE_URL}/Basic/Search.aspx', {{ waitUntil: 'networkidle' }});
-                    await page.waitForTimeout(1000);
-                    
-                    // Search by ZIP
-                    await page.fill('#StreetNumber', '');
-                    await page.fill('#StreetName', '');
-                    await page.fill('#City', 'Jacksonville');
-                    await page.fill('#Zip', '{zip_code}');
-                    await page.click('input[type="submit"]');
-                    await page.waitForLoadState('networkidle');
-                    await page.waitForTimeout(2000);
-                    
-                    // Extract results
-                    const results = await page.evaluate(() => {{
-                        const rows = document.querySelectorAll('.result-row, .grid-row, tr');
-                        return Array.from(rows).slice(0, {max_per_zip}).map(row => {{
-                            const cells = row.querySelectorAll('td');
-                            return {{
-                                re_number: cells[0]?.textContent?.trim() || '',
-                                address: cells[1]?.textContent?.trim() || '',
-                                owner_name: cells[2]?.textContent?.trim() || '',
-                                city: cells[3]?.textContent?.trim() || 'Jacksonville',
-                                zip: cells[4]?.textContent?.trim() || '{zip_code}'
-                            }};
-                        }});
-                    }});
-                    
-                    parcels.push(...results);
-                }} catch (e) {{
-                    console.error('Error:', e.message);
-                }}
-                return parcels;
-            }}
-            """
+        # Look for property data
+        property_items = soup.find_all(class_=['property-item', 'parcel-item'])
+        
+        for item in property_items:
+            record = {
+                'source_id': self.SOURCE_ID,
+                'scraped_at': datetime.now().isoformat(),
+            }
             
-            try:
-                response = requests.post(
-                    f"{BROWSERLESS_URL}/function?token={BROWSERLESS_TOKEN}",
-                    headers={
-                        "Content-Type": "application/json"
-                    },
-                    json={
-                        "code": script,
-                        "context": {}
-                    },
-                    timeout=60
-                )
-                
-                if response.status_code == 200:
-                    result = response.json()
-                    if isinstance(result, list):
-                        all_parcels.extend(result)
-                    elif isinstance(result, dict) and 'data' in result:
-                        all_parcels.extend(result['data'])
-                        
-            except Exception as e:
-                print(f"Browserless request failed for ZIP {zip_code}: {e}")
-                continue
+            parcel = item.find(class_=['parcel', 'folio', 're-number'])
+            if parcel:
+                record['parcel_id'] = parcel.get_text(strip=True)
+            
+            address = item.find(class_=['address', 'property-address'])
+            if address:
+                record['property_address'] = address.get_text(strip=True)
+            
+            owner = item.find(class_=['owner', 'owner-name'])
+            if owner:
+                record['owner_name'] = owner.get_text(strip=True)
+            
+            value = item.find(class_=['value', 'assessed-value'])
+            if value:
+                record['assessed_value'] = value.get_text(strip=True)
+            
+            if record.get('parcel_id'):
+                records.append(record)
         
-        return all_parcels
+        # Also check table rows
+        if not records:
+            tables = soup.find_all('table')
+            for table in tables:
+                rows = table.find_all('tr')
+                for row in rows[1:]:
+                    cells = row.find_all(['td', 'th'])
+                    if len(cells) >= 3:
+                        record = {
+                            'source_id': self.SOURCE_ID,
+                            'scraped_at': datetime.now().isoformat(),
+                        }
+                        for i, cell in enumerate(cells):
+                            text = cell.get_text(strip=True)
+                            if i == 0:
+                                record['parcel_id'] = text
+                            elif i == 1:
+                                record['property_address'] = text
+                            elif i == 2:
+                                record['owner_name'] = text
+                        
+                        if record.get('parcel_id'):
+                            records.append(record)
+        
+        return records
     
     def refresh(self, cursor: Optional[str] = None, days_back: int = None) -> Dict:
-        """Run weekly refresh for parcel master data."""
-        zip_codes = ['32202', '32204', '32205', '32206', '32207', '32208', '32209', '32210', 
-                     '32211', '32216', '32217', '32218', '32219', '32220', '32221', '32222',
-                     '32223', '32224', '32225', '32226', '32227', '32233', '32244', '32246',
-                     '32250', '32254', '32256', '32257', '32258', '32259', '32277']
+        """Run daily refresh."""
+        if days_back is None:
+            seed_mode = os.environ.get('SEED_MODE', 'false').lower() == 'true'
+            days_back = 30 if seed_mode else 1
         
-        parcels = self._scrape_with_browserless(zip_codes, max_per_zip=20)
+        if cursor:
+            start_date = cursor
+        else:
+            start_date = (datetime.now() - timedelta(days=days_back)).strftime('%Y-%m-%d')
+        
+        end_date = datetime.now().strftime('%Y-%m-%d')
+        
+        # Fetch property search page
+        html = self._fetch_page(f"{self.BASE_URL}/Basic/Search.aspx")
+        records = self._parse_records(html) if html else []
         
         return {
             'source_id': self.SOURCE_ID,
-            'records_fetched': len(parcels),
-            'new_records': parcels,
-            'updated_cursor': datetime.now().strftime('%Y-%m-%d'),
+            'records_fetched': len(records),
+            'new_records': records,
+            'updated_cursor': end_date,
             'errors': [],
             'timestamp': datetime.now().isoformat(),
-            'note': f'Bulk extracted {len(parcels)} parcels across {len(zip_codes)} ZIP codes using Browserless'
+            'date_range': {
+                'start': start_date,
+                'end': end_date
+            },
+            'note': 'Using Browserless /content API with HTML parsing'
         }
 
 if __name__ == '__main__':
-    config = {'source_url': 'https://paopropertysearch.coj.net/'}
-    scraper = DuvalPropertyAppraiserScraper(config)
-    result = scraper.refresh()
+    config = {'source_url': 'https://paopropertysearch.coj.net'}
+    scraper = DuvalParcelMasterScraper(config)
+    result = scraper.refresh(days_back=1)
     print(json.dumps(result, indent=2))

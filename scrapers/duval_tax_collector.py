@@ -1,17 +1,20 @@
 #!/usr/bin/env python3
 """
-Duval County Tax Collector Lien Info Scraper
-Source: https://tclieninfo.coj.net/
-Portal Type: Custom Web
+Duval County Tax Collector Scraper
+Source: https://tclieninfo.coj.net
+Portal Type: Tax Collector
+
+Uses Browserless /content API for cloud-based browser execution.
 """
 import json
 import os
 import requests
 from datetime import datetime, timedelta
 from typing import List, Dict, Optional
+from bs4 import BeautifulSoup
 
 BROWSERLESS_TOKEN = os.environ.get('BROWSERLESS_TOKEN', '2UfCnQNj9ioAEV89f55a786fd64722a5ae97b27921bf39df1')
-BROWSERLESS_URL = os.environ.get('BROWSERLESS_URL', 'https://chrome.browserless.io')
+BROWSERLESS_URL = os.environ.get('BROWSERLESS_URL', 'https://production-sfo.browserless.io')
 
 class DuvalTaxCollectorScraper:
     SOURCE_ID = "duval_tax_collector"
@@ -20,106 +23,116 @@ class DuvalTaxCollectorScraper:
     def __init__(self, config: Dict):
         self.config = config
     
-    def _scrape_with_browserless(self, parcel_ids: List[str]) -> List[Dict]:
-        """Scrape using Browserless API."""
-        all_liens = []
+    def _fetch_page(self, url: str) -> Optional[str]:
+        """Fetch page HTML using Browserless /content endpoint."""
+        try:
+            response = requests.post(
+                f"{BROWSERLESS_URL}/content?token={BROWSERLESS_TOKEN}",
+                headers={"Content-Type": "application/json"},
+                json={"url": url},
+                timeout=60
+            )
+            if response.status_code == 200:
+                return response.text
+            else:
+                print(f"Browserless error: {response.status_code} - {response.text[:200]}")
+                return None
+        except Exception as e:
+            print(f"Browserless request failed: {e}")
+            return None
+    
+    def _parse_records(self, html: str) -> List[Dict]:
+        """Parse HTML to extract tax records."""
+        records = []
+        soup = BeautifulSoup(html, 'html.parser')
         
-        for parcel_id in parcel_ids:
-            script = f"""
-            async ({{ page }}) => {{
-                const lien = {{}};
-                try {{
-                    // Navigate to search
-                    await page.goto('{self.BASE_URL}/Search.aspx', {{ waitUntil: 'networkidle' }});
-                    await page.waitForTimeout(1000);
-                    
-                    // Search by RE Number
-                    await page.fill('#RENumber', '{parcel_id}');
-                    await page.click('input[type="submit"]');
-                    await page.waitForLoadState('networkidle');
-                    await page.waitForTimeout(2000);
-                    
-                    // Extract results
-                    const result = await page.evaluate(() => {{
-                        const tables = document.querySelectorAll('table');
-                        let data = {{}};
-                        for (const table of tables) {{
-                            const rows = table.querySelectorAll('tr');
-                            for (const row of rows) {{
-                                const cells = row.querySelectorAll('td, th');
-                                if (cells.length >= 2) {{
-                                    const label = cells[0].textContent?.trim()?.toLowerCase() || '';
-                                    const value = cells[1].textContent?.trim() || '';
-                                    if (label.includes('amount') || label.includes('due')) data.amount_due = value;
-                                    if (label.includes('year')) data.tax_year = value;
-                                    if (label.includes('status')) data.status = value;
-                                    if (label.includes('owner')) data.owner_name = value;
-                                    if (label.includes('address')) data.property_address = value;
-                                }}
-                            }}
-                        }}
-                        return data;
-                    }});
-                    
-                    lien.re_number = '{parcel_id}';
-                    Object.assign(lien, result);
-                }} catch (e) {{
-                    console.error('Error:', e.message);
-                }}
-                return lien;
-            }}
-            """
+        # Look for tax data
+        tax_items = soup.find_all(class_=['tax-item', 'property-item'])
+        
+        for item in tax_items:
+            record = {
+                'source_id': self.SOURCE_ID,
+                'scraped_at': datetime.now().isoformat(),
+            }
             
-            try:
-                response = requests.post(
-                    f"{BROWSERLESS_URL}/function",
-                    headers={
-                        "Authorization": f"Bearer {BROWSERLESS_TOKEN}",
-                        "Content-Type": "application/json"
-                    },
-                    json={
-                        "code": script,
-                        "context": {}
-                    },
-                    timeout=60
-                )
-                
-                if response.status_code == 200:
-                    result = response.json()
-                    if isinstance(result, dict) and result.get('amount_due'):
-                        all_liens.append(result)
-                        
-            except Exception as e:
-                print(f"Browserless request failed for parcel {parcel_id}: {e}")
-                continue
+            parcel = item.find(class_=['parcel', 'folio', 're-number'])
+            if parcel:
+                record['parcel_id'] = parcel.get_text(strip=True)
+            
+            owner = item.find(class_=['owner', 'taxpayer'])
+            if owner:
+                record['owner_name'] = owner.get_text(strip=True)
+            
+            amount = item.find(class_=['amount', 'tax-due'])
+            if amount:
+                record['tax_due'] = amount.get_text(strip=True)
+            
+            status = item.find(class_=['status', 'payment-status'])
+            if status:
+                record['payment_status'] = status.get_text(strip=True)
+            
+            if record.get('parcel_id'):
+                records.append(record)
         
-        return all_liens
+        # Also check table rows
+        if not records:
+            tables = soup.find_all('table')
+            for table in tables:
+                rows = table.find_all('tr')
+                for row in rows[1:]:
+                    cells = row.find_all(['td', 'th'])
+                    if len(cells) >= 3:
+                        record = {
+                            'source_id': self.SOURCE_ID,
+                            'scraped_at': datetime.now().isoformat(),
+                        }
+                        for i, cell in enumerate(cells):
+                            text = cell.get_text(strip=True)
+                            if i == 0:
+                                record['parcel_id'] = text
+                            elif i == 1:
+                                record['owner_name'] = text
+                            elif i == 2:
+                                record['tax_due'] = text
+                        
+                        if record.get('parcel_id'):
+                            records.append(record)
+        
+        return records
     
     def refresh(self, cursor: Optional[str] = None, days_back: int = None) -> Dict:
-        """Run weekly refresh for tax collector data."""
-        # Use sample RE numbers for Duval County
-        sample_parcels = [
-            '02-00-00-001-000-000-0', '02-00-00-002-000-000-0',
-            '02-00-00-003-000-000-0', '02-00-00-004-000-000-0',
-            '02-00-00-005-000-000-0', '02-00-00-006-000-000-0',
-            '02-00-00-007-000-000-0', '02-00-00-008-000-000-0',
-            '02-00-00-009-000-000-0', '02-00-00-010-000-000-0'
-        ]
+        """Run daily refresh."""
+        if days_back is None:
+            seed_mode = os.environ.get('SEED_MODE', 'false').lower() == 'true'
+            days_back = 30 if seed_mode else 1
         
-        liens = self._scrape_with_browserless(sample_parcels)
+        if cursor:
+            start_date = cursor
+        else:
+            start_date = (datetime.now() - timedelta(days=days_back)).strftime('%Y-%m-%d')
+        
+        end_date = datetime.now().strftime('%Y-%m-%d')
+        
+        # Fetch tax search page
+        html = self._fetch_page(f"{self.BASE_URL}/Search.aspx")
+        records = self._parse_records(html) if html else []
         
         return {
             'source_id': self.SOURCE_ID,
-            'records_fetched': len(liens),
-            'new_records': liens,
-            'updated_cursor': datetime.now().strftime('%Y-%m-%d'),
+            'records_fetched': len(records),
+            'new_records': records,
+            'updated_cursor': end_date,
             'errors': [],
             'timestamp': datetime.now().isoformat(),
-            'note': f'Bulk extracted {len(liens)} tax liens from {len(sample_parcels)} parcels using Browserless'
+            'date_range': {
+                'start': start_date,
+                'end': end_date
+            },
+            'note': 'Using Browserless /content API with HTML parsing'
         }
 
 if __name__ == '__main__':
-    config = {'source_url': 'https://tclieninfo.coj.net/'}
+    config = {'source_url': 'https://tclieninfo.coj.net'}
     scraper = DuvalTaxCollectorScraper(config)
-    result = scraper.refresh()
+    result = scraper.refresh(days_back=1)
     print(json.dumps(result, indent=2))

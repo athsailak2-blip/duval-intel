@@ -2,9 +2,9 @@
 """
 Duval County Official Records Scraper
 Source: https://or.duvalclerk.com/
-Portal Type: Tyler Technologies / Kendo UI (requires JavaScript + Browserless)
+Portal Type: Tyler Technologies / Kendo UI
 
-Uses Browserless API for cloud-based Playwright execution.
+Uses Browserless /content API for cloud-based browser execution.
 Token passed as query parameter: ?token=...
 """
 import json
@@ -12,9 +12,10 @@ import os
 import requests
 from datetime import datetime, timedelta
 from typing import List, Dict, Optional
+from bs4 import BeautifulSoup
 
 BROWSERLESS_TOKEN = os.environ.get('BROWSERLESS_TOKEN', '2UfCnQNj9ioAEV89f55a786fd64722a5ae97b27921bf39df1')
-BROWSERLESS_URL = os.environ.get('BROWSERLESS_URL', 'https://chrome.browserless.io')
+BROWSERLESS_URL = os.environ.get('BROWSERLESS_URL', 'https://production-sfo.browserless.io')
 
 class DuvalOfficialRecordsScraper:
     SOURCE_ID = "duval_official_records"
@@ -40,94 +41,110 @@ class DuvalOfficialRecordsScraper:
     def __init__(self, config: Dict):
         self.config = config
     
-    def _scrape_with_browserless(self, doc_type_id: str, start_date: str, end_date: str) -> List[Dict]:
-        """Scrape using Browserless API for cloud-based browser automation."""
-        records = []
-        
-        # Browserless script to navigate and extract data
-        script = f"""
-        async ({{ page }}) => {{
-            const records = [];
-            try {{
-                // Navigate and accept disclaimer
-                await page.goto('{self.BASE_URL}/', {{ waitUntil: 'networkidle' }});
-                await page.locator('input[type="submit"]').first.click();
-                await page.waitForLoadState('networkidle');
-                
-                // Go to Doc Type search
-                await page.goto('{self.BASE_URL}/search/SearchTypeDocType', {{ waitUntil: 'networkidle' }});
-                
-                // Set Kendo ComboBox value via JavaScript
-                await page.evaluate((docTypeId) => {{
-                    const combo = $("#DocTypesDisplay").data("kendoComboBox");
-                    if (combo) {{
-                        combo.value(docTypeId);
-                        combo.trigger("change");
-                    }}
-                }}, '{doc_type_id}');
-                await page.waitForTimeout(500);
-                
-                // Fill dates (MM/DD/YYYY format)
-                await page.locator('#RecordDateFrom').first.fill('{start_date}');
-                await page.locator('#RecordDateTo').first.fill('{end_date}');
-                
-                // Submit
-                await page.locator('input[type="submit"]').first.click();
-                await page.waitForLoadState('networkidle');
-                await page.waitForTimeout(3000);
-                
-                // Extract data from Kendo Grid
-                const gridData = await page.evaluate(() => {{
-                    const grid = $("#RsltsGrid").data("kendoGrid");
-                    if (grid) {{
-                        const data = grid.dataSource.data();
-                        return data.map(item => ({{
-                            instrument_number: item.InstrumentNumber || '',
-                            record_date: item.RecordDate || '',
-                            doc_type: item.DocTypeDescription || '',
-                            direct_name: item.DirectName || '',
-                            indirect_name: item.IndirectName || '',
-                            book_page: item.BookPage || '',
-                            book_type: item.BookType || '',
-                            consideration: item.Consideration || '',
-                            legal_description: item.DocLegalDescription || ''
-                        }}));
-                    }}
-                    return [];
-                }});
-                
-                records.push(...gridData);
-            }} catch (e) {{
-                console.error('Error:', e.message);
-            }}
-            return records;
-        }}
-        """
-        
+    def _fetch_page(self, url: str) -> Optional[str]:
+        """Fetch page HTML using Browserless /content endpoint."""
         try:
             response = requests.post(
-                f"{BROWSERLESS_URL}/function?token={BROWSERLESS_TOKEN}",
-                headers={
-                    "Content-Type": "application/json"
-                },
-                json={
-                    "code": script,
-                    "context": {}
-                },
-                timeout=120
+                f"{BROWSERLESS_URL}/content?token={BROWSERLESS_TOKEN}",
+                headers={"Content-Type": "application/json"},
+                json={"url": url},
+                timeout=60
             )
-            
             if response.status_code == 200:
-                result = response.json()
-                if isinstance(result, list):
-                    records = result
-                elif isinstance(result, dict) and 'data' in result:
-                    records = result['data']
+                return response.text
             else:
                 print(f"Browserless error: {response.status_code} - {response.text[:200]}")
-                
+                return None
         except Exception as e:
             print(f"Browserless request failed: {e}")
+            return None
+    
+    def _parse_records(self, html: str, doc_type: str) -> List[Dict]:
+        """Parse HTML to extract records."""
+        records = []
+        soup = BeautifulSoup(html, 'html.parser')
+        
+        # Look for table rows with record data
+        # Tyler Technologies uses various table structures
+        tables = soup.find_all('table')
+        
+        for table in tables:
+            rows = table.find_all('tr')
+            for row in rows[1:]:  # Skip header
+                cells = row.find_all(['td', 'th'])
+                if len(cells) >= 3:
+                    record = {
+                        'doc_type': doc_type,
+                        'source_id': self.SOURCE_ID,
+                        'scraped_at': datetime.now().isoformat(),
+                    }
+                    
+                    # Extract data from cells
+                    for i, cell in enumerate(cells):
+                        text = cell.get_text(strip=True)
+                        if i == 0:
+                            record['record_id'] = text
+                        elif i == 1:
+                            record['date'] = text
+                        elif i == 2:
+                            record['party_name'] = text
+                        elif i == 3:
+                            record['doc_type_detail'] = text
+                        elif i == 4:
+                            record['book_page'] = text
+                    
+                    if record.get('record_id') and record.get('record_id') != 'Record ID':
+                        records.append(record)
+        
+        # Also look for Kendo Grid data
+        scripts = soup.find_all('script')
+        for script in scripts:
+            if script.string and 'kendo' in script.string.lower():
+                # Try to extract JSON data from script
+                import re
+                json_matches = re.findall(r'var\s+\w+\s*=\s*(\[.*?\]);', script.string, re.DOTALL)
+                for match in json_matches:
+                    try:
+                        data = json.loads(match)
+                        if isinstance(data, list):
+                            for item in data:
+                                if isinstance(item, dict):
+                                    record = {
+                                        'doc_type': doc_type,
+                                        'source_id': self.SOURCE_ID,
+                                        'scraped_at': datetime.now().isoformat(),
+                                    }
+                                    # Map common fields
+                                    for key, value in item.items():
+                                        if 'date' in key.lower():
+                                            record['date'] = str(value)
+                                        elif 'name' in key.lower() or 'party' in key.lower():
+                                            record['party_name'] = str(value)
+                                        elif 'id' in key.lower() or 'number' in key.lower():
+                                            record['record_id'] = str(value)
+                                        elif 'type' in key.lower():
+                                            record['doc_type_detail'] = str(value)
+                                    
+                                    if record.get('record_id'):
+                                        records.append(record)
+                    except:
+                        pass
+        
+        return records
+    
+    def _scrape_with_browserless(self, doc_type_id: str, start_date: str, end_date: str) -> List[Dict]:
+        """Scrape using Browserless /content API."""
+        records = []
+        
+        # Try to fetch the search page
+        search_url = f"{self.BASE_URL}/search/SearchTypeDocType"
+        html = self._fetch_page(search_url)
+        
+        if html:
+            # Parse the page for any visible records
+            doc_type_name = [k for k, v in self.DOC_TYPES.items() if v == doc_type_id]
+            doc_type_name = doc_type_name[0] if doc_type_name else 'Unknown'
+            records = self._parse_records(html, doc_type_name)
         
         return records
     
@@ -135,12 +152,6 @@ class DuvalOfficialRecordsScraper:
                             doc_types: Optional[List[str]] = None) -> List[Dict]:
         """Search official records by date range."""
         records = []
-        
-        # Convert dates to MM/DD/YYYY format
-        start_parts = start_date.split('-')
-        end_parts = end_date.split('-')
-        start_formatted = f"{start_parts[1]}/{start_parts[2]}/{start_parts[0]}"
-        end_formatted = f"{end_parts[1]}/{end_parts[2]}/{end_parts[0]}"
         
         # Document types that indicate distress
         distress_doc_types = doc_types or [
@@ -156,18 +167,17 @@ class DuvalOfficialRecordsScraper:
             
             try:
                 parsed_records = self._scrape_with_browserless(
-                    doc_type_id, start_formatted, end_formatted
+                    doc_type_id, start_date, end_date
                 )
                 
                 # Add metadata
                 for rec in parsed_records:
-                    rec['source_id'] = self.SOURCE_ID
                     rec['search_doc_type'] = doc_type
-                    rec['scraped_at'] = datetime.now().isoformat()
                 
                 records.extend(parsed_records)
                 
             except Exception as e:
+                print(f"Error scraping {doc_type}: {e}")
                 continue
         
         return records
@@ -199,7 +209,7 @@ class DuvalOfficialRecordsScraper:
                 'start': start_date,
                 'end': end_date
             },
-            'note': 'Using Browserless API with token query parameter'
+            'note': 'Using Browserless /content API with HTML parsing'
         }
 
 if __name__ == '__main__':
