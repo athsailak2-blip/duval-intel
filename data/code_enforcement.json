@@ -7,14 +7,10 @@ Code enforcement refresh requires PRR submission
   "errors": [
     "PRR required - manual process"
   ],
-  "timestamp": "2026-06-08T07:24:30.924657",
+  "timestamp": "2026-06-08T07:31:20.774396",
   "prr_portal_status": {
-    "accessible": true,
-    "status_code": 200,
-    "url": "https://records.coj.net",
-    "has_search": false,
-    "has_submit": true,
-    "has_form": true
+    "accessible": false,
+    "error": "HTTPSConnectionPool(host='records.coj.net', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='records.coj.net', port=443) at 0x7fb063760d40>, 'Connection to records.coj.net timed out. (connect timeout=30)'))"
   },
   "note": "Code enforcement data requires Public Records Request (PRR) submission"
 }
