@@ -39,20 +39,12 @@ jobs:
           pip install requests beautifulsoup4
           echo "Dependencies installed"
 
-      - name: Install Playwright dependencies
+      - name: Run Official Records Scraper
+        timeout-minutes: 5
         run: |
-          pip install playwright
-          playwright install chromium
-          echo "Playwright installed"
-
-      - name: Run Official Records Scraper (Playwright)
-        timeout-minutes: 10
-        run: |
-          python scrapers/duval_official_records_playwright.py > data/official_records.json
-          echo "Official records scraped with Playwright"
+          python scrapers/duval_official_records.py > data/official_records.json
+          echo "Official records scraped"
         env:
-          BROWSERLESS_TOKEN: ${{ secrets.BROWSERLESS_TOKEN }}
-          BROWSERLESS_URL: ${{ secrets.BROWSERLESS_URL }}
           SEED_MODE: ${{ github.event.inputs.seed_mode || 'false' }}
 
       - name: Run Court Records Scraper
