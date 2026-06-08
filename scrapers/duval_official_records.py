@@ -145,10 +145,13 @@ class DuvalOfficialRecordsScraper:
                     record = self._parse_record(raw, doc_type)
                     records.append(record)
                 
-                print(f"Found {len(raw_records)} {doc_type} records")
+                # Log to stderr so stdout is clean JSON
+                import sys
+                print(f"Found {len(raw_records)} {doc_type} records", file=sys.stderr)
                 
             except Exception as e:
-                print(f"Error scraping {doc_type}: {e}")
+                import sys
+                print(f"Error scraping {doc_type}: {e}", file=sys.stderr)
                 continue
         
         return records
