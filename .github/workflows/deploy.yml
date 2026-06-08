@@ -39,10 +39,17 @@ jobs:
           pip install requests beautifulsoup4
           echo "Dependencies installed"
 
-      - name: Run Official Records Scraper
+      - name: Install Playwright dependencies
         run: |
-          python scrapers/duval_official_records.py > data/official_records.json
-          echo "Official records scraped"
+          pip install playwright
+          playwright install chromium
+          echo "Playwright installed"
+
+      - name: Run Official Records Scraper (Playwright)
+        timeout-minutes: 10
+        run: |
+          python scrapers/duval_official_records_playwright.py > data/official_records.json
+          echo "Official records scraped with Playwright"
         env:
           BROWSERLESS_TOKEN: ${{ secrets.BROWSERLESS_TOKEN }}
           BROWSERLESS_URL: ${{ secrets.BROWSERLESS_URL }}
@@ -58,13 +65,13 @@ jobs:
           CORE_USERNAME: ${{ secrets.CORE_USERNAME }}
           CORE_PASSWORD: ${{ secrets.CORE_PASSWORD }}
 
-      - name: Run Foreclosure Sales Scraper
+      - name: Run Foreclosure Sales Scraper (Scrappey)
+        timeout-minutes: 10
         run: |
-          python scrapers/duval_foreclosure_sales.py > data/foreclosure_sales.json
-          echo "Foreclosure sales scraped"
+          python scrapers/duval_foreclosure_sales_scrappey.py > data/foreclosure_sales.json
+          echo "Foreclosure sales scraped with Scrappey"
         env:
-          BROWSERLESS_TOKEN: ${{ secrets.BROWSERLESS_TOKEN }}
-          BROWSERLESS_URL: ${{ secrets.BROWSERLESS_URL }}
+          SCRAPPEY_API_KEY: ${{ secrets.SCRAPPEY_API_KEY }}
           FORECLOSURE_USERNAME: ${{ secrets.FORECLOSURE_USERNAME }}
           FORECLOSURE_PASSWORD: ${{ secrets.FORECLOSURE_PASSWORD }}
 
