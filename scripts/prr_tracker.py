@@ -233,6 +233,51 @@ PRR_TEMPLATES = {
         'email': 'myjax@custhelp.com',
         'mail_address': 'Jacksonville Municipal Code Compliance Division, Attn: Public Records Coordinator, 214 North Hogan Street, 7th Floor, Jacksonville, FL 32202',
         'phone': '(904) 630-2489'
+    },
+    'court_records': {
+        'source_id': 'duval_court_records',
+        'request_type': 'Court Case Records (Civil Division)',
+        'description': 'Request for civil court case records including foreclosure filings, lis pendens, judgments, eviction cases, probate cases, and small claims. Include case number, filing date, parties involved, case status, disposition, and property address if applicable.',
+        'submission_method': 'online_portal',
+        'requested_fields': [
+            'case_number', 'case_type', 'filing_date', 'parties_plaintiff',
+            'parties_defendant', 'case_status', 'disposition', 'disposition_date',
+            'property_address', 'judgment_amount', 're_number'
+        ],
+        'portal_url': 'https://core.duvalclerk.com/',
+        'email': 'clerk@circuit4.duvalclerk.com',
+        'mail_address': 'Duval County Clerk of Courts, Attn: Records Division, 501 West Adams Street, Room 1025, Jacksonville, FL 32202',
+        'phone': '(904) 255-2000'
+    },
+    'foreclosure_sales': {
+        'source_id': 'duval_foreclosure_sales',
+        'request_type': 'Foreclosure Sale Records',
+        'description': 'Request for foreclosure sale records including sale date, property address, RE number, opening bid, final sale price, winning bidder, case number, and certificate of title issuance date.',
+        'submission_method': 'email',
+        'requested_fields': [
+            'sale_date', 'property_address', 're_number', 'opening_bid',
+            'final_sale_price', 'winning_bidder', 'case_number',
+            'certificate_of_title_date', 'sale_status'
+        ],
+        'portal_url': 'https://duval.realforeclose.com/',
+        'email': 'foreclosure@duvalclerk.com',
+        'mail_address': 'Duval County Clerk of Courts, Attn: Foreclosure Division, 501 West Adams Street, Room 1025, Jacksonville, FL 32202',
+        'phone': '(904) 255-2000'
+    },
+    'tax_deed_sales': {
+        'source_id': 'duval_tax_deed_sales',
+        'request_type': 'Tax Deed Sale Records',
+        'description': 'Request for tax deed sale records including sale date, property address, RE number, tax certificate number, minimum bid, final sale price, winning bidder, and issuance of tax deed date.',
+        'submission_method': 'email',
+        'requested_fields': [
+            'sale_date', 'property_address', 're_number', 'tax_certificate_number',
+            'minimum_bid', 'final_sale_price', 'winning_bidder',
+            'tax_deed_issuance_date', 'sale_status'
+        ],
+        'portal_url': 'https://duval.realtaxdeed.com/',
+        'email': 'taxdeed@duvalclerk.com',
+        'mail_address': 'Duval County Clerk of Courts, Attn: Tax Deed Division, 501 West Adams Street, Room 1025, Jacksonville, FL 32202',
+        'phone': '(904) 255-2000'
     }
 }
 
