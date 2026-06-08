@@ -1,0 +1,136 @@
+#!/usr/bin/env python3
+"""Update the GitHub Actions workflow to support Playwright."""
+
+workflow_content = """name: Deploy Dashboard to GitHub Pages
+
+on:
+  push:
+    branches: [ main ]
+  schedule:
+    # Run daily at 6:00 AM EST (11:00 UTC)
+    - cron: '0 11 * * *'
+  workflow_dispatch:
+    inputs:
+      seed_mode:
+        description: 'Run in seed mode (30-day backfill)'
+        required: false
+        default: 'false'
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: |
+          pip install requests beautifulsoup4 playwright
+          playwright install chromium
+          echo "Dependencies installed"
+
+      - name: Run Official Records Scraper
+        run: |
+          python scrapers/duval_official_records.py > data/official_records.json
+          echo "Official records scraped"
+        env:
+          SEED_MODE: ${{ github.event.inputs.seed_mode || 'false' }}
+
+      - name: Run Court Records Scraper
+        run: |
+          python scrapers/duval_court_records.py > data/court_records.json
+          echo "Court records scraped"
+
+      - name: Run Foreclosure Sales Scraper
+        run: |
+          python scrapers/duval_foreclosure_sales.py > data/foreclosure_sales.json
+          echo "Foreclosure sales scraped"
+
+      - name: Run Tax Deed Sales Scraper
+        run: |
+          python scrapers/duval_tax_deed_sales.py > data/tax_deed_sales.json
+          echo "Tax deed sales scraped"
+
+      - name: Run Parcel Master Scraper
+        run: |
+          python scrapers/duval_parcel_master.py > data/parcel_master.json
+          echo "Parcel master scraped"
+
+      - name: Run Tax Collector Scraper
+        run: |
+          python scrapers/duval_tax_collector.py > data/tax_collector.json
+          echo "Tax collector scraped"
+
+      - name: Run GIS Scraper
+        run: |
+          python scrapers/duval_gis.py > data/gis_mapping.json
+          echo "GIS data scraped"
+
+      - name: Run Code Enforcement Scraper
+        run: |
+          python scrapers/duval_code_enforcement.py > data/code_enforcement.json
+          echo "Code enforcement scraped"
+
+      - name: Aggregate data into leads.json
+        run: |
+          python scripts/aggregate_data.py || echo "Aggregate script not found"
+          echo "Data aggregation complete"
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Copy dashboard to _site
+        run: |
+          mkdir -p _site
+          cp -r dashboard/* _site/
+          cp -r data _site/ || true
+          echo "Dashboard files copied"
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '_site'
+
+      - name: Commit updated data
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add data/
+          git diff --quiet && git diff --staged --quiet || git commit -m "Update scraped data [$(date)]"
+          git push || echo "Nothing to commit or push failed"
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+"""
+
+with open('/workspace/.github/workflows/deploy.yml', 'w') as f:
+    f.write(workflow_content)
+
+print("Updated GitHub Actions workflow with Playwright support")
+print("\nKey changes:")
+print("- Added playwright install step")
+print("- Added chromium browser installation")
+print("- Added SEED_MODE input for manual 30-day backfill")
+print("- Added aggregate_data.py step")

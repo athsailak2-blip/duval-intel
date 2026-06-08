@@ -1,0 +1,11 @@
+# Duval County Lead Intelligence - Daily Refresh Schedule
+# Add these lines to your crontab with: crontab -e
+
+# Daily refresh at 6:00 AM EST (11:00 UTC)
+0 11 * * * /path/to/duval-intel/scripts/run_refresh.sh >> /path/to/duval-intel/logs/cron.log 2>&1
+
+# Weekly P1 refresh (Mondays at 6:30 AM EST)
+30 11 * * 1 /path/to/duval-intel/scripts/run_refresh.sh >> /path/to/duval-intel/logs/cron_p1.log 2>&1
+
+# Monthly P2 refresh (1st of month at 7:00 AM EST)
+0 12 1 * * /path/to/duval-intel/scripts/run_refresh.sh >> /path/to/duval-intel/logs/cron_p2.log 2>&1

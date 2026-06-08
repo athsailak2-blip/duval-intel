@@ -1,0 +1,62 @@
+{
+  "total_parcels": 12,
+  "total_signals": 24,
+  "expected_leads": {
+    "high_stack": 3,
+    "medium_stack": 5,
+    "single_signal": 7,
+    "enrichment_only": 3
+  },
+  "deal_path_distribution": {
+    "wholesale": 4,
+    "flip": 3,
+    "sub_to": 2,
+    "seller_finance": 1,
+    "partial_interest": 1,
+    "messy_title": 2,
+    "rental_acquisition": 2,
+    "dispo_only": 1,
+    "do_not_pursue": 0
+  },
+  "score_distribution": {
+    "90_100": 2,
+    "80_89": 4,
+    "70_79": 5,
+    "60_69": 3,
+    "below_60": 0
+  },
+  "lead_patterns": {
+    "pre_foreclosure": 2,
+    "tax_delinquent": 3,
+    "estate_probate": 3,
+    "code_violation": 3,
+    "foreclosure_sale": 1,
+    "trust_owned": 1,
+    "senior_distress": 1,
+    "investor_llc": 2,
+    "out_of_state": 1,
+    "vacant_land": 1,
+    "bank_owned": 1,
+    "judgment_lien": 1
+  },
+  "source_coverage": {
+    "duval_official_records": 8,
+    "duval_court_records": 4,
+    "duval_tax_collector": 3,
+    "duval_tax_deed_sales": 1,
+    "duval_foreclosure_sales": 1,
+    "duval_code_enforcement": 4
+  },
+  "test_assertions": [
+    "All parcels have valid parcel_id matching DC- prefix",
+    "All signals reference valid parcel_id from synthetic_parcels",
+    "No signal has confidence below 60",
+    "High-stack leads (3+ signals) score above 85",
+    "Tax delinquent signals have amount_due > 0",
+    "Foreclosure signals have case_number or sale_date",
+    "Estate signals contain 'Estate of' or 'Trust' in party_name",
+    "Code violation signals have case_id and violation_type"
+  ],
+  "build_timestamp": "2026-06-08T06:49:34+05:30",
+  "framework_version": "v5.3.1"
+}

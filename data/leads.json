@@ -1,0 +1,1502 @@
+{
+  "county": "Duval",
+  "state": "FL",
+  "last_refresh": "2026-06-08T06:28:11.898852",
+  "framework_version": "v5.3.1",
+  "total_leads": 50,
+  "high_stack_leads": 0,
+  "sources": {
+    "duval_official_records": {
+      "status": "healthy",
+      "last_refresh": "2026-06-08T06:28:11.898844",
+      "records_count": 289
+    },
+    "duval_court_records": {
+      "status": "login_required",
+      "last_refresh": "2026-06-08T06:28:11.898845",
+      "records_count": 0
+    },
+    "duval_foreclosure_sales": {
+      "status": "login_required",
+      "last_refresh": "2026-06-08T06:28:11.898846",
+      "records_count": 0
+    },
+    "duval_tax_deed_sales": {
+      "status": "login_required",
+      "last_refresh": "2026-06-08T06:28:11.898847",
+      "records_count": 0
+    },
+    "duval_parcel_master": {
+      "status": "healthy",
+      "last_refresh": "2026-06-08T06:28:11.898848",
+      "records_count": 312456
+    },
+    "duval_tax_collector": {
+      "status": "healthy",
+      "last_refresh": "2026-06-08T06:28:11.898849",
+      "records_count": 2847
+    },
+    "duval_gis_mapping": {
+      "status": "healthy",
+      "last_refresh": "2026-06-08T06:28:11.898850",
+      "records_count": 312456
+    },
+    "duval_code_enforcement": {
+      "status": "prr_required",
+      "last_refresh": "2026-06-08T06:28:11.898851",
+      "records_count": 0
+    }
+  },
+  "leads": [
+    {
+      "lead_id": "LEAD-001",
+      "parcel_id": "DC-2026101584",
+      "score": 85,
+      "score_reasons": [
+        "LIS PENDENS filed - foreclosure in progress",
+        "Motivated seller likely"
+      ],
+      "address": "",
+      "city": "Jacksonville",
+      "zip": "322xx",
+      "owner_name": "COPELAND MICHAEL J",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026/05/01",
+          "confidence": 95,
+          "details": "Foreclosure filed by FREEDOM MORTGAGE CORPORATION - Instrument 2026101584"
+        }
+      ],
+      "deal_path": "wholesale",
+      "deal_path_confidence": 90,
+      "status": "active",
+      "last_updated": "2026-06-08T06:28:11.898662",
+      "assessed_value": 0,
+      "equity_estimate": 0
+    },
+    {
+      "lead_id": "LEAD-002",
+      "parcel_id": "DC-2026101727",
+      "score": 85,
+      "score_reasons": [
+        "LIS PENDENS filed - foreclosure in progress",
+        "Motivated seller likely"
+      ],
+      "address": "PT L 2 MURRAY HILL GARDENS",
+      "city": "Jacksonville",
+      "zip": "322xx",
+      "owner_name": "PARK LILIA",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026/05/01",
+          "confidence": 95,
+          "details": "Foreclosure filed by LAKEVIEW LOAN SERVICING LLC - Instrument 2026101727"
+        }
+      ],
+      "deal_path": "wholesale",
+      "deal_path_confidence": 90,
+      "status": "active",
+      "last_updated": "2026-06-08T06:28:11.898682",
+      "assessed_value": 0,
+      "equity_estimate": 0
+    },
+    {
+      "lead_id": "LEAD-003",
+      "parcel_id": "DC-2026101738",
+      "score": 85,
+      "score_reasons": [
+        "LIS PENDENS filed - foreclosure in progress",
+        "Motivated seller likely"
+      ],
+      "address": "L 5 B 14 WASHINGTON HEIGHTS ESTATES PLAT BOOK 31 PAGES 93 93A 93B 93C",
+      "city": "Jacksonville",
+      "zip": "322xx",
+      "owner_name": "ALTENBACH BRYON KEITH SR",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026/05/01",
+          "confidence": 95,
+          "details": "Foreclosure filed by ALKAN MORTGAGE CORPORATION - Instrument 2026101738"
+        }
+      ],
+      "deal_path": "wholesale",
+      "deal_path_confidence": 90,
+      "status": "active",
+      "last_updated": "2026-06-08T06:28:11.898686",
+      "assessed_value": 0,
+      "equity_estimate": 0
+    },
+    {
+      "lead_id": "LEAD-004",
+      "parcel_id": "DC-2026101797",
+      "score": 85,
+      "score_reasons": [
+        "LIS PENDENS filed - foreclosure in progress",
+        "Motivated seller likely"
+      ],
+      "address": "",
+      "city": "Jacksonville",
+      "zip": "322xx",
+      "owner_name": "ARGO STEVEN C",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026/05/01",
+          "confidence": 95,
+          "details": "Foreclosure filed by COMPUTERSHARE DELAWARE TRUST COMPANY TRUSTEE - Instrument 2026101797"
+        }
+      ],
+      "deal_path": "wholesale",
+      "deal_path_confidence": 90,
+      "status": "active",
+      "last_updated": "2026-06-08T06:28:11.898689",
+      "assessed_value": 0,
+      "equity_estimate": 0
+    },
+    {
+      "lead_id": "LEAD-005",
+      "parcel_id": "DC-2026101954",
+      "score": 95,
+      "score_reasons": [
+        "LIS PENDENS filed - foreclosure in progress",
+        "Motivated seller likely"
+      ],
+      "address": "",
+      "city": "Jacksonville",
+      "zip": "322xx",
+      "owner_name": "HAZEN C MELVILLE DECEASED ESTATE",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026/05/01",
+          "confidence": 95,
+          "details": "Foreclosure filed by WELLS FARGO BANK N A - Instrument 2026101954"
+        }
+      ],
+      "deal_path": "wholesale",
+      "deal_path_confidence": 90,
+      "status": "active",
+      "last_updated": "2026-06-08T06:28:11.898693",
+      "assessed_value": 0,
+      "equity_estimate": 0
+    },
+    {
+      "lead_id": "LEAD-006",
+      "parcel_id": "DC-2026102009",
+      "score": 85,
+      "score_reasons": [
+        "LIS PENDENS filed - foreclosure in progress",
+        "Motivated seller likely"
+      ],
+      "address": "L 45 ARGYLE FOREST CHIMNEY LAKES U 14",
+      "city": "Jacksonville",
+      "zip": "322xx",
+      "owner_name": "GLOVER KALAB",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026/05/01",
+          "confidence": 95,
+          "details": "Foreclosure filed by PENNYMAC LOAN SERVICES LLC - Instrument 2026102009"
+        }
+      ],
+      "deal_path": "wholesale",
+      "deal_path_confidence": 90,
+      "status": "active",
+      "last_updated": "2026-06-08T06:28:11.898696",
+      "assessed_value": 0,
+      "equity_estimate": 0
+    },
+    {
+      "lead_id": "LEAD-007",
+      "parcel_id": "DC-2026102195",
+      "score": 85,
+      "score_reasons": [
+        "LIS PENDENS filed - foreclosure in progress",
+        "Motivated seller likely"
+      ],
+      "address": "WOLF CREEK CONDOMINIUM U 220 BLDG 2",
+      "city": "Jacksonville",
+      "zip": "322xx",
+      "owner_name": "JONES LISA FORD",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026/05/01",
+          "confidence": 95,
+          "details": "Foreclosure filed by RADIFI CREDIT UNION - Instrument 2026102195"
+        }
+      ],
+      "deal_path": "wholesale",
+      "deal_path_confidence": 90,
+      "status": "active",
+      "last_updated": "2026-06-08T06:28:11.898699",
+      "assessed_value": 0,
+      "equity_estimate": 0
+    },
+    {
+      "lead_id": "LEAD-008",
+      "parcel_id": "DC-2026102259",
+      "score": 85,
+      "score_reasons": [
+        "LIS PENDENS filed - foreclosure in progress",
+        "Motivated seller likely"
+      ],
+      "address": "L 121 OSPREY LANDING U 3-A 3-B",
+      "city": "Jacksonville",
+      "zip": "322xx",
+      "owner_name": "LYMAN ROBINSON STEPHANIE M",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026/05/01",
+          "confidence": 95,
+          "details": "Foreclosure filed by LAKEVIEW LOAN SERVICING LLC - Instrument 2026102259"
+        }
+      ],
+      "deal_path": "wholesale",
+      "deal_path_confidence": 90,
+      "status": "active",
+      "last_updated": "2026-06-08T06:28:11.898710",
+      "assessed_value": 0,
+      "equity_estimate": 0
+    },
+    {
+      "lead_id": "LEAD-009",
+      "parcel_id": "DC-2026102701",
+      "score": 85,
+      "score_reasons": [
+        "LIS PENDENS filed - foreclosure in progress",
+        "Motivated seller likely"
+      ],
+      "address": "",
+      "city": "Jacksonville",
+      "zip": "322xx",
+      "owner_name": "HIGHTOWER RAFALAR L.",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026/05/01",
+          "confidence": 95,
+          "details": "Foreclosure filed by ROOFING PROS USA II LLC - Instrument 2026102701"
+        }
+      ],
+      "deal_path": "wholesale",
+      "deal_path_confidence": 90,
+      "status": "active",
+      "last_updated": "2026-06-08T06:28:11.898715",
+      "assessed_value": 0,
+      "equity_estimate": 0
+    },
+    {
+      "lead_id": "LEAD-010",
+      "parcel_id": "DC-2026102824",
+      "score": 85,
+      "score_reasons": [
+        "LIS PENDENS filed - foreclosure in progress",
+        "Motivated seller likely"
+      ],
+      "address": "L 102 ADAMS LAKE U 4",
+      "city": "Jacksonville",
+      "zip": "322xx",
+      "owner_name": "POLLOCK MATTHEW A",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026/05/03",
+          "confidence": 95,
+          "details": "Foreclosure filed by FREEDOM MORTGAGE CORPORATION - Instrument 2026102824"
+        }
+      ],
+      "deal_path": "wholesale",
+      "deal_path_confidence": 90,
+      "status": "active",
+      "last_updated": "2026-06-08T06:28:11.898720",
+      "assessed_value": 0,
+      "equity_estimate": 0
+    },
+    {
+      "lead_id": "LEAD-011",
+      "parcel_id": "DC-2026102826",
+      "score": 85,
+      "score_reasons": [
+        "LIS PENDENS filed - foreclosure in progress",
+        "Motivated seller likely"
+      ],
+      "address": "L 59 WILLOW REEN REPLAT",
+      "city": "Jacksonville",
+      "zip": "322xx",
+      "owner_name": "REVELS EMMA IRENE",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026/05/03",
+          "confidence": 95,
+          "details": "Foreclosure filed by VYSTAR CREDIT UNION - Instrument 2026102826"
+        }
+      ],
+      "deal_path": "wholesale",
+      "deal_path_confidence": 90,
+      "status": "active",
+      "last_updated": "2026-06-08T06:28:11.898723",
+      "assessed_value": 0,
+      "equity_estimate": 0
+    },
+    {
+      "lead_id": "LEAD-012",
+      "parcel_id": "DC-2026102893",
+      "score": 85,
+      "score_reasons": [
+        "LIS PENDENS filed - foreclosure in progress",
+        "Motivated seller likely"
+      ],
+      "address": "L 24 PILGRIMS TRACE U 1",
+      "city": "Jacksonville",
+      "zip": "322xx",
+      "owner_name": "HARRIS STEPHEN",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026/05/03",
+          "confidence": 95,
+          "details": "Foreclosure filed by U.S. BANK NATIONAL ASSOCIATION - Instrument 2026102893"
+        }
+      ],
+      "deal_path": "wholesale",
+      "deal_path_confidence": 90,
+      "status": "active",
+      "last_updated": "2026-06-08T06:28:11.898726",
+      "assessed_value": 0,
+      "equity_estimate": 0
+    },
+    {
+      "lead_id": "LEAD-013",
+      "parcel_id": "DC-2026102956",
+      "score": 85,
+      "score_reasons": [
+        "LIS PENDENS filed - foreclosure in progress",
+        "Motivated seller likely"
+      ],
+      "address": "L 81 82 B N GOLFAIR TERRACE",
+      "city": "Jacksonville",
+      "zip": "322xx",
+      "owner_name": "ALSUP BRIANNA",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026/05/04",
+          "confidence": 95,
+          "details": "Foreclosure filed by SANDERS DYLAN - Instrument 2026102956"
+        }
+      ],
+      "deal_path": "wholesale",
+      "deal_path_confidence": 90,
+      "status": "active",
+      "last_updated": "2026-06-08T06:28:11.898729",
+      "assessed_value": 0,
+      "equity_estimate": 0
+    },
+    {
+      "lead_id": "LEAD-014",
+      "parcel_id": "DC-2026103152",
+      "score": 85,
+      "score_reasons": [
+        "LIS PENDENS filed - foreclosure in progress",
+        "Motivated seller likely"
+      ],
+      "address": "",
+      "city": "Jacksonville",
+      "zip": "322xx",
+      "owner_name": "LOGAN ERICA L.",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026/05/04",
+          "confidence": 95,
+          "details": "Foreclosure filed by TIMOTHY'S LANDING OWNERS ASSOCIATION INC. - Instrument 2026103152"
+        }
+      ],
+      "deal_path": "wholesale",
+      "deal_path_confidence": 90,
+      "status": "active",
+      "last_updated": "2026-06-08T06:28:11.898731",
+      "assessed_value": 0,
+      "equity_estimate": 0
+    },
+    {
+      "lead_id": "LEAD-015",
+      "parcel_id": "DC-2026103182",
+      "score": 85,
+      "score_reasons": [
+        "LIS PENDENS filed - foreclosure in progress",
+        "Motivated seller likely"
+      ],
+      "address": "PT L 5 6 B 23 ROBINSONS ADDITION TO WEST JACKSONVILLE",
+      "city": "Jacksonville",
+      "zip": "322xx",
+      "owner_name": "YOUNG LAVERNE",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026/05/04",
+          "confidence": 95,
+          "details": "Foreclosure filed by DEVORE CAPITAL CONTRACTING CONSULTING INC - Instrument 2026103182"
+        }
+      ],
+      "deal_path": "wholesale",
+      "deal_path_confidence": 90,
+      "status": "active",
+      "last_updated": "2026-06-08T06:28:11.898734",
+      "assessed_value": 0,
+      "equity_estimate": 0
+    },
+    {
+      "lead_id": "LEAD-016",
+      "parcel_id": "DC-2026103297",
+      "score": 95,
+      "score_reasons": [
+        "LIS PENDENS filed - foreclosure in progress",
+        "Motivated seller likely"
+      ],
+      "address": "L 35 B 3 OAK HILL U 12C",
+      "city": "Jacksonville",
+      "zip": "322xx",
+      "owner_name": "LEWIS MARY A DECEASED ESTATE",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026/05/04",
+          "confidence": 95,
+          "details": "Foreclosure filed by U.S. BANK TRUST NATIONAL ASSOCIATION TRUSTEE - Instrument 2026103297"
+        }
+      ],
+      "deal_path": "wholesale",
+      "deal_path_confidence": 90,
+      "status": "active",
+      "last_updated": "2026-06-08T06:28:11.898737",
+      "assessed_value": 0,
+      "equity_estimate": 0
+    },
+    {
+      "lead_id": "LEAD-017",
+      "parcel_id": "DC-2026103347",
+      "score": 85,
+      "score_reasons": [
+        "LIS PENDENS filed - foreclosure in progress",
+        "Motivated seller likely"
+      ],
+      "address": "",
+      "city": "Jacksonville",
+      "zip": "322xx",
+      "owner_name": "JOHNSON JENNIFER LYNN",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026/05/04",
+          "confidence": 95,
+          "details": "Foreclosure filed by SUMMER HAVEN OWNERS ASSOCIATION INC - Instrument 2026103347"
+        }
+      ],
+      "deal_path": "wholesale",
+      "deal_path_confidence": 90,
+      "status": "active",
+      "last_updated": "2026-06-08T06:28:11.898740",
+      "assessed_value": 0,
+      "equity_estimate": 0
+    },
+    {
+      "lead_id": "LEAD-018",
+      "parcel_id": "DC-2026103800",
+      "score": 85,
+      "score_reasons": [
+        "LIS PENDENS filed - foreclosure in progress",
+        "Motivated seller likely"
+      ],
+      "address": "",
+      "city": "Jacksonville",
+      "zip": "322xx",
+      "owner_name": "KOROVKINA YELENA",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026/05/04",
+          "confidence": 95,
+          "details": "Foreclosure filed by TAVANIER OAKS HOMEOWNERS ASSOCIATION INC. - Instrument 2026103800"
+        }
+      ],
+      "deal_path": "wholesale",
+      "deal_path_confidence": 90,
+      "status": "active",
+      "last_updated": "2026-06-08T06:28:11.898742",
+      "assessed_value": 0,
+      "equity_estimate": 0
+    },
+    {
+      "lead_id": "LEAD-019",
+      "parcel_id": "DC-2026103830",
+      "score": 85,
+      "score_reasons": [
+        "LIS PENDENS filed - foreclosure in progress",
+        "Motivated seller likely"
+      ],
+      "address": "L 8 17 B 5 DINSMORE",
+      "city": "Jacksonville",
+      "zip": "322xx",
+      "owner_name": "SHIVER FLOYD",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026/05/04",
+          "confidence": 95,
+          "details": "Foreclosure filed by LAKEVIEW LOAN SERVICING LLC - Instrument 2026103830"
+        }
+      ],
+      "deal_path": "wholesale",
+      "deal_path_confidence": 90,
+      "status": "active",
+      "last_updated": "2026-06-08T06:28:11.898746",
+      "assessed_value": 0,
+      "equity_estimate": 0
+    },
+    {
+      "lead_id": "LEAD-020",
+      "parcel_id": "DC-2026104045",
+      "score": 85,
+      "score_reasons": [
+        "LIS PENDENS filed - foreclosure in progress",
+        "Motivated seller likely"
+      ],
+      "address": "L 65 EDMONDSONS MAIN STREET ESTATES",
+      "city": "Jacksonville",
+      "zip": "322xx",
+      "owner_name": "ROBERTSON RICHARD",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026/05/04",
+          "confidence": 95,
+          "details": "Foreclosure filed by AMERIS BANK - Instrument 2026104045"
+        }
+      ],
+      "deal_path": "wholesale",
+      "deal_path_confidence": 90,
+      "status": "active",
+      "last_updated": "2026-06-08T06:28:11.898749",
+      "assessed_value": 0,
+      "equity_estimate": 0
+    },
+    {
+      "lead_id": "LEAD-021",
+      "parcel_id": "DC-2026104119",
+      "score": 85,
+      "score_reasons": [
+        "LIS PENDENS filed - foreclosure in progress",
+        "Motivated seller likely"
+      ],
+      "address": "",
+      "city": "Jacksonville",
+      "zip": "322xx",
+      "owner_name": "HUNTER LYNETTE TERESA",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026/05/04",
+          "confidence": 95,
+          "details": "Foreclosure filed by DEUTSCHE BANK NATIONAL TRUST COMPANY TRUSTEE - Instrument 2026104119"
+        }
+      ],
+      "deal_path": "wholesale",
+      "deal_path_confidence": 90,
+      "status": "active",
+      "last_updated": "2026-06-08T06:28:11.898753",
+      "assessed_value": 0,
+      "equity_estimate": 0
+    },
+    {
+      "lead_id": "LEAD-022",
+      "parcel_id": "DC-2026104146",
+      "score": 85,
+      "score_reasons": [
+        "LIS PENDENS filed - foreclosure in progress",
+        "Motivated seller likely"
+      ],
+      "address": "L366 ALDERMAN PARK U8",
+      "city": "Jacksonville",
+      "zip": "322xx",
+      "owner_name": "MONGE IRIS N",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026/05/04",
+          "confidence": 95,
+          "details": "Foreclosure filed by U.S. BANK NATIONAL ASSOCIATION - Instrument 2026104146"
+        }
+      ],
+      "deal_path": "wholesale",
+      "deal_path_confidence": 90,
+      "status": "active",
+      "last_updated": "2026-06-08T06:28:11.898756",
+      "assessed_value": 0,
+      "equity_estimate": 0
+    },
+    {
+      "lead_id": "LEAD-023",
+      "parcel_id": "DC-2026104198",
+      "score": 85,
+      "score_reasons": [
+        "LIS PENDENS filed - foreclosure in progress",
+        "Motivated seller likely"
+      ],
+      "address": "",
+      "city": "Jacksonville",
+      "zip": "322xx",
+      "owner_name": "THOMAS ERIC",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026/05/04",
+          "confidence": 95,
+          "details": "Foreclosure filed by FREEDOM MORTGAGE CORPORATION - Instrument 2026104198"
+        }
+      ],
+      "deal_path": "wholesale",
+      "deal_path_confidence": 90,
+      "status": "active",
+      "last_updated": "2026-06-08T06:28:11.898759",
+      "assessed_value": 0,
+      "equity_estimate": 0
+    },
+    {
+      "lead_id": "LEAD-024",
+      "parcel_id": "DC-2026104219",
+      "score": 85,
+      "score_reasons": [
+        "LIS PENDENS filed - foreclosure in progress",
+        "Motivated seller likely"
+      ],
+      "address": "",
+      "city": "Jacksonville",
+      "zip": "322xx",
+      "owner_name": "SHARP DONALD C II",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026/05/04",
+          "confidence": 95,
+          "details": "Foreclosure filed by LAKEVIEW LOAN SERVICING LLC - Instrument 2026104219"
+        }
+      ],
+      "deal_path": "wholesale",
+      "deal_path_confidence": 90,
+      "status": "active",
+      "last_updated": "2026-06-08T06:28:11.898762",
+      "assessed_value": 0,
+      "equity_estimate": 0
+    },
+    {
+      "lead_id": "LEAD-025",
+      "parcel_id": "DC-2026104269",
+      "score": 85,
+      "score_reasons": [
+        "LIS PENDENS filed - foreclosure in progress",
+        "Motivated seller likely"
+      ],
+      "address": "L3 B 1 MAGNOLIA GARDENS U 6",
+      "city": "Jacksonville",
+      "zip": "322xx",
+      "owner_name": "DENNARD DANYELLE",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026/05/04",
+          "confidence": 95,
+          "details": "Foreclosure filed by U.S. BANK TRUST COMPANY NATIONAL ASSOCIATION TRUSTEE - Instrument 2026104269"
+        }
+      ],
+      "deal_path": "wholesale",
+      "deal_path_confidence": 90,
+      "status": "active",
+      "last_updated": "2026-06-08T06:28:11.898765",
+      "assessed_value": 0,
+      "equity_estimate": 0
+    },
+    {
+      "lead_id": "LEAD-026",
+      "parcel_id": "DC-2026104462",
+      "score": 85,
+      "score_reasons": [
+        "LIS PENDENS filed - foreclosure in progress",
+        "Motivated seller likely"
+      ],
+      "address": "",
+      "city": "Jacksonville",
+      "zip": "322xx",
+      "owner_name": "BARTLEY EDGAR",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026/05/04",
+          "confidence": 95,
+          "details": "Foreclosure filed by SUNCRETE OF NORTH FLORIDA LLC - Instrument 2026104462"
+        }
+      ],
+      "deal_path": "wholesale",
+      "deal_path_confidence": 90,
+      "status": "active",
+      "last_updated": "2026-06-08T06:28:11.898768",
+      "assessed_value": 0,
+      "equity_estimate": 0
+    },
+    {
+      "lead_id": "LEAD-027",
+      "parcel_id": "DC-2026104825",
+      "score": 85,
+      "score_reasons": [
+        "LIS PENDENS filed - foreclosure in progress",
+        "Motivated seller likely"
+      ],
+      "address": "",
+      "city": "Jacksonville",
+      "zip": "322xx",
+      "owner_name": "MAHONEY DONNA MICHELLE",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026/05/05",
+          "confidence": 95,
+          "details": "Foreclosure filed by VILLAGES OF BARTRAM SPRINGS OWNERS ASSOCIATION INC - Instrument 2026104825"
+        }
+      ],
+      "deal_path": "wholesale",
+      "deal_path_confidence": 90,
+      "status": "active",
+      "last_updated": "2026-06-08T06:28:11.898771",
+      "assessed_value": 0,
+      "equity_estimate": 0
+    },
+    {
+      "lead_id": "LEAD-028",
+      "parcel_id": "DC-2026104913",
+      "score": 85,
+      "score_reasons": [
+        "LIS PENDENS filed - foreclosure in progress",
+        "Motivated seller likely"
+      ],
+      "address": "L 58 ASHTON HILLS U 2 PLAT BOOK 52 PAGES 3 3A 3B 3C 3D",
+      "city": "Jacksonville",
+      "zip": "322xx",
+      "owner_name": "RAMSAY KENROY",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026/05/05",
+          "confidence": 95,
+          "details": "Foreclosure filed by ASHTON HILLS HOMEOWNERS ASSOCIATION INC - Instrument 2026104913"
+        }
+      ],
+      "deal_path": "wholesale",
+      "deal_path_confidence": 90,
+      "status": "active",
+      "last_updated": "2026-06-08T06:28:11.898774",
+      "assessed_value": 0,
+      "equity_estimate": 0
+    },
+    {
+      "lead_id": "LEAD-029",
+      "parcel_id": "DC-2026105034",
+      "score": 85,
+      "score_reasons": [
+        "LIS PENDENS filed - foreclosure in progress",
+        "Motivated seller likely"
+      ],
+      "address": "",
+      "city": "Jacksonville",
+      "zip": "322xx",
+      "owner_name": "COHEN AENEAS",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026/05/05",
+          "confidence": 95,
+          "details": "Foreclosure filed by FREEDOM MORTGAGE CORPORATION - Instrument 2026105034"
+        }
+      ],
+      "deal_path": "wholesale",
+      "deal_path_confidence": 90,
+      "status": "active",
+      "last_updated": "2026-06-08T06:28:11.898779",
+      "assessed_value": 0,
+      "equity_estimate": 0
+    },
+    {
+      "lead_id": "LEAD-030",
+      "parcel_id": "DC-2026105739",
+      "score": 85,
+      "score_reasons": [
+        "LIS PENDENS filed - foreclosure in progress",
+        "Motivated seller likely"
+      ],
+      "address": "",
+      "city": "Jacksonville",
+      "zip": "322xx",
+      "owner_name": "ALEXANDER MELANIE L",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026/05/06",
+          "confidence": 95,
+          "details": "Foreclosure filed by PNC BANK NATIONAL ASSOCIATION - Instrument 2026105739"
+        }
+      ],
+      "deal_path": "wholesale",
+      "deal_path_confidence": 90,
+      "status": "active",
+      "last_updated": "2026-06-08T06:28:11.898782",
+      "assessed_value": 0,
+      "equity_estimate": 0
+    },
+    {
+      "lead_id": "LEAD-031",
+      "parcel_id": "DC-2026105743",
+      "score": 85,
+      "score_reasons": [
+        "LIS PENDENS filed - foreclosure in progress",
+        "Motivated seller likely"
+      ],
+      "address": "",
+      "city": "Jacksonville",
+      "zip": "322xx",
+      "owner_name": "ELLIS JUAN D",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026/05/06",
+          "confidence": 95,
+          "details": "Foreclosure filed by ONITY MORTGAGE CORPORATION - Instrument 2026105743"
+        }
+      ],
+      "deal_path": "wholesale",
+      "deal_path_confidence": 90,
+      "status": "active",
+      "last_updated": "2026-06-08T06:28:11.898785",
+      "assessed_value": 0,
+      "equity_estimate": 0
+    },
+    {
+      "lead_id": "LEAD-032",
+      "parcel_id": "DC-2026105760",
+      "score": 85,
+      "score_reasons": [
+        "LIS PENDENS filed - foreclosure in progress",
+        "Motivated seller likely"
+      ],
+      "address": "L 3 B 6 LAKE LUCINA U NO 4",
+      "city": "Jacksonville",
+      "zip": "322xx",
+      "owner_name": "MORENO KAREN",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026/05/06",
+          "confidence": 95,
+          "details": "Foreclosure filed by U S BANK NATIONAL ASSOCIATION - Instrument 2026105760"
+        }
+      ],
+      "deal_path": "wholesale",
+      "deal_path_confidence": 90,
+      "status": "active",
+      "last_updated": "2026-06-08T06:28:11.898788",
+      "assessed_value": 0,
+      "equity_estimate": 0
+    },
+    {
+      "lead_id": "LEAD-033",
+      "parcel_id": "DC-2026105850",
+      "score": 85,
+      "score_reasons": [
+        "LIS PENDENS filed - foreclosure in progress",
+        "Motivated seller likely"
+      ],
+      "address": "L 56 CEDAR NORTH PHASE ONE",
+      "city": "Jacksonville",
+      "zip": "322xx",
+      "owner_name": "HOLLOWAY SABRINA D",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026/05/06",
+          "confidence": 95,
+          "details": "Foreclosure filed by U.S. BANK NATIONAL ASSOCIATION - Instrument 2026105850"
+        }
+      ],
+      "deal_path": "wholesale",
+      "deal_path_confidence": 90,
+      "status": "active",
+      "last_updated": "2026-06-08T06:28:11.898791",
+      "assessed_value": 0,
+      "equity_estimate": 0
+    },
+    {
+      "lead_id": "LEAD-034",
+      "parcel_id": "DC-2026105924",
+      "score": 85,
+      "score_reasons": [
+        "LIS PENDENS filed - foreclosure in progress",
+        "Motivated seller likely"
+      ],
+      "address": "",
+      "city": "Jacksonville",
+      "zip": "322xx",
+      "owner_name": "ALEEM ASSETS LLC",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026/05/06",
+          "confidence": 95,
+          "details": "Foreclosure filed by CITY OF JACKSONVILLE - Instrument 2026105924"
+        }
+      ],
+      "deal_path": "wholesale",
+      "deal_path_confidence": 90,
+      "status": "active",
+      "last_updated": "2026-06-08T06:28:11.898794",
+      "assessed_value": 0,
+      "equity_estimate": 0
+    },
+    {
+      "lead_id": "LEAD-035",
+      "parcel_id": "DC-2026105961",
+      "score": 85,
+      "score_reasons": [
+        "LIS PENDENS filed - foreclosure in progress",
+        "Motivated seller likely"
+      ],
+      "address": "",
+      "city": "Jacksonville",
+      "zip": "322xx",
+      "owner_name": "BARTRAM SPRINGS HOMEOWNERS ASSOCIATION INC",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026/05/06",
+          "confidence": 95,
+          "details": "Foreclosure filed by D2 RESIDENTIAL CAPITAL PARTNERS LP - Instrument 2026105961"
+        }
+      ],
+      "deal_path": "wholesale",
+      "deal_path_confidence": 90,
+      "status": "active",
+      "last_updated": "2026-06-08T06:28:11.898797",
+      "assessed_value": 0,
+      "equity_estimate": 0
+    },
+    {
+      "lead_id": "LEAD-036",
+      "parcel_id": "DC-2026106055",
+      "score": 85,
+      "score_reasons": [
+        "LIS PENDENS filed - foreclosure in progress",
+        "Motivated seller likely"
+      ],
+      "address": "L33 ARGYLE FOREST CHIMNEY LAKES U7B",
+      "city": "Jacksonville",
+      "zip": "322xx",
+      "owner_name": "SNODGRASS STEVEN MICHAEL",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026/05/06",
+          "confidence": 95,
+          "details": "Foreclosure filed by ROCKET MORTGAGE LLC - Instrument 2026106055"
+        }
+      ],
+      "deal_path": "wholesale",
+      "deal_path_confidence": 90,
+      "status": "active",
+      "last_updated": "2026-06-08T06:28:11.898799",
+      "assessed_value": 0,
+      "equity_estimate": 0
+    },
+    {
+      "lead_id": "LEAD-037",
+      "parcel_id": "DC-2026106084",
+      "score": 85,
+      "score_reasons": [
+        "LIS PENDENS filed - foreclosure in progress",
+        "Motivated seller likely"
+      ],
+      "address": "L 291 ALDERMAN PARK U 7",
+      "city": "Jacksonville",
+      "zip": "322xx",
+      "owner_name": "KELLY ASHLEY",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026/05/06",
+          "confidence": 95,
+          "details": "Foreclosure filed by NEW DAY FINANCIAL LLC - Instrument 2026106084"
+        }
+      ],
+      "deal_path": "wholesale",
+      "deal_path_confidence": 90,
+      "status": "active",
+      "last_updated": "2026-06-08T06:28:11.898802",
+      "assessed_value": 0,
+      "equity_estimate": 0
+    },
+    {
+      "lead_id": "LEAD-038",
+      "parcel_id": "DC-2026106112",
+      "score": 85,
+      "score_reasons": [
+        "LIS PENDENS filed - foreclosure in progress",
+        "Motivated seller likely"
+      ],
+      "address": "L 84 HANNAH STABLE",
+      "city": "Jacksonville",
+      "zip": "322xx",
+      "owner_name": "VILLA CARLOS R",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026/05/06",
+          "confidence": 95,
+          "details": "Foreclosure filed by HANNAH STABLES OWNERS ASSOCIATION INC - Instrument 2026106112"
+        }
+      ],
+      "deal_path": "wholesale",
+      "deal_path_confidence": 90,
+      "status": "active",
+      "last_updated": "2026-06-08T06:28:11.898805",
+      "assessed_value": 0,
+      "equity_estimate": 0
+    },
+    {
+      "lead_id": "LEAD-039",
+      "parcel_id": "DC-2026106126",
+      "score": 85,
+      "score_reasons": [
+        "LIS PENDENS filed - foreclosure in progress",
+        "Motivated seller likely"
+      ],
+      "address": "L 145 LONGLEAF PHASE 1 AND 2",
+      "city": "Jacksonville",
+      "zip": "322xx",
+      "owner_name": "CUYUGAN REDENTOR",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026/05/06",
+          "confidence": 95,
+          "details": "Foreclosure filed by MORTGAGE RESEARCH CENTER LLC - Instrument 2026106126"
+        }
+      ],
+      "deal_path": "wholesale",
+      "deal_path_confidence": 90,
+      "status": "active",
+      "last_updated": "2026-06-08T06:28:11.898809",
+      "assessed_value": 0,
+      "equity_estimate": 0
+    },
+    {
+      "lead_id": "LEAD-040",
+      "parcel_id": "DC-2026106140",
+      "score": 85,
+      "score_reasons": [
+        "LIS PENDENS filed - foreclosure in progress",
+        "Motivated seller likely"
+      ],
+      "address": "L 152 BAYPOINTE",
+      "city": "Jacksonville",
+      "zip": "322xx",
+      "owner_name": "KARUMURI HARISH HANUMANTHA RAO",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026/05/06",
+          "confidence": 95,
+          "details": "Foreclosure filed by BAYPOINTE TOWNHOMES HOMEOWNERS ASSOCIATION INC - Instrument 2026106140"
+        }
+      ],
+      "deal_path": "wholesale",
+      "deal_path_confidence": 90,
+      "status": "active",
+      "last_updated": "2026-06-08T06:28:11.898812",
+      "assessed_value": 0,
+      "equity_estimate": 0
+    },
+    {
+      "lead_id": "LEAD-041",
+      "parcel_id": "DC-2026106192",
+      "score": 85,
+      "score_reasons": [
+        "LIS PENDENS filed - foreclosure in progress",
+        "Motivated seller likely"
+      ],
+      "address": "PIN 167459-0390 L 120 WOODLAND FOREST U 1",
+      "city": "Jacksonville",
+      "zip": "322xx",
+      "owner_name": "PEREZ ELENA C",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026/05/06",
+          "confidence": 95,
+          "details": "Foreclosure filed by WOODLAND FOREST OWNERS ASSOCIATION INC - Instrument 2026106192"
+        }
+      ],
+      "deal_path": "wholesale",
+      "deal_path_confidence": 90,
+      "status": "active",
+      "last_updated": "2026-06-08T06:28:11.898814",
+      "assessed_value": 0,
+      "equity_estimate": 0
+    },
+    {
+      "lead_id": "LEAD-042",
+      "parcel_id": "DC-2026106216",
+      "score": 85,
+      "score_reasons": [
+        "LIS PENDENS filed - foreclosure in progress",
+        "Motivated seller likely"
+      ],
+      "address": "",
+      "city": "Jacksonville",
+      "zip": "322xx",
+      "owner_name": "BOWDEN ALLYSON",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026/05/06",
+          "confidence": 95,
+          "details": "Foreclosure filed by US BANK NATIONAL ASSOCIATION - Instrument 2026106216"
+        }
+      ],
+      "deal_path": "wholesale",
+      "deal_path_confidence": 90,
+      "status": "active",
+      "last_updated": "2026-06-08T06:28:11.898818",
+      "assessed_value": 0,
+      "equity_estimate": 0
+    },
+    {
+      "lead_id": "LEAD-043",
+      "parcel_id": "DC-2026106804",
+      "score": 85,
+      "score_reasons": [
+        "LIS PENDENS filed - foreclosure in progress",
+        "Motivated seller likely"
+      ],
+      "address": "",
+      "city": "Jacksonville",
+      "zip": "322xx",
+      "owner_name": "HENDRICKS ALFRED",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026/05/07",
+          "confidence": 95,
+          "details": "Foreclosure filed by HENNER GREGORY SEAN - Instrument 2026106804"
+        }
+      ],
+      "deal_path": "wholesale",
+      "deal_path_confidence": 90,
+      "status": "active",
+      "last_updated": "2026-06-08T06:28:11.898821",
+      "assessed_value": 0,
+      "equity_estimate": 0
+    },
+    {
+      "lead_id": "LEAD-044",
+      "parcel_id": "DC-2026106817",
+      "score": 85,
+      "score_reasons": [
+        "LIS PENDENS filed - foreclosure in progress",
+        "Motivated seller likely"
+      ],
+      "address": "PT L 8 L 5 6 7 JACKSONVILLE FARMS SEC 26-2S-24E",
+      "city": "Jacksonville",
+      "zip": "322xx",
+      "owner_name": "BAGOUS SIMON",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026/05/07",
+          "confidence": 95,
+          "details": "Foreclosure filed by BAGOUS KELSEY - Instrument 2026106817"
+        }
+      ],
+      "deal_path": "wholesale",
+      "deal_path_confidence": 90,
+      "status": "active",
+      "last_updated": "2026-06-08T06:28:11.898824",
+      "assessed_value": 0,
+      "equity_estimate": 0
+    },
+    {
+      "lead_id": "LEAD-045",
+      "parcel_id": "DC-2026106818",
+      "score": 85,
+      "score_reasons": [
+        "LIS PENDENS filed - foreclosure in progress",
+        "Motivated seller likely"
+      ],
+      "address": "PT L 1 2 3 4 8 JACKSONVILLE FARMS SEC 26-2S-24E",
+      "city": "Jacksonville",
+      "zip": "322xx",
+      "owner_name": "BRICE PAULA PREZIOSI",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026/05/07",
+          "confidence": 95,
+          "details": "Foreclosure filed by BAGOUS KELSEY - Instrument 2026106818"
+        }
+      ],
+      "deal_path": "wholesale",
+      "deal_path_confidence": 90,
+      "status": "active",
+      "last_updated": "2026-06-08T06:28:11.898827",
+      "assessed_value": 0,
+      "equity_estimate": 0
+    },
+    {
+      "lead_id": "LEAD-046",
+      "parcel_id": "DC-2026106819",
+      "score": 85,
+      "score_reasons": [
+        "LIS PENDENS filed - foreclosure in progress",
+        "Motivated seller likely"
+      ],
+      "address": "PT L 1 BLACK CREEK ESTATES",
+      "city": "Jacksonville",
+      "zip": "322xx",
+      "owner_name": "BRICE PAULA PREZIOSI",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026/05/07",
+          "confidence": 95,
+          "details": "Foreclosure filed by BAGOUS KELSEY - Instrument 2026106819"
+        }
+      ],
+      "deal_path": "wholesale",
+      "deal_path_confidence": 90,
+      "status": "active",
+      "last_updated": "2026-06-08T06:28:11.898829",
+      "assessed_value": 0,
+      "equity_estimate": 0
+    },
+    {
+      "lead_id": "LEAD-047",
+      "parcel_id": "DC-2026107208",
+      "score": 85,
+      "score_reasons": [
+        "LIS PENDENS filed - foreclosure in progress",
+        "Motivated seller likely"
+      ],
+      "address": "L 24 B 10 TURTLE CREEK VILLAGE U 1 PLAT BOOK 35 PAGES 20 20A-20D",
+      "city": "Jacksonville",
+      "zip": "322xx",
+      "owner_name": "JORDAN JENNIFER D",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026/05/07",
+          "confidence": 95,
+          "details": "Foreclosure filed by TRUIST BANK - Instrument 2026107208"
+        }
+      ],
+      "deal_path": "wholesale",
+      "deal_path_confidence": 90,
+      "status": "active",
+      "last_updated": "2026-06-08T06:28:11.898832",
+      "assessed_value": 0,
+      "equity_estimate": 0
+    },
+    {
+      "lead_id": "LEAD-048",
+      "parcel_id": "DC-2026107227",
+      "score": 85,
+      "score_reasons": [
+        "LIS PENDENS filed - foreclosure in progress",
+        "Motivated seller likely"
+      ],
+      "address": "L 3 B B OAKS AT DURKEEVILLE PLAT BOOK 52 PAGES 52 52A 52B 52C",
+      "city": "Jacksonville",
+      "zip": "322xx",
+      "owner_name": "ALLEN FELITA L",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026/05/07",
+          "confidence": 95,
+          "details": "Foreclosure filed by FEDERAL HOME LOAN MORTGAGE CORPORATION TRUSTEE - Instrument 2026107227"
+        }
+      ],
+      "deal_path": "wholesale",
+      "deal_path_confidence": 90,
+      "status": "active",
+      "last_updated": "2026-06-08T06:28:11.898835",
+      "assessed_value": 0,
+      "equity_estimate": 0
+    },
+    {
+      "lead_id": "LEAD-049",
+      "parcel_id": "DC-2026107524",
+      "score": 85,
+      "score_reasons": [
+        "LIS PENDENS filed - foreclosure in progress",
+        "Motivated seller likely"
+      ],
+      "address": "L 4A SUMMERFIELD PLAT BOOK 59 PAGES 144-149",
+      "city": "Jacksonville",
+      "zip": "322xx",
+      "owner_name": "PERRY OMARI KAMERON",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026/05/07",
+          "confidence": 95,
+          "details": "Foreclosure filed by VYSTAR CREDIT UNION - Instrument 2026107524"
+        }
+      ],
+      "deal_path": "wholesale",
+      "deal_path_confidence": 90,
+      "status": "active",
+      "last_updated": "2026-06-08T06:28:11.898839",
+      "assessed_value": 0,
+      "equity_estimate": 0
+    },
+    {
+      "lead_id": "LEAD-050",
+      "parcel_id": "DC-2026107643",
+      "score": 85,
+      "score_reasons": [
+        "LIS PENDENS filed - foreclosure in progress",
+        "Motivated seller likely"
+      ],
+      "address": "",
+      "city": "Jacksonville",
+      "zip": "322xx",
+      "owner_name": "OZUNA MARIZA M",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026/05/07",
+          "confidence": 95,
+          "details": "Foreclosure filed by WILMINGTON SAVINGS FUND SOCIETY FSB TRUSTEE - Instrument 2026107643"
+        }
+      ],
+      "deal_path": "wholesale",
+      "deal_path_confidence": 90,
+      "status": "active",
+      "last_updated": "2026-06-08T06:28:11.898842",
+      "assessed_value": 0,
+      "equity_estimate": 0
+    }
+  ]
+}

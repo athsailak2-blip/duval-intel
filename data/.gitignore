@@ -1,0 +1,13 @@
+# Data files (large, generated)
+data/raw/*.jsonl
+data/raw/*.csv
+data/raw/*.xml
+data/processed/*.jsonl
+data/processed/*.csv
+logs/*.log
+
+# But keep structure and sample files
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+!data/leads.json
+!data/dashboard_status.json
