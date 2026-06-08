@@ -42,7 +42,7 @@ jobs:
 
       - name: Initialize Database
         run: |
-          python -c "from scripts.db_storage import init_db; init_db()"
+          python -c "import sys; sys.path.insert(0, '.'); from scripts.db_storage import init_db; init_db()"
           echo "Database initialized"
 
       - name: Run Official Records Scraper
@@ -94,7 +94,7 @@ jobs:
 
       - name: Export database to JSON
         run: |
-          python -c "from scripts.db_storage import export_leads_to_json; export_leads_to_json()" || echo "DB export not available"
+          python -c "import sys; sys.path.insert(0, '.'); from scripts.db_storage import export_leads_to_json; export_leads_to_json()" || echo "DB export not available"
           echo "Database export complete"
 
       - name: Setup Pages
