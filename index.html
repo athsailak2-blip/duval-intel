@@ -430,21 +430,148 @@
             text-decoration: none;
         }
         
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0,0,0,0.5);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+        }
+        .modal-overlay.active {
+            display: flex;
+        }
+        .modal-content {
+            background: white;
+            border-radius: 16px;
+            width: 90%;
+            max-width: 700px;
+            max-height: 90vh;
+            overflow-y: auto;
+            padding: 32px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 24px;
+        }
+        .modal-header h3 {
+            font-size: 22px;
+            font-weight: 600;
+            color: #2c3e50;
+            margin: 0;
+        }
+        .modal-close {
+            background: none;
+            border: none;
+            font-size: 28px;
+            color: #95a5a6;
+            cursor: pointer;
+            padding: 0;
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: background 0.2s;
+        }
+        .modal-close:hover {
+            background: #f0f0f0;
+            color: #2c3e50;
+        }
+        .modal-section {
+            margin-bottom: 24px;
+        }
+        .modal-section h4 {
+            font-size: 14px;
+            font-weight: 600;
+            color: #7f8c8d;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 12px;
+        }
+        .modal-info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+        .modal-info-item {
+            background: #f8f9fa;
+            padding: 12px 16px;
+            border-radius: 8px;
+        }
+        .modal-info-item .label {
+            font-size: 11px;
+            color: #7f8c8d;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 4px;
+        }
+        .modal-info-item .value {
+            font-size: 14px;
+            font-weight: 500;
+            color: #2c3e50;
+        }
+        .signal-history-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 12px;
+            border-radius: 8px;
+            background: #f8f9fa;
+            margin-bottom: 8px;
+        }
+        .signal-history-item .signal-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            margin-top: 4px;
+            flex-shrink: 0;
+        }
+        .signal-history-item .signal-info {
+            flex: 1;
+        }
+        .signal-history-item .signal-type {
+            font-weight: 600;
+            font-size: 13px;
+            color: #2c3e50;
+        }
+        .signal-history-item .signal-source {
+            font-size: 12px;
+            color: #7f8c8d;
+            margin-top: 2px;
+        }
+        .signal-history-item .signal-date {
+            font-size: 12px;
+            color: #95a5a6;
+            margin-top: 2px;
+        }
+        .signal-history-item .signal-details {
+            font-size: 12px;
+            color: #5d6d7e;
+            margin-top: 4px;
+            font-style: italic;
+        }
+        .modal-score-badge {
+            display: inline-block;
+            padding: 8px 20px;
+            border-radius: 24px;
+            font-weight: 700;
+            font-size: 18px;
+        }
+        .clickable-row {
+            cursor: pointer;
+        }
+        .clickable-row:hover {
+            background: #eef2f7 !important;
+        }
         @media (max-width: 768px) {
-            .container {
-                padding: 20px;
-            }
-            
-            .header {
-                padding: 20px;
-            }
-            
-            .lead-table {
-                font-size: 12px;
-            }
-            
-            .lead-table th, .lead-table td {
-                padding: 8px;
+            .modal-info-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -463,6 +590,15 @@
                 <div class="label">Total Active Leads</div>
                 <div class="value" id="total-leads">--</div>
                 <div class="change positive">+12 from yesterday</div>
+                <div class="filter-group">
+                    <label>Date Range</label>
+                    <div style="display: flex; gap: 8px; align-items: center;">
+                        <input type="date" id="date-from" class="filter-select" style="min-width: 140px; padding: 6px 12px;">
+                        <span style="color: #7f8c8d; font-size: 13px;">to</span>
+                        <input type="date" id="date-to" class="filter-select" style="min-width: 140px; padding: 6px 12px;">
+                        <button class="filter-btn" id="date-clear-btn" style="padding: 6px 12px; font-size: 12px;">Clear</button>
+                    </div>
+                </div>
             </div>
             <div class="kpi-card">
                 <div class="label">High-Stack Leads (3+ Signals)</div>
@@ -563,6 +699,44 @@
         </div>
     </div>
     
+    <!-- Lead Detail Modal -->
+    <div class="modal-overlay" id="lead-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div>
+                    <h3 id="modal-address">Address</h3>
+                    <div style="margin-top: 8px;" id="modal-lead-id"></div>
+                </div>
+                <button class="modal-close" onclick="closeModal()">&times;</button>
+            </div>
+            <div class="modal-section">
+                <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 16px;">
+                    <span class="modal-score-badge" id="modal-score">--</span>
+                    <div>
+                        <div style="font-weight: 600; color: #2c3e50;" id="modal-deal-path">--</div>
+                        <div style="font-size: 12px; color: #7f8c8d;" id="modal-status">--</div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-section">
+                <h4>Property Information</h4>
+                <div class="modal-info-grid" id="modal-property-info"></div>
+            </div>
+            <div class="modal-section">
+                <h4>Owner Information</h4>
+                <div class="modal-info-grid" id="modal-owner-info"></div>
+            </div>
+            <div class="modal-section">
+                <h4>Signal History (<span id="modal-signal-count">0</span> signals)</h4>
+                <div id="modal-signal-history"></div>
+            </div>
+            <div class="modal-section">
+                <h4>Score Reasons</h4>
+                <div id="modal-score-reasons"></div>
+            </div>
+        </div>
+    </div>
+
     <div class="footer">
         <p>Duval County Lead Intelligence System | Framework v5.3.1</p>
         <p>Data sourced from: Duval County Clerk, Property Appraiser, Tax Collector, Court Records, and Municipal Code Compliance</p>
@@ -580,23 +754,46 @@
             const tbody = document.getElementById('lead-table-body');
             tbody.innerHTML = '';
             
+            if (!leads || !leads.length) {
+                tbody.innerHTML = '<tr><td colspan="7" style="text-align: center; padding: 40px; color: #95a5a6;">No leads match current filters</td></tr>';
+                return;
+            }
+            
             leads.forEach(lead => {
-                const scoreClass = lead.score >= 85 ? 'score-high' : lead.score >= 70 ? 'score-medium' : 'score-low';
-                const statusClass = lead.status === 'active' ? 'status-active' : lead.status === 'pending' ? 'status-pending' : 'status-closed';
+                const score = lead.score || lead.Score || 0;
+                const scoreClass = score >= 85 ? 'score-high' : score >= 70 ? 'score-medium' : 'score-low';
+                const status = lead.status || lead.Status || 'active';
+                const statusClass = status === 'active' ? 'status-active' : status === 'pending' ? 'status-pending' : 'status-closed';
                 
-                const signalsHtml = lead.signals.map(s => 
-                    `<span class="signal-tag ${s.type}">${s.label}</span>`
-                ).join('');
+                const signals = lead.signals || lead.Signals || [];
+                const signalsHtml = signals.map(s => {
+                    const type = (s.type || s.Type || 'unknown').toLowerCase();
+                    let cls = '';
+                    if (type.includes('foreclosure') || type.includes('lis')) cls = 'foreclosure';
+                    else if (type.includes('tax')) cls = 'tax';
+                    else if (type.includes('code') || type.includes('violation')) cls = 'code';
+                    else if (type.includes('probate') || type.includes('estate')) cls = 'probate';
+                    else if (type.includes('trust') || type.includes('deed')) cls = 'estate';
+                    const label = (s.type || s.Type || 'Signal').replace(/_/g, ' ');
+                    return `<span class="signal-tag ${cls}">${label}</span>`;
+                }).join('');
+                
+                const address = lead.address || lead.Address || lead.property_address || 'N/A';
+                const owner = lead.owner_name || lead.ownerName || lead.owner || lead.OwnerName || 'Unknown';
+                const dealPath = lead.deal_path || lead.dealPath || lead.dealPath || 'creative_finance';
+                const lastSignal = lead.last_updated || lead.lastUpdated || lead.lastSignal || lead.LastSignal || 'N/A';
                 
                 const row = document.createElement('tr');
+                row.className = 'clickable-row';
+                row.onclick = () => openModal(lead);
                 row.innerHTML = `
-                    <td><span class="score-badge ${scoreClass}">${lead.score}</span></td>
-                    <td class="address-cell">${lead.address}</td>
-                    <td class="owner-cell">${lead.owner}</td>
+                    <td><span class="score-badge ${scoreClass}">${score}</span></td>
+                    <td class="address-cell">${address}</td>
+                    <td class="owner-cell">${owner}</td>
                     <td><div class="signal-stack">${signalsHtml}</div></td>
-                    <td><span class="deal-path">${lead.dealPath}</span></td>
-                    <td class="date-cell">${lead.lastSignal}</td>
-                    <td><span class="status-indicator ${statusClass}"></span>${lead.status}</td>
+                    <td><span class="deal-path">${dealPath.replace(/_/g, ' ')}</span></td>
+                    <td class="date-cell">${lastSignal}</td>
+                    <td><span class="status-indicator ${statusClass}"></span>${status}</td>
                 `;
                 tbody.appendChild(row);
             });
@@ -625,13 +822,41 @@
         }
         
         function updateKPIs() {
-            document.getElementById('total-leads').textContent = sampleLeads.length;
-            document.getElementById('high-stack-leads').textContent = sampleLeads.filter(l => l.signals.length >= 3).length;
-            document.getElementById('foreclosure-count').textContent = sampleLeads.filter(l => l.signals.some(s => s.type === 'foreclosure')).length;
-            document.getElementById('tax-delinquent-count').textContent = sampleLeads.filter(l => l.signals.some(s => s.type === 'tax')).length;
-            document.getElementById('code-violation-count').textContent = sampleLeads.filter(l => l.signals.some(s => s.type === 'code')).length;
-            document.getElementById('avg-score').textContent = Math.round(sampleLeads.reduce((a, b) => a + b.score, 0) / sampleLeads.length);
-            document.getElementById('lead-count-badge').textContent = sampleLeads.length;
+            const totalLeads = sampleLeads ? sampleLeads.length : 0;
+            const highStack = sampleLeads ? sampleLeads.filter(l => {
+                const sigs = l.signals || l.Signals || [];
+                return sigs.length >= 3;
+            }).length : 0;
+            const foreclosureCount = sampleLeads ? sampleLeads.filter(l => {
+                const sigs = l.signals || l.Signals || [];
+                return sigs.some(s => {
+                    const t = (s.type || s.Type || '').toLowerCase();
+                    return t.includes('foreclosure') || t.includes('lis');
+                });
+            }).length : 0;
+            const taxCount = sampleLeads ? sampleLeads.filter(l => {
+                const sigs = l.signals || l.Signals || [];
+                return sigs.some(s => {
+                    const t = (s.type || s.Type || '').toLowerCase();
+                    return t.includes('tax');
+                });
+            }).length : 0;
+            const codeCount = sampleLeads ? sampleLeads.filter(l => {
+                const sigs = l.signals || l.Signals || [];
+                return sigs.some(s => {
+                    const t = (s.type || s.Type || '').toLowerCase();
+                    return t.includes('code') || t.includes('violation');
+                });
+            }).length : 0;
+            const avgScore = totalLeads > 0 ? Math.round(sampleLeads.reduce((a, b) => a + (b.score || b.Score || 0), 0) / totalLeads) : 0;
+            
+            document.getElementById('total-leads').textContent = totalLeads;
+            document.getElementById('high-stack-leads').textContent = highStack;
+            document.getElementById('foreclosure-count').textContent = foreclosureCount;
+            document.getElementById('tax-delinquent-count').textContent = taxCount;
+            document.getElementById('code-violation-count').textContent = codeCount;
+            document.getElementById('avg-score').textContent = avgScore;
+            document.getElementById('lead-count-badge').textContent = totalLeads;
             document.getElementById('last-refresh').textContent = new Date().toLocaleString();
         }
         
@@ -640,7 +865,9 @@
             signal: 'all',
             dealPath: 'all',
             scoreMin: 0,
-            scoreMax: 100
+            scoreMax: 100,
+            dateFrom: null,
+            dateTo: null
         };
         
         function applyFilters() {
@@ -648,27 +875,86 @@
             
             // Signal type filter
             if (currentFilters.signal === 'high') {
-                filtered = filtered.filter(l => l.signals.length >= 3);
+                filtered = filtered.filter(l => {
+                    const sigs = l.signals || l.Signals || [];
+                    return sigs.length >= 3;
+                });
             } else if (currentFilters.signal === 'foreclosure') {
-                filtered = filtered.filter(l => l.signals.some(s => s.type === 'foreclosure'));
+                filtered = filtered.filter(l => {
+                    const sigs = l.signals || l.Signals || [];
+                    return sigs.some(s => {
+                        const t = (s.type || s.Type || '').toLowerCase();
+                        return t.includes('foreclosure') || t.includes('lis');
+                    });
+                });
             } else if (currentFilters.signal === 'tax') {
-                filtered = filtered.filter(l => l.signals.some(s => s.type === 'tax'));
+                filtered = filtered.filter(l => {
+                    const sigs = l.signals || l.Signals || [];
+                    return sigs.some(s => {
+                        const t = (s.type || s.Type || '').toLowerCase();
+                        return t.includes('tax');
+                    });
+                });
             } else if (currentFilters.signal === 'code') {
-                filtered = filtered.filter(l => l.signals.some(s => s.type === 'code'));
+                filtered = filtered.filter(l => {
+                    const sigs = l.signals || l.Signals || [];
+                    return sigs.some(s => {
+                        const t = (s.type || s.Type || '').toLowerCase();
+                        return t.includes('code') || t.includes('violation');
+                    });
+                });
             } else if (currentFilters.signal === 'probate') {
-                filtered = filtered.filter(l => l.signals.some(s => s.type === 'probate' || s.type === 'estate'));
+                filtered = filtered.filter(l => {
+                    const sigs = l.signals || l.Signals || [];
+                    return sigs.some(s => {
+                        const t = (s.type || s.Type || '').toLowerCase();
+                        return t.includes('probate') || t.includes('estate');
+                    });
+                });
             }
             
             // Deal path filter
             if (currentFilters.dealPath !== 'all') {
-                filtered = filtered.filter(l => l.dealPath === currentFilters.dealPath || l.deal_path === currentFilters.dealPath);
+                filtered = filtered.filter(l => {
+                    const dp = l.deal_path || l.dealPath || l.DealPath || '';
+                    return dp === currentFilters.dealPath;
+                });
             }
             
             // Score range filter
             filtered = filtered.filter(l => {
-                const score = l.score || 0;
+                const score = l.score || l.Score || 0;
                 return score >= currentFilters.scoreMin && score <= currentFilters.scoreMax;
             });
+            
+            // Date range filter
+            if (currentFilters.dateFrom || currentFilters.dateTo) {
+                filtered = filtered.filter(l => {
+                    const signals = l.signals || l.Signals || [];
+                    if (!signals.length) return false;
+                    
+                    // Get the most recent signal date
+                    const dates = signals.map(s => {
+                        const d = s.date || s.Date || s.record_date || s.RecordDate;
+                        return d ? new Date(d) : null;
+                    }).filter(d => d && !isNaN(d));
+                    
+                    if (!dates.length) return false;
+                    const latestDate = new Date(Math.max(...dates));
+                    
+                    if (currentFilters.dateFrom) {
+                        const from = new Date(currentFilters.dateFrom);
+                        from.setHours(0,0,0,0);
+                        if (latestDate < from) return false;
+                    }
+                    if (currentFilters.dateTo) {
+                        const to = new Date(currentFilters.dateTo);
+                        to.setHours(23,59,59,999);
+                        if (latestDate > to) return false;
+                    }
+                    return true;
+                });
+            }
             
             renderLeads(filtered);
         }
@@ -735,12 +1021,13 @@
                     
                     sources = Object.entries(data.sources || {}).map(([id, info]) => {
                         const mapped = sourceMap[id] || { name: id, icon: '📋' };
-                        const isPrr = info.status === 'prr_required';
-                        const isHealthy = info.status === 'healthy' || info.status === 'scraped';
+                        const status = info.status || 'offline';
+                        const isPrr = status === 'prr_required';
+                        const isHealthy = status === 'healthy' || status === 'scraped';
                         return {
                             name: mapped.name,
                             status: isPrr ? 'warning' : isHealthy ? 'online' : 'offline',
-                            lastRefresh: info.last_refresh || 'Never',
+                            lastRefresh: info.last_refresh || info.lastRefresh || 'Never',
                             icon: mapped.icon
                         };
                     });
@@ -759,6 +1046,141 @@
                     `;
                 });
         }
+        
+        // Date range filters
+        const dateFromInput = document.getElementById('date-from');
+        const dateToInput = document.getElementById('date-to');
+        const dateClearBtn = document.getElementById('date-clear-btn');
+        
+        function updateDateFilter() {
+            currentFilters.dateFrom = dateFromInput.value || null;
+            currentFilters.dateTo = dateToInput.value || null;
+            applyFilters();
+        }
+        
+        dateFromInput.addEventListener('change', updateDateFilter);
+        dateToInput.addEventListener('change', updateDateFilter);
+        dateClearBtn.addEventListener('click', function() {
+            dateFromInput.value = '';
+            dateToInput.value = '';
+            currentFilters.dateFrom = null;
+            currentFilters.dateTo = null;
+            applyFilters();
+        });
+        
+        // Modal functions
+        function openModal(lead) {
+            const modal = document.getElementById('lead-modal');
+            
+            const address = lead.address || lead.Address || lead.property_address || 'N/A';
+            const leadId = lead.lead_id || lead.leadId || lead.LeadId || '';
+            const score = lead.score || lead.Score || 0;
+            const dealPath = lead.deal_path || lead.dealPath || lead.DealPath || 'creative_finance';
+            const status = lead.status || lead.Status || 'active';
+            
+            document.getElementById('modal-address').textContent = address;
+            document.getElementById('modal-lead-id').textContent = leadId;
+            
+            const scoreEl = document.getElementById('modal-score');
+            scoreEl.textContent = score;
+            scoreEl.className = 'modal-score-badge ' + (score >= 85 ? 'score-high' : score >= 70 ? 'score-medium' : 'score-low');
+            
+            document.getElementById('modal-deal-path').textContent = dealPath.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+            document.getElementById('modal-status').textContent = 'Status: ' + status;
+            
+            // Property info
+            const parcelId = lead.parcel_id || lead.parcelId || lead.ParcelId || 'N/A';
+            const city = lead.city || lead.City || 'Jacksonville';
+            const zip = lead.zip || lead.Zip || lead.zipCode || '322xx';
+            const assessedValue = lead.assessed_value || lead.assessedValue || lead.AssessedValue;
+            const equityEstimate = lead.equity_estimate || lead.equityEstimate || lead.EquityEstimate;
+            
+            const propGrid = document.getElementById('modal-property-info');
+            propGrid.innerHTML = `
+                <div class="modal-info-item">
+                    <div class="label">Parcel ID</div>
+                    <div class="value">${parcelId}</div>
+                </div>
+                <div class="modal-info-item">
+                    <div class="label">City / ZIP</div>
+                    <div class="value">${city}, ${zip}</div>
+                </div>
+                <div class="modal-info-item">
+                    <div class="label">Assessed Value</div>
+                    <div class="value">${assessedValue ? '$' + Number(assessedValue).toLocaleString() : 'N/A'}</div>
+                </div>
+                <div class="modal-info-item">
+                    <div class="label">Equity Estimate</div>
+                    <div class="value">${equityEstimate ? '$' + Number(equityEstimate).toLocaleString() : 'N/A'}</div>
+                </div>
+            `;
+            
+            // Owner info
+            const ownerName = lead.owner_name || lead.ownerName || lead.OwnerName || lead.owner || 'Unknown';
+            const ownerAddress = lead.owner_mailing_address || lead.ownerMailingAddress || lead.OwnerMailingAddress || 'N/A';
+            
+            const ownerGrid = document.getElementById('modal-owner-info');
+            ownerGrid.innerHTML = `
+                <div class="modal-info-item">
+                    <div class="label">Owner Name</div>
+                    <div class="value">${ownerName}</div>
+                </div>
+                <div class="modal-info-item">
+                    <div class="label">Mailing Address</div>
+                    <div class="value">${ownerAddress}</div>
+                </div>
+            `;
+            
+            // Signal history
+            const signals = lead.signals || lead.Signals || [];
+            document.getElementById('modal-signal-count').textContent = signals.length;
+            const signalHistory = document.getElementById('modal-signal-history');
+            signalHistory.innerHTML = signals.map(s => {
+                const type = (s.type || s.Type || 'Unknown').replace(/_/g, ' ');
+                const source = s.source || s.Source || 'Unknown';
+                const date = s.date || s.Date || s.record_date || s.RecordDate || 'N/A';
+                const details = s.details || s.Details || '';
+                let dotColor = '#95a5a6';
+                const t = type.toLowerCase();
+                if (t.includes('foreclosure') || t.includes('lis')) dotColor = '#e74c3c';
+                else if (t.includes('tax')) dotColor = '#f39c12';
+                else if (t.includes('code')) dotColor = '#3498db';
+                else if (t.includes('probate')) dotColor = '#9b59b6';
+                return `
+                    <div class="signal-history-item">
+                        <div class="signal-dot" style="background: ${dotColor};"></div>
+                        <div class="signal-info">
+                            <div class="signal-type">${type}</div>
+                            <div class="signal-source">Source: ${source}</div>
+                            <div class="signal-date">Date: ${date}</div>
+                            ${details ? `<div class="signal-details">${details}</div>` : ''}
+                        </div>
+                    </div>
+                `;
+            }).join('') || '<p style="color: #95a5a6; font-size: 13px;">No signals recorded for this lead.</p>';
+            
+            // Score reasons
+            const reasons = lead.score_reasons || lead.scoreReasons || lead.ScoreReasons || [];
+            document.getElementById('modal-score-reasons').innerHTML = reasons.map(r => 
+                `<div style="padding: 8px 12px; background: #f8f9fa; border-radius: 6px; margin-bottom: 6px; font-size: 13px; color: #5d6d7e;">${r}</div>`
+            ).join('') || '<p style="color: #95a5a6; font-size: 13px;">No score reasons recorded.</p>';
+            
+            modal.classList.add('active');
+        }
+        
+        function closeModal() {
+            document.getElementById('lead-modal').classList.remove('active');
+        }
+        
+        // Close modal on overlay click
+        document.getElementById('lead-modal').addEventListener('click', function(e) {
+            if (e.target === this) closeModal();
+        });
+        
+        // Close modal on Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') closeModal();
+        });
         
         // Initialize
         loadData();
