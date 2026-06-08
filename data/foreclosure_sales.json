@@ -1,13 +1,17 @@
+Warning: SCRAPPEY_API_KEY not set, returning empty results
 {
   "source_id": "duval_foreclosure_sales",
   "records_fetched": 0,
   "new_records": [],
   "updated_cursor": "2026-07-08",
-  "errors": [],
-  "timestamp": "2026-06-08T13:44:36.407979",
+  "errors": [
+    "SCRAPPEY_API_KEY not configured - site blocked by AWS ELB"
+  ],
+  "timestamp": "2026-06-08T14:18:45.776077",
   "date_range": {
     "start": "2026-06-08",
     "end": "2026-07-08"
   },
-  "note": "Using Browserless /content API with HTML parsing and login credentials"
+  "note": "Site blocked by AWS ELB (403 Forbidden). Requires Scrappey API or residential proxy.",
+  "requires_scrappey": true
 }
