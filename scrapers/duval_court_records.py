@@ -19,20 +19,32 @@ class DuvalCourtRecordsScraper:
     
     def refresh(self, cursor: Optional[str] = None, days_back: int = None) -> Dict:
         """Run daily refresh or historical seeding."""
-        if days_back is None:
-            seed_mode = os.environ.get('SEED_MODE', 'false').lower() == 'true'
-            days_back = 30 if seed_mode else 1
-        """Court records require login - cannot scrape without credentials."""
-        return {
-            'source_id': self.SOURCE_ID,
-            'records_fetched': 0,
-            'new_records': [],
-            'updated_cursor': datetime.now().strftime('%Y-%m-%d'),
-            'errors': ["Login required - CORE portal requires authentication"],
-            'timestamp': datetime.now().isoformat(),
-            'status': 'login_required',
-            'note': 'Court records require registered account at core.duvalclerk.com'
-        }
+        try:
+            if days_back is None:
+                seed_mode = os.environ.get('SEED_MODE', 'false').lower() == 'true'
+                days_back = 30 if seed_mode else 1
+            """Court records require login - cannot scrape without credentials."""
+            return {
+                'source_id': self.SOURCE_ID,
+                'records_fetched': 0,
+                'new_records': [],
+                'updated_cursor': datetime.now().strftime('%Y-%m-%d'),
+                'errors': ["Login required - CORE portal requires authentication"],
+                'timestamp': datetime.now().isoformat(),
+                'status': 'login_required',
+                'note': 'Court records require registered account at core.duvalclerk.com'
+            }
+        except Exception as e:
+            return {
+                'source_id': self.SOURCE_ID,
+                'records_fetched': 0,
+                'new_records': [],
+                'updated_cursor': datetime.now().strftime('%Y-%m-%d'),
+                'errors': [f"Unexpected error: {str(e)}"],
+                'timestamp': datetime.now().isoformat(),
+                'status': 'error',
+                'note': 'Court records require registered account at core.duvalclerk.com'
+            }
 
 if __name__ == '__main__':
     config = {'source_url': 'https://core.duvalclerk.com/'}

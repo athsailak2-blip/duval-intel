@@ -19,21 +19,33 @@ class DuvalForeclosureSalesScraper:
     
     def refresh(self, cursor: Optional[str] = None, days_ahead: int = None) -> Dict:
         """Foreclosure sales require login - cannot scrape without bidder account."""
-        # Check for seed mode from environment
-        if days_ahead is None:
-            seed_mode = os.environ.get('SEED_MODE', 'false').lower() == 'true'
-            days_ahead = 90 if seed_mode else 30
-        
-        return {
-            'source_id': self.SOURCE_ID,
-            'records_fetched': 0,
-            'new_records': [],
-            'updated_cursor': datetime.now().strftime('%Y-%m-%d'),
-            'errors': ["Login required - RealForeclose requires bidder registration"],
-            'timestamp': datetime.now().isoformat(),
-            'status': 'login_required',
-            'note': 'Foreclosure sales require registered bidder account at duval.realforeclose.com'
-        }
+        try:
+            # Check for seed mode from environment
+            if days_ahead is None:
+                seed_mode = os.environ.get('SEED_MODE', 'false').lower() == 'true'
+                days_ahead = 90 if seed_mode else 30
+            
+            return {
+                'source_id': self.SOURCE_ID,
+                'records_fetched': 0,
+                'new_records': [],
+                'updated_cursor': datetime.now().strftime('%Y-%m-%d'),
+                'errors': ["Login required - RealForeclose requires bidder registration"],
+                'timestamp': datetime.now().isoformat(),
+                'status': 'login_required',
+                'note': 'Foreclosure sales require registered bidder account at duval.realforeclose.com'
+            }
+        except Exception as e:
+            return {
+                'source_id': self.SOURCE_ID,
+                'records_fetched': 0,
+                'new_records': [],
+                'updated_cursor': datetime.now().strftime('%Y-%m-%d'),
+                'errors': [f"Unexpected error: {str(e)}"],
+                'timestamp': datetime.now().isoformat(),
+                'status': 'error',
+                'note': 'Foreclosure sales require registered bidder account at duval.realforeclose.com'
+            }
 
 if __name__ == '__main__':
     config = {'source_url': 'https://www.duval.realforeclose.com/'}
