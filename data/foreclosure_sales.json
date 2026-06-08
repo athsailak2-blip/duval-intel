@@ -1,17 +1,14 @@
-Warning: SCRAPPEY_API_KEY not set, returning empty results
+Scrappey request failed: HTTPSConnectionPool(host='api.scrappey.com', port=443): Max retries exceeded with url: /v1/scrape (Caused by NameResolutionError("HTTPSConnection(host='api.scrappey.com', port=443): Failed to resolve 'api.scrappey.com' ([Errno -2] Name or service not known)"))
 {
   "source_id": "duval_foreclosure_sales",
   "records_fetched": 0,
   "new_records": [],
   "updated_cursor": "2026-07-08",
-  "errors": [
-    "SCRAPPEY_API_KEY not configured - site blocked by AWS ELB"
-  ],
-  "timestamp": "2026-06-08T16:54:32.074744",
+  "errors": [],
+  "timestamp": "2026-06-08T19:47:25.466114",
   "date_range": {
     "start": "2026-06-08",
     "end": "2026-07-08"
   },
-  "note": "Site blocked by AWS ELB (403 Forbidden). Requires Scrappey API or residential proxy.",
-  "requires_scrappey": true
+  "note": "Using Scrappey API with residential proxy"
 }
