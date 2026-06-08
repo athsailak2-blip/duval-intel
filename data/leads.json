@@ -1,171 +1,55 @@
 {
   "county": "Duval",
   "state": "FL",
-  "last_refresh": "2026-06-08T06:28:11.898852",
+  "last_refresh": "2026-06-08T06:50:17.980998",
   "framework_version": "v5.3.1",
   "total_leads": 50,
   "high_stack_leads": 0,
   "sources": {
-    "duval_official_records": {
-      "status": "healthy",
-      "last_refresh": "2026-06-08T06:28:11.898844",
-      "records_count": 289
-    },
-    "duval_court_records": {
-      "status": "login_required",
-      "last_refresh": "2026-06-08T06:28:11.898845",
+    "official_records": {
+      "status": "offline",
+      "last_refresh": null,
       "records_count": 0
     },
-    "duval_foreclosure_sales": {
-      "status": "login_required",
-      "last_refresh": "2026-06-08T06:28:11.898846",
+    "court_records": {
+      "status": "healthy",
+      "last_refresh": "2026-06-08T06:49:44.131290",
       "records_count": 0
     },
-    "duval_tax_deed_sales": {
-      "status": "login_required",
-      "last_refresh": "2026-06-08T06:28:11.898847",
+    "foreclosure_sales": {
+      "status": "healthy",
+      "last_refresh": "2026-06-08T06:49:44.181385",
       "records_count": 0
     },
-    "duval_parcel_master": {
+    "tax_deed_sales": {
       "status": "healthy",
-      "last_refresh": "2026-06-08T06:28:11.898848",
-      "records_count": 312456
+      "last_refresh": "2026-06-08T06:49:44.224382",
+      "records_count": 0
     },
-    "duval_tax_collector": {
+    "parcel_master": {
+      "status": "offline",
+      "last_refresh": null,
+      "records_count": 0
+    },
+    "tax_collector": {
+      "status": "offline",
+      "last_refresh": null,
+      "records_count": 0
+    },
+    "gis_mapping": {
       "status": "healthy",
-      "last_refresh": "2026-06-08T06:28:11.898849",
-      "records_count": 2847
+      "last_refresh": "2026-06-08T06:49:47.463251",
+      "records_count": 0
     },
-    "duval_gis_mapping": {
-      "status": "healthy",
-      "last_refresh": "2026-06-08T06:28:11.898850",
-      "records_count": 312456
-    },
-    "duval_code_enforcement": {
-      "status": "prr_required",
-      "last_refresh": "2026-06-08T06:28:11.898851",
+    "code_enforcement": {
+      "status": "offline",
+      "last_refresh": null,
       "records_count": 0
     }
   },
   "leads": [
     {
       "lead_id": "LEAD-001",
-      "parcel_id": "DC-2026101584",
-      "score": 85,
-      "score_reasons": [
-        "LIS PENDENS filed - foreclosure in progress",
-        "Motivated seller likely"
-      ],
-      "address": "",
-      "city": "Jacksonville",
-      "zip": "322xx",
-      "owner_name": "COPELAND MICHAEL J",
-      "owner_mailing_address": "Unknown",
-      "signals": [
-        {
-          "type": "LIS_PENDENS",
-          "source": "duval_official_records",
-          "date": "2026/05/01",
-          "confidence": 95,
-          "details": "Foreclosure filed by FREEDOM MORTGAGE CORPORATION - Instrument 2026101584"
-        }
-      ],
-      "deal_path": "wholesale",
-      "deal_path_confidence": 90,
-      "status": "active",
-      "last_updated": "2026-06-08T06:28:11.898662",
-      "assessed_value": 0,
-      "equity_estimate": 0
-    },
-    {
-      "lead_id": "LEAD-002",
-      "parcel_id": "DC-2026101727",
-      "score": 85,
-      "score_reasons": [
-        "LIS PENDENS filed - foreclosure in progress",
-        "Motivated seller likely"
-      ],
-      "address": "PT L 2 MURRAY HILL GARDENS",
-      "city": "Jacksonville",
-      "zip": "322xx",
-      "owner_name": "PARK LILIA",
-      "owner_mailing_address": "Unknown",
-      "signals": [
-        {
-          "type": "LIS_PENDENS",
-          "source": "duval_official_records",
-          "date": "2026/05/01",
-          "confidence": 95,
-          "details": "Foreclosure filed by LAKEVIEW LOAN SERVICING LLC - Instrument 2026101727"
-        }
-      ],
-      "deal_path": "wholesale",
-      "deal_path_confidence": 90,
-      "status": "active",
-      "last_updated": "2026-06-08T06:28:11.898682",
-      "assessed_value": 0,
-      "equity_estimate": 0
-    },
-    {
-      "lead_id": "LEAD-003",
-      "parcel_id": "DC-2026101738",
-      "score": 85,
-      "score_reasons": [
-        "LIS PENDENS filed - foreclosure in progress",
-        "Motivated seller likely"
-      ],
-      "address": "L 5 B 14 WASHINGTON HEIGHTS ESTATES PLAT BOOK 31 PAGES 93 93A 93B 93C",
-      "city": "Jacksonville",
-      "zip": "322xx",
-      "owner_name": "ALTENBACH BRYON KEITH SR",
-      "owner_mailing_address": "Unknown",
-      "signals": [
-        {
-          "type": "LIS_PENDENS",
-          "source": "duval_official_records",
-          "date": "2026/05/01",
-          "confidence": 95,
-          "details": "Foreclosure filed by ALKAN MORTGAGE CORPORATION - Instrument 2026101738"
-        }
-      ],
-      "deal_path": "wholesale",
-      "deal_path_confidence": 90,
-      "status": "active",
-      "last_updated": "2026-06-08T06:28:11.898686",
-      "assessed_value": 0,
-      "equity_estimate": 0
-    },
-    {
-      "lead_id": "LEAD-004",
-      "parcel_id": "DC-2026101797",
-      "score": 85,
-      "score_reasons": [
-        "LIS PENDENS filed - foreclosure in progress",
-        "Motivated seller likely"
-      ],
-      "address": "",
-      "city": "Jacksonville",
-      "zip": "322xx",
-      "owner_name": "ARGO STEVEN C",
-      "owner_mailing_address": "Unknown",
-      "signals": [
-        {
-          "type": "LIS_PENDENS",
-          "source": "duval_official_records",
-          "date": "2026/05/01",
-          "confidence": 95,
-          "details": "Foreclosure filed by COMPUTERSHARE DELAWARE TRUST COMPANY TRUSTEE - Instrument 2026101797"
-        }
-      ],
-      "deal_path": "wholesale",
-      "deal_path_confidence": 90,
-      "status": "active",
-      "last_updated": "2026-06-08T06:28:11.898689",
-      "assessed_value": 0,
-      "equity_estimate": 0
-    },
-    {
-      "lead_id": "LEAD-005",
       "parcel_id": "DC-2026101954",
       "score": 95,
       "score_reasons": [
@@ -194,7 +78,152 @@
       "equity_estimate": 0
     },
     {
+      "lead_id": "LEAD-002",
+      "parcel_id": "DC-2026103297",
+      "score": 95,
+      "score_reasons": [
+        "LIS PENDENS filed - foreclosure in progress",
+        "Motivated seller likely"
+      ],
+      "address": "L 35 B 3 OAK HILL U 12C",
+      "city": "Jacksonville",
+      "zip": "322xx",
+      "owner_name": "LEWIS MARY A DECEASED ESTATE",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026/05/04",
+          "confidence": 95,
+          "details": "Foreclosure filed by U.S. BANK TRUST NATIONAL ASSOCIATION TRUSTEE - Instrument 2026103297"
+        }
+      ],
+      "deal_path": "wholesale",
+      "deal_path_confidence": 90,
+      "status": "active",
+      "last_updated": "2026-06-08T06:28:11.898737",
+      "assessed_value": 0,
+      "equity_estimate": 0
+    },
+    {
+      "lead_id": "LEAD-003",
+      "parcel_id": "DC-2026101584",
+      "score": 85,
+      "score_reasons": [
+        "LIS PENDENS filed - foreclosure in progress",
+        "Motivated seller likely"
+      ],
+      "address": "",
+      "city": "Jacksonville",
+      "zip": "322xx",
+      "owner_name": "COPELAND MICHAEL J",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026/05/01",
+          "confidence": 95,
+          "details": "Foreclosure filed by FREEDOM MORTGAGE CORPORATION - Instrument 2026101584"
+        }
+      ],
+      "deal_path": "wholesale",
+      "deal_path_confidence": 90,
+      "status": "active",
+      "last_updated": "2026-06-08T06:28:11.898662",
+      "assessed_value": 0,
+      "equity_estimate": 0
+    },
+    {
+      "lead_id": "LEAD-004",
+      "parcel_id": "DC-2026101727",
+      "score": 85,
+      "score_reasons": [
+        "LIS PENDENS filed - foreclosure in progress",
+        "Motivated seller likely"
+      ],
+      "address": "PT L 2 MURRAY HILL GARDENS",
+      "city": "Jacksonville",
+      "zip": "322xx",
+      "owner_name": "PARK LILIA",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026/05/01",
+          "confidence": 95,
+          "details": "Foreclosure filed by LAKEVIEW LOAN SERVICING LLC - Instrument 2026101727"
+        }
+      ],
+      "deal_path": "wholesale",
+      "deal_path_confidence": 90,
+      "status": "active",
+      "last_updated": "2026-06-08T06:28:11.898682",
+      "assessed_value": 0,
+      "equity_estimate": 0
+    },
+    {
+      "lead_id": "LEAD-005",
+      "parcel_id": "DC-2026101738",
+      "score": 85,
+      "score_reasons": [
+        "LIS PENDENS filed - foreclosure in progress",
+        "Motivated seller likely"
+      ],
+      "address": "L 5 B 14 WASHINGTON HEIGHTS ESTATES PLAT BOOK 31 PAGES 93 93A 93B 93C",
+      "city": "Jacksonville",
+      "zip": "322xx",
+      "owner_name": "ALTENBACH BRYON KEITH SR",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026/05/01",
+          "confidence": 95,
+          "details": "Foreclosure filed by ALKAN MORTGAGE CORPORATION - Instrument 2026101738"
+        }
+      ],
+      "deal_path": "wholesale",
+      "deal_path_confidence": 90,
+      "status": "active",
+      "last_updated": "2026-06-08T06:28:11.898686",
+      "assessed_value": 0,
+      "equity_estimate": 0
+    },
+    {
       "lead_id": "LEAD-006",
+      "parcel_id": "DC-2026101797",
+      "score": 85,
+      "score_reasons": [
+        "LIS PENDENS filed - foreclosure in progress",
+        "Motivated seller likely"
+      ],
+      "address": "",
+      "city": "Jacksonville",
+      "zip": "322xx",
+      "owner_name": "ARGO STEVEN C",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026/05/01",
+          "confidence": 95,
+          "details": "Foreclosure filed by COMPUTERSHARE DELAWARE TRUST COMPANY TRUSTEE - Instrument 2026101797"
+        }
+      ],
+      "deal_path": "wholesale",
+      "deal_path_confidence": 90,
+      "status": "active",
+      "last_updated": "2026-06-08T06:28:11.898689",
+      "assessed_value": 0,
+      "equity_estimate": 0
+    },
+    {
+      "lead_id": "LEAD-007",
       "parcel_id": "DC-2026102009",
       "score": 85,
       "score_reasons": [
@@ -223,7 +252,7 @@
       "equity_estimate": 0
     },
     {
-      "lead_id": "LEAD-007",
+      "lead_id": "LEAD-008",
       "parcel_id": "DC-2026102195",
       "score": 85,
       "score_reasons": [
@@ -252,7 +281,7 @@
       "equity_estimate": 0
     },
     {
-      "lead_id": "LEAD-008",
+      "lead_id": "LEAD-009",
       "parcel_id": "DC-2026102259",
       "score": 85,
       "score_reasons": [
@@ -281,7 +310,7 @@
       "equity_estimate": 0
     },
     {
-      "lead_id": "LEAD-009",
+      "lead_id": "LEAD-010",
       "parcel_id": "DC-2026102701",
       "score": 85,
       "score_reasons": [
@@ -310,7 +339,7 @@
       "equity_estimate": 0
     },
     {
-      "lead_id": "LEAD-010",
+      "lead_id": "LEAD-011",
       "parcel_id": "DC-2026102824",
       "score": 85,
       "score_reasons": [
@@ -339,7 +368,7 @@
       "equity_estimate": 0
     },
     {
-      "lead_id": "LEAD-011",
+      "lead_id": "LEAD-012",
       "parcel_id": "DC-2026102826",
       "score": 85,
       "score_reasons": [
@@ -368,7 +397,7 @@
       "equity_estimate": 0
     },
     {
-      "lead_id": "LEAD-012",
+      "lead_id": "LEAD-013",
       "parcel_id": "DC-2026102893",
       "score": 85,
       "score_reasons": [
@@ -397,7 +426,7 @@
       "equity_estimate": 0
     },
     {
-      "lead_id": "LEAD-013",
+      "lead_id": "LEAD-014",
       "parcel_id": "DC-2026102956",
       "score": 85,
       "score_reasons": [
@@ -426,7 +455,7 @@
       "equity_estimate": 0
     },
     {
-      "lead_id": "LEAD-014",
+      "lead_id": "LEAD-015",
       "parcel_id": "DC-2026103152",
       "score": 85,
       "score_reasons": [
@@ -455,7 +484,7 @@
       "equity_estimate": 0
     },
     {
-      "lead_id": "LEAD-015",
+      "lead_id": "LEAD-016",
       "parcel_id": "DC-2026103182",
       "score": 85,
       "score_reasons": [
@@ -480,35 +509,6 @@
       "deal_path_confidence": 90,
       "status": "active",
       "last_updated": "2026-06-08T06:28:11.898734",
-      "assessed_value": 0,
-      "equity_estimate": 0
-    },
-    {
-      "lead_id": "LEAD-016",
-      "parcel_id": "DC-2026103297",
-      "score": 95,
-      "score_reasons": [
-        "LIS PENDENS filed - foreclosure in progress",
-        "Motivated seller likely"
-      ],
-      "address": "L 35 B 3 OAK HILL U 12C",
-      "city": "Jacksonville",
-      "zip": "322xx",
-      "owner_name": "LEWIS MARY A DECEASED ESTATE",
-      "owner_mailing_address": "Unknown",
-      "signals": [
-        {
-          "type": "LIS_PENDENS",
-          "source": "duval_official_records",
-          "date": "2026/05/04",
-          "confidence": 95,
-          "details": "Foreclosure filed by U.S. BANK TRUST NATIONAL ASSOCIATION TRUSTEE - Instrument 2026103297"
-        }
-      ],
-      "deal_path": "wholesale",
-      "deal_path_confidence": 90,
-      "status": "active",
-      "last_updated": "2026-06-08T06:28:11.898737",
       "assessed_value": 0,
       "equity_estimate": 0
     },
