@@ -754,9 +754,16 @@
             const tbody = document.getElementById('lead-table-body');
             tbody.innerHTML = '';
             
+            if (!leads || !leads.length) {
+                tbody.innerHTML = '<tr><td colspan="7" style="text-align: center; padding: 40px; color: #95a5a6;">No leads match current filters</td></tr>';
+                return;
+            }
+            
             leads.forEach(lead => {
-                const scoreClass = lead.score >= 85 ? 'score-high' : lead.score >= 70 ? 'score-medium' : 'score-low';
-                const statusClass = lead.status === 'active' ? 'status-active' : lead.status === 'pending' ? 'status-pending' : 'status-closed';
+                const score = lead.score || lead.Score || 0;
+                const scoreClass = score >= 85 ? 'score-high' : score >= 70 ? 'score-medium' : 'score-low';
+                const status = lead.status || lead.Status || 'active';
+                const statusClass = status === 'active' ? 'status-active' : status === 'pending' ? 'status-pending' : 'status-closed';
                 
                 const signals = lead.signals || lead.Signals || [];
                 const signalsHtml = signals.map(s => {
@@ -771,17 +778,22 @@
                     return `<span class="signal-tag ${cls}">${label}</span>`;
                 }).join('');
                 
+                const address = lead.address || lead.Address || lead.property_address || 'N/A';
+                const owner = lead.owner_name || lead.ownerName || lead.owner || lead.OwnerName || 'Unknown';
+                const dealPath = lead.deal_path || lead.dealPath || lead.dealPath || 'creative_finance';
+                const lastSignal = lead.last_updated || lead.lastUpdated || lead.lastSignal || lead.LastSignal || 'N/A';
+                
                 const row = document.createElement('tr');
                 row.className = 'clickable-row';
                 row.onclick = () => openModal(lead);
                 row.innerHTML = `
-                    <td><span class="score-badge ${scoreClass}">${lead.score || 0}</span></td>
-                    <td class="address-cell">${lead.address || lead.Address || 'N/A'}</td>
-                    <td class="owner-cell">${lead.owner_name || lead.ownerName || lead.owner || 'Unknown'}</td>
+                    <td><span class="score-badge ${scoreClass}">${score}</span></td>
+                    <td class="address-cell">${address}</td>
+                    <td class="owner-cell">${owner}</td>
                     <td><div class="signal-stack">${signalsHtml}</div></td>
-                    <td><span class="deal-path">${(lead.deal_path || lead.dealPath || 'creative_finance').replace(/_/g, ' ')}</span></td>
-                    <td class="date-cell">${lead.last_updated || lead.lastUpdated || lead.lastSignal || 'N/A'}</td>
-                    <td><span class="status-indicator ${statusClass}"></span>${lead.status || 'active'}</td>
+                    <td><span class="deal-path">${dealPath.replace(/_/g, ' ')}</span></td>
+                    <td class="date-cell">${lastSignal}</td>
+                    <td><span class="status-indicator ${statusClass}"></span>${status}</td>
                 `;
                 tbody.appendChild(row);
             });
@@ -810,13 +822,41 @@
         }
         
         function updateKPIs() {
-            document.getElementById('total-leads').textContent = sampleLeads.length;
-            document.getElementById('high-stack-leads').textContent = sampleLeads.filter(l => l.signals.length >= 3).length;
-            document.getElementById('foreclosure-count').textContent = sampleLeads.filter(l => l.signals.some(s => s.type === 'foreclosure')).length;
-            document.getElementById('tax-delinquent-count').textContent = sampleLeads.filter(l => l.signals.some(s => s.type === 'tax')).length;
-            document.getElementById('code-violation-count').textContent = sampleLeads.filter(l => l.signals.some(s => s.type === 'code')).length;
-            document.getElementById('avg-score').textContent = Math.round(sampleLeads.reduce((a, b) => a + b.score, 0) / sampleLeads.length);
-            document.getElementById('lead-count-badge').textContent = sampleLeads.length;
+            const totalLeads = sampleLeads ? sampleLeads.length : 0;
+            const highStack = sampleLeads ? sampleLeads.filter(l => {
+                const sigs = l.signals || l.Signals || [];
+                return sigs.length >= 3;
+            }).length : 0;
+            const foreclosureCount = sampleLeads ? sampleLeads.filter(l => {
+                const sigs = l.signals || l.Signals || [];
+                return sigs.some(s => {
+                    const t = (s.type || s.Type || '').toLowerCase();
+                    return t.includes('foreclosure') || t.includes('lis');
+                });
+            }).length : 0;
+            const taxCount = sampleLeads ? sampleLeads.filter(l => {
+                const sigs = l.signals || l.Signals || [];
+                return sigs.some(s => {
+                    const t = (s.type || s.Type || '').toLowerCase();
+                    return t.includes('tax');
+                });
+            }).length : 0;
+            const codeCount = sampleLeads ? sampleLeads.filter(l => {
+                const sigs = l.signals || l.Signals || [];
+                return sigs.some(s => {
+                    const t = (s.type || s.Type || '').toLowerCase();
+                    return t.includes('code') || t.includes('violation');
+                });
+            }).length : 0;
+            const avgScore = totalLeads > 0 ? Math.round(sampleLeads.reduce((a, b) => a + (b.score || b.Score || 0), 0) / totalLeads) : 0;
+            
+            document.getElementById('total-leads').textContent = totalLeads;
+            document.getElementById('high-stack-leads').textContent = highStack;
+            document.getElementById('foreclosure-count').textContent = foreclosureCount;
+            document.getElementById('tax-delinquent-count').textContent = taxCount;
+            document.getElementById('code-violation-count').textContent = codeCount;
+            document.getElementById('avg-score').textContent = avgScore;
+            document.getElementById('lead-count-badge').textContent = totalLeads;
             document.getElementById('last-refresh').textContent = new Date().toLocaleString();
         }
         
@@ -835,25 +875,55 @@
             
             // Signal type filter
             if (currentFilters.signal === 'high') {
-                filtered = filtered.filter(l => l.signals.length >= 3);
+                filtered = filtered.filter(l => {
+                    const sigs = l.signals || l.Signals || [];
+                    return sigs.length >= 3;
+                });
             } else if (currentFilters.signal === 'foreclosure') {
-                filtered = filtered.filter(l => l.signals.some(s => s.type === 'foreclosure'));
+                filtered = filtered.filter(l => {
+                    const sigs = l.signals || l.Signals || [];
+                    return sigs.some(s => {
+                        const t = (s.type || s.Type || '').toLowerCase();
+                        return t.includes('foreclosure') || t.includes('lis');
+                    });
+                });
             } else if (currentFilters.signal === 'tax') {
-                filtered = filtered.filter(l => l.signals.some(s => s.type === 'tax'));
+                filtered = filtered.filter(l => {
+                    const sigs = l.signals || l.Signals || [];
+                    return sigs.some(s => {
+                        const t = (s.type || s.Type || '').toLowerCase();
+                        return t.includes('tax');
+                    });
+                });
             } else if (currentFilters.signal === 'code') {
-                filtered = filtered.filter(l => l.signals.some(s => s.type === 'code'));
+                filtered = filtered.filter(l => {
+                    const sigs = l.signals || l.Signals || [];
+                    return sigs.some(s => {
+                        const t = (s.type || s.Type || '').toLowerCase();
+                        return t.includes('code') || t.includes('violation');
+                    });
+                });
             } else if (currentFilters.signal === 'probate') {
-                filtered = filtered.filter(l => l.signals.some(s => s.type === 'probate' || s.type === 'estate'));
+                filtered = filtered.filter(l => {
+                    const sigs = l.signals || l.Signals || [];
+                    return sigs.some(s => {
+                        const t = (s.type || s.Type || '').toLowerCase();
+                        return t.includes('probate') || t.includes('estate');
+                    });
+                });
             }
             
             // Deal path filter
             if (currentFilters.dealPath !== 'all') {
-                filtered = filtered.filter(l => l.dealPath === currentFilters.dealPath || l.deal_path === currentFilters.dealPath);
+                filtered = filtered.filter(l => {
+                    const dp = l.deal_path || l.dealPath || l.DealPath || '';
+                    return dp === currentFilters.dealPath;
+                });
             }
             
             // Score range filter
             filtered = filtered.filter(l => {
-                const score = l.score || 0;
+                const score = l.score || l.Score || 0;
                 return score >= currentFilters.scoreMin && score <= currentFilters.scoreMax;
             });
             
@@ -951,12 +1021,13 @@
                     
                     sources = Object.entries(data.sources || {}).map(([id, info]) => {
                         const mapped = sourceMap[id] || { name: id, icon: '📋' };
-                        const isPrr = info.status === 'prr_required';
-                        const isHealthy = info.status === 'healthy' || info.status === 'scraped';
+                        const status = info.status || 'offline';
+                        const isPrr = status === 'prr_required';
+                        const isHealthy = status === 'healthy' || status === 'scraped';
                         return {
                             name: mapped.name,
                             status: isPrr ? 'warning' : isHealthy ? 'online' : 'offline',
-                            lastRefresh: info.last_refresh || 'Never',
+                            lastRefresh: info.last_refresh || info.lastRefresh || 'Never',
                             icon: mapped.icon
                         };
                     });
@@ -1001,48 +1072,62 @@
         function openModal(lead) {
             const modal = document.getElementById('lead-modal');
             
-            document.getElementById('modal-address').textContent = lead.address || lead.Address || 'N/A';
-            document.getElementById('modal-lead-id').textContent = lead.lead_id || lead.leadId || '';
+            const address = lead.address || lead.Address || lead.property_address || 'N/A';
+            const leadId = lead.lead_id || lead.leadId || lead.LeadId || '';
+            const score = lead.score || lead.Score || 0;
+            const dealPath = lead.deal_path || lead.dealPath || lead.DealPath || 'creative_finance';
+            const status = lead.status || lead.Status || 'active';
             
-            const score = lead.score || 0;
+            document.getElementById('modal-address').textContent = address;
+            document.getElementById('modal-lead-id').textContent = leadId;
+            
             const scoreEl = document.getElementById('modal-score');
             scoreEl.textContent = score;
             scoreEl.className = 'modal-score-badge ' + (score >= 85 ? 'score-high' : score >= 70 ? 'score-medium' : 'score-low');
             
-            document.getElementById('modal-deal-path').textContent = (lead.deal_path || lead.dealPath || 'Creative Finance').replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
-            document.getElementById('modal-status').textContent = 'Status: ' + (lead.status || 'active');
+            document.getElementById('modal-deal-path').textContent = dealPath.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+            document.getElementById('modal-status').textContent = 'Status: ' + status;
             
             // Property info
+            const parcelId = lead.parcel_id || lead.parcelId || lead.ParcelId || 'N/A';
+            const city = lead.city || lead.City || 'Jacksonville';
+            const zip = lead.zip || lead.Zip || lead.zipCode || '322xx';
+            const assessedValue = lead.assessed_value || lead.assessedValue || lead.AssessedValue;
+            const equityEstimate = lead.equity_estimate || lead.equityEstimate || lead.EquityEstimate;
+            
             const propGrid = document.getElementById('modal-property-info');
             propGrid.innerHTML = `
                 <div class="modal-info-item">
                     <div class="label">Parcel ID</div>
-                    <div class="value">${lead.parcel_id || lead.parcelId || 'N/A'}</div>
+                    <div class="value">${parcelId}</div>
                 </div>
                 <div class="modal-info-item">
                     <div class="label">City / ZIP</div>
-                    <div class="value">${lead.city || 'Jacksonville'}, ${lead.zip || '322xx'}</div>
+                    <div class="value">${city}, ${zip}</div>
                 </div>
                 <div class="modal-info-item">
                     <div class="label">Assessed Value</div>
-                    <div class="value">${lead.assessed_value ? '$' + lead.assessed_value.toLocaleString() : 'N/A'}</div>
+                    <div class="value">${assessedValue ? '$' + Number(assessedValue).toLocaleString() : 'N/A'}</div>
                 </div>
                 <div class="modal-info-item">
                     <div class="label">Equity Estimate</div>
-                    <div class="value">${lead.equity_estimate ? '$' + lead.equity_estimate.toLocaleString() : 'N/A'}</div>
+                    <div class="value">${equityEstimate ? '$' + Number(equityEstimate).toLocaleString() : 'N/A'}</div>
                 </div>
             `;
             
             // Owner info
+            const ownerName = lead.owner_name || lead.ownerName || lead.OwnerName || lead.owner || 'Unknown';
+            const ownerAddress = lead.owner_mailing_address || lead.ownerMailingAddress || lead.OwnerMailingAddress || 'N/A';
+            
             const ownerGrid = document.getElementById('modal-owner-info');
             ownerGrid.innerHTML = `
                 <div class="modal-info-item">
                     <div class="label">Owner Name</div>
-                    <div class="value">${lead.owner_name || lead.ownerName || lead.owner || 'Unknown'}</div>
+                    <div class="value">${ownerName}</div>
                 </div>
                 <div class="modal-info-item">
                     <div class="label">Mailing Address</div>
-                    <div class="value">${lead.owner_mailing_address || lead.ownerMailingAddress || 'N/A'}</div>
+                    <div class="value">${ownerAddress}</div>
                 </div>
             `;
             
@@ -1072,13 +1157,13 @@
                         </div>
                     </div>
                 `;
-            }).join('');
+            }).join('') || '<p style="color: #95a5a6; font-size: 13px;">No signals recorded for this lead.</p>';
             
             // Score reasons
-            const reasons = lead.score_reasons || lead.scoreReasons || [];
+            const reasons = lead.score_reasons || lead.scoreReasons || lead.ScoreReasons || [];
             document.getElementById('modal-score-reasons').innerHTML = reasons.map(r => 
                 `<div style="padding: 8px 12px; background: #f8f9fa; border-radius: 6px; margin-bottom: 6px; font-size: 13px; color: #5d6d7e;">${r}</div>`
-            ).join('');
+            ).join('') || '<p style="color: #95a5a6; font-size: 13px;">No score reasons recorded.</p>';
             
             modal.classList.add('active');
         }
