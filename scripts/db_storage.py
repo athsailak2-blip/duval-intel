@@ -7,7 +7,7 @@ import os
 from datetime import datetime
 from typing import List, Dict, Optional
 
-DB_PATH = os.environ.get('DUVAL_INTEL_DB', '/workspace/data/duval_intel.db')
+DB_PATH = os.environ.get('DUVAL_INTEL_DB', os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'data', 'duval_intel.db'))
 
 def init_db():
     """Initialize the SQLite database with required tables."""
@@ -92,8 +92,10 @@ def init_db():
     conn.close()
     print(f"Database initialized at {DB_PATH}")
 
-def load_leads_from_json(json_path: str = '/workspace/data/leads.json'):
+def load_leads_from_json(json_path: str = None):
     """Load leads from JSON file into database."""
+    if json_path is None:
+        json_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'data', 'leads.json')
     if not os.path.exists(json_path):
         print(f"No leads.json found at {json_path}")
         return 0
@@ -250,8 +252,11 @@ def get_source_health() -> Dict:
     conn.close()
     return sources
 
-def export_leads_to_json(output_path: str = '/workspace/data/leads.json'):
+def export_leads_to_json(output_path: str = None):
     """Export leads from database back to JSON for dashboard."""
+    if output_path is None:
+        output_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'data', 'leads.json')
+    
     conn = sqlite3.connect(DB_PATH)
     conn.row_factory = sqlite3.Row
     cursor = conn.cursor()
