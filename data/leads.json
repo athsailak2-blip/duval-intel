@@ -1,54 +1,71 @@
 {
   "county": "Duval",
   "state": "FL",
-  "last_refresh": "2026-06-08T08:27:27.478664",
+  "last_refresh": "2026-06-08T08:28:58.626681",
   "framework_version": "v5.3.1",
   "total_leads": 100,
-  "high_stack_leads": 0,
+  "high_stack_leads": 50,
   "sources": {
     "official_records": {
       "status": "healthy",
-      "last_refresh": "2026-06-08T08:23:28.883639",
-      "records_count": 298
+      "last_refresh": "2026-06-08T08:28:31.249325",
+      "records_count": 294,
+      "errors": [],
+      "note": ""
     },
     "court_records": {
       "status": "healthy",
-      "last_refresh": "2026-06-08T08:23:55.275884",
-      "records_count": 0
+      "last_refresh": "2026-06-08T08:28:31.292660",
+      "records_count": 0,
+      "errors": [],
+      "note": ""
     },
     "foreclosure_sales": {
       "status": "healthy",
-      "last_refresh": "2026-06-08T08:24:07.172204",
-      "records_count": 0
+      "last_refresh": "2026-06-08T08:28:31.324878",
+      "records_count": 0,
+      "errors": [],
+      "note": ""
     },
     "tax_deed_sales": {
       "status": "healthy",
-      "last_refresh": "2026-06-08T08:24:43.178298",
-      "records_count": 0
+      "last_refresh": "2026-06-08T08:28:31.357905",
+      "records_count": 0,
+      "errors": [],
+      "note": ""
     },
     "parcel_master": {
       "status": "healthy",
-      "last_refresh": "2026-06-08T08:26:32.378060",
-      "records_count": 0
+      "last_refresh": "2026-06-08T08:28:52.399501",
+      "records_count": 0,
+      "errors": [],
+      "note": ""
     },
     "tax_collector": {
       "status": "healthy",
-      "last_refresh": "2026-06-08T08:26:59.071544",
-      "records_count": 0
+      "last_refresh": "2026-06-08T08:28:56.832936",
+      "records_count": 0,
+      "errors": [],
+      "note": ""
     },
     "gis_mapping": {
       "status": "healthy",
-      "last_refresh": "2026-06-08T08:24:54.381446",
-      "records_count": 0
+      "last_refresh": "2026-06-08T08:28:56.885974",
+      "records_count": 0,
+      "errors": [],
+      "note": ""
     },
     "code_enforcement": {
       "status": "prr_required",
-      "last_refresh": "2026-06-08T08:25:15.874634",
-      "records_count": 0
+      "last_refresh": "2026-06-08T08:28:58.519858",
+      "records_count": 0,
+      "errors": [],
+      "note": ""
     }
   },
   "leads": [
     {
+      "id": 151,
       "lead_id": "LEAD-001",
       "parcel_id": "DC-000001",
       "score": 85,
@@ -61,28 +78,40 @@
       "zip": "32202",
       "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
+      "deal_path": "wholesale",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:28:58.579541",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "created_at": "2026-06-08 08:28:58",
+      "updated_at": "2026-06-08T08:28:58.584580",
       "signals": [
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026/05/01",
+          "confidence": 95,
+          "details": "Foreclosure filed by WELLS FARGO BANK N A - Instrument 2026101954"
+        },
         {
           "type": "LIS_PENDENS",
           "source": "duval_official_records",
           "date": "2026-05-09",
           "confidence": 80,
           "details": "Record from official_records: LIS PENDENS"
+        },
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026-05-10",
+          "confidence": 80,
+          "details": "Record from official_records: LIS PENDENS"
         }
-      ],
-      "deal_path": "wholesale",
-      "deal_path_confidence": 75,
-      "status": "active",
-      "last_updated": "2026-06-08T08:27:27.470367",
-      "assessed_value": 100000,
-      "equity_estimate": 25000,
-      "stacked_sources": [
-        "duval_official_records"
-      ],
-      "stack_count": 1,
-      "is_stacked": false
+      ]
     },
     {
+      "id": 152,
       "lead_id": "LEAD-002",
       "parcel_id": "DC-000002",
       "score": 85,
@@ -95,28 +124,40 @@
       "zip": "32202",
       "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
+      "deal_path": "wholesale",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:28:58.579555",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "created_at": "2026-06-08 08:28:58",
+      "updated_at": "2026-06-08T08:28:58.584854",
       "signals": [
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026/05/04",
+          "confidence": 95,
+          "details": "Foreclosure filed by U.S. BANK TRUST NATIONAL ASSOCIATION TRUSTEE - Instrument 2026103297"
+        },
         {
           "type": "LIS_PENDENS",
           "source": "duval_official_records",
           "date": "2026-05-09",
           "confidence": 80,
           "details": "Record from official_records: LIS PENDENS"
+        },
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026-05-11",
+          "confidence": 80,
+          "details": "Record from official_records: LIS PENDENS"
         }
-      ],
-      "deal_path": "wholesale",
-      "deal_path_confidence": 75,
-      "status": "active",
-      "last_updated": "2026-06-08T08:27:27.470434",
-      "assessed_value": 100000,
-      "equity_estimate": 25000,
-      "stacked_sources": [
-        "duval_official_records"
-      ],
-      "stack_count": 1,
-      "is_stacked": false
+      ]
     },
     {
+      "id": 153,
       "lead_id": "LEAD-003",
       "parcel_id": "DC-000003",
       "score": 85,
@@ -129,28 +170,40 @@
       "zip": "32202",
       "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
+      "deal_path": "wholesale",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:28:58.579564",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "created_at": "2026-06-08 08:28:58",
+      "updated_at": "2026-06-08T08:28:58.584880",
       "signals": [
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026/05/01",
+          "confidence": 95,
+          "details": "Foreclosure filed by FREEDOM MORTGAGE CORPORATION - Instrument 2026101584"
+        },
         {
           "type": "LIS_PENDENS",
           "source": "duval_official_records",
           "date": "2026-05-11",
           "confidence": 80,
           "details": "Record from official_records: LIS PENDENS"
+        },
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026-05-16",
+          "confidence": 80,
+          "details": "Record from official_records: LIS PENDENS"
         }
-      ],
-      "deal_path": "wholesale",
-      "deal_path_confidence": 75,
-      "status": "active",
-      "last_updated": "2026-06-08T08:27:27.470448",
-      "assessed_value": 100000,
-      "equity_estimate": 25000,
-      "stacked_sources": [
-        "duval_official_records"
-      ],
-      "stack_count": 1,
-      "is_stacked": false
+      ]
     },
     {
+      "id": 154,
       "lead_id": "LEAD-004",
       "parcel_id": "DC-000004",
       "score": 85,
@@ -163,28 +216,40 @@
       "zip": "32202",
       "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
+      "deal_path": "wholesale",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:28:58.579571",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "created_at": "2026-06-08 08:28:58",
+      "updated_at": "2026-06-08T08:28:58.584896",
       "signals": [
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026/05/01",
+          "confidence": 95,
+          "details": "Foreclosure filed by LAKEVIEW LOAN SERVICING LLC - Instrument 2026101727"
+        },
         {
           "type": "LIS_PENDENS",
           "source": "duval_official_records",
           "date": "2026-05-12",
           "confidence": 80,
           "details": "Record from official_records: LIS PENDENS"
+        },
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026-05-17",
+          "confidence": 80,
+          "details": "Record from official_records: LIS PENDENS"
         }
-      ],
-      "deal_path": "wholesale",
-      "deal_path_confidence": 75,
-      "status": "active",
-      "last_updated": "2026-06-08T08:27:27.470472",
-      "assessed_value": 100000,
-      "equity_estimate": 25000,
-      "stacked_sources": [
-        "duval_official_records"
-      ],
-      "stack_count": 1,
-      "is_stacked": false
+      ]
     },
     {
+      "id": 155,
       "lead_id": "LEAD-005",
       "parcel_id": "DC-000005",
       "score": 85,
@@ -197,28 +262,40 @@
       "zip": "32202",
       "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
+      "deal_path": "wholesale",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:28:58.579579",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "created_at": "2026-06-08 08:28:58",
+      "updated_at": "2026-06-08T08:28:58.584911",
       "signals": [
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026/05/01",
+          "confidence": 95,
+          "details": "Foreclosure filed by ALKAN MORTGAGE CORPORATION - Instrument 2026101738"
+        },
         {
           "type": "LIS_PENDENS",
           "source": "duval_official_records",
           "date": "2026-05-13",
           "confidence": 80,
           "details": "Record from official_records: LIS PENDENS"
+        },
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026-05-17",
+          "confidence": 80,
+          "details": "Record from official_records: LIS PENDENS"
         }
-      ],
-      "deal_path": "wholesale",
-      "deal_path_confidence": 75,
-      "status": "active",
-      "last_updated": "2026-06-08T08:27:27.470487",
-      "assessed_value": 100000,
-      "equity_estimate": 25000,
-      "stacked_sources": [
-        "duval_official_records"
-      ],
-      "stack_count": 1,
-      "is_stacked": false
+      ]
     },
     {
+      "id": 156,
       "lead_id": "LEAD-006",
       "parcel_id": "DC-000006",
       "score": 85,
@@ -231,28 +308,40 @@
       "zip": "32202",
       "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
+      "deal_path": "wholesale",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:28:58.579585",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "created_at": "2026-06-08 08:28:58",
+      "updated_at": "2026-06-08T08:28:58.584924",
       "signals": [
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026/05/01",
+          "confidence": 95,
+          "details": "Foreclosure filed by COMPUTERSHARE DELAWARE TRUST COMPANY TRUSTEE - Instrument 2026101797"
+        },
         {
           "type": "LIS_PENDENS",
           "source": "duval_official_records",
           "date": "2026-05-14",
           "confidence": 80,
           "details": "Record from official_records: LIS PENDENS"
+        },
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026-05-17",
+          "confidence": 80,
+          "details": "Record from official_records: LIS PENDENS"
         }
-      ],
-      "deal_path": "wholesale",
-      "deal_path_confidence": 75,
-      "status": "active",
-      "last_updated": "2026-06-08T08:27:27.470500",
-      "assessed_value": 100000,
-      "equity_estimate": 25000,
-      "stacked_sources": [
-        "duval_official_records"
-      ],
-      "stack_count": 1,
-      "is_stacked": false
+      ]
     },
     {
+      "id": 157,
       "lead_id": "LEAD-007",
       "parcel_id": "DC-000007",
       "score": 85,
@@ -265,28 +354,40 @@
       "zip": "32202",
       "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
+      "deal_path": "wholesale",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:28:58.579592",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "created_at": "2026-06-08 08:28:58",
+      "updated_at": "2026-06-08T08:28:58.584937",
       "signals": [
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026/05/01",
+          "confidence": 95,
+          "details": "Foreclosure filed by PENNYMAC LOAN SERVICES LLC - Instrument 2026102009"
+        },
         {
           "type": "LIS_PENDENS",
           "source": "duval_official_records",
           "date": "2026-05-17",
           "confidence": 80,
           "details": "Record from official_records: LIS PENDENS"
+        },
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026-05-21",
+          "confidence": 80,
+          "details": "Record from official_records: LIS PENDENS"
         }
-      ],
-      "deal_path": "wholesale",
-      "deal_path_confidence": 75,
-      "status": "active",
-      "last_updated": "2026-06-08T08:27:27.470513",
-      "assessed_value": 100000,
-      "equity_estimate": 25000,
-      "stacked_sources": [
-        "duval_official_records"
-      ],
-      "stack_count": 1,
-      "is_stacked": false
+      ]
     },
     {
+      "id": 158,
       "lead_id": "LEAD-008",
       "parcel_id": "DC-000008",
       "score": 85,
@@ -299,28 +400,40 @@
       "zip": "32202",
       "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
+      "deal_path": "wholesale",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:28:58.579598",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "created_at": "2026-06-08 08:28:58",
+      "updated_at": "2026-06-08T08:28:58.584950",
       "signals": [
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026/05/01",
+          "confidence": 95,
+          "details": "Foreclosure filed by RADIFI CREDIT UNION - Instrument 2026102195"
+        },
         {
           "type": "LIS_PENDENS",
           "source": "duval_official_records",
           "date": "2026-05-19",
           "confidence": 80,
           "details": "Record from official_records: LIS PENDENS"
+        },
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026-05-21",
+          "confidence": 80,
+          "details": "Record from official_records: LIS PENDENS"
         }
-      ],
-      "deal_path": "wholesale",
-      "deal_path_confidence": 75,
-      "status": "active",
-      "last_updated": "2026-06-08T08:27:27.470661",
-      "assessed_value": 100000,
-      "equity_estimate": 25000,
-      "stacked_sources": [
-        "duval_official_records"
-      ],
-      "stack_count": 1,
-      "is_stacked": false
+      ]
     },
     {
+      "id": 159,
       "lead_id": "LEAD-009",
       "parcel_id": "DC-000009",
       "score": 85,
@@ -333,28 +446,40 @@
       "zip": "32202",
       "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
+      "deal_path": "wholesale",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:28:58.579604",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "created_at": "2026-06-08 08:28:58",
+      "updated_at": "2026-06-08T08:28:58.584964",
       "signals": [
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026/05/01",
+          "confidence": 95,
+          "details": "Foreclosure filed by LAKEVIEW LOAN SERVICING LLC - Instrument 2026102259"
+        },
         {
           "type": "LIS_PENDENS",
           "source": "duval_official_records",
           "date": "2026-05-26",
           "confidence": 80,
           "details": "Record from official_records: LIS PENDENS"
+        },
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026-05-22",
+          "confidence": 80,
+          "details": "Record from official_records: LIS PENDENS"
         }
-      ],
-      "deal_path": "wholesale",
-      "deal_path_confidence": 75,
-      "status": "active",
-      "last_updated": "2026-06-08T08:27:27.470840",
-      "assessed_value": 100000,
-      "equity_estimate": 25000,
-      "stacked_sources": [
-        "duval_official_records"
-      ],
-      "stack_count": 1,
-      "is_stacked": false
+      ]
     },
     {
+      "id": 160,
       "lead_id": "LEAD-010",
       "parcel_id": "DC-000010",
       "score": 85,
@@ -367,28 +492,40 @@
       "zip": "32202",
       "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
+      "deal_path": "wholesale",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:28:58.579613",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "created_at": "2026-06-08 08:28:58",
+      "updated_at": "2026-06-08T08:28:58.585009",
       "signals": [
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026/05/01",
+          "confidence": 95,
+          "details": "Foreclosure filed by ROOFING PROS USA II LLC - Instrument 2026102701"
+        },
         {
           "type": "LIS_PENDENS",
           "source": "duval_official_records",
           "date": "2026-05-29",
           "confidence": 80,
           "details": "Record from official_records: LIS PENDENS"
+        },
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026-05-22",
+          "confidence": 80,
+          "details": "Record from official_records: LIS PENDENS"
         }
-      ],
-      "deal_path": "wholesale",
-      "deal_path_confidence": 75,
-      "status": "active",
-      "last_updated": "2026-06-08T08:27:27.470858",
-      "assessed_value": 100000,
-      "equity_estimate": 25000,
-      "stacked_sources": [
-        "duval_official_records"
-      ],
-      "stack_count": 1,
-      "is_stacked": false
+      ]
     },
     {
+      "id": 161,
       "lead_id": "LEAD-011",
       "parcel_id": "DC-000011",
       "score": 85,
@@ -401,28 +538,40 @@
       "zip": "32202",
       "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
+      "deal_path": "wholesale",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:28:58.579619",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "created_at": "2026-06-08 08:28:58",
+      "updated_at": "2026-06-08T08:28:58.585032",
       "signals": [
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026/05/03",
+          "confidence": 95,
+          "details": "Foreclosure filed by FREEDOM MORTGAGE CORPORATION - Instrument 2026102824"
+        },
         {
           "type": "LIS_PENDENS",
           "source": "duval_official_records",
           "date": "2026-05-29",
           "confidence": 80,
           "details": "Record from official_records: LIS PENDENS"
+        },
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026-05-24",
+          "confidence": 80,
+          "details": "Record from official_records: LIS PENDENS"
         }
-      ],
-      "deal_path": "wholesale",
-      "deal_path_confidence": 75,
-      "status": "active",
-      "last_updated": "2026-06-08T08:27:27.470897",
-      "assessed_value": 100000,
-      "equity_estimate": 25000,
-      "stacked_sources": [
-        "duval_official_records"
-      ],
-      "stack_count": 1,
-      "is_stacked": false
+      ]
     },
     {
+      "id": 162,
       "lead_id": "LEAD-012",
       "parcel_id": "DC-000012",
       "score": 85,
@@ -435,28 +584,40 @@
       "zip": "32202",
       "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
+      "deal_path": "wholesale",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:28:58.579626",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "created_at": "2026-06-08 08:28:58",
+      "updated_at": "2026-06-08T08:28:58.585046",
       "signals": [
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026/05/03",
+          "confidence": 95,
+          "details": "Foreclosure filed by VYSTAR CREDIT UNION - Instrument 2026102826"
+        },
         {
           "type": "LIS_PENDENS",
           "source": "duval_official_records",
           "date": "2026-05-29",
           "confidence": 80,
           "details": "Record from official_records: LIS PENDENS"
+        },
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026-05-27",
+          "confidence": 80,
+          "details": "Record from official_records: LIS PENDENS"
         }
-      ],
-      "deal_path": "wholesale",
-      "deal_path_confidence": 75,
-      "status": "active",
-      "last_updated": "2026-06-08T08:27:27.470965",
-      "assessed_value": 100000,
-      "equity_estimate": 25000,
-      "stacked_sources": [
-        "duval_official_records"
-      ],
-      "stack_count": 1,
-      "is_stacked": false
+      ]
     },
     {
+      "id": 163,
       "lead_id": "LEAD-013",
       "parcel_id": "DC-000013",
       "score": 85,
@@ -469,28 +630,40 @@
       "zip": "32202",
       "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
+      "deal_path": "wholesale",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:28:58.579632",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "created_at": "2026-06-08 08:28:58",
+      "updated_at": "2026-06-08T08:28:58.585058",
       "signals": [
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026/05/03",
+          "confidence": 95,
+          "details": "Foreclosure filed by U.S. BANK NATIONAL ASSOCIATION - Instrument 2026102893"
+        },
         {
           "type": "LIS_PENDENS",
           "source": "duval_official_records",
           "date": "2026-05-30",
           "confidence": 80,
           "details": "Record from official_records: LIS PENDENS"
+        },
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026-05-28",
+          "confidence": 80,
+          "details": "Record from official_records: LIS PENDENS"
         }
-      ],
-      "deal_path": "wholesale",
-      "deal_path_confidence": 75,
-      "status": "active",
-      "last_updated": "2026-06-08T08:27:27.471168",
-      "assessed_value": 100000,
-      "equity_estimate": 25000,
-      "stacked_sources": [
-        "duval_official_records"
-      ],
-      "stack_count": 1,
-      "is_stacked": false
+      ]
     },
     {
+      "id": 164,
       "lead_id": "LEAD-014",
       "parcel_id": "DC-000014",
       "score": 85,
@@ -503,28 +676,40 @@
       "zip": "32202",
       "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
+      "deal_path": "wholesale",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:28:58.579639",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "created_at": "2026-06-08 08:28:58",
+      "updated_at": "2026-06-08T08:28:58.585071",
       "signals": [
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026/05/04",
+          "confidence": 95,
+          "details": "Foreclosure filed by SANDERS DYLAN - Instrument 2026102956"
+        },
         {
           "type": "LIS_PENDENS",
           "source": "duval_official_records",
           "date": "2026-05-30",
           "confidence": 80,
           "details": "Record from official_records: LIS PENDENS"
+        },
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026-05-28",
+          "confidence": 80,
+          "details": "Record from official_records: LIS PENDENS"
         }
-      ],
-      "deal_path": "wholesale",
-      "deal_path_confidence": 75,
-      "status": "active",
-      "last_updated": "2026-06-08T08:27:27.471204",
-      "assessed_value": 100000,
-      "equity_estimate": 25000,
-      "stacked_sources": [
-        "duval_official_records"
-      ],
-      "stack_count": 1,
-      "is_stacked": false
+      ]
     },
     {
+      "id": 165,
       "lead_id": "LEAD-015",
       "parcel_id": "DC-000015",
       "score": 85,
@@ -537,28 +722,40 @@
       "zip": "32202",
       "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
+      "deal_path": "wholesale",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:28:58.579645",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "created_at": "2026-06-08 08:28:58",
+      "updated_at": "2026-06-08T08:28:58.585084",
       "signals": [
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026/05/04",
+          "confidence": 95,
+          "details": "Foreclosure filed by TIMOTHY'S LANDING OWNERS ASSOCIATION INC. - Instrument 2026103152"
+        },
         {
           "type": "LIS_PENDENS",
           "source": "duval_official_records",
           "date": "2026-05-30",
           "confidence": 80,
           "details": "Record from official_records: LIS PENDENS"
+        },
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026-05-29",
+          "confidence": 80,
+          "details": "Record from official_records: LIS PENDENS"
         }
-      ],
-      "deal_path": "wholesale",
-      "deal_path_confidence": 75,
-      "status": "active",
-      "last_updated": "2026-06-08T08:27:27.471243",
-      "assessed_value": 100000,
-      "equity_estimate": 25000,
-      "stacked_sources": [
-        "duval_official_records"
-      ],
-      "stack_count": 1,
-      "is_stacked": false
+      ]
     },
     {
+      "id": 166,
       "lead_id": "LEAD-016",
       "parcel_id": "DC-000016",
       "score": 85,
@@ -571,28 +768,40 @@
       "zip": "32202",
       "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
+      "deal_path": "wholesale",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:28:58.579651",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "created_at": "2026-06-08 08:28:58",
+      "updated_at": "2026-06-08T08:28:58.585097",
       "signals": [
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026/05/04",
+          "confidence": 95,
+          "details": "Foreclosure filed by DEVORE CAPITAL CONTRACTING CONSULTING INC - Instrument 2026103182"
+        },
         {
           "type": "LIS_PENDENS",
           "source": "duval_official_records",
           "date": "2026-06-04",
           "confidence": 80,
           "details": "Record from official_records: LIS PENDENS"
+        },
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026-05-31",
+          "confidence": 80,
+          "details": "Record from official_records: LIS PENDENS"
         }
-      ],
-      "deal_path": "wholesale",
-      "deal_path_confidence": 75,
-      "status": "active",
-      "last_updated": "2026-06-08T08:27:27.471338",
-      "assessed_value": 100000,
-      "equity_estimate": 25000,
-      "stacked_sources": [
-        "duval_official_records"
-      ],
-      "stack_count": 1,
-      "is_stacked": false
+      ]
     },
     {
+      "id": 167,
       "lead_id": "LEAD-017",
       "parcel_id": "DC-000017",
       "score": 85,
@@ -605,28 +814,40 @@
       "zip": "32202",
       "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
+      "deal_path": "wholesale",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:28:58.579657",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "created_at": "2026-06-08 08:28:58",
+      "updated_at": "2026-06-08T08:28:58.585110",
       "signals": [
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026/05/04",
+          "confidence": 95,
+          "details": "Foreclosure filed by SUMMER HAVEN OWNERS ASSOCIATION INC - Instrument 2026103347"
+        },
         {
           "type": "LIS_PENDENS",
           "source": "duval_official_records",
           "date": "2026-06-04",
           "confidence": 80,
           "details": "Record from official_records: LIS PENDENS"
+        },
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026-06-01",
+          "confidence": 80,
+          "details": "Record from official_records: LIS PENDENS"
         }
-      ],
-      "deal_path": "wholesale",
-      "deal_path_confidence": 75,
-      "status": "active",
-      "last_updated": "2026-06-08T08:27:27.473631",
-      "assessed_value": 100000,
-      "equity_estimate": 25000,
-      "stacked_sources": [
-        "duval_official_records"
-      ],
-      "stack_count": 1,
-      "is_stacked": false
+      ]
     },
     {
+      "id": 168,
       "lead_id": "LEAD-018",
       "parcel_id": "DC-000018",
       "score": 85,
@@ -639,33 +860,45 @@
       "zip": "32202",
       "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
+      "deal_path": "wholesale",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:28:58.579664",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "created_at": "2026-06-08 08:28:58",
+      "updated_at": "2026-06-08T08:28:58.585122",
       "signals": [
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026/05/04",
+          "confidence": 95,
+          "details": "Foreclosure filed by TAVANIER OAKS HOMEOWNERS ASSOCIATION INC. - Instrument 2026103800"
+        },
         {
           "type": "LIS_PENDENS",
           "source": "duval_official_records",
           "date": "2026-06-07",
           "confidence": 80,
           "details": "Record from official_records: LIS PENDENS"
+        },
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026-06-02",
+          "confidence": 80,
+          "details": "Record from official_records: LIS PENDENS"
         }
-      ],
-      "deal_path": "wholesale",
-      "deal_path_confidence": 75,
-      "status": "active",
-      "last_updated": "2026-06-08T08:27:27.473665",
-      "assessed_value": 100000,
-      "equity_estimate": 25000,
-      "stacked_sources": [
-        "duval_official_records"
-      ],
-      "stack_count": 1,
-      "is_stacked": false
+      ]
     },
     {
+      "id": 169,
       "lead_id": "LEAD-019",
       "parcel_id": "DC-000019",
-      "score": 50,
+      "score": 85,
       "score_reasons": [
-        "Single distress signal: Mortgage",
+        "Single distress signal: Lis Pendens",
         "Monitoring for additional signals"
       ],
       "address": "19 Sample St, Jacksonville, FL 32209",
@@ -673,33 +906,45 @@
       "zip": "32202",
       "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
+      "deal_path": "wholesale",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:28:58.579671",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "created_at": "2026-06-08 08:28:58",
+      "updated_at": "2026-06-08T08:28:58.585135",
       "signals": [
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026/05/04",
+          "confidence": 95,
+          "details": "Foreclosure filed by LAKEVIEW LOAN SERVICING LLC - Instrument 2026103830"
+        },
         {
           "type": "MORTGAGE",
           "source": "duval_official_records",
           "date": "2026-05-09",
           "confidence": 80,
           "details": "Record from official_records: MORTGAGE"
+        },
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026-06-06",
+          "confidence": 80,
+          "details": "Record from official_records: LIS PENDENS"
         }
-      ],
-      "deal_path": "creative_finance",
-      "deal_path_confidence": 75,
-      "status": "active",
-      "last_updated": "2026-06-08T08:27:27.473682",
-      "assessed_value": 100000,
-      "equity_estimate": 25000,
-      "stacked_sources": [
-        "duval_official_records"
-      ],
-      "stack_count": 1,
-      "is_stacked": false
+      ]
     },
     {
+      "id": 170,
       "lead_id": "LEAD-020",
       "parcel_id": "DC-000020",
-      "score": 50,
+      "score": 85,
       "score_reasons": [
-        "Single distress signal: Mortgage",
+        "Single distress signal: Lis Pendens",
         "Monitoring for additional signals"
       ],
       "address": "20 Sample St, Jacksonville, FL 32200",
@@ -707,28 +952,40 @@
       "zip": "32202",
       "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
+      "deal_path": "wholesale",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:28:58.579678",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "created_at": "2026-06-08 08:28:58",
+      "updated_at": "2026-06-08T08:28:58.585158",
       "signals": [
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026/05/04",
+          "confidence": 95,
+          "details": "Foreclosure filed by AMERIS BANK - Instrument 2026104045"
+        },
         {
           "type": "MORTGAGE",
           "source": "duval_official_records",
           "date": "2026-05-13",
           "confidence": 80,
           "details": "Record from official_records: MORTGAGE"
+        },
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026-06-08",
+          "confidence": 80,
+          "details": "Record from official_records: LIS PENDENS"
         }
-      ],
-      "deal_path": "creative_finance",
-      "deal_path_confidence": 75,
-      "status": "active",
-      "last_updated": "2026-06-08T08:27:27.473697",
-      "assessed_value": 100000,
-      "equity_estimate": 25000,
-      "stacked_sources": [
-        "duval_official_records"
-      ],
-      "stack_count": 1,
-      "is_stacked": false
+      ]
     },
     {
+      "id": 171,
       "lead_id": "LEAD-021",
       "parcel_id": "DC-000021",
       "score": 50,
@@ -741,28 +998,40 @@
       "zip": "32202",
       "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:28:58.579687",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "created_at": "2026-06-08 08:28:58",
+      "updated_at": "2026-06-08T08:28:58.585171",
       "signals": [
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026/05/04",
+          "confidence": 95,
+          "details": "Foreclosure filed by DEUTSCHE BANK NATIONAL TRUST COMPANY TRUSTEE - Instrument 2026104119"
+        },
         {
           "type": "MORTGAGE",
           "source": "duval_official_records",
           "date": "2026-05-20",
           "confidence": 80,
           "details": "Record from official_records: MORTGAGE"
+        },
+        {
+          "type": "MORTGAGE",
+          "source": "duval_official_records",
+          "date": "2026-05-14",
+          "confidence": 80,
+          "details": "Record from official_records: MORTGAGE"
         }
-      ],
-      "deal_path": "creative_finance",
-      "deal_path_confidence": 75,
-      "status": "active",
-      "last_updated": "2026-06-08T08:27:27.473709",
-      "assessed_value": 100000,
-      "equity_estimate": 25000,
-      "stacked_sources": [
-        "duval_official_records"
-      ],
-      "stack_count": 1,
-      "is_stacked": false
+      ]
     },
     {
+      "id": 172,
       "lead_id": "LEAD-022",
       "parcel_id": "DC-000022",
       "score": 50,
@@ -775,28 +1044,40 @@
       "zip": "32202",
       "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:28:58.579694",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "created_at": "2026-06-08 08:28:58",
+      "updated_at": "2026-06-08T08:28:58.585185",
       "signals": [
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026/05/04",
+          "confidence": 95,
+          "details": "Foreclosure filed by U.S. BANK NATIONAL ASSOCIATION - Instrument 2026104146"
+        },
         {
           "type": "MORTGAGE",
           "source": "duval_official_records",
           "date": "2026-05-23",
           "confidence": 80,
           "details": "Record from official_records: MORTGAGE"
+        },
+        {
+          "type": "MORTGAGE",
+          "source": "duval_official_records",
+          "date": "2026-05-14",
+          "confidence": 80,
+          "details": "Record from official_records: MORTGAGE"
         }
-      ],
-      "deal_path": "creative_finance",
-      "deal_path_confidence": 75,
-      "status": "active",
-      "last_updated": "2026-06-08T08:27:27.473720",
-      "assessed_value": 100000,
-      "equity_estimate": 25000,
-      "stacked_sources": [
-        "duval_official_records"
-      ],
-      "stack_count": 1,
-      "is_stacked": false
+      ]
     },
     {
+      "id": 173,
       "lead_id": "LEAD-023",
       "parcel_id": "DC-000023",
       "score": 50,
@@ -809,28 +1090,40 @@
       "zip": "32202",
       "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:28:58.579701",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "created_at": "2026-06-08 08:28:58",
+      "updated_at": "2026-06-08T08:28:58.585198",
       "signals": [
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026/05/04",
+          "confidence": 95,
+          "details": "Foreclosure filed by FREEDOM MORTGAGE CORPORATION - Instrument 2026104198"
+        },
         {
           "type": "MORTGAGE",
           "source": "duval_official_records",
           "date": "2026-05-24",
           "confidence": 80,
           "details": "Record from official_records: MORTGAGE"
+        },
+        {
+          "type": "MORTGAGE",
+          "source": "duval_official_records",
+          "date": "2026-05-14",
+          "confidence": 80,
+          "details": "Record from official_records: MORTGAGE"
         }
-      ],
-      "deal_path": "creative_finance",
-      "deal_path_confidence": 75,
-      "status": "active",
-      "last_updated": "2026-06-08T08:27:27.473730",
-      "assessed_value": 100000,
-      "equity_estimate": 25000,
-      "stacked_sources": [
-        "duval_official_records"
-      ],
-      "stack_count": 1,
-      "is_stacked": false
+      ]
     },
     {
+      "id": 174,
       "lead_id": "LEAD-024",
       "parcel_id": "DC-000024",
       "score": 50,
@@ -843,28 +1136,40 @@
       "zip": "32202",
       "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:28:58.579708",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "created_at": "2026-06-08 08:28:58",
+      "updated_at": "2026-06-08T08:28:58.585211",
       "signals": [
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026/05/04",
+          "confidence": 95,
+          "details": "Foreclosure filed by LAKEVIEW LOAN SERVICING LLC - Instrument 2026104219"
+        },
         {
           "type": "MORTGAGE",
           "source": "duval_official_records",
           "date": "2026-05-25",
           "confidence": 80,
           "details": "Record from official_records: MORTGAGE"
+        },
+        {
+          "type": "MORTGAGE",
+          "source": "duval_official_records",
+          "date": "2026-05-15",
+          "confidence": 80,
+          "details": "Record from official_records: MORTGAGE"
         }
-      ],
-      "deal_path": "creative_finance",
-      "deal_path_confidence": 75,
-      "status": "active",
-      "last_updated": "2026-06-08T08:27:27.473747",
-      "assessed_value": 100000,
-      "equity_estimate": 25000,
-      "stacked_sources": [
-        "duval_official_records"
-      ],
-      "stack_count": 1,
-      "is_stacked": false
+      ]
     },
     {
+      "id": 175,
       "lead_id": "LEAD-025",
       "parcel_id": "DC-000025",
       "score": 50,
@@ -877,28 +1182,40 @@
       "zip": "32202",
       "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:28:58.579716",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "created_at": "2026-06-08 08:28:58",
+      "updated_at": "2026-06-08T08:28:58.585224",
       "signals": [
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026/05/04",
+          "confidence": 95,
+          "details": "Foreclosure filed by U.S. BANK TRUST COMPANY NATIONAL ASSOCIATION TRUSTEE - Instrument 2026104269"
+        },
         {
           "type": "MORTGAGE",
           "source": "duval_official_records",
           "date": "2026-05-26",
           "confidence": 80,
           "details": "Record from official_records: MORTGAGE"
+        },
+        {
+          "type": "MORTGAGE",
+          "source": "duval_official_records",
+          "date": "2026-05-16",
+          "confidence": 80,
+          "details": "Record from official_records: MORTGAGE"
         }
-      ],
-      "deal_path": "creative_finance",
-      "deal_path_confidence": 75,
-      "status": "active",
-      "last_updated": "2026-06-08T08:27:27.473758",
-      "assessed_value": 100000,
-      "equity_estimate": 25000,
-      "stacked_sources": [
-        "duval_official_records"
-      ],
-      "stack_count": 1,
-      "is_stacked": false
+      ]
     },
     {
+      "id": 176,
       "lead_id": "LEAD-026",
       "parcel_id": "DC-000026",
       "score": 50,
@@ -911,28 +1228,40 @@
       "zip": "32202",
       "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:28:58.579726",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "created_at": "2026-06-08 08:28:58",
+      "updated_at": "2026-06-08T08:28:58.585236",
       "signals": [
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026/05/04",
+          "confidence": 95,
+          "details": "Foreclosure filed by SUNCRETE OF NORTH FLORIDA LLC - Instrument 2026104462"
+        },
         {
           "type": "MORTGAGE",
           "source": "duval_official_records",
           "date": "2026-05-26",
           "confidence": 80,
           "details": "Record from official_records: MORTGAGE"
+        },
+        {
+          "type": "MORTGAGE",
+          "source": "duval_official_records",
+          "date": "2026-05-18",
+          "confidence": 80,
+          "details": "Record from official_records: MORTGAGE"
         }
-      ],
-      "deal_path": "creative_finance",
-      "deal_path_confidence": 75,
-      "status": "active",
-      "last_updated": "2026-06-08T08:27:27.473821",
-      "assessed_value": 100000,
-      "equity_estimate": 25000,
-      "stacked_sources": [
-        "duval_official_records"
-      ],
-      "stack_count": 1,
-      "is_stacked": false
+      ]
     },
     {
+      "id": 177,
       "lead_id": "LEAD-027",
       "parcel_id": "DC-000027",
       "score": 50,
@@ -945,28 +1274,40 @@
       "zip": "32202",
       "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:28:58.579734",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "created_at": "2026-06-08 08:28:58",
+      "updated_at": "2026-06-08T08:28:58.585249",
       "signals": [
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026/05/05",
+          "confidence": 95,
+          "details": "Foreclosure filed by VILLAGES OF BARTRAM SPRINGS OWNERS ASSOCIATION INC - Instrument 2026104825"
+        },
         {
           "type": "MORTGAGE",
           "source": "duval_official_records",
           "date": "2026-05-28",
           "confidence": 80,
           "details": "Record from official_records: MORTGAGE"
+        },
+        {
+          "type": "MORTGAGE",
+          "source": "duval_official_records",
+          "date": "2026-05-19",
+          "confidence": 80,
+          "details": "Record from official_records: MORTGAGE"
         }
-      ],
-      "deal_path": "creative_finance",
-      "deal_path_confidence": 75,
-      "status": "active",
-      "last_updated": "2026-06-08T08:27:27.473843",
-      "assessed_value": 100000,
-      "equity_estimate": 25000,
-      "stacked_sources": [
-        "duval_official_records"
-      ],
-      "stack_count": 1,
-      "is_stacked": false
+      ]
     },
     {
+      "id": 178,
       "lead_id": "LEAD-028",
       "parcel_id": "DC-000028",
       "score": 50,
@@ -979,28 +1320,40 @@
       "zip": "32202",
       "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:28:58.579741",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "created_at": "2026-06-08 08:28:58",
+      "updated_at": "2026-06-08T08:28:58.585264",
       "signals": [
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026/05/05",
+          "confidence": 95,
+          "details": "Foreclosure filed by ASHTON HILLS HOMEOWNERS ASSOCIATION INC - Instrument 2026104913"
+        },
         {
           "type": "MORTGAGE",
           "source": "duval_official_records",
           "date": "2026-05-28",
           "confidence": 80,
           "details": "Record from official_records: MORTGAGE"
+        },
+        {
+          "type": "MORTGAGE",
+          "source": "duval_official_records",
+          "date": "2026-05-20",
+          "confidence": 80,
+          "details": "Record from official_records: MORTGAGE"
         }
-      ],
-      "deal_path": "creative_finance",
-      "deal_path_confidence": 75,
-      "status": "active",
-      "last_updated": "2026-06-08T08:27:27.473854",
-      "assessed_value": 100000,
-      "equity_estimate": 25000,
-      "stacked_sources": [
-        "duval_official_records"
-      ],
-      "stack_count": 1,
-      "is_stacked": false
+      ]
     },
     {
+      "id": 179,
       "lead_id": "LEAD-029",
       "parcel_id": "DC-000029",
       "score": 50,
@@ -1013,28 +1366,40 @@
       "zip": "32202",
       "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:28:58.579748",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "created_at": "2026-06-08 08:28:58",
+      "updated_at": "2026-06-08T08:28:58.585277",
       "signals": [
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026/05/05",
+          "confidence": 95,
+          "details": "Foreclosure filed by FREEDOM MORTGAGE CORPORATION - Instrument 2026105034"
+        },
         {
           "type": "MORTGAGE",
           "source": "duval_official_records",
           "date": "2026-05-28",
           "confidence": 80,
           "details": "Record from official_records: MORTGAGE"
+        },
+        {
+          "type": "MORTGAGE",
+          "source": "duval_official_records",
+          "date": "2026-05-21",
+          "confidence": 80,
+          "details": "Record from official_records: MORTGAGE"
         }
-      ],
-      "deal_path": "creative_finance",
-      "deal_path_confidence": 75,
-      "status": "active",
-      "last_updated": "2026-06-08T08:27:27.473864",
-      "assessed_value": 100000,
-      "equity_estimate": 25000,
-      "stacked_sources": [
-        "duval_official_records"
-      ],
-      "stack_count": 1,
-      "is_stacked": false
+      ]
     },
     {
+      "id": 180,
       "lead_id": "LEAD-030",
       "parcel_id": "DC-000030",
       "score": 50,
@@ -1047,28 +1412,40 @@
       "zip": "32202",
       "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:28:58.579756",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "created_at": "2026-06-08 08:28:58",
+      "updated_at": "2026-06-08T08:28:58.585290",
       "signals": [
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026/05/06",
+          "confidence": 95,
+          "details": "Foreclosure filed by PNC BANK NATIONAL ASSOCIATION - Instrument 2026105739"
+        },
         {
           "type": "MORTGAGE",
           "source": "duval_official_records",
           "date": "2026-05-29",
           "confidence": 80,
           "details": "Record from official_records: MORTGAGE"
+        },
+        {
+          "type": "MORTGAGE",
+          "source": "duval_official_records",
+          "date": "2026-05-22",
+          "confidence": 80,
+          "details": "Record from official_records: MORTGAGE"
         }
-      ],
-      "deal_path": "creative_finance",
-      "deal_path_confidence": 75,
-      "status": "active",
-      "last_updated": "2026-06-08T08:27:27.473878",
-      "assessed_value": 100000,
-      "equity_estimate": 25000,
-      "stacked_sources": [
-        "duval_official_records"
-      ],
-      "stack_count": 1,
-      "is_stacked": false
+      ]
     },
     {
+      "id": 181,
       "lead_id": "LEAD-031",
       "parcel_id": "DC-000031",
       "score": 50,
@@ -1081,28 +1458,40 @@
       "zip": "32202",
       "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:28:58.579763",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "created_at": "2026-06-08 08:28:58",
+      "updated_at": "2026-06-08T08:28:58.585302",
       "signals": [
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026/05/06",
+          "confidence": 95,
+          "details": "Foreclosure filed by ONITY MORTGAGE CORPORATION - Instrument 2026105743"
+        },
         {
           "type": "MORTGAGE",
           "source": "duval_official_records",
           "date": "2026-05-31",
           "confidence": 80,
           "details": "Record from official_records: MORTGAGE"
+        },
+        {
+          "type": "MORTGAGE",
+          "source": "duval_official_records",
+          "date": "2026-05-27",
+          "confidence": 80,
+          "details": "Record from official_records: MORTGAGE"
         }
-      ],
-      "deal_path": "creative_finance",
-      "deal_path_confidence": 75,
-      "status": "active",
-      "last_updated": "2026-06-08T08:27:27.473935",
-      "assessed_value": 100000,
-      "equity_estimate": 25000,
-      "stacked_sources": [
-        "duval_official_records"
-      ],
-      "stack_count": 1,
-      "is_stacked": false
+      ]
     },
     {
+      "id": 182,
       "lead_id": "LEAD-032",
       "parcel_id": "DC-000032",
       "score": 50,
@@ -1115,28 +1504,40 @@
       "zip": "32202",
       "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:28:58.579770",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "created_at": "2026-06-08 08:28:58",
+      "updated_at": "2026-06-08T08:28:58.585314",
       "signals": [
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026/05/06",
+          "confidence": 95,
+          "details": "Foreclosure filed by U S BANK NATIONAL ASSOCIATION - Instrument 2026105760"
+        },
         {
           "type": "MORTGAGE",
           "source": "duval_official_records",
           "date": "2026-05-31",
           "confidence": 80,
           "details": "Record from official_records: MORTGAGE"
+        },
+        {
+          "type": "MORTGAGE",
+          "source": "duval_official_records",
+          "date": "2026-05-27",
+          "confidence": 80,
+          "details": "Record from official_records: MORTGAGE"
         }
-      ],
-      "deal_path": "creative_finance",
-      "deal_path_confidence": 75,
-      "status": "active",
-      "last_updated": "2026-06-08T08:27:27.473961",
-      "assessed_value": 100000,
-      "equity_estimate": 25000,
-      "stacked_sources": [
-        "duval_official_records"
-      ],
-      "stack_count": 1,
-      "is_stacked": false
+      ]
     },
     {
+      "id": 183,
       "lead_id": "LEAD-033",
       "parcel_id": "DC-000033",
       "score": 50,
@@ -1149,28 +1550,40 @@
       "zip": "32202",
       "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:28:58.579776",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "created_at": "2026-06-08 08:28:58",
+      "updated_at": "2026-06-08T08:28:58.585327",
       "signals": [
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026/05/06",
+          "confidence": 95,
+          "details": "Foreclosure filed by U.S. BANK NATIONAL ASSOCIATION - Instrument 2026105850"
+        },
         {
           "type": "MORTGAGE",
           "source": "duval_official_records",
           "date": "2026-05-31",
           "confidence": 80,
           "details": "Record from official_records: MORTGAGE"
+        },
+        {
+          "type": "MORTGAGE",
+          "source": "duval_official_records",
+          "date": "2026-05-28",
+          "confidence": 80,
+          "details": "Record from official_records: MORTGAGE"
         }
-      ],
-      "deal_path": "creative_finance",
-      "deal_path_confidence": 75,
-      "status": "active",
-      "last_updated": "2026-06-08T08:27:27.473978",
-      "assessed_value": 100000,
-      "equity_estimate": 25000,
-      "stacked_sources": [
-        "duval_official_records"
-      ],
-      "stack_count": 1,
-      "is_stacked": false
+      ]
     },
     {
+      "id": 184,
       "lead_id": "LEAD-034",
       "parcel_id": "DC-000034",
       "score": 50,
@@ -1183,28 +1596,40 @@
       "zip": "32202",
       "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:28:58.579784",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "created_at": "2026-06-08 08:28:58",
+      "updated_at": "2026-06-08T08:28:58.585340",
       "signals": [
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026/05/06",
+          "confidence": 95,
+          "details": "Foreclosure filed by CITY OF JACKSONVILLE - Instrument 2026105924"
+        },
         {
           "type": "MORTGAGE",
           "source": "duval_official_records",
           "date": "2026-06-01",
           "confidence": 80,
           "details": "Record from official_records: MORTGAGE"
+        },
+        {
+          "type": "MORTGAGE",
+          "source": "duval_official_records",
+          "date": "2026-05-28",
+          "confidence": 80,
+          "details": "Record from official_records: MORTGAGE"
         }
-      ],
-      "deal_path": "creative_finance",
-      "deal_path_confidence": 75,
-      "status": "active",
-      "last_updated": "2026-06-08T08:27:27.475755",
-      "assessed_value": 100000,
-      "equity_estimate": 25000,
-      "stacked_sources": [
-        "duval_official_records"
-      ],
-      "stack_count": 1,
-      "is_stacked": false
+      ]
     },
     {
+      "id": 185,
       "lead_id": "LEAD-035",
       "parcel_id": "DC-000035",
       "score": 50,
@@ -1217,28 +1642,40 @@
       "zip": "32202",
       "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:28:58.579791",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "created_at": "2026-06-08 08:28:58",
+      "updated_at": "2026-06-08T08:28:58.585352",
       "signals": [
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026/05/06",
+          "confidence": 95,
+          "details": "Foreclosure filed by D2 RESIDENTIAL CAPITAL PARTNERS LP - Instrument 2026105961"
+        },
         {
           "type": "MORTGAGE",
           "source": "duval_official_records",
           "date": "2026-06-02",
           "confidence": 80,
           "details": "Record from official_records: MORTGAGE"
+        },
+        {
+          "type": "MORTGAGE",
+          "source": "duval_official_records",
+          "date": "2026-05-29",
+          "confidence": 80,
+          "details": "Record from official_records: MORTGAGE"
         }
-      ],
-      "deal_path": "creative_finance",
-      "deal_path_confidence": 75,
-      "status": "active",
-      "last_updated": "2026-06-08T08:27:27.475830",
-      "assessed_value": 100000,
-      "equity_estimate": 25000,
-      "stacked_sources": [
-        "duval_official_records"
-      ],
-      "stack_count": 1,
-      "is_stacked": false
+      ]
     },
     {
+      "id": 186,
       "lead_id": "LEAD-036",
       "parcel_id": "DC-000036",
       "score": 50,
@@ -1251,28 +1688,40 @@
       "zip": "32202",
       "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:28:58.579798",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "created_at": "2026-06-08 08:28:58",
+      "updated_at": "2026-06-08T08:28:58.585372",
       "signals": [
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026/05/06",
+          "confidence": 95,
+          "details": "Foreclosure filed by ROCKET MORTGAGE LLC - Instrument 2026106055"
+        },
         {
           "type": "MORTGAGE",
           "source": "duval_official_records",
           "date": "2026-06-05",
           "confidence": 80,
           "details": "Record from official_records: MORTGAGE"
+        },
+        {
+          "type": "MORTGAGE",
+          "source": "duval_official_records",
+          "date": "2026-05-30",
+          "confidence": 80,
+          "details": "Record from official_records: MORTGAGE"
         }
-      ],
-      "deal_path": "creative_finance",
-      "deal_path_confidence": 75,
-      "status": "active",
-      "last_updated": "2026-06-08T08:27:27.475843",
-      "assessed_value": 100000,
-      "equity_estimate": 25000,
-      "stacked_sources": [
-        "duval_official_records"
-      ],
-      "stack_count": 1,
-      "is_stacked": false
+      ]
     },
     {
+      "id": 187,
       "lead_id": "LEAD-037",
       "parcel_id": "DC-000037",
       "score": 50,
@@ -1285,28 +1734,40 @@
       "zip": "32202",
       "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:28:58.579806",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "created_at": "2026-06-08 08:28:58",
+      "updated_at": "2026-06-08T08:28:58.585386",
       "signals": [
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026/05/06",
+          "confidence": 95,
+          "details": "Foreclosure filed by NEW DAY FINANCIAL LLC - Instrument 2026106084"
+        },
         {
           "type": "MORTGAGE",
           "source": "duval_official_records",
           "date": "2026-06-07",
           "confidence": 80,
           "details": "Record from official_records: MORTGAGE"
+        },
+        {
+          "type": "MORTGAGE",
+          "source": "duval_official_records",
+          "date": "2026-05-31",
+          "confidence": 80,
+          "details": "Record from official_records: MORTGAGE"
         }
-      ],
-      "deal_path": "creative_finance",
-      "deal_path_confidence": 75,
-      "status": "active",
-      "last_updated": "2026-06-08T08:27:27.475861",
-      "assessed_value": 100000,
-      "equity_estimate": 25000,
-      "stacked_sources": [
-        "duval_official_records"
-      ],
-      "stack_count": 1,
-      "is_stacked": false
+      ]
     },
     {
+      "id": 188,
       "lead_id": "LEAD-038",
       "parcel_id": "DC-000038",
       "score": 50,
@@ -1319,28 +1780,40 @@
       "zip": "32202",
       "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:28:58.579813",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "created_at": "2026-06-08 08:28:58",
+      "updated_at": "2026-06-08T08:28:58.585398",
       "signals": [
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026/05/06",
+          "confidence": 95,
+          "details": "Foreclosure filed by HANNAH STABLES OWNERS ASSOCIATION INC - Instrument 2026106112"
+        },
         {
           "type": "MORTGAGE",
           "source": "duval_official_records",
           "date": "2026-06-08",
           "confidence": 80,
           "details": "Record from official_records: MORTGAGE"
+        },
+        {
+          "type": "MORTGAGE",
+          "source": "duval_official_records",
+          "date": "2026-06-03",
+          "confidence": 80,
+          "details": "Record from official_records: MORTGAGE"
         }
-      ],
-      "deal_path": "creative_finance",
-      "deal_path_confidence": 75,
-      "status": "active",
-      "last_updated": "2026-06-08T08:27:27.475890",
-      "assessed_value": 100000,
-      "equity_estimate": 25000,
-      "stacked_sources": [
-        "duval_official_records"
-      ],
-      "stack_count": 1,
-      "is_stacked": false
+      ]
     },
     {
+      "id": 189,
       "lead_id": "LEAD-039",
       "parcel_id": "DC-000039",
       "score": 50,
@@ -1353,33 +1826,45 @@
       "zip": "32202",
       "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:28:58.579820",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "created_at": "2026-06-08 08:28:58",
+      "updated_at": "2026-06-08T08:28:58.585411",
       "signals": [
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026/05/06",
+          "confidence": 95,
+          "details": "Foreclosure filed by MORTGAGE RESEARCH CENTER LLC - Instrument 2026106126"
+        },
         {
           "type": "MORTGAGE",
           "source": "duval_official_records",
           "date": "2026-06-08",
           "confidence": 80,
           "details": "Record from official_records: MORTGAGE"
+        },
+        {
+          "type": "MORTGAGE",
+          "source": "duval_official_records",
+          "date": "2026-06-04",
+          "confidence": 80,
+          "details": "Record from official_records: MORTGAGE"
         }
-      ],
-      "deal_path": "creative_finance",
-      "deal_path_confidence": 75,
-      "status": "active",
-      "last_updated": "2026-06-08T08:27:27.475916",
-      "assessed_value": 100000,
-      "equity_estimate": 25000,
-      "stacked_sources": [
-        "duval_official_records"
-      ],
-      "stack_count": 1,
-      "is_stacked": false
+      ]
     },
     {
+      "id": 190,
       "lead_id": "LEAD-040",
       "parcel_id": "DC-000040",
       "score": 50,
       "score_reasons": [
-        "Single distress signal: Lien",
+        "Single distress signal: Mortgage",
         "Monitoring for additional signals"
       ],
       "address": "40 Sample St, Jacksonville, FL 32200",
@@ -1387,28 +1872,40 @@
       "zip": "32202",
       "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:28:58.579828",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "created_at": "2026-06-08 08:28:58",
+      "updated_at": "2026-06-08T08:28:58.585424",
       "signals": [
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026/05/06",
+          "confidence": 95,
+          "details": "Foreclosure filed by BAYPOINTE TOWNHOMES HOMEOWNERS ASSOCIATION INC - Instrument 2026106140"
+        },
         {
           "type": "LIEN",
           "source": "duval_official_records",
           "date": "2026-05-09",
           "confidence": 80,
           "details": "Record from official_records: LIEN"
+        },
+        {
+          "type": "MORTGAGE",
+          "source": "duval_official_records",
+          "date": "2026-06-05",
+          "confidence": 80,
+          "details": "Record from official_records: MORTGAGE"
         }
-      ],
-      "deal_path": "creative_finance",
-      "deal_path_confidence": 75,
-      "status": "active",
-      "last_updated": "2026-06-08T08:27:27.475929",
-      "assessed_value": 100000,
-      "equity_estimate": 25000,
-      "stacked_sources": [
-        "duval_official_records"
-      ],
-      "stack_count": 1,
-      "is_stacked": false
+      ]
     },
     {
+      "id": 191,
       "lead_id": "LEAD-041",
       "parcel_id": "DC-000041",
       "score": 50,
@@ -1421,28 +1918,40 @@
       "zip": "32202",
       "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:28:58.579837",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "created_at": "2026-06-08 08:28:58",
+      "updated_at": "2026-06-08T08:28:58.585436",
       "signals": [
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026/05/06",
+          "confidence": 95,
+          "details": "Foreclosure filed by WOODLAND FOREST OWNERS ASSOCIATION INC - Instrument 2026106192"
+        },
         {
           "type": "LIEN",
           "source": "duval_official_records",
           "date": "2026-05-11",
           "confidence": 80,
           "details": "Record from official_records: LIEN"
+        },
+        {
+          "type": "LIEN",
+          "source": "duval_official_records",
+          "date": "2026-05-10",
+          "confidence": 80,
+          "details": "Record from official_records: LIEN"
         }
-      ],
-      "deal_path": "creative_finance",
-      "deal_path_confidence": 75,
-      "status": "active",
-      "last_updated": "2026-06-08T08:27:27.475940",
-      "assessed_value": 100000,
-      "equity_estimate": 25000,
-      "stacked_sources": [
-        "duval_official_records"
-      ],
-      "stack_count": 1,
-      "is_stacked": false
+      ]
     },
     {
+      "id": 192,
       "lead_id": "LEAD-042",
       "parcel_id": "DC-000042",
       "score": 50,
@@ -1455,28 +1964,40 @@
       "zip": "32202",
       "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:28:58.579845",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "created_at": "2026-06-08 08:28:58",
+      "updated_at": "2026-06-08T08:28:58.585449",
       "signals": [
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026/05/06",
+          "confidence": 95,
+          "details": "Foreclosure filed by US BANK NATIONAL ASSOCIATION - Instrument 2026106216"
+        },
         {
           "type": "LIEN",
           "source": "duval_official_records",
           "date": "2026-05-12",
           "confidence": 80,
           "details": "Record from official_records: LIEN"
+        },
+        {
+          "type": "LIEN",
+          "source": "duval_official_records",
+          "date": "2026-05-11",
+          "confidence": 80,
+          "details": "Record from official_records: LIEN"
         }
-      ],
-      "deal_path": "creative_finance",
-      "deal_path_confidence": 75,
-      "status": "active",
-      "last_updated": "2026-06-08T08:27:27.475954",
-      "assessed_value": 100000,
-      "equity_estimate": 25000,
-      "stacked_sources": [
-        "duval_official_records"
-      ],
-      "stack_count": 1,
-      "is_stacked": false
+      ]
     },
     {
+      "id": 193,
       "lead_id": "LEAD-043",
       "parcel_id": "DC-000043",
       "score": 50,
@@ -1489,28 +2010,40 @@
       "zip": "32202",
       "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:28:58.579853",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "created_at": "2026-06-08 08:28:58",
+      "updated_at": "2026-06-08T08:28:58.585462",
       "signals": [
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026/05/07",
+          "confidence": 95,
+          "details": "Foreclosure filed by HENNER GREGORY SEAN - Instrument 2026106804"
+        },
         {
           "type": "LIEN",
           "source": "duval_official_records",
           "date": "2026-05-13",
           "confidence": 80,
           "details": "Record from official_records: LIEN"
+        },
+        {
+          "type": "LIEN",
+          "source": "duval_official_records",
+          "date": "2026-05-12",
+          "confidence": 80,
+          "details": "Record from official_records: LIEN"
         }
-      ],
-      "deal_path": "creative_finance",
-      "deal_path_confidence": 75,
-      "status": "active",
-      "last_updated": "2026-06-08T08:27:27.475971",
-      "assessed_value": 100000,
-      "equity_estimate": 25000,
-      "stacked_sources": [
-        "duval_official_records"
-      ],
-      "stack_count": 1,
-      "is_stacked": false
+      ]
     },
     {
+      "id": 194,
       "lead_id": "LEAD-044",
       "parcel_id": "DC-000044",
       "score": 50,
@@ -1523,7 +2056,29 @@
       "zip": "32202",
       "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:28:58.579860",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "created_at": "2026-06-08 08:28:58",
+      "updated_at": "2026-06-08T08:28:58.585476",
       "signals": [
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026/05/07",
+          "confidence": 95,
+          "details": "Foreclosure filed by BAGOUS KELSEY - Instrument 2026106817"
+        },
+        {
+          "type": "LIEN",
+          "source": "duval_official_records",
+          "date": "2026-05-13",
+          "confidence": 80,
+          "details": "Record from official_records: LIEN"
+        },
         {
           "type": "LIEN",
           "source": "duval_official_records",
@@ -1531,20 +2086,10 @@
           "confidence": 80,
           "details": "Record from official_records: LIEN"
         }
-      ],
-      "deal_path": "creative_finance",
-      "deal_path_confidence": 75,
-      "status": "active",
-      "last_updated": "2026-06-08T08:27:27.476283",
-      "assessed_value": 100000,
-      "equity_estimate": 25000,
-      "stacked_sources": [
-        "duval_official_records"
-      ],
-      "stack_count": 1,
-      "is_stacked": false
+      ]
     },
     {
+      "id": 195,
       "lead_id": "LEAD-045",
       "parcel_id": "DC-000045",
       "score": 50,
@@ -1557,28 +2102,40 @@
       "zip": "32202",
       "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:28:58.579871",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "created_at": "2026-06-08 08:28:58",
+      "updated_at": "2026-06-08T08:28:58.585489",
       "signals": [
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026/05/07",
+          "confidence": 95,
+          "details": "Foreclosure filed by BAGOUS KELSEY - Instrument 2026106818"
+        },
         {
           "type": "LIEN",
           "source": "duval_official_records",
           "date": "2026-05-14",
           "confidence": 80,
           "details": "Record from official_records: LIEN"
+        },
+        {
+          "type": "LIEN",
+          "source": "duval_official_records",
+          "date": "2026-05-13",
+          "confidence": 80,
+          "details": "Record from official_records: LIEN"
         }
-      ],
-      "deal_path": "creative_finance",
-      "deal_path_confidence": 75,
-      "status": "active",
-      "last_updated": "2026-06-08T08:27:27.476512",
-      "assessed_value": 100000,
-      "equity_estimate": 25000,
-      "stacked_sources": [
-        "duval_official_records"
-      ],
-      "stack_count": 1,
-      "is_stacked": false
+      ]
     },
     {
+      "id": 196,
       "lead_id": "LEAD-046",
       "parcel_id": "DC-000046",
       "score": 50,
@@ -1591,28 +2148,40 @@
       "zip": "32202",
       "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:28:58.579878",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "created_at": "2026-06-08 08:28:58",
+      "updated_at": "2026-06-08T08:28:58.585502",
       "signals": [
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026/05/07",
+          "confidence": 95,
+          "details": "Foreclosure filed by BAGOUS KELSEY - Instrument 2026106819"
+        },
         {
           "type": "LIEN",
           "source": "duval_official_records",
           "date": "2026-05-15",
           "confidence": 80,
           "details": "Record from official_records: LIEN"
+        },
+        {
+          "type": "LIEN",
+          "source": "duval_official_records",
+          "date": "2026-05-18",
+          "confidence": 80,
+          "details": "Record from official_records: LIEN"
         }
-      ],
-      "deal_path": "creative_finance",
-      "deal_path_confidence": 75,
-      "status": "active",
-      "last_updated": "2026-06-08T08:27:27.476606",
-      "assessed_value": 100000,
-      "equity_estimate": 25000,
-      "stacked_sources": [
-        "duval_official_records"
-      ],
-      "stack_count": 1,
-      "is_stacked": false
+      ]
     },
     {
+      "id": 197,
       "lead_id": "LEAD-047",
       "parcel_id": "DC-000047",
       "score": 50,
@@ -1625,28 +2194,40 @@
       "zip": "32202",
       "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:28:58.579885",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "created_at": "2026-06-08 08:28:58",
+      "updated_at": "2026-06-08T08:28:58.585514",
       "signals": [
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026/05/07",
+          "confidence": 95,
+          "details": "Foreclosure filed by TRUIST BANK - Instrument 2026107208"
+        },
         {
           "type": "LIEN",
           "source": "duval_official_records",
           "date": "2026-05-18",
           "confidence": 80,
           "details": "Record from official_records: LIEN"
+        },
+        {
+          "type": "LIEN",
+          "source": "duval_official_records",
+          "date": "2026-05-21",
+          "confidence": 80,
+          "details": "Record from official_records: LIEN"
         }
-      ],
-      "deal_path": "creative_finance",
-      "deal_path_confidence": 75,
-      "status": "active",
-      "last_updated": "2026-06-08T08:27:27.476800",
-      "assessed_value": 100000,
-      "equity_estimate": 25000,
-      "stacked_sources": [
-        "duval_official_records"
-      ],
-      "stack_count": 1,
-      "is_stacked": false
+      ]
     },
     {
+      "id": 198,
       "lead_id": "LEAD-048",
       "parcel_id": "DC-000048",
       "score": 50,
@@ -1659,28 +2240,40 @@
       "zip": "32202",
       "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:28:58.579892",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "created_at": "2026-06-08 08:28:58",
+      "updated_at": "2026-06-08T08:28:58.585527",
       "signals": [
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026/05/07",
+          "confidence": 95,
+          "details": "Foreclosure filed by FEDERAL HOME LOAN MORTGAGE CORPORATION TRUSTEE - Instrument 2026107227"
+        },
         {
           "type": "LIEN",
           "source": "duval_official_records",
           "date": "2026-05-19",
           "confidence": 80,
           "details": "Record from official_records: LIEN"
+        },
+        {
+          "type": "LIEN",
+          "source": "duval_official_records",
+          "date": "2026-05-23",
+          "confidence": 80,
+          "details": "Record from official_records: LIEN"
         }
-      ],
-      "deal_path": "creative_finance",
-      "deal_path_confidence": 75,
-      "status": "active",
-      "last_updated": "2026-06-08T08:27:27.476812",
-      "assessed_value": 100000,
-      "equity_estimate": 25000,
-      "stacked_sources": [
-        "duval_official_records"
-      ],
-      "stack_count": 1,
-      "is_stacked": false
+      ]
     },
     {
+      "id": 199,
       "lead_id": "LEAD-049",
       "parcel_id": "DC-000049",
       "score": 50,
@@ -1693,28 +2286,40 @@
       "zip": "32202",
       "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:28:58.579898",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "created_at": "2026-06-08 08:28:58",
+      "updated_at": "2026-06-08T08:28:58.585539",
       "signals": [
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026/05/07",
+          "confidence": 95,
+          "details": "Foreclosure filed by VYSTAR CREDIT UNION - Instrument 2026107524"
+        },
         {
           "type": "LIEN",
           "source": "duval_official_records",
           "date": "2026-05-20",
           "confidence": 80,
           "details": "Record from official_records: LIEN"
+        },
+        {
+          "type": "LIEN",
+          "source": "duval_official_records",
+          "date": "2026-05-26",
+          "confidence": 80,
+          "details": "Record from official_records: LIEN"
         }
-      ],
-      "deal_path": "creative_finance",
-      "deal_path_confidence": 75,
-      "status": "active",
-      "last_updated": "2026-06-08T08:27:27.476822",
-      "assessed_value": 100000,
-      "equity_estimate": 25000,
-      "stacked_sources": [
-        "duval_official_records"
-      ],
-      "stack_count": 1,
-      "is_stacked": false
+      ]
     },
     {
+      "id": 200,
       "lead_id": "LEAD-050",
       "parcel_id": "DC-000050",
       "score": 50,
@@ -1727,28 +2332,40 @@
       "zip": "32202",
       "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:28:58.579906",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "created_at": "2026-06-08 08:28:58",
+      "updated_at": "2026-06-08T08:28:58.585552",
       "signals": [
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026/05/07",
+          "confidence": 95,
+          "details": "Foreclosure filed by WILMINGTON SAVINGS FUND SOCIETY FSB TRUSTEE - Instrument 2026107643"
+        },
         {
           "type": "LIEN",
           "source": "duval_official_records",
           "date": "2026-05-21",
           "confidence": 80,
           "details": "Record from official_records: LIEN"
+        },
+        {
+          "type": "LIEN",
+          "source": "duval_official_records",
+          "date": "2026-05-29",
+          "confidence": 80,
+          "details": "Record from official_records: LIEN"
         }
-      ],
-      "deal_path": "creative_finance",
-      "deal_path_confidence": 75,
-      "status": "active",
-      "last_updated": "2026-06-08T08:27:27.476833",
-      "assessed_value": 100000,
-      "equity_estimate": 25000,
-      "stacked_sources": [
-        "duval_official_records"
-      ],
-      "stack_count": 1,
-      "is_stacked": false
+      ]
     },
     {
+      "id": 201,
       "lead_id": "LEAD-051",
       "parcel_id": "DC-000051",
       "score": 50,
@@ -1761,6 +2378,14 @@
       "zip": "32202",
       "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:28:58.579913",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "created_at": "2026-06-08 08:28:58",
+      "updated_at": "2026-06-08T08:28:58.585565",
       "signals": [
         {
           "type": "LIEN",
@@ -1768,21 +2393,18 @@
           "date": "2026-05-21",
           "confidence": 80,
           "details": "Record from official_records: LIEN"
+        },
+        {
+          "type": "LIEN",
+          "source": "duval_official_records",
+          "date": "2026-05-31",
+          "confidence": 80,
+          "details": "Record from official_records: LIEN"
         }
-      ],
-      "deal_path": "creative_finance",
-      "deal_path_confidence": 75,
-      "status": "active",
-      "last_updated": "2026-06-08T08:27:27.476842",
-      "assessed_value": 100000,
-      "equity_estimate": 25000,
-      "stacked_sources": [
-        "duval_official_records"
-      ],
-      "stack_count": 1,
-      "is_stacked": false
+      ]
     },
     {
+      "id": 202,
       "lead_id": "LEAD-052",
       "parcel_id": "DC-000052",
       "score": 50,
@@ -1795,6 +2417,14 @@
       "zip": "32202",
       "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:28:58.579920",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "created_at": "2026-06-08 08:28:58",
+      "updated_at": "2026-06-08T08:28:58.585587",
       "signals": [
         {
           "type": "LIEN",
@@ -1802,21 +2432,18 @@
           "date": "2026-05-22",
           "confidence": 80,
           "details": "Record from official_records: LIEN"
+        },
+        {
+          "type": "LIEN",
+          "source": "duval_official_records",
+          "date": "2026-05-31",
+          "confidence": 80,
+          "details": "Record from official_records: LIEN"
         }
-      ],
-      "deal_path": "creative_finance",
-      "deal_path_confidence": 75,
-      "status": "active",
-      "last_updated": "2026-06-08T08:27:27.476854",
-      "assessed_value": 100000,
-      "equity_estimate": 25000,
-      "stacked_sources": [
-        "duval_official_records"
-      ],
-      "stack_count": 1,
-      "is_stacked": false
+      ]
     },
     {
+      "id": 203,
       "lead_id": "LEAD-053",
       "parcel_id": "DC-000053",
       "score": 50,
@@ -1829,6 +2456,14 @@
       "zip": "32202",
       "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:28:58.579927",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "created_at": "2026-06-08 08:28:58",
+      "updated_at": "2026-06-08T08:28:58.585600",
       "signals": [
         {
           "type": "LIEN",
@@ -1836,21 +2471,18 @@
           "date": "2026-05-25",
           "confidence": 80,
           "details": "Record from official_records: LIEN"
+        },
+        {
+          "type": "LIEN",
+          "source": "duval_official_records",
+          "date": "2026-06-01",
+          "confidence": 80,
+          "details": "Record from official_records: LIEN"
         }
-      ],
-      "deal_path": "creative_finance",
-      "deal_path_confidence": 75,
-      "status": "active",
-      "last_updated": "2026-06-08T08:27:27.476864",
-      "assessed_value": 100000,
-      "equity_estimate": 25000,
-      "stacked_sources": [
-        "duval_official_records"
-      ],
-      "stack_count": 1,
-      "is_stacked": false
+      ]
     },
     {
+      "id": 204,
       "lead_id": "LEAD-054",
       "parcel_id": "DC-000054",
       "score": 50,
@@ -1863,6 +2495,14 @@
       "zip": "32202",
       "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:28:58.579935",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "created_at": "2026-06-08 08:28:58",
+      "updated_at": "2026-06-08T08:28:58.585612",
       "signals": [
         {
           "type": "LIEN",
@@ -1870,21 +2510,18 @@
           "date": "2026-05-25",
           "confidence": 80,
           "details": "Record from official_records: LIEN"
+        },
+        {
+          "type": "LIEN",
+          "source": "duval_official_records",
+          "date": "2026-06-01",
+          "confidence": 80,
+          "details": "Record from official_records: LIEN"
         }
-      ],
-      "deal_path": "creative_finance",
-      "deal_path_confidence": 75,
-      "status": "active",
-      "last_updated": "2026-06-08T08:27:27.476874",
-      "assessed_value": 100000,
-      "equity_estimate": 25000,
-      "stacked_sources": [
-        "duval_official_records"
-      ],
-      "stack_count": 1,
-      "is_stacked": false
+      ]
     },
     {
+      "id": 205,
       "lead_id": "LEAD-055",
       "parcel_id": "DC-000055",
       "score": 50,
@@ -1897,6 +2534,14 @@
       "zip": "32202",
       "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:28:58.579942",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "created_at": "2026-06-08 08:28:58",
+      "updated_at": "2026-06-08T08:28:58.585625",
       "signals": [
         {
           "type": "LIEN",
@@ -1904,21 +2549,18 @@
           "date": "2026-06-01",
           "confidence": 80,
           "details": "Record from official_records: LIEN"
+        },
+        {
+          "type": "LIEN",
+          "source": "duval_official_records",
+          "date": "2026-06-02",
+          "confidence": 80,
+          "details": "Record from official_records: LIEN"
         }
-      ],
-      "deal_path": "creative_finance",
-      "deal_path_confidence": 75,
-      "status": "active",
-      "last_updated": "2026-06-08T08:27:27.476887",
-      "assessed_value": 100000,
-      "equity_estimate": 25000,
-      "stacked_sources": [
-        "duval_official_records"
-      ],
-      "stack_count": 1,
-      "is_stacked": false
+      ]
     },
     {
+      "id": 206,
       "lead_id": "LEAD-056",
       "parcel_id": "DC-000056",
       "score": 50,
@@ -1931,6 +2573,14 @@
       "zip": "32202",
       "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:28:58.579949",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "created_at": "2026-06-08 08:28:58",
+      "updated_at": "2026-06-08T08:28:58.585637",
       "signals": [
         {
           "type": "LIEN",
@@ -1938,21 +2588,18 @@
           "date": "2026-06-01",
           "confidence": 80,
           "details": "Record from official_records: LIEN"
+        },
+        {
+          "type": "LIEN",
+          "source": "duval_official_records",
+          "date": "2026-06-06",
+          "confidence": 80,
+          "details": "Record from official_records: LIEN"
         }
-      ],
-      "deal_path": "creative_finance",
-      "deal_path_confidence": 75,
-      "status": "active",
-      "last_updated": "2026-06-08T08:27:27.476897",
-      "assessed_value": 100000,
-      "equity_estimate": 25000,
-      "stacked_sources": [
-        "duval_official_records"
-      ],
-      "stack_count": 1,
-      "is_stacked": false
+      ]
     },
     {
+      "id": 207,
       "lead_id": "LEAD-057",
       "parcel_id": "DC-000057",
       "score": 50,
@@ -1965,6 +2612,14 @@
       "zip": "32202",
       "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:28:58.579956",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "created_at": "2026-06-08 08:28:58",
+      "updated_at": "2026-06-08T08:28:58.585650",
       "signals": [
         {
           "type": "LIEN",
@@ -1972,21 +2627,18 @@
           "date": "2026-06-02",
           "confidence": 80,
           "details": "Record from official_records: LIEN"
+        },
+        {
+          "type": "LIEN",
+          "source": "duval_official_records",
+          "date": "2026-06-06",
+          "confidence": 80,
+          "details": "Record from official_records: LIEN"
         }
-      ],
-      "deal_path": "creative_finance",
-      "deal_path_confidence": 75,
-      "status": "active",
-      "last_updated": "2026-06-08T08:27:27.476908",
-      "assessed_value": 100000,
-      "equity_estimate": 25000,
-      "stacked_sources": [
-        "duval_official_records"
-      ],
-      "stack_count": 1,
-      "is_stacked": false
+      ]
     },
     {
+      "id": 208,
       "lead_id": "LEAD-058",
       "parcel_id": "DC-000058",
       "score": 50,
@@ -1999,6 +2651,14 @@
       "zip": "32202",
       "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:28:58.579963",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "created_at": "2026-06-08 08:28:58",
+      "updated_at": "2026-06-08T08:28:58.585663",
       "signals": [
         {
           "type": "LIEN",
@@ -2006,26 +2666,23 @@
           "date": "2026-06-03",
           "confidence": 80,
           "details": "Record from official_records: LIEN"
+        },
+        {
+          "type": "LIEN",
+          "source": "duval_official_records",
+          "date": "2026-06-08",
+          "confidence": 80,
+          "details": "Record from official_records: LIEN"
         }
-      ],
-      "deal_path": "creative_finance",
-      "deal_path_confidence": 75,
-      "status": "active",
-      "last_updated": "2026-06-08T08:27:27.476918",
-      "assessed_value": 100000,
-      "equity_estimate": 25000,
-      "stacked_sources": [
-        "duval_official_records"
-      ],
-      "stack_count": 1,
-      "is_stacked": false
+      ]
     },
     {
+      "id": 209,
       "lead_id": "LEAD-059",
       "parcel_id": "DC-000059",
       "score": 50,
       "score_reasons": [
-        "Single distress signal: Lien",
+        "Single distress signal: Judgment",
         "Monitoring for additional signals"
       ],
       "address": "59 Sample St, Jacksonville, FL 32209",
@@ -2033,6 +2690,14 @@
       "zip": "32202",
       "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:28:58.579970",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "created_at": "2026-06-08 08:28:58",
+      "updated_at": "2026-06-08T08:28:58.585675",
       "signals": [
         {
           "type": "LIEN",
@@ -2040,21 +2705,18 @@
           "date": "2026-06-04",
           "confidence": 80,
           "details": "Record from official_records: LIEN"
+        },
+        {
+          "type": "JUDGMENT",
+          "source": "duval_official_records",
+          "date": "2026-05-09",
+          "confidence": 80,
+          "details": "Record from official_records: JUDGMENT"
         }
-      ],
-      "deal_path": "creative_finance",
-      "deal_path_confidence": 75,
-      "status": "active",
-      "last_updated": "2026-06-08T08:27:27.476927",
-      "assessed_value": 100000,
-      "equity_estimate": 25000,
-      "stacked_sources": [
-        "duval_official_records"
-      ],
-      "stack_count": 1,
-      "is_stacked": false
+      ]
     },
     {
+      "id": 210,
       "lead_id": "LEAD-060",
       "parcel_id": "DC-000060",
       "score": 50,
@@ -2067,6 +2729,14 @@
       "zip": "32202",
       "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:28:58.579979",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "created_at": "2026-06-08 08:28:58",
+      "updated_at": "2026-06-08T08:28:58.585688",
       "signals": [
         {
           "type": "JUDGMENT",
@@ -2074,21 +2744,18 @@
           "date": "2026-05-09",
           "confidence": 80,
           "details": "Record from official_records: JUDGMENT"
+        },
+        {
+          "type": "JUDGMENT",
+          "source": "duval_official_records",
+          "date": "2026-05-10",
+          "confidence": 80,
+          "details": "Record from official_records: JUDGMENT"
         }
-      ],
-      "deal_path": "creative_finance",
-      "deal_path_confidence": 75,
-      "status": "active",
-      "last_updated": "2026-06-08T08:27:27.476937",
-      "assessed_value": 100000,
-      "equity_estimate": 25000,
-      "stacked_sources": [
-        "duval_official_records"
-      ],
-      "stack_count": 1,
-      "is_stacked": false
+      ]
     },
     {
+      "id": 211,
       "lead_id": "LEAD-061",
       "parcel_id": "DC-000061",
       "score": 50,
@@ -2101,6 +2768,14 @@
       "zip": "32202",
       "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:28:58.580022",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "created_at": "2026-06-08 08:28:58",
+      "updated_at": "2026-06-08T08:28:58.585701",
       "signals": [
         {
           "type": "JUDGMENT",
@@ -2108,21 +2783,18 @@
           "date": "2026-05-11",
           "confidence": 80,
           "details": "Record from official_records: JUDGMENT"
+        },
+        {
+          "type": "JUDGMENT",
+          "source": "duval_official_records",
+          "date": "2026-05-10",
+          "confidence": 80,
+          "details": "Record from official_records: JUDGMENT"
         }
-      ],
-      "deal_path": "creative_finance",
-      "deal_path_confidence": 75,
-      "status": "active",
-      "last_updated": "2026-06-08T08:27:27.476951",
-      "assessed_value": 100000,
-      "equity_estimate": 25000,
-      "stacked_sources": [
-        "duval_official_records"
-      ],
-      "stack_count": 1,
-      "is_stacked": false
+      ]
     },
     {
+      "id": 212,
       "lead_id": "LEAD-062",
       "parcel_id": "DC-000062",
       "score": 50,
@@ -2135,6 +2807,14 @@
       "zip": "32202",
       "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:28:58.580029",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "created_at": "2026-06-08 08:28:58",
+      "updated_at": "2026-06-08T08:28:58.585721",
       "signals": [
         {
           "type": "JUDGMENT",
@@ -2142,21 +2822,18 @@
           "date": "2026-05-14",
           "confidence": 80,
           "details": "Record from official_records: JUDGMENT"
+        },
+        {
+          "type": "JUDGMENT",
+          "source": "duval_official_records",
+          "date": "2026-05-11",
+          "confidence": 80,
+          "details": "Record from official_records: JUDGMENT"
         }
-      ],
-      "deal_path": "creative_finance",
-      "deal_path_confidence": 75,
-      "status": "active",
-      "last_updated": "2026-06-08T08:27:27.476969",
-      "assessed_value": 100000,
-      "equity_estimate": 25000,
-      "stacked_sources": [
-        "duval_official_records"
-      ],
-      "stack_count": 1,
-      "is_stacked": false
+      ]
     },
     {
+      "id": 213,
       "lead_id": "LEAD-063",
       "parcel_id": "DC-000063",
       "score": 50,
@@ -2169,6 +2846,14 @@
       "zip": "32202",
       "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:28:58.580036",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "created_at": "2026-06-08 08:28:58",
+      "updated_at": "2026-06-08T08:28:58.585733",
       "signals": [
         {
           "type": "JUDGMENT",
@@ -2176,21 +2861,18 @@
           "date": "2026-05-14",
           "confidence": 80,
           "details": "Record from official_records: JUDGMENT"
+        },
+        {
+          "type": "JUDGMENT",
+          "source": "duval_official_records",
+          "date": "2026-05-11",
+          "confidence": 80,
+          "details": "Record from official_records: JUDGMENT"
         }
-      ],
-      "deal_path": "creative_finance",
-      "deal_path_confidence": 75,
-      "status": "active",
-      "last_updated": "2026-06-08T08:27:27.476979",
-      "assessed_value": 100000,
-      "equity_estimate": 25000,
-      "stacked_sources": [
-        "duval_official_records"
-      ],
-      "stack_count": 1,
-      "is_stacked": false
+      ]
     },
     {
+      "id": 214,
       "lead_id": "LEAD-064",
       "parcel_id": "DC-000064",
       "score": 50,
@@ -2203,6 +2885,14 @@
       "zip": "32202",
       "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:28:58.580043",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "created_at": "2026-06-08 08:28:58",
+      "updated_at": "2026-06-08T08:28:58.585746",
       "signals": [
         {
           "type": "JUDGMENT",
@@ -2210,21 +2900,18 @@
           "date": "2026-05-16",
           "confidence": 80,
           "details": "Record from official_records: JUDGMENT"
+        },
+        {
+          "type": "JUDGMENT",
+          "source": "duval_official_records",
+          "date": "2026-05-12",
+          "confidence": 80,
+          "details": "Record from official_records: JUDGMENT"
         }
-      ],
-      "deal_path": "creative_finance",
-      "deal_path_confidence": 75,
-      "status": "active",
-      "last_updated": "2026-06-08T08:27:27.476991",
-      "assessed_value": 100000,
-      "equity_estimate": 25000,
-      "stacked_sources": [
-        "duval_official_records"
-      ],
-      "stack_count": 1,
-      "is_stacked": false
+      ]
     },
     {
+      "id": 215,
       "lead_id": "LEAD-065",
       "parcel_id": "DC-000065",
       "score": 50,
@@ -2237,6 +2924,14 @@
       "zip": "32202",
       "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:28:58.580050",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "created_at": "2026-06-08 08:28:58",
+      "updated_at": "2026-06-08T08:28:58.585759",
       "signals": [
         {
           "type": "JUDGMENT",
@@ -2244,21 +2939,18 @@
           "date": "2026-05-20",
           "confidence": 80,
           "details": "Record from official_records: JUDGMENT"
+        },
+        {
+          "type": "JUDGMENT",
+          "source": "duval_official_records",
+          "date": "2026-05-13",
+          "confidence": 80,
+          "details": "Record from official_records: JUDGMENT"
         }
-      ],
-      "deal_path": "creative_finance",
-      "deal_path_confidence": 75,
-      "status": "active",
-      "last_updated": "2026-06-08T08:27:27.477002",
-      "assessed_value": 100000,
-      "equity_estimate": 25000,
-      "stacked_sources": [
-        "duval_official_records"
-      ],
-      "stack_count": 1,
-      "is_stacked": false
+      ]
     },
     {
+      "id": 216,
       "lead_id": "LEAD-066",
       "parcel_id": "DC-000066",
       "score": 50,
@@ -2271,6 +2963,14 @@
       "zip": "32202",
       "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:28:58.580057",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "created_at": "2026-06-08 08:28:58",
+      "updated_at": "2026-06-08T08:28:58.585771",
       "signals": [
         {
           "type": "JUDGMENT",
@@ -2278,21 +2978,18 @@
           "date": "2026-05-20",
           "confidence": 80,
           "details": "Record from official_records: JUDGMENT"
+        },
+        {
+          "type": "JUDGMENT",
+          "source": "duval_official_records",
+          "date": "2026-05-14",
+          "confidence": 80,
+          "details": "Record from official_records: JUDGMENT"
         }
-      ],
-      "deal_path": "creative_finance",
-      "deal_path_confidence": 75,
-      "status": "active",
-      "last_updated": "2026-06-08T08:27:27.477017",
-      "assessed_value": 100000,
-      "equity_estimate": 25000,
-      "stacked_sources": [
-        "duval_official_records"
-      ],
-      "stack_count": 1,
-      "is_stacked": false
+      ]
     },
     {
+      "id": 217,
       "lead_id": "LEAD-067",
       "parcel_id": "DC-000067",
       "score": 50,
@@ -2305,6 +3002,14 @@
       "zip": "32202",
       "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:28:58.580065",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "created_at": "2026-06-08 08:28:58",
+      "updated_at": "2026-06-08T08:28:58.585783",
       "signals": [
         {
           "type": "JUDGMENT",
@@ -2312,21 +3017,18 @@
           "date": "2026-05-21",
           "confidence": 80,
           "details": "Record from official_records: JUDGMENT"
+        },
+        {
+          "type": "JUDGMENT",
+          "source": "duval_official_records",
+          "date": "2026-05-14",
+          "confidence": 80,
+          "details": "Record from official_records: JUDGMENT"
         }
-      ],
-      "deal_path": "creative_finance",
-      "deal_path_confidence": 75,
-      "status": "active",
-      "last_updated": "2026-06-08T08:27:27.477030",
-      "assessed_value": 100000,
-      "equity_estimate": 25000,
-      "stacked_sources": [
-        "duval_official_records"
-      ],
-      "stack_count": 1,
-      "is_stacked": false
+      ]
     },
     {
+      "id": 218,
       "lead_id": "LEAD-068",
       "parcel_id": "DC-000068",
       "score": 50,
@@ -2339,6 +3041,14 @@
       "zip": "32202",
       "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:28:58.580073",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "created_at": "2026-06-08 08:28:58",
+      "updated_at": "2026-06-08T08:28:58.585796",
       "signals": [
         {
           "type": "JUDGMENT",
@@ -2346,21 +3056,18 @@
           "date": "2026-05-21",
           "confidence": 80,
           "details": "Record from official_records: JUDGMENT"
+        },
+        {
+          "type": "JUDGMENT",
+          "source": "duval_official_records",
+          "date": "2026-05-16",
+          "confidence": 80,
+          "details": "Record from official_records: JUDGMENT"
         }
-      ],
-      "deal_path": "creative_finance",
-      "deal_path_confidence": 75,
-      "status": "active",
-      "last_updated": "2026-06-08T08:27:27.477040",
-      "assessed_value": 100000,
-      "equity_estimate": 25000,
-      "stacked_sources": [
-        "duval_official_records"
-      ],
-      "stack_count": 1,
-      "is_stacked": false
+      ]
     },
     {
+      "id": 219,
       "lead_id": "LEAD-069",
       "parcel_id": "DC-000069",
       "score": 50,
@@ -2373,6 +3080,14 @@
       "zip": "32202",
       "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:28:58.580081",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "created_at": "2026-06-08 08:28:58",
+      "updated_at": "2026-06-08T08:28:58.585808",
       "signals": [
         {
           "type": "JUDGMENT",
@@ -2380,21 +3095,18 @@
           "date": "2026-05-22",
           "confidence": 80,
           "details": "Record from official_records: JUDGMENT"
+        },
+        {
+          "type": "JUDGMENT",
+          "source": "duval_official_records",
+          "date": "2026-05-22",
+          "confidence": 80,
+          "details": "Record from official_records: JUDGMENT"
         }
-      ],
-      "deal_path": "creative_finance",
-      "deal_path_confidence": 75,
-      "status": "active",
-      "last_updated": "2026-06-08T08:27:27.477049",
-      "assessed_value": 100000,
-      "equity_estimate": 25000,
-      "stacked_sources": [
-        "duval_official_records"
-      ],
-      "stack_count": 1,
-      "is_stacked": false
+      ]
     },
     {
+      "id": 220,
       "lead_id": "LEAD-070",
       "parcel_id": "DC-000070",
       "score": 50,
@@ -2407,6 +3119,14 @@
       "zip": "32202",
       "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:28:58.580089",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "created_at": "2026-06-08 08:28:58",
+      "updated_at": "2026-06-08T08:28:58.585821",
       "signals": [
         {
           "type": "JUDGMENT",
@@ -2414,21 +3134,18 @@
           "date": "2026-05-22",
           "confidence": 80,
           "details": "Record from official_records: JUDGMENT"
+        },
+        {
+          "type": "JUDGMENT",
+          "source": "duval_official_records",
+          "date": "2026-05-26",
+          "confidence": 80,
+          "details": "Record from official_records: JUDGMENT"
         }
-      ],
-      "deal_path": "creative_finance",
-      "deal_path_confidence": 75,
-      "status": "active",
-      "last_updated": "2026-06-08T08:27:27.477061",
-      "assessed_value": 100000,
-      "equity_estimate": 25000,
-      "stacked_sources": [
-        "duval_official_records"
-      ],
-      "stack_count": 1,
-      "is_stacked": false
+      ]
     },
     {
+      "id": 221,
       "lead_id": "LEAD-071",
       "parcel_id": "DC-000071",
       "score": 50,
@@ -2441,6 +3158,14 @@
       "zip": "32202",
       "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:28:58.580096",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "created_at": "2026-06-08 08:28:58",
+      "updated_at": "2026-06-08T08:28:58.585836",
       "signals": [
         {
           "type": "JUDGMENT",
@@ -2448,21 +3173,18 @@
           "date": "2026-05-22",
           "confidence": 80,
           "details": "Record from official_records: JUDGMENT"
+        },
+        {
+          "type": "JUDGMENT",
+          "source": "duval_official_records",
+          "date": "2026-05-27",
+          "confidence": 80,
+          "details": "Record from official_records: JUDGMENT"
         }
-      ],
-      "deal_path": "creative_finance",
-      "deal_path_confidence": 75,
-      "status": "active",
-      "last_updated": "2026-06-08T08:27:27.477071",
-      "assessed_value": 100000,
-      "equity_estimate": 25000,
-      "stacked_sources": [
-        "duval_official_records"
-      ],
-      "stack_count": 1,
-      "is_stacked": false
+      ]
     },
     {
+      "id": 222,
       "lead_id": "LEAD-072",
       "parcel_id": "DC-000072",
       "score": 50,
@@ -2475,6 +3197,14 @@
       "zip": "32202",
       "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:28:58.580102",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "created_at": "2026-06-08 08:28:58",
+      "updated_at": "2026-06-08T08:28:58.585848",
       "signals": [
         {
           "type": "JUDGMENT",
@@ -2482,21 +3212,18 @@
           "date": "2026-05-24",
           "confidence": 80,
           "details": "Record from official_records: JUDGMENT"
+        },
+        {
+          "type": "JUDGMENT",
+          "source": "duval_official_records",
+          "date": "2026-05-27",
+          "confidence": 80,
+          "details": "Record from official_records: JUDGMENT"
         }
-      ],
-      "deal_path": "creative_finance",
-      "deal_path_confidence": 75,
-      "status": "active",
-      "last_updated": "2026-06-08T08:27:27.477081",
-      "assessed_value": 100000,
-      "equity_estimate": 25000,
-      "stacked_sources": [
-        "duval_official_records"
-      ],
-      "stack_count": 1,
-      "is_stacked": false
+      ]
     },
     {
+      "id": 223,
       "lead_id": "LEAD-073",
       "parcel_id": "DC-000073",
       "score": 50,
@@ -2509,6 +3236,14 @@
       "zip": "32202",
       "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:28:58.580109",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "created_at": "2026-06-08 08:28:58",
+      "updated_at": "2026-06-08T08:28:58.585861",
       "signals": [
         {
           "type": "JUDGMENT",
@@ -2516,21 +3251,18 @@
           "date": "2026-05-25",
           "confidence": 80,
           "details": "Record from official_records: JUDGMENT"
+        },
+        {
+          "type": "JUDGMENT",
+          "source": "duval_official_records",
+          "date": "2026-05-28",
+          "confidence": 80,
+          "details": "Record from official_records: JUDGMENT"
         }
-      ],
-      "deal_path": "creative_finance",
-      "deal_path_confidence": 75,
-      "status": "active",
-      "last_updated": "2026-06-08T08:27:27.477090",
-      "assessed_value": 100000,
-      "equity_estimate": 25000,
-      "stacked_sources": [
-        "duval_official_records"
-      ],
-      "stack_count": 1,
-      "is_stacked": false
+      ]
     },
     {
+      "id": 224,
       "lead_id": "LEAD-074",
       "parcel_id": "DC-000074",
       "score": 50,
@@ -2543,6 +3275,14 @@
       "zip": "32202",
       "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:28:58.580116",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "created_at": "2026-06-08 08:28:58",
+      "updated_at": "2026-06-08T08:28:58.585873",
       "signals": [
         {
           "type": "JUDGMENT",
@@ -2550,21 +3290,18 @@
           "date": "2026-05-25",
           "confidence": 80,
           "details": "Record from official_records: JUDGMENT"
+        },
+        {
+          "type": "JUDGMENT",
+          "source": "duval_official_records",
+          "date": "2026-05-29",
+          "confidence": 80,
+          "details": "Record from official_records: JUDGMENT"
         }
-      ],
-      "deal_path": "creative_finance",
-      "deal_path_confidence": 75,
-      "status": "active",
-      "last_updated": "2026-06-08T08:27:27.477099",
-      "assessed_value": 100000,
-      "equity_estimate": 25000,
-      "stacked_sources": [
-        "duval_official_records"
-      ],
-      "stack_count": 1,
-      "is_stacked": false
+      ]
     },
     {
+      "id": 225,
       "lead_id": "LEAD-075",
       "parcel_id": "DC-000075",
       "score": 50,
@@ -2577,6 +3314,14 @@
       "zip": "32202",
       "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:28:58.580123",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "created_at": "2026-06-08 08:28:58",
+      "updated_at": "2026-06-08T08:28:58.585886",
       "signals": [
         {
           "type": "JUDGMENT",
@@ -2584,21 +3329,18 @@
           "date": "2026-05-26",
           "confidence": 80,
           "details": "Record from official_records: JUDGMENT"
+        },
+        {
+          "type": "JUDGMENT",
+          "source": "duval_official_records",
+          "date": "2026-05-29",
+          "confidence": 80,
+          "details": "Record from official_records: JUDGMENT"
         }
-      ],
-      "deal_path": "creative_finance",
-      "deal_path_confidence": 75,
-      "status": "active",
-      "last_updated": "2026-06-08T08:27:27.477108",
-      "assessed_value": 100000,
-      "equity_estimate": 25000,
-      "stacked_sources": [
-        "duval_official_records"
-      ],
-      "stack_count": 1,
-      "is_stacked": false
+      ]
     },
     {
+      "id": 226,
       "lead_id": "LEAD-076",
       "parcel_id": "DC-000076",
       "score": 50,
@@ -2611,6 +3353,14 @@
       "zip": "32202",
       "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:28:58.580131",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "created_at": "2026-06-08 08:28:58",
+      "updated_at": "2026-06-08T08:28:58.585898",
       "signals": [
         {
           "type": "JUDGMENT",
@@ -2618,21 +3368,18 @@
           "date": "2026-05-26",
           "confidence": 80,
           "details": "Record from official_records: JUDGMENT"
+        },
+        {
+          "type": "JUDGMENT",
+          "source": "duval_official_records",
+          "date": "2026-05-30",
+          "confidence": 80,
+          "details": "Record from official_records: JUDGMENT"
         }
-      ],
-      "deal_path": "creative_finance",
-      "deal_path_confidence": 75,
-      "status": "active",
-      "last_updated": "2026-06-08T08:27:27.477118",
-      "assessed_value": 100000,
-      "equity_estimate": 25000,
-      "stacked_sources": [
-        "duval_official_records"
-      ],
-      "stack_count": 1,
-      "is_stacked": false
+      ]
     },
     {
+      "id": 227,
       "lead_id": "LEAD-077",
       "parcel_id": "DC-000077",
       "score": 50,
@@ -2645,6 +3392,14 @@
       "zip": "32202",
       "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:28:58.580138",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "created_at": "2026-06-08 08:28:58",
+      "updated_at": "2026-06-08T08:28:58.585911",
       "signals": [
         {
           "type": "JUDGMENT",
@@ -2652,21 +3407,18 @@
           "date": "2026-05-26",
           "confidence": 80,
           "details": "Record from official_records: JUDGMENT"
+        },
+        {
+          "type": "JUDGMENT",
+          "source": "duval_official_records",
+          "date": "2026-05-30",
+          "confidence": 80,
+          "details": "Record from official_records: JUDGMENT"
         }
-      ],
-      "deal_path": "creative_finance",
-      "deal_path_confidence": 75,
-      "status": "active",
-      "last_updated": "2026-06-08T08:27:27.477293",
-      "assessed_value": 100000,
-      "equity_estimate": 25000,
-      "stacked_sources": [
-        "duval_official_records"
-      ],
-      "stack_count": 1,
-      "is_stacked": false
+      ]
     },
     {
+      "id": 228,
       "lead_id": "LEAD-078",
       "parcel_id": "DC-000078",
       "score": 50,
@@ -2679,6 +3431,14 @@
       "zip": "32202",
       "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:28:58.580145",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "created_at": "2026-06-08 08:28:58",
+      "updated_at": "2026-06-08T08:28:58.585923",
       "signals": [
         {
           "type": "JUDGMENT",
@@ -2686,21 +3446,18 @@
           "date": "2026-05-27",
           "confidence": 80,
           "details": "Record from official_records: JUDGMENT"
+        },
+        {
+          "type": "JUDGMENT",
+          "source": "duval_official_records",
+          "date": "2026-06-01",
+          "confidence": 80,
+          "details": "Record from official_records: JUDGMENT"
         }
-      ],
-      "deal_path": "creative_finance",
-      "deal_path_confidence": 75,
-      "status": "active",
-      "last_updated": "2026-06-08T08:27:27.477334",
-      "assessed_value": 100000,
-      "equity_estimate": 25000,
-      "stacked_sources": [
-        "duval_official_records"
-      ],
-      "stack_count": 1,
-      "is_stacked": false
+      ]
     },
     {
+      "id": 229,
       "lead_id": "LEAD-079",
       "parcel_id": "DC-000079",
       "score": 50,
@@ -2713,6 +3470,14 @@
       "zip": "32202",
       "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:28:58.580153",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "created_at": "2026-06-08 08:28:58",
+      "updated_at": "2026-06-08T08:28:58.585939",
       "signals": [
         {
           "type": "JUDGMENT",
@@ -2720,21 +3485,18 @@
           "date": "2026-05-31",
           "confidence": 80,
           "details": "Record from official_records: JUDGMENT"
+        },
+        {
+          "type": "JUDGMENT",
+          "source": "duval_official_records",
+          "date": "2026-06-02",
+          "confidence": 80,
+          "details": "Record from official_records: JUDGMENT"
         }
-      ],
-      "deal_path": "creative_finance",
-      "deal_path_confidence": 75,
-      "status": "active",
-      "last_updated": "2026-06-08T08:27:27.477352",
-      "assessed_value": 100000,
-      "equity_estimate": 25000,
-      "stacked_sources": [
-        "duval_official_records"
-      ],
-      "stack_count": 1,
-      "is_stacked": false
+      ]
     },
     {
+      "id": 230,
       "lead_id": "LEAD-080",
       "parcel_id": "DC-000080",
       "score": 50,
@@ -2747,6 +3509,14 @@
       "zip": "32202",
       "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:28:58.580162",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "created_at": "2026-06-08 08:28:58",
+      "updated_at": "2026-06-08T08:28:58.585951",
       "signals": [
         {
           "type": "JUDGMENT",
@@ -2754,21 +3524,18 @@
           "date": "2026-06-01",
           "confidence": 80,
           "details": "Record from official_records: JUDGMENT"
+        },
+        {
+          "type": "JUDGMENT",
+          "source": "duval_official_records",
+          "date": "2026-06-04",
+          "confidence": 80,
+          "details": "Record from official_records: JUDGMENT"
         }
-      ],
-      "deal_path": "creative_finance",
-      "deal_path_confidence": 75,
-      "status": "active",
-      "last_updated": "2026-06-08T08:27:27.477362",
-      "assessed_value": 100000,
-      "equity_estimate": 25000,
-      "stacked_sources": [
-        "duval_official_records"
-      ],
-      "stack_count": 1,
-      "is_stacked": false
+      ]
     },
     {
+      "id": 231,
       "lead_id": "LEAD-081",
       "parcel_id": "DC-000081",
       "score": 50,
@@ -2781,6 +3548,14 @@
       "zip": "32202",
       "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:28:58.580168",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "created_at": "2026-06-08 08:28:58",
+      "updated_at": "2026-06-08T08:28:58.585964",
       "signals": [
         {
           "type": "JUDGMENT",
@@ -2788,21 +3563,18 @@
           "date": "2026-06-06",
           "confidence": 80,
           "details": "Record from official_records: JUDGMENT"
+        },
+        {
+          "type": "JUDGMENT",
+          "source": "duval_official_records",
+          "date": "2026-06-04",
+          "confidence": 80,
+          "details": "Record from official_records: JUDGMENT"
         }
-      ],
-      "deal_path": "creative_finance",
-      "deal_path_confidence": 75,
-      "status": "active",
-      "last_updated": "2026-06-08T08:27:27.477372",
-      "assessed_value": 100000,
-      "equity_estimate": 25000,
-      "stacked_sources": [
-        "duval_official_records"
-      ],
-      "stack_count": 1,
-      "is_stacked": false
+      ]
     },
     {
+      "id": 232,
       "lead_id": "LEAD-082",
       "parcel_id": "DC-000082",
       "score": 50,
@@ -2815,6 +3587,14 @@
       "zip": "32202",
       "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:28:58.580175",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "created_at": "2026-06-08 08:28:58",
+      "updated_at": "2026-06-08T08:28:58.585977",
       "signals": [
         {
           "type": "JUDGMENT",
@@ -2822,26 +3602,23 @@
           "date": "2026-06-07",
           "confidence": 80,
           "details": "Record from official_records: JUDGMENT"
+        },
+        {
+          "type": "JUDGMENT",
+          "source": "duval_official_records",
+          "date": "2026-06-06",
+          "confidence": 80,
+          "details": "Record from official_records: JUDGMENT"
         }
-      ],
-      "deal_path": "creative_finance",
-      "deal_path_confidence": 75,
-      "status": "active",
-      "last_updated": "2026-06-08T08:27:27.477381",
-      "assessed_value": 100000,
-      "equity_estimate": 25000,
-      "stacked_sources": [
-        "duval_official_records"
-      ],
-      "stack_count": 1,
-      "is_stacked": false
+      ]
     },
     {
+      "id": 233,
       "lead_id": "LEAD-083",
       "parcel_id": "DC-000083",
       "score": 50,
       "score_reasons": [
-        "Single distress signal: Foreclosure",
+        "Single distress signal: Judgment",
         "Monitoring for additional signals"
       ],
       "address": "83 Sample St, Jacksonville, FL 32203",
@@ -2849,6 +3626,14 @@
       "zip": "32202",
       "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:28:58.580182",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "created_at": "2026-06-08 08:28:58",
+      "updated_at": "2026-06-08T08:28:58.586022",
       "signals": [
         {
           "type": "FORECLOSURE",
@@ -2856,21 +3641,18 @@
           "date": "2026-05-10",
           "confidence": 80,
           "details": "Record from official_records: FORECLOSURE"
+        },
+        {
+          "type": "JUDGMENT",
+          "source": "duval_official_records",
+          "date": "2026-06-08",
+          "confidence": 80,
+          "details": "Record from official_records: JUDGMENT"
         }
-      ],
-      "deal_path": "creative_finance",
-      "deal_path_confidence": 75,
-      "status": "active",
-      "last_updated": "2026-06-08T08:27:27.477392",
-      "assessed_value": 100000,
-      "equity_estimate": 25000,
-      "stacked_sources": [
-        "duval_official_records"
-      ],
-      "stack_count": 1,
-      "is_stacked": false
+      ]
     },
     {
+      "id": 234,
       "lead_id": "LEAD-084",
       "parcel_id": "DC-000084",
       "score": 50,
@@ -2883,6 +3665,14 @@
       "zip": "32202",
       "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:28:58.580191",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "created_at": "2026-06-08 08:28:58",
+      "updated_at": "2026-06-08T08:28:58.586034",
       "signals": [
         {
           "type": "FORECLOSURE",
@@ -2890,21 +3680,18 @@
           "date": "2026-05-11",
           "confidence": 80,
           "details": "Record from official_records: FORECLOSURE"
+        },
+        {
+          "type": "FORECLOSURE",
+          "source": "duval_official_records",
+          "date": "2026-05-11",
+          "confidence": 80,
+          "details": "Record from official_records: FORECLOSURE"
         }
-      ],
-      "deal_path": "creative_finance",
-      "deal_path_confidence": 75,
-      "status": "active",
-      "last_updated": "2026-06-08T08:27:27.477403",
-      "assessed_value": 100000,
-      "equity_estimate": 25000,
-      "stacked_sources": [
-        "duval_official_records"
-      ],
-      "stack_count": 1,
-      "is_stacked": false
+      ]
     },
     {
+      "id": 235,
       "lead_id": "LEAD-085",
       "parcel_id": "DC-000085",
       "score": 50,
@@ -2917,6 +3704,14 @@
       "zip": "32202",
       "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:28:58.580198",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "created_at": "2026-06-08 08:28:58",
+      "updated_at": "2026-06-08T08:28:58.586047",
       "signals": [
         {
           "type": "FORECLOSURE",
@@ -2924,21 +3719,18 @@
           "date": "2026-05-12",
           "confidence": 80,
           "details": "Record from official_records: FORECLOSURE"
+        },
+        {
+          "type": "FORECLOSURE",
+          "source": "duval_official_records",
+          "date": "2026-05-11",
+          "confidence": 80,
+          "details": "Record from official_records: FORECLOSURE"
         }
-      ],
-      "deal_path": "creative_finance",
-      "deal_path_confidence": 75,
-      "status": "active",
-      "last_updated": "2026-06-08T08:27:27.477413",
-      "assessed_value": 100000,
-      "equity_estimate": 25000,
-      "stacked_sources": [
-        "duval_official_records"
-      ],
-      "stack_count": 1,
-      "is_stacked": false
+      ]
     },
     {
+      "id": 236,
       "lead_id": "LEAD-086",
       "parcel_id": "DC-000086",
       "score": 50,
@@ -2951,6 +3743,14 @@
       "zip": "32202",
       "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:28:58.580204",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "created_at": "2026-06-08 08:28:58",
+      "updated_at": "2026-06-08T08:28:58.586060",
       "signals": [
         {
           "type": "FORECLOSURE",
@@ -2958,21 +3758,18 @@
           "date": "2026-05-12",
           "confidence": 80,
           "details": "Record from official_records: FORECLOSURE"
+        },
+        {
+          "type": "FORECLOSURE",
+          "source": "duval_official_records",
+          "date": "2026-05-12",
+          "confidence": 80,
+          "details": "Record from official_records: FORECLOSURE"
         }
-      ],
-      "deal_path": "creative_finance",
-      "deal_path_confidence": 75,
-      "status": "active",
-      "last_updated": "2026-06-08T08:27:27.477423",
-      "assessed_value": 100000,
-      "equity_estimate": 25000,
-      "stacked_sources": [
-        "duval_official_records"
-      ],
-      "stack_count": 1,
-      "is_stacked": false
+      ]
     },
     {
+      "id": 237,
       "lead_id": "LEAD-087",
       "parcel_id": "DC-000087",
       "score": 50,
@@ -2985,6 +3782,14 @@
       "zip": "32202",
       "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:28:58.580211",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "created_at": "2026-06-08 08:28:58",
+      "updated_at": "2026-06-08T08:28:58.586075",
       "signals": [
         {
           "type": "FORECLOSURE",
@@ -2992,21 +3797,18 @@
           "date": "2026-05-13",
           "confidence": 80,
           "details": "Record from official_records: FORECLOSURE"
+        },
+        {
+          "type": "FORECLOSURE",
+          "source": "duval_official_records",
+          "date": "2026-05-16",
+          "confidence": 80,
+          "details": "Record from official_records: FORECLOSURE"
         }
-      ],
-      "deal_path": "creative_finance",
-      "deal_path_confidence": 75,
-      "status": "active",
-      "last_updated": "2026-06-08T08:27:27.477435",
-      "assessed_value": 100000,
-      "equity_estimate": 25000,
-      "stacked_sources": [
-        "duval_official_records"
-      ],
-      "stack_count": 1,
-      "is_stacked": false
+      ]
     },
     {
+      "id": 238,
       "lead_id": "LEAD-088",
       "parcel_id": "DC-000088",
       "score": 50,
@@ -3019,6 +3821,14 @@
       "zip": "32202",
       "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:28:58.580218",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "created_at": "2026-06-08 08:28:58",
+      "updated_at": "2026-06-08T08:28:58.586087",
       "signals": [
         {
           "type": "FORECLOSURE",
@@ -3026,21 +3836,18 @@
           "date": "2026-05-13",
           "confidence": 80,
           "details": "Record from official_records: FORECLOSURE"
+        },
+        {
+          "type": "FORECLOSURE",
+          "source": "duval_official_records",
+          "date": "2026-05-17",
+          "confidence": 80,
+          "details": "Record from official_records: FORECLOSURE"
         }
-      ],
-      "deal_path": "creative_finance",
-      "deal_path_confidence": 75,
-      "status": "active",
-      "last_updated": "2026-06-08T08:27:27.477446",
-      "assessed_value": 100000,
-      "equity_estimate": 25000,
-      "stacked_sources": [
-        "duval_official_records"
-      ],
-      "stack_count": 1,
-      "is_stacked": false
+      ]
     },
     {
+      "id": 239,
       "lead_id": "LEAD-089",
       "parcel_id": "DC-000089",
       "score": 50,
@@ -3053,6 +3860,14 @@
       "zip": "32202",
       "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:28:58.580226",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "created_at": "2026-06-08 08:28:58",
+      "updated_at": "2026-06-08T08:28:58.586100",
       "signals": [
         {
           "type": "FORECLOSURE",
@@ -3060,21 +3875,18 @@
           "date": "2026-05-14",
           "confidence": 80,
           "details": "Record from official_records: FORECLOSURE"
+        },
+        {
+          "type": "FORECLOSURE",
+          "source": "duval_official_records",
+          "date": "2026-05-17",
+          "confidence": 80,
+          "details": "Record from official_records: FORECLOSURE"
         }
-      ],
-      "deal_path": "creative_finance",
-      "deal_path_confidence": 75,
-      "status": "active",
-      "last_updated": "2026-06-08T08:27:27.477456",
-      "assessed_value": 100000,
-      "equity_estimate": 25000,
-      "stacked_sources": [
-        "duval_official_records"
-      ],
-      "stack_count": 1,
-      "is_stacked": false
+      ]
     },
     {
+      "id": 240,
       "lead_id": "LEAD-090",
       "parcel_id": "DC-000090",
       "score": 50,
@@ -3087,6 +3899,14 @@
       "zip": "32202",
       "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:28:58.580235",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "created_at": "2026-06-08 08:28:58",
+      "updated_at": "2026-06-08T08:28:58.586112",
       "signals": [
         {
           "type": "FORECLOSURE",
@@ -3094,21 +3914,18 @@
           "date": "2026-05-14",
           "confidence": 80,
           "details": "Record from official_records: FORECLOSURE"
+        },
+        {
+          "type": "FORECLOSURE",
+          "source": "duval_official_records",
+          "date": "2026-05-17",
+          "confidence": 80,
+          "details": "Record from official_records: FORECLOSURE"
         }
-      ],
-      "deal_path": "creative_finance",
-      "deal_path_confidence": 75,
-      "status": "active",
-      "last_updated": "2026-06-08T08:27:27.477465",
-      "assessed_value": 100000,
-      "equity_estimate": 25000,
-      "stacked_sources": [
-        "duval_official_records"
-      ],
-      "stack_count": 1,
-      "is_stacked": false
+      ]
     },
     {
+      "id": 241,
       "lead_id": "LEAD-091",
       "parcel_id": "DC-000091",
       "score": 50,
@@ -3121,6 +3938,14 @@
       "zip": "32202",
       "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:28:58.580241",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "created_at": "2026-06-08 08:28:58",
+      "updated_at": "2026-06-08T08:28:58.586124",
       "signals": [
         {
           "type": "FORECLOSURE",
@@ -3128,21 +3953,18 @@
           "date": "2026-05-16",
           "confidence": 80,
           "details": "Record from official_records: FORECLOSURE"
+        },
+        {
+          "type": "FORECLOSURE",
+          "source": "duval_official_records",
+          "date": "2026-05-18",
+          "confidence": 80,
+          "details": "Record from official_records: FORECLOSURE"
         }
-      ],
-      "deal_path": "creative_finance",
-      "deal_path_confidence": 75,
-      "status": "active",
-      "last_updated": "2026-06-08T08:27:27.477474",
-      "assessed_value": 100000,
-      "equity_estimate": 25000,
-      "stacked_sources": [
-        "duval_official_records"
-      ],
-      "stack_count": 1,
-      "is_stacked": false
+      ]
     },
     {
+      "id": 242,
       "lead_id": "LEAD-092",
       "parcel_id": "DC-000092",
       "score": 50,
@@ -3155,6 +3977,14 @@
       "zip": "32202",
       "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:28:58.580249",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "created_at": "2026-06-08 08:28:58",
+      "updated_at": "2026-06-08T08:28:58.586137",
       "signals": [
         {
           "type": "FORECLOSURE",
@@ -3162,21 +3992,18 @@
           "date": "2026-05-18",
           "confidence": 80,
           "details": "Record from official_records: FORECLOSURE"
+        },
+        {
+          "type": "FORECLOSURE",
+          "source": "duval_official_records",
+          "date": "2026-05-19",
+          "confidence": 80,
+          "details": "Record from official_records: FORECLOSURE"
         }
-      ],
-      "deal_path": "creative_finance",
-      "deal_path_confidence": 75,
-      "status": "active",
-      "last_updated": "2026-06-08T08:27:27.477484",
-      "assessed_value": 100000,
-      "equity_estimate": 25000,
-      "stacked_sources": [
-        "duval_official_records"
-      ],
-      "stack_count": 1,
-      "is_stacked": false
+      ]
     },
     {
+      "id": 243,
       "lead_id": "LEAD-093",
       "parcel_id": "DC-000093",
       "score": 50,
@@ -3189,6 +4016,14 @@
       "zip": "32202",
       "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:28:58.580256",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "created_at": "2026-06-08 08:28:58",
+      "updated_at": "2026-06-08T08:28:58.586149",
       "signals": [
         {
           "type": "FORECLOSURE",
@@ -3196,21 +4031,18 @@
           "date": "2026-05-18",
           "confidence": 80,
           "details": "Record from official_records: FORECLOSURE"
+        },
+        {
+          "type": "FORECLOSURE",
+          "source": "duval_official_records",
+          "date": "2026-05-21",
+          "confidence": 80,
+          "details": "Record from official_records: FORECLOSURE"
         }
-      ],
-      "deal_path": "creative_finance",
-      "deal_path_confidence": 75,
-      "status": "active",
-      "last_updated": "2026-06-08T08:27:27.477496",
-      "assessed_value": 100000,
-      "equity_estimate": 25000,
-      "stacked_sources": [
-        "duval_official_records"
-      ],
-      "stack_count": 1,
-      "is_stacked": false
+      ]
     },
     {
+      "id": 244,
       "lead_id": "LEAD-094",
       "parcel_id": "DC-000094",
       "score": 50,
@@ -3223,6 +4055,14 @@
       "zip": "32202",
       "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:28:58.580263",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "created_at": "2026-06-08 08:28:58",
+      "updated_at": "2026-06-08T08:28:58.586164",
       "signals": [
         {
           "type": "FORECLOSURE",
@@ -3230,21 +4070,18 @@
           "date": "2026-05-19",
           "confidence": 80,
           "details": "Record from official_records: FORECLOSURE"
+        },
+        {
+          "type": "FORECLOSURE",
+          "source": "duval_official_records",
+          "date": "2026-05-24",
+          "confidence": 80,
+          "details": "Record from official_records: FORECLOSURE"
         }
-      ],
-      "deal_path": "creative_finance",
-      "deal_path_confidence": 75,
-      "status": "active",
-      "last_updated": "2026-06-08T08:27:27.477508",
-      "assessed_value": 100000,
-      "equity_estimate": 25000,
-      "stacked_sources": [
-        "duval_official_records"
-      ],
-      "stack_count": 1,
-      "is_stacked": false
+      ]
     },
     {
+      "id": 245,
       "lead_id": "LEAD-095",
       "parcel_id": "DC-000095",
       "score": 50,
@@ -3257,6 +4094,14 @@
       "zip": "32202",
       "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:28:58.580296",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "created_at": "2026-06-08 08:28:58",
+      "updated_at": "2026-06-08T08:28:58.586176",
       "signals": [
         {
           "type": "FORECLOSURE",
@@ -3264,21 +4109,18 @@
           "date": "2026-05-19",
           "confidence": 80,
           "details": "Record from official_records: FORECLOSURE"
+        },
+        {
+          "type": "FORECLOSURE",
+          "source": "duval_official_records",
+          "date": "2026-05-24",
+          "confidence": 80,
+          "details": "Record from official_records: FORECLOSURE"
         }
-      ],
-      "deal_path": "creative_finance",
-      "deal_path_confidence": 75,
-      "status": "active",
-      "last_updated": "2026-06-08T08:27:27.477542",
-      "assessed_value": 100000,
-      "equity_estimate": 25000,
-      "stacked_sources": [
-        "duval_official_records"
-      ],
-      "stack_count": 1,
-      "is_stacked": false
+      ]
     },
     {
+      "id": 246,
       "lead_id": "LEAD-096",
       "parcel_id": "DC-000096",
       "score": 50,
@@ -3291,6 +4133,14 @@
       "zip": "32202",
       "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:28:58.580303",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "created_at": "2026-06-08 08:28:58",
+      "updated_at": "2026-06-08T08:28:58.586189",
       "signals": [
         {
           "type": "FORECLOSURE",
@@ -3298,21 +4148,18 @@
           "date": "2026-05-20",
           "confidence": 80,
           "details": "Record from official_records: FORECLOSURE"
+        },
+        {
+          "type": "FORECLOSURE",
+          "source": "duval_official_records",
+          "date": "2026-05-25",
+          "confidence": 80,
+          "details": "Record from official_records: FORECLOSURE"
         }
-      ],
-      "deal_path": "creative_finance",
-      "deal_path_confidence": 75,
-      "status": "active",
-      "last_updated": "2026-06-08T08:27:27.477566",
-      "assessed_value": 100000,
-      "equity_estimate": 25000,
-      "stacked_sources": [
-        "duval_official_records"
-      ],
-      "stack_count": 1,
-      "is_stacked": false
+      ]
     },
     {
+      "id": 247,
       "lead_id": "LEAD-097",
       "parcel_id": "DC-000097",
       "score": 50,
@@ -3325,6 +4172,14 @@
       "zip": "32202",
       "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:28:58.580310",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "created_at": "2026-06-08 08:28:58",
+      "updated_at": "2026-06-08T08:28:58.586201",
       "signals": [
         {
           "type": "FORECLOSURE",
@@ -3332,21 +4187,18 @@
           "date": "2026-05-21",
           "confidence": 80,
           "details": "Record from official_records: FORECLOSURE"
+        },
+        {
+          "type": "FORECLOSURE",
+          "source": "duval_official_records",
+          "date": "2026-05-25",
+          "confidence": 80,
+          "details": "Record from official_records: FORECLOSURE"
         }
-      ],
-      "deal_path": "creative_finance",
-      "deal_path_confidence": 75,
-      "status": "active",
-      "last_updated": "2026-06-08T08:27:27.477584",
-      "assessed_value": 100000,
-      "equity_estimate": 25000,
-      "stacked_sources": [
-        "duval_official_records"
-      ],
-      "stack_count": 1,
-      "is_stacked": false
+      ]
     },
     {
+      "id": 248,
       "lead_id": "LEAD-098",
       "parcel_id": "DC-000098",
       "score": 50,
@@ -3359,6 +4211,14 @@
       "zip": "32202",
       "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:28:58.580317",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "created_at": "2026-06-08 08:28:58",
+      "updated_at": "2026-06-08T08:28:58.586214",
       "signals": [
         {
           "type": "FORECLOSURE",
@@ -3366,21 +4226,18 @@
           "date": "2026-05-22",
           "confidence": 80,
           "details": "Record from official_records: FORECLOSURE"
+        },
+        {
+          "type": "FORECLOSURE",
+          "source": "duval_official_records",
+          "date": "2026-05-27",
+          "confidence": 80,
+          "details": "Record from official_records: FORECLOSURE"
         }
-      ],
-      "deal_path": "creative_finance",
-      "deal_path_confidence": 75,
-      "status": "active",
-      "last_updated": "2026-06-08T08:27:27.477594",
-      "assessed_value": 100000,
-      "equity_estimate": 25000,
-      "stacked_sources": [
-        "duval_official_records"
-      ],
-      "stack_count": 1,
-      "is_stacked": false
+      ]
     },
     {
+      "id": 249,
       "lead_id": "LEAD-099",
       "parcel_id": "DC-000099",
       "score": 50,
@@ -3393,6 +4250,14 @@
       "zip": "32202",
       "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:28:58.580324",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "created_at": "2026-06-08 08:28:58",
+      "updated_at": "2026-06-08T08:28:58.586227",
       "signals": [
         {
           "type": "FORECLOSURE",
@@ -3400,21 +4265,18 @@
           "date": "2026-05-22",
           "confidence": 80,
           "details": "Record from official_records: FORECLOSURE"
+        },
+        {
+          "type": "FORECLOSURE",
+          "source": "duval_official_records",
+          "date": "2026-05-27",
+          "confidence": 80,
+          "details": "Record from official_records: FORECLOSURE"
         }
-      ],
-      "deal_path": "creative_finance",
-      "deal_path_confidence": 75,
-      "status": "active",
-      "last_updated": "2026-06-08T08:27:27.477604",
-      "assessed_value": 100000,
-      "equity_estimate": 25000,
-      "stacked_sources": [
-        "duval_official_records"
-      ],
-      "stack_count": 1,
-      "is_stacked": false
+      ]
     },
     {
+      "id": 250,
       "lead_id": "LEAD-100",
       "parcel_id": "DC-000100",
       "score": 50,
@@ -3427,6 +4289,14 @@
       "zip": "32202",
       "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:28:58.580336",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "created_at": "2026-06-08 08:28:58",
+      "updated_at": "2026-06-08T08:28:58.586239",
       "signals": [
         {
           "type": "FORECLOSURE",
@@ -3434,19 +4304,15 @@
           "date": "2026-05-24",
           "confidence": 80,
           "details": "Record from official_records: FORECLOSURE"
+        },
+        {
+          "type": "FORECLOSURE",
+          "source": "duval_official_records",
+          "date": "2026-05-30",
+          "confidence": 80,
+          "details": "Record from official_records: FORECLOSURE"
         }
-      ],
-      "deal_path": "creative_finance",
-      "deal_path_confidence": 75,
-      "status": "active",
-      "last_updated": "2026-06-08T08:27:27.477615",
-      "assessed_value": 100000,
-      "equity_estimate": 25000,
-      "stacked_sources": [
-        "duval_official_records"
-      ],
-      "stack_count": 1,
-      "is_stacked": false
+      ]
     }
   ]
 }
