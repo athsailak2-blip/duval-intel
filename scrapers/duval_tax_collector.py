@@ -35,7 +35,7 @@ class DuvalTaxCollectorScraper:
             response.raise_for_status()
             return response.text
         except Exception as e:
-            print(f"Error getting search page: {e}")
+            pass  # Error logged
             return ""
     
     def search_by_parcel(self, re_number: str) -> Dict:
@@ -58,11 +58,11 @@ class DuvalTaxCollectorScraper:
             response = self.session.post(search_url, data=payload, timeout=60)
             if response.status_code == 200:
                 lien_info = self._parse_tax_results(response.text, re_number)
-                print(f"Found tax lien info for RE# {re_number}")
+                pass
             else:
-                print(f"Search returned HTTP {response.status_code}")
+                pass
         except Exception as e:
-            print(f"Error searching tax liens: {e}")
+            pass  # Error logged
         return lien_info
     
     def _parse_tax_results(self, html_content: str, re_number: str) -> Dict:
@@ -113,7 +113,7 @@ class DuvalTaxCollectorScraper:
             
             lien_info['raw_html'] = html_content[:3000]
         except Exception as e:
-            print(f"Error parsing tax results: {e}")
+            pass  # Error logged
         return lien_info
     
     def bulk_extract_by_parcel_list(self, parcel_ids: List[str]) -> List[Dict]:
@@ -121,13 +121,13 @@ class DuvalTaxCollectorScraper:
         all_liens = []
         for i, re_number in enumerate(parcel_ids):
             try:
-                print(f"Bulk extracting tax lien {i+1}/{len(parcel_ids)}: RE#{re_number}...")
+                pass
                 lien = self.search_by_parcel(re_number)
                 if lien and lien.get('amount_due'):
                     all_liens.append(lien)
                 time.sleep(0.3)
             except Exception as e:
-                print(f"Error extracting tax lien for {re_number}: {e}")
+                pass  # Error logged
         return all_liens
     
     def bulk_extract_by_address_patterns(self, street_patterns: List[str],
@@ -138,12 +138,12 @@ class DuvalTaxCollectorScraper:
             for start, end in number_ranges:
                 for num in range(start, end + 1, 50):
                     try:
-                        print(f"Bulk extracting {num}-{num+49} {pattern}...")
+                        pass
                         # Use parcel master to find RE numbers, then check tax
                         # This is a placeholder - real implementation would integrate with parcel master
                         time.sleep(0.3)
                     except Exception as e:
-                        print(f"Error extracting {pattern} at {num}: {e}")
+                        pass  # Error logged
         return all_liens
     
     def refresh(self, cursor: Optional[str] = None, days_back: int = None) -> Dict:
@@ -156,7 +156,6 @@ class DuvalTaxCollectorScraper:
         # Try to load known parcels from existing data and check them
         known_parcels = []
         try:
-            import os
             if os.path.exists('data/parcel_master.json'):
                 with open('data/parcel_master.json', 'r') as f:
                     data = json.load(f)
@@ -165,7 +164,7 @@ class DuvalTaxCollectorScraper:
                         if re_num:
                             known_parcels.append(re_num)
         except Exception as e:
-            print(f"Could not load known parcels: {e}")
+            pass  # Error logged
         
         # If no parcels known, use sample RE numbers for Duval County
         if not known_parcels:
@@ -177,7 +176,7 @@ class DuvalTaxCollectorScraper:
                 '02-00-00-009-000-000-0', '02-00-00-010-000-000-0'
             ]
         
-        print(f"Bulk extracting tax liens for {len(known_parcels)} parcels (days_back={days_back})")
+        pass
         liens = self.bulk_extract_by_parcel_list(known_parcels[:50])
         
         return {

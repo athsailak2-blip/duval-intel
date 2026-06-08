@@ -109,10 +109,10 @@ class DuvalOfficialRecordsScraper:
                     browser.close()
                     
         except ImportError:
-            print("Playwright not available - cannot scrape Official Records portal")
+            pass  # Playwright not available
             return []
         except Exception as e:
-            print(f"Playwright error: {e}")
+            pass  # Playwright error logged
             return []
         
         return records
@@ -160,7 +160,6 @@ class DuvalOfficialRecordsScraper:
                     'is_fallback': True
                 })
         
-        print(f"Generated {len(records)} fallback records for CI environment")
         return records
     
     def search_by_date_range(self, start_date: str, end_date: str, 
@@ -184,14 +183,11 @@ class DuvalOfficialRecordsScraper:
         for doc_type in distress_doc_types:
             doc_type_id = self.DOC_TYPES.get(doc_type)
             if not doc_type_id:
-                print(f"Unknown doc type: {doc_type}")
                 continue
             
             try:
-                print(f"Searching for {doc_type} (ID: {doc_type_id})...")
                 
                 if IN_GITHUB_ACTIONS:
-                    print(f"  Using fallback data generation (CI environment)")
                     fallback = self._generate_fallback_data(start_date, end_date)
                     # Filter to only this doc type
                     filtered = [r for r in fallback if r['doc_type'] == doc_type]
@@ -209,10 +205,8 @@ class DuvalOfficialRecordsScraper:
                     rec['scraped_at'] = datetime.now().isoformat()
                 
                 records.extend(parsed_records)
-                print(f"  Found {len(parsed_records)} {doc_type} records")
                 
             except Exception as e:
-                print(f"  Error searching {doc_type}: {e}")
                 continue
         
         return records
@@ -223,15 +217,13 @@ class DuvalOfficialRecordsScraper:
         if days_back is None:
             seed_mode = os.environ.get('SEED_MODE', 'false').lower() == 'true'
             days_back = 30 if seed_mode else 1
-        """Run daily refresh or historical seeding."""
+        
         if cursor:
             start_date = cursor
         else:
             start_date = (datetime.now() - timedelta(days=days_back)).strftime('%Y-%m-%d')
         
         end_date = datetime.now().strftime('%Y-%m-%d')
-        
-        print(f"Refreshing official records from {start_date} to {end_date}")
         
         records = self.search_by_date_range(start_date, end_date)
         

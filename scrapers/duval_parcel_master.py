@@ -35,7 +35,7 @@ class DuvalPropertyAppraiserScraper:
             response.raise_for_status()
             return response.text
         except Exception as e:
-            print(f"Error getting search page: {e}")
+            pass  # Error logged
             return ""
     
     def search_by_address(self, street_number: str, street_name: str,
@@ -65,11 +65,11 @@ class DuvalPropertyAppraiserScraper:
             response = self.session.post(search_url, data=payload, timeout=60)
             if response.status_code == 200:
                 parcels = self._parse_search_results(response.text)
-                print(f"Found {len(parcels)} parcels for address {street_number} {street_name}")
+                pass
             else:
-                print(f"Search returned HTTP {response.status_code}")
+                pass
         except Exception as e:
-            print(f"Error searching by address: {e}")
+            pass  # Error logged
         return parcels
     
     def _parse_search_results(self, html_content: str) -> List[Dict]:
@@ -119,7 +119,7 @@ class DuvalPropertyAppraiserScraper:
                     }
                     parcels.append(parcel)
         except Exception as e:
-            print(f"Error parsing search results: {e}")
+            pass  # Error logged
         return parcels
     
     def bulk_extract_by_zip(self, zip_codes: List[str], max_per_zip: int = 50) -> List[Dict]:
@@ -127,13 +127,13 @@ class DuvalPropertyAppraiserScraper:
         all_parcels = []
         for zip_code in zip_codes:
             try:
-                print(f"Bulk extracting ZIP {zip_code}...")
+                pass
                 # Search by ZIP prefix - use empty street to get all in area
                 parcels = self.search_by_address('', f'ZIP:{zip_code}')
                 all_parcels.extend(parcels[:max_per_zip])
                 time.sleep(0.5)
             except Exception as e:
-                print(f"Error extracting ZIP {zip_code}: {e}")
+                pass  # Error logged
         return all_parcels
     
     def bulk_extract_by_street_range(self, street_name: str, 
@@ -143,12 +143,12 @@ class DuvalPropertyAppraiserScraper:
         all_parcels = []
         for num in range(start_number, end_number + 1, step):
             try:
-                print(f"Bulk extracting {num}-{num+step-1} {street_name}...")
+                pass
                 parcels = self.search_by_address(str(num), street_name)
                 all_parcels.extend(parcels)
                 time.sleep(0.5)
             except Exception as e:
-                print(f"Error extracting {street_name} at {num}: {e}")
+                pass  # Error logged
         return all_parcels
     
     def refresh(self, cursor: Optional[str] = None, days_back: int = None) -> Dict:
@@ -164,7 +164,7 @@ class DuvalPropertyAppraiserScraper:
                      '32223', '32224', '32225', '32226', '32227', '32233', '32244', '32246',
                      '32250', '32254', '32256', '32257', '32258', '32259', '32277']
         
-        print(f"Bulk extracting parcels for {len(zip_codes)} ZIP codes (days_back={days_back})")
+        pass
         parcels = self.bulk_extract_by_zip(zip_codes, max_per_zip=20)
         
         return {

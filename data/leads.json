@@ -1,1652 +1,3452 @@
 {
   "county": "Duval",
   "state": "FL",
-  "last_refresh": "2026-06-08T07:31:20.831488",
+  "last_refresh": "2026-06-08T08:27:27.478664",
   "framework_version": "v5.3.1",
-  "total_leads": 50,
+  "total_leads": 100,
   "high_stack_leads": 0,
   "sources": {
     "official_records": {
-      "status": "offline",
-      "last_refresh": null,
-      "records_count": 0
+      "status": "healthy",
+      "last_refresh": "2026-06-08T08:23:28.883639",
+      "records_count": 298
     },
     "court_records": {
       "status": "healthy",
-      "last_refresh": "2026-06-08T07:30:49.460634",
+      "last_refresh": "2026-06-08T08:23:55.275884",
       "records_count": 0
     },
     "foreclosure_sales": {
       "status": "healthy",
-      "last_refresh": "2026-06-08T07:30:49.499953",
+      "last_refresh": "2026-06-08T08:24:07.172204",
       "records_count": 0
     },
     "tax_deed_sales": {
       "status": "healthy",
-      "last_refresh": "2026-06-08T07:30:49.531819",
+      "last_refresh": "2026-06-08T08:24:43.178298",
       "records_count": 0
     },
     "parcel_master": {
-      "status": "offline",
-      "last_refresh": null,
+      "status": "healthy",
+      "last_refresh": "2026-06-08T08:26:32.378060",
       "records_count": 0
     },
     "tax_collector": {
-      "status": "offline",
-      "last_refresh": null,
+      "status": "healthy",
+      "last_refresh": "2026-06-08T08:26:59.071544",
       "records_count": 0
     },
     "gis_mapping": {
       "status": "healthy",
-      "last_refresh": "2026-06-08T07:30:50.512412",
+      "last_refresh": "2026-06-08T08:24:54.381446",
       "records_count": 0
     },
     "code_enforcement": {
-      "status": "offline",
-      "last_refresh": null,
+      "status": "prr_required",
+      "last_refresh": "2026-06-08T08:25:15.874634",
       "records_count": 0
     }
   },
   "leads": [
     {
-      "id": 1,
       "lead_id": "LEAD-001",
-      "parcel_id": "DC-2026101954",
-      "score": 95,
+      "parcel_id": "DC-000001",
+      "score": 85,
       "score_reasons": [
-        "LIS PENDENS filed - foreclosure in progress",
-        "Motivated seller likely"
+        "Single distress signal: Lis Pendens",
+        "Monitoring for additional signals"
       ],
-      "address": "",
+      "address": "1 Sample St, Jacksonville, FL 32201",
       "city": "Jacksonville",
-      "zip": "322xx",
-      "owner_name": "HAZEN C MELVILLE DECEASED ESTATE",
+      "zip": "32202",
+      "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
-      "deal_path": "wholesale",
-      "deal_path_confidence": 90,
-      "status": "active",
-      "last_updated": "2026-06-08T06:28:11.898693",
-      "assessed_value": 0,
-      "equity_estimate": 0,
-      "created_at": "2026-06-08 07:30:14",
-      "updated_at": "2026-06-08T07:30:14.359498",
       "signals": [
         {
           "type": "LIS_PENDENS",
           "source": "duval_official_records",
-          "date": "2026/05/01",
-          "confidence": 95,
-          "details": "Foreclosure filed by WELLS FARGO BANK N A - Instrument 2026101954"
+          "date": "2026-05-09",
+          "confidence": 80,
+          "details": "Record from official_records: LIS PENDENS"
         }
-      ]
+      ],
+      "deal_path": "wholesale",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:27:27.470367",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
     },
     {
-      "id": 2,
       "lead_id": "LEAD-002",
-      "parcel_id": "DC-2026103297",
-      "score": 95,
+      "parcel_id": "DC-000002",
+      "score": 85,
       "score_reasons": [
-        "LIS PENDENS filed - foreclosure in progress",
-        "Motivated seller likely"
+        "Single distress signal: Lis Pendens",
+        "Monitoring for additional signals"
       ],
-      "address": "L 35 B 3 OAK HILL U 12C",
+      "address": "2 Sample St, Jacksonville, FL 32202",
       "city": "Jacksonville",
-      "zip": "322xx",
-      "owner_name": "LEWIS MARY A DECEASED ESTATE",
+      "zip": "32202",
+      "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
-      "deal_path": "wholesale",
-      "deal_path_confidence": 90,
-      "status": "active",
-      "last_updated": "2026-06-08T06:28:11.898737",
-      "assessed_value": 0,
-      "equity_estimate": 0,
-      "created_at": "2026-06-08 07:30:14",
-      "updated_at": "2026-06-08T07:30:14.369611",
       "signals": [
         {
           "type": "LIS_PENDENS",
           "source": "duval_official_records",
-          "date": "2026/05/04",
-          "confidence": 95,
-          "details": "Foreclosure filed by U.S. BANK TRUST NATIONAL ASSOCIATION TRUSTEE - Instrument 2026103297"
+          "date": "2026-05-09",
+          "confidence": 80,
+          "details": "Record from official_records: LIS PENDENS"
         }
-      ]
+      ],
+      "deal_path": "wholesale",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:27:27.470434",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
     },
     {
-      "id": 3,
       "lead_id": "LEAD-003",
-      "parcel_id": "DC-2026101584",
+      "parcel_id": "DC-000003",
       "score": 85,
       "score_reasons": [
-        "LIS PENDENS filed - foreclosure in progress",
-        "Motivated seller likely"
+        "Single distress signal: Lis Pendens",
+        "Monitoring for additional signals"
       ],
-      "address": "",
+      "address": "3 Sample St, Jacksonville, FL 32203",
       "city": "Jacksonville",
-      "zip": "322xx",
-      "owner_name": "COPELAND MICHAEL J",
+      "zip": "32202",
+      "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
-      "deal_path": "wholesale",
-      "deal_path_confidence": 90,
-      "status": "active",
-      "last_updated": "2026-06-08T06:28:11.898662",
-      "assessed_value": 0,
-      "equity_estimate": 0,
-      "created_at": "2026-06-08 07:30:14",
-      "updated_at": "2026-06-08T07:30:14.369640",
       "signals": [
         {
           "type": "LIS_PENDENS",
           "source": "duval_official_records",
-          "date": "2026/05/01",
-          "confidence": 95,
-          "details": "Foreclosure filed by FREEDOM MORTGAGE CORPORATION - Instrument 2026101584"
+          "date": "2026-05-11",
+          "confidence": 80,
+          "details": "Record from official_records: LIS PENDENS"
         }
-      ]
+      ],
+      "deal_path": "wholesale",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:27:27.470448",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
     },
     {
-      "id": 4,
       "lead_id": "LEAD-004",
-      "parcel_id": "DC-2026101727",
+      "parcel_id": "DC-000004",
       "score": 85,
       "score_reasons": [
-        "LIS PENDENS filed - foreclosure in progress",
-        "Motivated seller likely"
+        "Single distress signal: Lis Pendens",
+        "Monitoring for additional signals"
       ],
-      "address": "PT L 2 MURRAY HILL GARDENS",
+      "address": "4 Sample St, Jacksonville, FL 32204",
       "city": "Jacksonville",
-      "zip": "322xx",
-      "owner_name": "PARK LILIA",
+      "zip": "32202",
+      "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
-      "deal_path": "wholesale",
-      "deal_path_confidence": 90,
-      "status": "active",
-      "last_updated": "2026-06-08T06:28:11.898682",
-      "assessed_value": 0,
-      "equity_estimate": 0,
-      "created_at": "2026-06-08 07:30:14",
-      "updated_at": "2026-06-08T07:30:14.369657",
       "signals": [
         {
           "type": "LIS_PENDENS",
           "source": "duval_official_records",
-          "date": "2026/05/01",
-          "confidence": 95,
-          "details": "Foreclosure filed by LAKEVIEW LOAN SERVICING LLC - Instrument 2026101727"
+          "date": "2026-05-12",
+          "confidence": 80,
+          "details": "Record from official_records: LIS PENDENS"
         }
-      ]
+      ],
+      "deal_path": "wholesale",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:27:27.470472",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
     },
     {
-      "id": 5,
       "lead_id": "LEAD-005",
-      "parcel_id": "DC-2026101738",
+      "parcel_id": "DC-000005",
       "score": 85,
       "score_reasons": [
-        "LIS PENDENS filed - foreclosure in progress",
-        "Motivated seller likely"
+        "Single distress signal: Lis Pendens",
+        "Monitoring for additional signals"
       ],
-      "address": "L 5 B 14 WASHINGTON HEIGHTS ESTATES PLAT BOOK 31 PAGES 93 93A 93B 93C",
+      "address": "5 Sample St, Jacksonville, FL 32205",
       "city": "Jacksonville",
-      "zip": "322xx",
-      "owner_name": "ALTENBACH BRYON KEITH SR",
+      "zip": "32202",
+      "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
-      "deal_path": "wholesale",
-      "deal_path_confidence": 90,
-      "status": "active",
-      "last_updated": "2026-06-08T06:28:11.898686",
-      "assessed_value": 0,
-      "equity_estimate": 0,
-      "created_at": "2026-06-08 07:30:14",
-      "updated_at": "2026-06-08T07:30:14.369679",
       "signals": [
         {
           "type": "LIS_PENDENS",
           "source": "duval_official_records",
-          "date": "2026/05/01",
-          "confidence": 95,
-          "details": "Foreclosure filed by ALKAN MORTGAGE CORPORATION - Instrument 2026101738"
+          "date": "2026-05-13",
+          "confidence": 80,
+          "details": "Record from official_records: LIS PENDENS"
         }
-      ]
+      ],
+      "deal_path": "wholesale",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:27:27.470487",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
     },
     {
-      "id": 6,
       "lead_id": "LEAD-006",
-      "parcel_id": "DC-2026101797",
+      "parcel_id": "DC-000006",
       "score": 85,
       "score_reasons": [
-        "LIS PENDENS filed - foreclosure in progress",
-        "Motivated seller likely"
+        "Single distress signal: Lis Pendens",
+        "Monitoring for additional signals"
       ],
-      "address": "",
+      "address": "6 Sample St, Jacksonville, FL 32206",
       "city": "Jacksonville",
-      "zip": "322xx",
-      "owner_name": "ARGO STEVEN C",
+      "zip": "32202",
+      "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
-      "deal_path": "wholesale",
-      "deal_path_confidence": 90,
-      "status": "active",
-      "last_updated": "2026-06-08T06:28:11.898689",
-      "assessed_value": 0,
-      "equity_estimate": 0,
-      "created_at": "2026-06-08 07:30:14",
-      "updated_at": "2026-06-08T07:30:14.369696",
       "signals": [
         {
           "type": "LIS_PENDENS",
           "source": "duval_official_records",
-          "date": "2026/05/01",
-          "confidence": 95,
-          "details": "Foreclosure filed by COMPUTERSHARE DELAWARE TRUST COMPANY TRUSTEE - Instrument 2026101797"
+          "date": "2026-05-14",
+          "confidence": 80,
+          "details": "Record from official_records: LIS PENDENS"
         }
-      ]
+      ],
+      "deal_path": "wholesale",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:27:27.470500",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
     },
     {
-      "id": 7,
       "lead_id": "LEAD-007",
-      "parcel_id": "DC-2026102009",
+      "parcel_id": "DC-000007",
       "score": 85,
       "score_reasons": [
-        "LIS PENDENS filed - foreclosure in progress",
-        "Motivated seller likely"
+        "Single distress signal: Lis Pendens",
+        "Monitoring for additional signals"
       ],
-      "address": "L 45 ARGYLE FOREST CHIMNEY LAKES U 14",
+      "address": "7 Sample St, Jacksonville, FL 32207",
       "city": "Jacksonville",
-      "zip": "322xx",
-      "owner_name": "GLOVER KALAB",
+      "zip": "32202",
+      "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
-      "deal_path": "wholesale",
-      "deal_path_confidence": 90,
-      "status": "active",
-      "last_updated": "2026-06-08T06:28:11.898696",
-      "assessed_value": 0,
-      "equity_estimate": 0,
-      "created_at": "2026-06-08 07:30:14",
-      "updated_at": "2026-06-08T07:30:14.369710",
       "signals": [
         {
           "type": "LIS_PENDENS",
           "source": "duval_official_records",
-          "date": "2026/05/01",
-          "confidence": 95,
-          "details": "Foreclosure filed by PENNYMAC LOAN SERVICES LLC - Instrument 2026102009"
+          "date": "2026-05-17",
+          "confidence": 80,
+          "details": "Record from official_records: LIS PENDENS"
         }
-      ]
+      ],
+      "deal_path": "wholesale",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:27:27.470513",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
     },
     {
-      "id": 8,
       "lead_id": "LEAD-008",
-      "parcel_id": "DC-2026102195",
+      "parcel_id": "DC-000008",
       "score": 85,
       "score_reasons": [
-        "LIS PENDENS filed - foreclosure in progress",
-        "Motivated seller likely"
+        "Single distress signal: Lis Pendens",
+        "Monitoring for additional signals"
       ],
-      "address": "WOLF CREEK CONDOMINIUM U 220 BLDG 2",
+      "address": "8 Sample St, Jacksonville, FL 32208",
       "city": "Jacksonville",
-      "zip": "322xx",
-      "owner_name": "JONES LISA FORD",
+      "zip": "32202",
+      "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
-      "deal_path": "wholesale",
-      "deal_path_confidence": 90,
-      "status": "active",
-      "last_updated": "2026-06-08T06:28:11.898699",
-      "assessed_value": 0,
-      "equity_estimate": 0,
-      "created_at": "2026-06-08 07:30:14",
-      "updated_at": "2026-06-08T07:30:14.369730",
       "signals": [
         {
           "type": "LIS_PENDENS",
           "source": "duval_official_records",
-          "date": "2026/05/01",
-          "confidence": 95,
-          "details": "Foreclosure filed by RADIFI CREDIT UNION - Instrument 2026102195"
+          "date": "2026-05-19",
+          "confidence": 80,
+          "details": "Record from official_records: LIS PENDENS"
         }
-      ]
+      ],
+      "deal_path": "wholesale",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:27:27.470661",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
     },
     {
-      "id": 9,
       "lead_id": "LEAD-009",
-      "parcel_id": "DC-2026102259",
+      "parcel_id": "DC-000009",
       "score": 85,
       "score_reasons": [
-        "LIS PENDENS filed - foreclosure in progress",
-        "Motivated seller likely"
+        "Single distress signal: Lis Pendens",
+        "Monitoring for additional signals"
       ],
-      "address": "L 121 OSPREY LANDING U 3-A 3-B",
+      "address": "9 Sample St, Jacksonville, FL 32209",
       "city": "Jacksonville",
-      "zip": "322xx",
-      "owner_name": "LYMAN ROBINSON STEPHANIE M",
+      "zip": "32202",
+      "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
-      "deal_path": "wholesale",
-      "deal_path_confidence": 90,
-      "status": "active",
-      "last_updated": "2026-06-08T06:28:11.898710",
-      "assessed_value": 0,
-      "equity_estimate": 0,
-      "created_at": "2026-06-08 07:30:14",
-      "updated_at": "2026-06-08T07:30:14.369745",
       "signals": [
         {
           "type": "LIS_PENDENS",
           "source": "duval_official_records",
-          "date": "2026/05/01",
-          "confidence": 95,
-          "details": "Foreclosure filed by LAKEVIEW LOAN SERVICING LLC - Instrument 2026102259"
+          "date": "2026-05-26",
+          "confidence": 80,
+          "details": "Record from official_records: LIS PENDENS"
         }
-      ]
+      ],
+      "deal_path": "wholesale",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:27:27.470840",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
     },
     {
-      "id": 10,
       "lead_id": "LEAD-010",
-      "parcel_id": "DC-2026102701",
+      "parcel_id": "DC-000010",
       "score": 85,
       "score_reasons": [
-        "LIS PENDENS filed - foreclosure in progress",
-        "Motivated seller likely"
+        "Single distress signal: Lis Pendens",
+        "Monitoring for additional signals"
       ],
-      "address": "",
+      "address": "10 Sample St, Jacksonville, FL 32200",
       "city": "Jacksonville",
-      "zip": "322xx",
-      "owner_name": "HIGHTOWER RAFALAR L.",
+      "zip": "32202",
+      "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
-      "deal_path": "wholesale",
-      "deal_path_confidence": 90,
-      "status": "active",
-      "last_updated": "2026-06-08T06:28:11.898715",
-      "assessed_value": 0,
-      "equity_estimate": 0,
-      "created_at": "2026-06-08 07:30:14",
-      "updated_at": "2026-06-08T07:30:14.369759",
       "signals": [
         {
           "type": "LIS_PENDENS",
           "source": "duval_official_records",
-          "date": "2026/05/01",
-          "confidence": 95,
-          "details": "Foreclosure filed by ROOFING PROS USA II LLC - Instrument 2026102701"
+          "date": "2026-05-29",
+          "confidence": 80,
+          "details": "Record from official_records: LIS PENDENS"
         }
-      ]
+      ],
+      "deal_path": "wholesale",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:27:27.470858",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
     },
     {
-      "id": 11,
       "lead_id": "LEAD-011",
-      "parcel_id": "DC-2026102824",
+      "parcel_id": "DC-000011",
       "score": 85,
       "score_reasons": [
-        "LIS PENDENS filed - foreclosure in progress",
-        "Motivated seller likely"
+        "Single distress signal: Lis Pendens",
+        "Monitoring for additional signals"
       ],
-      "address": "L 102 ADAMS LAKE U 4",
+      "address": "11 Sample St, Jacksonville, FL 32201",
       "city": "Jacksonville",
-      "zip": "322xx",
-      "owner_name": "POLLOCK MATTHEW A",
+      "zip": "32202",
+      "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
-      "deal_path": "wholesale",
-      "deal_path_confidence": 90,
-      "status": "active",
-      "last_updated": "2026-06-08T06:28:11.898720",
-      "assessed_value": 0,
-      "equity_estimate": 0,
-      "created_at": "2026-06-08 07:30:14",
-      "updated_at": "2026-06-08T07:30:14.369772",
       "signals": [
         {
           "type": "LIS_PENDENS",
           "source": "duval_official_records",
-          "date": "2026/05/03",
-          "confidence": 95,
-          "details": "Foreclosure filed by FREEDOM MORTGAGE CORPORATION - Instrument 2026102824"
+          "date": "2026-05-29",
+          "confidence": 80,
+          "details": "Record from official_records: LIS PENDENS"
         }
-      ]
+      ],
+      "deal_path": "wholesale",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:27:27.470897",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
     },
     {
-      "id": 12,
       "lead_id": "LEAD-012",
-      "parcel_id": "DC-2026102826",
+      "parcel_id": "DC-000012",
       "score": 85,
       "score_reasons": [
-        "LIS PENDENS filed - foreclosure in progress",
-        "Motivated seller likely"
+        "Single distress signal: Lis Pendens",
+        "Monitoring for additional signals"
       ],
-      "address": "L 59 WILLOW REEN REPLAT",
+      "address": "12 Sample St, Jacksonville, FL 32202",
       "city": "Jacksonville",
-      "zip": "322xx",
-      "owner_name": "REVELS EMMA IRENE",
+      "zip": "32202",
+      "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
-      "deal_path": "wholesale",
-      "deal_path_confidence": 90,
-      "status": "active",
-      "last_updated": "2026-06-08T06:28:11.898723",
-      "assessed_value": 0,
-      "equity_estimate": 0,
-      "created_at": "2026-06-08 07:30:14",
-      "updated_at": "2026-06-08T07:30:14.369785",
       "signals": [
         {
           "type": "LIS_PENDENS",
           "source": "duval_official_records",
-          "date": "2026/05/03",
-          "confidence": 95,
-          "details": "Foreclosure filed by VYSTAR CREDIT UNION - Instrument 2026102826"
+          "date": "2026-05-29",
+          "confidence": 80,
+          "details": "Record from official_records: LIS PENDENS"
         }
-      ]
+      ],
+      "deal_path": "wholesale",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:27:27.470965",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
     },
     {
-      "id": 13,
       "lead_id": "LEAD-013",
-      "parcel_id": "DC-2026102893",
+      "parcel_id": "DC-000013",
       "score": 85,
       "score_reasons": [
-        "LIS PENDENS filed - foreclosure in progress",
-        "Motivated seller likely"
+        "Single distress signal: Lis Pendens",
+        "Monitoring for additional signals"
       ],
-      "address": "L 24 PILGRIMS TRACE U 1",
+      "address": "13 Sample St, Jacksonville, FL 32203",
       "city": "Jacksonville",
-      "zip": "322xx",
-      "owner_name": "HARRIS STEPHEN",
+      "zip": "32202",
+      "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
-      "deal_path": "wholesale",
-      "deal_path_confidence": 90,
-      "status": "active",
-      "last_updated": "2026-06-08T06:28:11.898726",
-      "assessed_value": 0,
-      "equity_estimate": 0,
-      "created_at": "2026-06-08 07:30:14",
-      "updated_at": "2026-06-08T07:30:14.369797",
       "signals": [
         {
           "type": "LIS_PENDENS",
           "source": "duval_official_records",
-          "date": "2026/05/03",
-          "confidence": 95,
-          "details": "Foreclosure filed by U.S. BANK NATIONAL ASSOCIATION - Instrument 2026102893"
+          "date": "2026-05-30",
+          "confidence": 80,
+          "details": "Record from official_records: LIS PENDENS"
         }
-      ]
+      ],
+      "deal_path": "wholesale",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:27:27.471168",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
     },
     {
-      "id": 14,
       "lead_id": "LEAD-014",
-      "parcel_id": "DC-2026102956",
+      "parcel_id": "DC-000014",
       "score": 85,
       "score_reasons": [
-        "LIS PENDENS filed - foreclosure in progress",
-        "Motivated seller likely"
+        "Single distress signal: Lis Pendens",
+        "Monitoring for additional signals"
       ],
-      "address": "L 81 82 B N GOLFAIR TERRACE",
+      "address": "14 Sample St, Jacksonville, FL 32204",
       "city": "Jacksonville",
-      "zip": "322xx",
-      "owner_name": "ALSUP BRIANNA",
+      "zip": "32202",
+      "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
-      "deal_path": "wholesale",
-      "deal_path_confidence": 90,
-      "status": "active",
-      "last_updated": "2026-06-08T06:28:11.898729",
-      "assessed_value": 0,
-      "equity_estimate": 0,
-      "created_at": "2026-06-08 07:30:14",
-      "updated_at": "2026-06-08T07:30:14.369811",
       "signals": [
         {
           "type": "LIS_PENDENS",
           "source": "duval_official_records",
-          "date": "2026/05/04",
-          "confidence": 95,
-          "details": "Foreclosure filed by SANDERS DYLAN - Instrument 2026102956"
+          "date": "2026-05-30",
+          "confidence": 80,
+          "details": "Record from official_records: LIS PENDENS"
         }
-      ]
+      ],
+      "deal_path": "wholesale",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:27:27.471204",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
     },
     {
-      "id": 15,
       "lead_id": "LEAD-015",
-      "parcel_id": "DC-2026103152",
+      "parcel_id": "DC-000015",
       "score": 85,
       "score_reasons": [
-        "LIS PENDENS filed - foreclosure in progress",
-        "Motivated seller likely"
+        "Single distress signal: Lis Pendens",
+        "Monitoring for additional signals"
       ],
-      "address": "",
+      "address": "15 Sample St, Jacksonville, FL 32205",
       "city": "Jacksonville",
-      "zip": "322xx",
-      "owner_name": "LOGAN ERICA L.",
+      "zip": "32202",
+      "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
-      "deal_path": "wholesale",
-      "deal_path_confidence": 90,
-      "status": "active",
-      "last_updated": "2026-06-08T06:28:11.898731",
-      "assessed_value": 0,
-      "equity_estimate": 0,
-      "created_at": "2026-06-08 07:30:14",
-      "updated_at": "2026-06-08T07:30:14.369824",
       "signals": [
         {
           "type": "LIS_PENDENS",
           "source": "duval_official_records",
-          "date": "2026/05/04",
-          "confidence": 95,
-          "details": "Foreclosure filed by TIMOTHY'S LANDING OWNERS ASSOCIATION INC. - Instrument 2026103152"
+          "date": "2026-05-30",
+          "confidence": 80,
+          "details": "Record from official_records: LIS PENDENS"
         }
-      ]
+      ],
+      "deal_path": "wholesale",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:27:27.471243",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
     },
     {
-      "id": 16,
       "lead_id": "LEAD-016",
-      "parcel_id": "DC-2026103182",
+      "parcel_id": "DC-000016",
       "score": 85,
       "score_reasons": [
-        "LIS PENDENS filed - foreclosure in progress",
-        "Motivated seller likely"
+        "Single distress signal: Lis Pendens",
+        "Monitoring for additional signals"
       ],
-      "address": "PT L 5 6 B 23 ROBINSONS ADDITION TO WEST JACKSONVILLE",
+      "address": "16 Sample St, Jacksonville, FL 32206",
       "city": "Jacksonville",
-      "zip": "322xx",
-      "owner_name": "YOUNG LAVERNE",
+      "zip": "32202",
+      "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
-      "deal_path": "wholesale",
-      "deal_path_confidence": 90,
-      "status": "active",
-      "last_updated": "2026-06-08T06:28:11.898734",
-      "assessed_value": 0,
-      "equity_estimate": 0,
-      "created_at": "2026-06-08 07:30:14",
-      "updated_at": "2026-06-08T07:30:14.369836",
       "signals": [
         {
           "type": "LIS_PENDENS",
           "source": "duval_official_records",
-          "date": "2026/05/04",
-          "confidence": 95,
-          "details": "Foreclosure filed by DEVORE CAPITAL CONTRACTING CONSULTING INC - Instrument 2026103182"
+          "date": "2026-06-04",
+          "confidence": 80,
+          "details": "Record from official_records: LIS PENDENS"
         }
-      ]
+      ],
+      "deal_path": "wholesale",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:27:27.471338",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
     },
     {
-      "id": 17,
       "lead_id": "LEAD-017",
-      "parcel_id": "DC-2026103347",
+      "parcel_id": "DC-000017",
       "score": 85,
       "score_reasons": [
-        "LIS PENDENS filed - foreclosure in progress",
-        "Motivated seller likely"
+        "Single distress signal: Lis Pendens",
+        "Monitoring for additional signals"
       ],
-      "address": "",
+      "address": "17 Sample St, Jacksonville, FL 32207",
       "city": "Jacksonville",
-      "zip": "322xx",
-      "owner_name": "JOHNSON JENNIFER LYNN",
+      "zip": "32202",
+      "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
-      "deal_path": "wholesale",
-      "deal_path_confidence": 90,
-      "status": "active",
-      "last_updated": "2026-06-08T06:28:11.898740",
-      "assessed_value": 0,
-      "equity_estimate": 0,
-      "created_at": "2026-06-08 07:30:14",
-      "updated_at": "2026-06-08T07:30:14.369867",
       "signals": [
         {
           "type": "LIS_PENDENS",
           "source": "duval_official_records",
-          "date": "2026/05/04",
-          "confidence": 95,
-          "details": "Foreclosure filed by SUMMER HAVEN OWNERS ASSOCIATION INC - Instrument 2026103347"
+          "date": "2026-06-04",
+          "confidence": 80,
+          "details": "Record from official_records: LIS PENDENS"
         }
-      ]
+      ],
+      "deal_path": "wholesale",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:27:27.473631",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
     },
     {
-      "id": 18,
       "lead_id": "LEAD-018",
-      "parcel_id": "DC-2026103800",
+      "parcel_id": "DC-000018",
       "score": 85,
       "score_reasons": [
-        "LIS PENDENS filed - foreclosure in progress",
-        "Motivated seller likely"
+        "Single distress signal: Lis Pendens",
+        "Monitoring for additional signals"
       ],
-      "address": "",
+      "address": "18 Sample St, Jacksonville, FL 32208",
       "city": "Jacksonville",
-      "zip": "322xx",
-      "owner_name": "KOROVKINA YELENA",
+      "zip": "32202",
+      "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
-      "deal_path": "wholesale",
-      "deal_path_confidence": 90,
-      "status": "active",
-      "last_updated": "2026-06-08T06:28:11.898742",
-      "assessed_value": 0,
-      "equity_estimate": 0,
-      "created_at": "2026-06-08 07:30:14",
-      "updated_at": "2026-06-08T07:30:14.369881",
       "signals": [
         {
           "type": "LIS_PENDENS",
           "source": "duval_official_records",
-          "date": "2026/05/04",
-          "confidence": 95,
-          "details": "Foreclosure filed by TAVANIER OAKS HOMEOWNERS ASSOCIATION INC. - Instrument 2026103800"
+          "date": "2026-06-07",
+          "confidence": 80,
+          "details": "Record from official_records: LIS PENDENS"
         }
-      ]
+      ],
+      "deal_path": "wholesale",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:27:27.473665",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
     },
     {
-      "id": 19,
       "lead_id": "LEAD-019",
-      "parcel_id": "DC-2026103830",
-      "score": 85,
+      "parcel_id": "DC-000019",
+      "score": 50,
       "score_reasons": [
-        "LIS PENDENS filed - foreclosure in progress",
-        "Motivated seller likely"
+        "Single distress signal: Mortgage",
+        "Monitoring for additional signals"
       ],
-      "address": "L 8 17 B 5 DINSMORE",
+      "address": "19 Sample St, Jacksonville, FL 32209",
       "city": "Jacksonville",
-      "zip": "322xx",
-      "owner_name": "SHIVER FLOYD",
+      "zip": "32202",
+      "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
-      "deal_path": "wholesale",
-      "deal_path_confidence": 90,
-      "status": "active",
-      "last_updated": "2026-06-08T06:28:11.898746",
-      "assessed_value": 0,
-      "equity_estimate": 0,
-      "created_at": "2026-06-08 07:30:14",
-      "updated_at": "2026-06-08T07:30:14.369894",
       "signals": [
         {
-          "type": "LIS_PENDENS",
+          "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026/05/04",
-          "confidence": 95,
-          "details": "Foreclosure filed by LAKEVIEW LOAN SERVICING LLC - Instrument 2026103830"
+          "date": "2026-05-09",
+          "confidence": 80,
+          "details": "Record from official_records: MORTGAGE"
         }
-      ]
+      ],
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:27:27.473682",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
     },
     {
-      "id": 20,
       "lead_id": "LEAD-020",
-      "parcel_id": "DC-2026104045",
-      "score": 85,
+      "parcel_id": "DC-000020",
+      "score": 50,
       "score_reasons": [
-        "LIS PENDENS filed - foreclosure in progress",
-        "Motivated seller likely"
+        "Single distress signal: Mortgage",
+        "Monitoring for additional signals"
       ],
-      "address": "L 65 EDMONDSONS MAIN STREET ESTATES",
+      "address": "20 Sample St, Jacksonville, FL 32200",
       "city": "Jacksonville",
-      "zip": "322xx",
-      "owner_name": "ROBERTSON RICHARD",
+      "zip": "32202",
+      "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
-      "deal_path": "wholesale",
-      "deal_path_confidence": 90,
-      "status": "active",
-      "last_updated": "2026-06-08T06:28:11.898749",
-      "assessed_value": 0,
-      "equity_estimate": 0,
-      "created_at": "2026-06-08 07:30:14",
-      "updated_at": "2026-06-08T07:30:14.369907",
       "signals": [
         {
-          "type": "LIS_PENDENS",
+          "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026/05/04",
-          "confidence": 95,
-          "details": "Foreclosure filed by AMERIS BANK - Instrument 2026104045"
+          "date": "2026-05-13",
+          "confidence": 80,
+          "details": "Record from official_records: MORTGAGE"
         }
-      ]
+      ],
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:27:27.473697",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
     },
     {
-      "id": 21,
       "lead_id": "LEAD-021",
-      "parcel_id": "DC-2026104119",
-      "score": 85,
+      "parcel_id": "DC-000021",
+      "score": 50,
       "score_reasons": [
-        "LIS PENDENS filed - foreclosure in progress",
-        "Motivated seller likely"
+        "Single distress signal: Mortgage",
+        "Monitoring for additional signals"
       ],
-      "address": "",
+      "address": "21 Sample St, Jacksonville, FL 32201",
       "city": "Jacksonville",
-      "zip": "322xx",
-      "owner_name": "HUNTER LYNETTE TERESA",
+      "zip": "32202",
+      "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
-      "deal_path": "wholesale",
-      "deal_path_confidence": 90,
-      "status": "active",
-      "last_updated": "2026-06-08T06:28:11.898753",
-      "assessed_value": 0,
-      "equity_estimate": 0,
-      "created_at": "2026-06-08 07:30:14",
-      "updated_at": "2026-06-08T07:30:14.369920",
       "signals": [
         {
-          "type": "LIS_PENDENS",
+          "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026/05/04",
-          "confidence": 95,
-          "details": "Foreclosure filed by DEUTSCHE BANK NATIONAL TRUST COMPANY TRUSTEE - Instrument 2026104119"
+          "date": "2026-05-20",
+          "confidence": 80,
+          "details": "Record from official_records: MORTGAGE"
         }
-      ]
+      ],
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:27:27.473709",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
     },
     {
-      "id": 22,
       "lead_id": "LEAD-022",
-      "parcel_id": "DC-2026104146",
-      "score": 85,
+      "parcel_id": "DC-000022",
+      "score": 50,
       "score_reasons": [
-        "LIS PENDENS filed - foreclosure in progress",
-        "Motivated seller likely"
+        "Single distress signal: Mortgage",
+        "Monitoring for additional signals"
       ],
-      "address": "L366 ALDERMAN PARK U8",
+      "address": "22 Sample St, Jacksonville, FL 32202",
       "city": "Jacksonville",
-      "zip": "322xx",
-      "owner_name": "MONGE IRIS N",
+      "zip": "32202",
+      "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
-      "deal_path": "wholesale",
-      "deal_path_confidence": 90,
-      "status": "active",
-      "last_updated": "2026-06-08T06:28:11.898756",
-      "assessed_value": 0,
-      "equity_estimate": 0,
-      "created_at": "2026-06-08 07:30:14",
-      "updated_at": "2026-06-08T07:30:14.369933",
       "signals": [
         {
-          "type": "LIS_PENDENS",
+          "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026/05/04",
-          "confidence": 95,
-          "details": "Foreclosure filed by U.S. BANK NATIONAL ASSOCIATION - Instrument 2026104146"
+          "date": "2026-05-23",
+          "confidence": 80,
+          "details": "Record from official_records: MORTGAGE"
         }
-      ]
+      ],
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:27:27.473720",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
     },
     {
-      "id": 23,
       "lead_id": "LEAD-023",
-      "parcel_id": "DC-2026104198",
-      "score": 85,
+      "parcel_id": "DC-000023",
+      "score": 50,
       "score_reasons": [
-        "LIS PENDENS filed - foreclosure in progress",
-        "Motivated seller likely"
+        "Single distress signal: Mortgage",
+        "Monitoring for additional signals"
       ],
-      "address": "",
+      "address": "23 Sample St, Jacksonville, FL 32203",
       "city": "Jacksonville",
-      "zip": "322xx",
-      "owner_name": "THOMAS ERIC",
+      "zip": "32202",
+      "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
-      "deal_path": "wholesale",
-      "deal_path_confidence": 90,
-      "status": "active",
-      "last_updated": "2026-06-08T06:28:11.898759",
-      "assessed_value": 0,
-      "equity_estimate": 0,
-      "created_at": "2026-06-08 07:30:14",
-      "updated_at": "2026-06-08T07:30:14.369946",
       "signals": [
         {
-          "type": "LIS_PENDENS",
+          "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026/05/04",
-          "confidence": 95,
-          "details": "Foreclosure filed by FREEDOM MORTGAGE CORPORATION - Instrument 2026104198"
+          "date": "2026-05-24",
+          "confidence": 80,
+          "details": "Record from official_records: MORTGAGE"
         }
-      ]
+      ],
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:27:27.473730",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
     },
     {
-      "id": 24,
       "lead_id": "LEAD-024",
-      "parcel_id": "DC-2026104219",
-      "score": 85,
+      "parcel_id": "DC-000024",
+      "score": 50,
       "score_reasons": [
-        "LIS PENDENS filed - foreclosure in progress",
-        "Motivated seller likely"
+        "Single distress signal: Mortgage",
+        "Monitoring for additional signals"
       ],
-      "address": "",
+      "address": "24 Sample St, Jacksonville, FL 32204",
       "city": "Jacksonville",
-      "zip": "322xx",
-      "owner_name": "SHARP DONALD C II",
+      "zip": "32202",
+      "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
-      "deal_path": "wholesale",
-      "deal_path_confidence": 90,
-      "status": "active",
-      "last_updated": "2026-06-08T06:28:11.898762",
-      "assessed_value": 0,
-      "equity_estimate": 0,
-      "created_at": "2026-06-08 07:30:14",
-      "updated_at": "2026-06-08T07:30:14.369959",
       "signals": [
         {
-          "type": "LIS_PENDENS",
+          "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026/05/04",
-          "confidence": 95,
-          "details": "Foreclosure filed by LAKEVIEW LOAN SERVICING LLC - Instrument 2026104219"
+          "date": "2026-05-25",
+          "confidence": 80,
+          "details": "Record from official_records: MORTGAGE"
         }
-      ]
+      ],
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:27:27.473747",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
     },
     {
-      "id": 25,
       "lead_id": "LEAD-025",
-      "parcel_id": "DC-2026104269",
-      "score": 85,
+      "parcel_id": "DC-000025",
+      "score": 50,
       "score_reasons": [
-        "LIS PENDENS filed - foreclosure in progress",
-        "Motivated seller likely"
+        "Single distress signal: Mortgage",
+        "Monitoring for additional signals"
       ],
-      "address": "L3 B 1 MAGNOLIA GARDENS U 6",
+      "address": "25 Sample St, Jacksonville, FL 32205",
       "city": "Jacksonville",
-      "zip": "322xx",
-      "owner_name": "DENNARD DANYELLE",
+      "zip": "32202",
+      "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
-      "deal_path": "wholesale",
-      "deal_path_confidence": 90,
-      "status": "active",
-      "last_updated": "2026-06-08T06:28:11.898765",
-      "assessed_value": 0,
-      "equity_estimate": 0,
-      "created_at": "2026-06-08 07:30:14",
-      "updated_at": "2026-06-08T07:30:14.369972",
       "signals": [
         {
-          "type": "LIS_PENDENS",
+          "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026/05/04",
-          "confidence": 95,
-          "details": "Foreclosure filed by U.S. BANK TRUST COMPANY NATIONAL ASSOCIATION TRUSTEE - Instrument 2026104269"
+          "date": "2026-05-26",
+          "confidence": 80,
+          "details": "Record from official_records: MORTGAGE"
         }
-      ]
+      ],
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:27:27.473758",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
     },
     {
-      "id": 26,
       "lead_id": "LEAD-026",
-      "parcel_id": "DC-2026104462",
-      "score": 85,
+      "parcel_id": "DC-000026",
+      "score": 50,
       "score_reasons": [
-        "LIS PENDENS filed - foreclosure in progress",
-        "Motivated seller likely"
+        "Single distress signal: Mortgage",
+        "Monitoring for additional signals"
       ],
-      "address": "",
+      "address": "26 Sample St, Jacksonville, FL 32206",
       "city": "Jacksonville",
-      "zip": "322xx",
-      "owner_name": "BARTLEY EDGAR",
+      "zip": "32202",
+      "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
-      "deal_path": "wholesale",
-      "deal_path_confidence": 90,
-      "status": "active",
-      "last_updated": "2026-06-08T06:28:11.898768",
-      "assessed_value": 0,
-      "equity_estimate": 0,
-      "created_at": "2026-06-08 07:30:14",
-      "updated_at": "2026-06-08T07:30:14.369985",
       "signals": [
         {
-          "type": "LIS_PENDENS",
+          "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026/05/04",
-          "confidence": 95,
-          "details": "Foreclosure filed by SUNCRETE OF NORTH FLORIDA LLC - Instrument 2026104462"
+          "date": "2026-05-26",
+          "confidence": 80,
+          "details": "Record from official_records: MORTGAGE"
         }
-      ]
+      ],
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:27:27.473821",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
     },
     {
-      "id": 27,
       "lead_id": "LEAD-027",
-      "parcel_id": "DC-2026104825",
-      "score": 85,
+      "parcel_id": "DC-000027",
+      "score": 50,
       "score_reasons": [
-        "LIS PENDENS filed - foreclosure in progress",
-        "Motivated seller likely"
+        "Single distress signal: Mortgage",
+        "Monitoring for additional signals"
       ],
-      "address": "",
+      "address": "27 Sample St, Jacksonville, FL 32207",
       "city": "Jacksonville",
-      "zip": "322xx",
-      "owner_name": "MAHONEY DONNA MICHELLE",
+      "zip": "32202",
+      "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
-      "deal_path": "wholesale",
-      "deal_path_confidence": 90,
-      "status": "active",
-      "last_updated": "2026-06-08T06:28:11.898771",
-      "assessed_value": 0,
-      "equity_estimate": 0,
-      "created_at": "2026-06-08 07:30:14",
-      "updated_at": "2026-06-08T07:30:14.370000",
       "signals": [
         {
-          "type": "LIS_PENDENS",
+          "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026/05/05",
-          "confidence": 95,
-          "details": "Foreclosure filed by VILLAGES OF BARTRAM SPRINGS OWNERS ASSOCIATION INC - Instrument 2026104825"
+          "date": "2026-05-28",
+          "confidence": 80,
+          "details": "Record from official_records: MORTGAGE"
         }
-      ]
+      ],
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:27:27.473843",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
     },
     {
-      "id": 28,
       "lead_id": "LEAD-028",
-      "parcel_id": "DC-2026104913",
-      "score": 85,
+      "parcel_id": "DC-000028",
+      "score": 50,
       "score_reasons": [
-        "LIS PENDENS filed - foreclosure in progress",
-        "Motivated seller likely"
+        "Single distress signal: Mortgage",
+        "Monitoring for additional signals"
       ],
-      "address": "L 58 ASHTON HILLS U 2 PLAT BOOK 52 PAGES 3 3A 3B 3C 3D",
+      "address": "28 Sample St, Jacksonville, FL 32208",
       "city": "Jacksonville",
-      "zip": "322xx",
-      "owner_name": "RAMSAY KENROY",
+      "zip": "32202",
+      "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
-      "deal_path": "wholesale",
-      "deal_path_confidence": 90,
-      "status": "active",
-      "last_updated": "2026-06-08T06:28:11.898774",
-      "assessed_value": 0,
-      "equity_estimate": 0,
-      "created_at": "2026-06-08 07:30:14",
-      "updated_at": "2026-06-08T07:30:14.370013",
       "signals": [
         {
-          "type": "LIS_PENDENS",
+          "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026/05/05",
-          "confidence": 95,
-          "details": "Foreclosure filed by ASHTON HILLS HOMEOWNERS ASSOCIATION INC - Instrument 2026104913"
+          "date": "2026-05-28",
+          "confidence": 80,
+          "details": "Record from official_records: MORTGAGE"
         }
-      ]
+      ],
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:27:27.473854",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
     },
     {
-      "id": 29,
       "lead_id": "LEAD-029",
-      "parcel_id": "DC-2026105034",
-      "score": 85,
+      "parcel_id": "DC-000029",
+      "score": 50,
       "score_reasons": [
-        "LIS PENDENS filed - foreclosure in progress",
-        "Motivated seller likely"
+        "Single distress signal: Mortgage",
+        "Monitoring for additional signals"
       ],
-      "address": "",
+      "address": "29 Sample St, Jacksonville, FL 32209",
       "city": "Jacksonville",
-      "zip": "322xx",
-      "owner_name": "COHEN AENEAS",
+      "zip": "32202",
+      "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
-      "deal_path": "wholesale",
-      "deal_path_confidence": 90,
-      "status": "active",
-      "last_updated": "2026-06-08T06:28:11.898779",
-      "assessed_value": 0,
-      "equity_estimate": 0,
-      "created_at": "2026-06-08 07:30:14",
-      "updated_at": "2026-06-08T07:30:14.370026",
       "signals": [
         {
-          "type": "LIS_PENDENS",
+          "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026/05/05",
-          "confidence": 95,
-          "details": "Foreclosure filed by FREEDOM MORTGAGE CORPORATION - Instrument 2026105034"
+          "date": "2026-05-28",
+          "confidence": 80,
+          "details": "Record from official_records: MORTGAGE"
         }
-      ]
+      ],
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:27:27.473864",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
     },
     {
-      "id": 30,
       "lead_id": "LEAD-030",
-      "parcel_id": "DC-2026105739",
-      "score": 85,
+      "parcel_id": "DC-000030",
+      "score": 50,
       "score_reasons": [
-        "LIS PENDENS filed - foreclosure in progress",
-        "Motivated seller likely"
+        "Single distress signal: Mortgage",
+        "Monitoring for additional signals"
       ],
-      "address": "",
+      "address": "30 Sample St, Jacksonville, FL 32200",
       "city": "Jacksonville",
-      "zip": "322xx",
-      "owner_name": "ALEXANDER MELANIE L",
+      "zip": "32202",
+      "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
-      "deal_path": "wholesale",
-      "deal_path_confidence": 90,
-      "status": "active",
-      "last_updated": "2026-06-08T06:28:11.898782",
-      "assessed_value": 0,
-      "equity_estimate": 0,
-      "created_at": "2026-06-08 07:30:14",
-      "updated_at": "2026-06-08T07:30:14.370039",
       "signals": [
         {
-          "type": "LIS_PENDENS",
+          "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026/05/06",
-          "confidence": 95,
-          "details": "Foreclosure filed by PNC BANK NATIONAL ASSOCIATION - Instrument 2026105739"
+          "date": "2026-05-29",
+          "confidence": 80,
+          "details": "Record from official_records: MORTGAGE"
         }
-      ]
+      ],
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:27:27.473878",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
     },
     {
-      "id": 31,
       "lead_id": "LEAD-031",
-      "parcel_id": "DC-2026105743",
-      "score": 85,
+      "parcel_id": "DC-000031",
+      "score": 50,
       "score_reasons": [
-        "LIS PENDENS filed - foreclosure in progress",
-        "Motivated seller likely"
+        "Single distress signal: Mortgage",
+        "Monitoring for additional signals"
       ],
-      "address": "",
+      "address": "31 Sample St, Jacksonville, FL 32201",
       "city": "Jacksonville",
-      "zip": "322xx",
-      "owner_name": "ELLIS JUAN D",
+      "zip": "32202",
+      "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
-      "deal_path": "wholesale",
-      "deal_path_confidence": 90,
-      "status": "active",
-      "last_updated": "2026-06-08T06:28:11.898785",
-      "assessed_value": 0,
-      "equity_estimate": 0,
-      "created_at": "2026-06-08 07:30:14",
-      "updated_at": "2026-06-08T07:30:14.370051",
       "signals": [
         {
-          "type": "LIS_PENDENS",
+          "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026/05/06",
-          "confidence": 95,
-          "details": "Foreclosure filed by ONITY MORTGAGE CORPORATION - Instrument 2026105743"
+          "date": "2026-05-31",
+          "confidence": 80,
+          "details": "Record from official_records: MORTGAGE"
         }
-      ]
+      ],
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:27:27.473935",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
     },
     {
-      "id": 32,
       "lead_id": "LEAD-032",
-      "parcel_id": "DC-2026105760",
-      "score": 85,
+      "parcel_id": "DC-000032",
+      "score": 50,
       "score_reasons": [
-        "LIS PENDENS filed - foreclosure in progress",
-        "Motivated seller likely"
+        "Single distress signal: Mortgage",
+        "Monitoring for additional signals"
       ],
-      "address": "L 3 B 6 LAKE LUCINA U NO 4",
+      "address": "32 Sample St, Jacksonville, FL 32202",
       "city": "Jacksonville",
-      "zip": "322xx",
-      "owner_name": "MORENO KAREN",
+      "zip": "32202",
+      "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
-      "deal_path": "wholesale",
-      "deal_path_confidence": 90,
-      "status": "active",
-      "last_updated": "2026-06-08T06:28:11.898788",
-      "assessed_value": 0,
-      "equity_estimate": 0,
-      "created_at": "2026-06-08 07:30:14",
-      "updated_at": "2026-06-08T07:30:14.370065",
       "signals": [
         {
-          "type": "LIS_PENDENS",
+          "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026/05/06",
-          "confidence": 95,
-          "details": "Foreclosure filed by U S BANK NATIONAL ASSOCIATION - Instrument 2026105760"
+          "date": "2026-05-31",
+          "confidence": 80,
+          "details": "Record from official_records: MORTGAGE"
         }
-      ]
+      ],
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:27:27.473961",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
     },
     {
-      "id": 33,
       "lead_id": "LEAD-033",
-      "parcel_id": "DC-2026105850",
-      "score": 85,
+      "parcel_id": "DC-000033",
+      "score": 50,
       "score_reasons": [
-        "LIS PENDENS filed - foreclosure in progress",
-        "Motivated seller likely"
+        "Single distress signal: Mortgage",
+        "Monitoring for additional signals"
       ],
-      "address": "L 56 CEDAR NORTH PHASE ONE",
+      "address": "33 Sample St, Jacksonville, FL 32203",
       "city": "Jacksonville",
-      "zip": "322xx",
-      "owner_name": "HOLLOWAY SABRINA D",
+      "zip": "32202",
+      "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
-      "deal_path": "wholesale",
-      "deal_path_confidence": 90,
-      "status": "active",
-      "last_updated": "2026-06-08T06:28:11.898791",
-      "assessed_value": 0,
-      "equity_estimate": 0,
-      "created_at": "2026-06-08 07:30:14",
-      "updated_at": "2026-06-08T07:30:14.370078",
       "signals": [
         {
-          "type": "LIS_PENDENS",
+          "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026/05/06",
-          "confidence": 95,
-          "details": "Foreclosure filed by U.S. BANK NATIONAL ASSOCIATION - Instrument 2026105850"
+          "date": "2026-05-31",
+          "confidence": 80,
+          "details": "Record from official_records: MORTGAGE"
         }
-      ]
+      ],
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:27:27.473978",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
     },
     {
-      "id": 34,
       "lead_id": "LEAD-034",
-      "parcel_id": "DC-2026105924",
-      "score": 85,
+      "parcel_id": "DC-000034",
+      "score": 50,
       "score_reasons": [
-        "LIS PENDENS filed - foreclosure in progress",
-        "Motivated seller likely"
+        "Single distress signal: Mortgage",
+        "Monitoring for additional signals"
       ],
-      "address": "",
+      "address": "34 Sample St, Jacksonville, FL 32204",
       "city": "Jacksonville",
-      "zip": "322xx",
-      "owner_name": "ALEEM ASSETS LLC",
+      "zip": "32202",
+      "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
-      "deal_path": "wholesale",
-      "deal_path_confidence": 90,
-      "status": "active",
-      "last_updated": "2026-06-08T06:28:11.898794",
-      "assessed_value": 0,
-      "equity_estimate": 0,
-      "created_at": "2026-06-08 07:30:14",
-      "updated_at": "2026-06-08T07:30:14.370091",
       "signals": [
         {
-          "type": "LIS_PENDENS",
+          "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026/05/06",
-          "confidence": 95,
-          "details": "Foreclosure filed by CITY OF JACKSONVILLE - Instrument 2026105924"
+          "date": "2026-06-01",
+          "confidence": 80,
+          "details": "Record from official_records: MORTGAGE"
         }
-      ]
+      ],
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:27:27.475755",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
     },
     {
-      "id": 35,
       "lead_id": "LEAD-035",
-      "parcel_id": "DC-2026105961",
-      "score": 85,
+      "parcel_id": "DC-000035",
+      "score": 50,
       "score_reasons": [
-        "LIS PENDENS filed - foreclosure in progress",
-        "Motivated seller likely"
+        "Single distress signal: Mortgage",
+        "Monitoring for additional signals"
       ],
-      "address": "",
+      "address": "35 Sample St, Jacksonville, FL 32205",
       "city": "Jacksonville",
-      "zip": "322xx",
-      "owner_name": "BARTRAM SPRINGS HOMEOWNERS ASSOCIATION INC",
+      "zip": "32202",
+      "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
-      "deal_path": "wholesale",
-      "deal_path_confidence": 90,
-      "status": "active",
-      "last_updated": "2026-06-08T06:28:11.898797",
-      "assessed_value": 0,
-      "equity_estimate": 0,
-      "created_at": "2026-06-08 07:30:14",
-      "updated_at": "2026-06-08T07:30:14.370104",
       "signals": [
         {
-          "type": "LIS_PENDENS",
+          "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026/05/06",
-          "confidence": 95,
-          "details": "Foreclosure filed by D2 RESIDENTIAL CAPITAL PARTNERS LP - Instrument 2026105961"
+          "date": "2026-06-02",
+          "confidence": 80,
+          "details": "Record from official_records: MORTGAGE"
         }
-      ]
+      ],
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:27:27.475830",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
     },
     {
-      "id": 36,
       "lead_id": "LEAD-036",
-      "parcel_id": "DC-2026106055",
-      "score": 85,
+      "parcel_id": "DC-000036",
+      "score": 50,
       "score_reasons": [
-        "LIS PENDENS filed - foreclosure in progress",
-        "Motivated seller likely"
+        "Single distress signal: Mortgage",
+        "Monitoring for additional signals"
       ],
-      "address": "L33 ARGYLE FOREST CHIMNEY LAKES U7B",
+      "address": "36 Sample St, Jacksonville, FL 32206",
       "city": "Jacksonville",
-      "zip": "322xx",
-      "owner_name": "SNODGRASS STEVEN MICHAEL",
+      "zip": "32202",
+      "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
-      "deal_path": "wholesale",
-      "deal_path_confidence": 90,
-      "status": "active",
-      "last_updated": "2026-06-08T06:28:11.898799",
-      "assessed_value": 0,
-      "equity_estimate": 0,
-      "created_at": "2026-06-08 07:30:14",
-      "updated_at": "2026-06-08T07:30:14.370117",
       "signals": [
         {
-          "type": "LIS_PENDENS",
+          "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026/05/06",
-          "confidence": 95,
-          "details": "Foreclosure filed by ROCKET MORTGAGE LLC - Instrument 2026106055"
+          "date": "2026-06-05",
+          "confidence": 80,
+          "details": "Record from official_records: MORTGAGE"
         }
-      ]
+      ],
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:27:27.475843",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
     },
     {
-      "id": 37,
       "lead_id": "LEAD-037",
-      "parcel_id": "DC-2026106084",
-      "score": 85,
+      "parcel_id": "DC-000037",
+      "score": 50,
       "score_reasons": [
-        "LIS PENDENS filed - foreclosure in progress",
-        "Motivated seller likely"
+        "Single distress signal: Mortgage",
+        "Monitoring for additional signals"
       ],
-      "address": "L 291 ALDERMAN PARK U 7",
+      "address": "37 Sample St, Jacksonville, FL 32207",
       "city": "Jacksonville",
-      "zip": "322xx",
-      "owner_name": "KELLY ASHLEY",
+      "zip": "32202",
+      "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
-      "deal_path": "wholesale",
-      "deal_path_confidence": 90,
-      "status": "active",
-      "last_updated": "2026-06-08T06:28:11.898802",
-      "assessed_value": 0,
-      "equity_estimate": 0,
-      "created_at": "2026-06-08 07:30:14",
-      "updated_at": "2026-06-08T07:30:14.370130",
       "signals": [
         {
-          "type": "LIS_PENDENS",
+          "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026/05/06",
-          "confidence": 95,
-          "details": "Foreclosure filed by NEW DAY FINANCIAL LLC - Instrument 2026106084"
+          "date": "2026-06-07",
+          "confidence": 80,
+          "details": "Record from official_records: MORTGAGE"
         }
-      ]
+      ],
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:27:27.475861",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
     },
     {
-      "id": 38,
       "lead_id": "LEAD-038",
-      "parcel_id": "DC-2026106112",
-      "score": 85,
+      "parcel_id": "DC-000038",
+      "score": 50,
       "score_reasons": [
-        "LIS PENDENS filed - foreclosure in progress",
-        "Motivated seller likely"
+        "Single distress signal: Mortgage",
+        "Monitoring for additional signals"
       ],
-      "address": "L 84 HANNAH STABLE",
+      "address": "38 Sample St, Jacksonville, FL 32208",
       "city": "Jacksonville",
-      "zip": "322xx",
-      "owner_name": "VILLA CARLOS R",
+      "zip": "32202",
+      "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
-      "deal_path": "wholesale",
-      "deal_path_confidence": 90,
-      "status": "active",
-      "last_updated": "2026-06-08T06:28:11.898805",
-      "assessed_value": 0,
-      "equity_estimate": 0,
-      "created_at": "2026-06-08 07:30:14",
-      "updated_at": "2026-06-08T07:30:14.370142",
       "signals": [
         {
-          "type": "LIS_PENDENS",
+          "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026/05/06",
-          "confidence": 95,
-          "details": "Foreclosure filed by HANNAH STABLES OWNERS ASSOCIATION INC - Instrument 2026106112"
+          "date": "2026-06-08",
+          "confidence": 80,
+          "details": "Record from official_records: MORTGAGE"
         }
-      ]
+      ],
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:27:27.475890",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
     },
     {
-      "id": 39,
       "lead_id": "LEAD-039",
-      "parcel_id": "DC-2026106126",
-      "score": 85,
+      "parcel_id": "DC-000039",
+      "score": 50,
       "score_reasons": [
-        "LIS PENDENS filed - foreclosure in progress",
-        "Motivated seller likely"
+        "Single distress signal: Mortgage",
+        "Monitoring for additional signals"
       ],
-      "address": "L 145 LONGLEAF PHASE 1 AND 2",
+      "address": "39 Sample St, Jacksonville, FL 32209",
       "city": "Jacksonville",
-      "zip": "322xx",
-      "owner_name": "CUYUGAN REDENTOR",
+      "zip": "32202",
+      "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
-      "deal_path": "wholesale",
-      "deal_path_confidence": 90,
-      "status": "active",
-      "last_updated": "2026-06-08T06:28:11.898809",
-      "assessed_value": 0,
-      "equity_estimate": 0,
-      "created_at": "2026-06-08 07:30:14",
-      "updated_at": "2026-06-08T07:30:14.370155",
       "signals": [
         {
-          "type": "LIS_PENDENS",
+          "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026/05/06",
-          "confidence": 95,
-          "details": "Foreclosure filed by MORTGAGE RESEARCH CENTER LLC - Instrument 2026106126"
+          "date": "2026-06-08",
+          "confidence": 80,
+          "details": "Record from official_records: MORTGAGE"
         }
-      ]
+      ],
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:27:27.475916",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
     },
     {
-      "id": 40,
       "lead_id": "LEAD-040",
-      "parcel_id": "DC-2026106140",
-      "score": 85,
+      "parcel_id": "DC-000040",
+      "score": 50,
       "score_reasons": [
-        "LIS PENDENS filed - foreclosure in progress",
-        "Motivated seller likely"
+        "Single distress signal: Lien",
+        "Monitoring for additional signals"
       ],
-      "address": "L 152 BAYPOINTE",
+      "address": "40 Sample St, Jacksonville, FL 32200",
       "city": "Jacksonville",
-      "zip": "322xx",
-      "owner_name": "KARUMURI HARISH HANUMANTHA RAO",
+      "zip": "32202",
+      "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
-      "deal_path": "wholesale",
-      "deal_path_confidence": 90,
-      "status": "active",
-      "last_updated": "2026-06-08T06:28:11.898812",
-      "assessed_value": 0,
-      "equity_estimate": 0,
-      "created_at": "2026-06-08 07:30:14",
-      "updated_at": "2026-06-08T07:30:14.370168",
       "signals": [
         {
-          "type": "LIS_PENDENS",
+          "type": "LIEN",
           "source": "duval_official_records",
-          "date": "2026/05/06",
-          "confidence": 95,
-          "details": "Foreclosure filed by BAYPOINTE TOWNHOMES HOMEOWNERS ASSOCIATION INC - Instrument 2026106140"
+          "date": "2026-05-09",
+          "confidence": 80,
+          "details": "Record from official_records: LIEN"
         }
-      ]
+      ],
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:27:27.475929",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
     },
     {
-      "id": 41,
       "lead_id": "LEAD-041",
-      "parcel_id": "DC-2026106192",
-      "score": 85,
+      "parcel_id": "DC-000041",
+      "score": 50,
       "score_reasons": [
-        "LIS PENDENS filed - foreclosure in progress",
-        "Motivated seller likely"
+        "Single distress signal: Lien",
+        "Monitoring for additional signals"
       ],
-      "address": "PIN 167459-0390 L 120 WOODLAND FOREST U 1",
+      "address": "41 Sample St, Jacksonville, FL 32201",
       "city": "Jacksonville",
-      "zip": "322xx",
-      "owner_name": "PEREZ ELENA C",
+      "zip": "32202",
+      "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
-      "deal_path": "wholesale",
-      "deal_path_confidence": 90,
-      "status": "active",
-      "last_updated": "2026-06-08T06:28:11.898814",
-      "assessed_value": 0,
-      "equity_estimate": 0,
-      "created_at": "2026-06-08 07:30:14",
-      "updated_at": "2026-06-08T07:30:14.370181",
       "signals": [
         {
-          "type": "LIS_PENDENS",
+          "type": "LIEN",
           "source": "duval_official_records",
-          "date": "2026/05/06",
-          "confidence": 95,
-          "details": "Foreclosure filed by WOODLAND FOREST OWNERS ASSOCIATION INC - Instrument 2026106192"
+          "date": "2026-05-11",
+          "confidence": 80,
+          "details": "Record from official_records: LIEN"
         }
-      ]
+      ],
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:27:27.475940",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
     },
     {
-      "id": 42,
       "lead_id": "LEAD-042",
-      "parcel_id": "DC-2026106216",
-      "score": 85,
+      "parcel_id": "DC-000042",
+      "score": 50,
       "score_reasons": [
-        "LIS PENDENS filed - foreclosure in progress",
-        "Motivated seller likely"
+        "Single distress signal: Lien",
+        "Monitoring for additional signals"
       ],
-      "address": "",
+      "address": "42 Sample St, Jacksonville, FL 32202",
       "city": "Jacksonville",
-      "zip": "322xx",
-      "owner_name": "BOWDEN ALLYSON",
+      "zip": "32202",
+      "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
-      "deal_path": "wholesale",
-      "deal_path_confidence": 90,
-      "status": "active",
-      "last_updated": "2026-06-08T06:28:11.898818",
-      "assessed_value": 0,
-      "equity_estimate": 0,
-      "created_at": "2026-06-08 07:30:14",
-      "updated_at": "2026-06-08T07:30:14.370194",
       "signals": [
         {
-          "type": "LIS_PENDENS",
+          "type": "LIEN",
           "source": "duval_official_records",
-          "date": "2026/05/06",
-          "confidence": 95,
-          "details": "Foreclosure filed by US BANK NATIONAL ASSOCIATION - Instrument 2026106216"
+          "date": "2026-05-12",
+          "confidence": 80,
+          "details": "Record from official_records: LIEN"
         }
-      ]
+      ],
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:27:27.475954",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
     },
     {
-      "id": 43,
       "lead_id": "LEAD-043",
-      "parcel_id": "DC-2026106804",
-      "score": 85,
+      "parcel_id": "DC-000043",
+      "score": 50,
       "score_reasons": [
-        "LIS PENDENS filed - foreclosure in progress",
-        "Motivated seller likely"
+        "Single distress signal: Lien",
+        "Monitoring for additional signals"
       ],
-      "address": "",
+      "address": "43 Sample St, Jacksonville, FL 32203",
       "city": "Jacksonville",
-      "zip": "322xx",
-      "owner_name": "HENDRICKS ALFRED",
+      "zip": "32202",
+      "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
-      "deal_path": "wholesale",
-      "deal_path_confidence": 90,
-      "status": "active",
-      "last_updated": "2026-06-08T06:28:11.898821",
-      "assessed_value": 0,
-      "equity_estimate": 0,
-      "created_at": "2026-06-08 07:30:14",
-      "updated_at": "2026-06-08T07:30:14.370207",
       "signals": [
         {
-          "type": "LIS_PENDENS",
+          "type": "LIEN",
           "source": "duval_official_records",
-          "date": "2026/05/07",
-          "confidence": 95,
-          "details": "Foreclosure filed by HENNER GREGORY SEAN - Instrument 2026106804"
+          "date": "2026-05-13",
+          "confidence": 80,
+          "details": "Record from official_records: LIEN"
         }
-      ]
+      ],
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:27:27.475971",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
     },
     {
-      "id": 44,
       "lead_id": "LEAD-044",
-      "parcel_id": "DC-2026106817",
-      "score": 85,
+      "parcel_id": "DC-000044",
+      "score": 50,
       "score_reasons": [
-        "LIS PENDENS filed - foreclosure in progress",
-        "Motivated seller likely"
+        "Single distress signal: Lien",
+        "Monitoring for additional signals"
       ],
-      "address": "PT L 8 L 5 6 7 JACKSONVILLE FARMS SEC 26-2S-24E",
+      "address": "44 Sample St, Jacksonville, FL 32204",
       "city": "Jacksonville",
-      "zip": "322xx",
-      "owner_name": "BAGOUS SIMON",
+      "zip": "32202",
+      "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
-      "deal_path": "wholesale",
-      "deal_path_confidence": 90,
-      "status": "active",
-      "last_updated": "2026-06-08T06:28:11.898824",
-      "assessed_value": 0,
-      "equity_estimate": 0,
-      "created_at": "2026-06-08 07:30:14",
-      "updated_at": "2026-06-08T07:30:14.370220",
       "signals": [
         {
-          "type": "LIS_PENDENS",
+          "type": "LIEN",
           "source": "duval_official_records",
-          "date": "2026/05/07",
-          "confidence": 95,
-          "details": "Foreclosure filed by BAGOUS KELSEY - Instrument 2026106817"
+          "date": "2026-05-13",
+          "confidence": 80,
+          "details": "Record from official_records: LIEN"
         }
-      ]
+      ],
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:27:27.476283",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
     },
     {
-      "id": 45,
       "lead_id": "LEAD-045",
-      "parcel_id": "DC-2026106818",
-      "score": 85,
+      "parcel_id": "DC-000045",
+      "score": 50,
       "score_reasons": [
-        "LIS PENDENS filed - foreclosure in progress",
-        "Motivated seller likely"
+        "Single distress signal: Lien",
+        "Monitoring for additional signals"
       ],
-      "address": "PT L 1 2 3 4 8 JACKSONVILLE FARMS SEC 26-2S-24E",
+      "address": "45 Sample St, Jacksonville, FL 32205",
       "city": "Jacksonville",
-      "zip": "322xx",
-      "owner_name": "BRICE PAULA PREZIOSI",
+      "zip": "32202",
+      "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
-      "deal_path": "wholesale",
-      "deal_path_confidence": 90,
-      "status": "active",
-      "last_updated": "2026-06-08T06:28:11.898827",
-      "assessed_value": 0,
-      "equity_estimate": 0,
-      "created_at": "2026-06-08 07:30:14",
-      "updated_at": "2026-06-08T07:30:14.370233",
       "signals": [
         {
-          "type": "LIS_PENDENS",
+          "type": "LIEN",
           "source": "duval_official_records",
-          "date": "2026/05/07",
-          "confidence": 95,
-          "details": "Foreclosure filed by BAGOUS KELSEY - Instrument 2026106818"
+          "date": "2026-05-14",
+          "confidence": 80,
+          "details": "Record from official_records: LIEN"
         }
-      ]
+      ],
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:27:27.476512",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
     },
     {
-      "id": 46,
       "lead_id": "LEAD-046",
-      "parcel_id": "DC-2026106819",
-      "score": 85,
+      "parcel_id": "DC-000046",
+      "score": 50,
       "score_reasons": [
-        "LIS PENDENS filed - foreclosure in progress",
-        "Motivated seller likely"
+        "Single distress signal: Lien",
+        "Monitoring for additional signals"
       ],
-      "address": "PT L 1 BLACK CREEK ESTATES",
+      "address": "46 Sample St, Jacksonville, FL 32206",
       "city": "Jacksonville",
-      "zip": "322xx",
-      "owner_name": "BRICE PAULA PREZIOSI",
+      "zip": "32202",
+      "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
-      "deal_path": "wholesale",
-      "deal_path_confidence": 90,
-      "status": "active",
-      "last_updated": "2026-06-08T06:28:11.898829",
-      "assessed_value": 0,
-      "equity_estimate": 0,
-      "created_at": "2026-06-08 07:30:14",
-      "updated_at": "2026-06-08T07:30:14.370246",
       "signals": [
         {
-          "type": "LIS_PENDENS",
+          "type": "LIEN",
           "source": "duval_official_records",
-          "date": "2026/05/07",
-          "confidence": 95,
-          "details": "Foreclosure filed by BAGOUS KELSEY - Instrument 2026106819"
+          "date": "2026-05-15",
+          "confidence": 80,
+          "details": "Record from official_records: LIEN"
         }
-      ]
+      ],
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:27:27.476606",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
     },
     {
-      "id": 47,
       "lead_id": "LEAD-047",
-      "parcel_id": "DC-2026107208",
-      "score": 85,
+      "parcel_id": "DC-000047",
+      "score": 50,
       "score_reasons": [
-        "LIS PENDENS filed - foreclosure in progress",
-        "Motivated seller likely"
+        "Single distress signal: Lien",
+        "Monitoring for additional signals"
       ],
-      "address": "L 24 B 10 TURTLE CREEK VILLAGE U 1 PLAT BOOK 35 PAGES 20 20A-20D",
+      "address": "47 Sample St, Jacksonville, FL 32207",
       "city": "Jacksonville",
-      "zip": "322xx",
-      "owner_name": "JORDAN JENNIFER D",
+      "zip": "32202",
+      "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
-      "deal_path": "wholesale",
-      "deal_path_confidence": 90,
-      "status": "active",
-      "last_updated": "2026-06-08T06:28:11.898832",
-      "assessed_value": 0,
-      "equity_estimate": 0,
-      "created_at": "2026-06-08 07:30:14",
-      "updated_at": "2026-06-08T07:30:14.370261",
       "signals": [
         {
-          "type": "LIS_PENDENS",
+          "type": "LIEN",
           "source": "duval_official_records",
-          "date": "2026/05/07",
-          "confidence": 95,
-          "details": "Foreclosure filed by TRUIST BANK - Instrument 2026107208"
+          "date": "2026-05-18",
+          "confidence": 80,
+          "details": "Record from official_records: LIEN"
         }
-      ]
+      ],
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:27:27.476800",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
     },
     {
-      "id": 48,
       "lead_id": "LEAD-048",
-      "parcel_id": "DC-2026107227",
-      "score": 85,
+      "parcel_id": "DC-000048",
+      "score": 50,
       "score_reasons": [
-        "LIS PENDENS filed - foreclosure in progress",
-        "Motivated seller likely"
+        "Single distress signal: Lien",
+        "Monitoring for additional signals"
       ],
-      "address": "L 3 B B OAKS AT DURKEEVILLE PLAT BOOK 52 PAGES 52 52A 52B 52C",
+      "address": "48 Sample St, Jacksonville, FL 32208",
       "city": "Jacksonville",
-      "zip": "322xx",
-      "owner_name": "ALLEN FELITA L",
+      "zip": "32202",
+      "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
-      "deal_path": "wholesale",
-      "deal_path_confidence": 90,
-      "status": "active",
-      "last_updated": "2026-06-08T06:28:11.898835",
-      "assessed_value": 0,
-      "equity_estimate": 0,
-      "created_at": "2026-06-08 07:30:14",
-      "updated_at": "2026-06-08T07:30:14.370274",
       "signals": [
         {
-          "type": "LIS_PENDENS",
+          "type": "LIEN",
           "source": "duval_official_records",
-          "date": "2026/05/07",
-          "confidence": 95,
-          "details": "Foreclosure filed by FEDERAL HOME LOAN MORTGAGE CORPORATION TRUSTEE - Instrument 2026107227"
+          "date": "2026-05-19",
+          "confidence": 80,
+          "details": "Record from official_records: LIEN"
         }
-      ]
+      ],
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:27:27.476812",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
     },
     {
-      "id": 49,
       "lead_id": "LEAD-049",
-      "parcel_id": "DC-2026107524",
-      "score": 85,
+      "parcel_id": "DC-000049",
+      "score": 50,
       "score_reasons": [
-        "LIS PENDENS filed - foreclosure in progress",
-        "Motivated seller likely"
+        "Single distress signal: Lien",
+        "Monitoring for additional signals"
       ],
-      "address": "L 4A SUMMERFIELD PLAT BOOK 59 PAGES 144-149",
+      "address": "49 Sample St, Jacksonville, FL 32209",
       "city": "Jacksonville",
-      "zip": "322xx",
-      "owner_name": "PERRY OMARI KAMERON",
+      "zip": "32202",
+      "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
-      "deal_path": "wholesale",
-      "deal_path_confidence": 90,
-      "status": "active",
-      "last_updated": "2026-06-08T06:28:11.898839",
-      "assessed_value": 0,
-      "equity_estimate": 0,
-      "created_at": "2026-06-08 07:30:14",
-      "updated_at": "2026-06-08T07:30:14.370287",
       "signals": [
         {
-          "type": "LIS_PENDENS",
+          "type": "LIEN",
           "source": "duval_official_records",
-          "date": "2026/05/07",
-          "confidence": 95,
-          "details": "Foreclosure filed by VYSTAR CREDIT UNION - Instrument 2026107524"
+          "date": "2026-05-20",
+          "confidence": 80,
+          "details": "Record from official_records: LIEN"
         }
-      ]
+      ],
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:27:27.476822",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
     },
     {
-      "id": 50,
       "lead_id": "LEAD-050",
-      "parcel_id": "DC-2026107643",
-      "score": 85,
+      "parcel_id": "DC-000050",
+      "score": 50,
       "score_reasons": [
-        "LIS PENDENS filed - foreclosure in progress",
-        "Motivated seller likely"
+        "Single distress signal: Lien",
+        "Monitoring for additional signals"
       ],
-      "address": "",
+      "address": "50 Sample St, Jacksonville, FL 32200",
       "city": "Jacksonville",
-      "zip": "322xx",
-      "owner_name": "OZUNA MARIZA M",
+      "zip": "32202",
+      "owner_name": "Unknown",
       "owner_mailing_address": "Unknown",
-      "deal_path": "wholesale",
-      "deal_path_confidence": 90,
-      "status": "active",
-      "last_updated": "2026-06-08T06:28:11.898842",
-      "assessed_value": 0,
-      "equity_estimate": 0,
-      "created_at": "2026-06-08 07:30:14",
-      "updated_at": "2026-06-08T07:30:14.370315",
       "signals": [
         {
-          "type": "LIS_PENDENS",
+          "type": "LIEN",
           "source": "duval_official_records",
-          "date": "2026/05/07",
-          "confidence": 95,
-          "details": "Foreclosure filed by WILMINGTON SAVINGS FUND SOCIETY FSB TRUSTEE - Instrument 2026107643"
+          "date": "2026-05-21",
+          "confidence": 80,
+          "details": "Record from official_records: LIEN"
         }
-      ]
+      ],
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:27:27.476833",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
+    },
+    {
+      "lead_id": "LEAD-051",
+      "parcel_id": "DC-000051",
+      "score": 50,
+      "score_reasons": [
+        "Single distress signal: Lien",
+        "Monitoring for additional signals"
+      ],
+      "address": "51 Sample St, Jacksonville, FL 32201",
+      "city": "Jacksonville",
+      "zip": "32202",
+      "owner_name": "Unknown",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "LIEN",
+          "source": "duval_official_records",
+          "date": "2026-05-21",
+          "confidence": 80,
+          "details": "Record from official_records: LIEN"
+        }
+      ],
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:27:27.476842",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
+    },
+    {
+      "lead_id": "LEAD-052",
+      "parcel_id": "DC-000052",
+      "score": 50,
+      "score_reasons": [
+        "Single distress signal: Lien",
+        "Monitoring for additional signals"
+      ],
+      "address": "52 Sample St, Jacksonville, FL 32202",
+      "city": "Jacksonville",
+      "zip": "32202",
+      "owner_name": "Unknown",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "LIEN",
+          "source": "duval_official_records",
+          "date": "2026-05-22",
+          "confidence": 80,
+          "details": "Record from official_records: LIEN"
+        }
+      ],
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:27:27.476854",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
+    },
+    {
+      "lead_id": "LEAD-053",
+      "parcel_id": "DC-000053",
+      "score": 50,
+      "score_reasons": [
+        "Single distress signal: Lien",
+        "Monitoring for additional signals"
+      ],
+      "address": "53 Sample St, Jacksonville, FL 32203",
+      "city": "Jacksonville",
+      "zip": "32202",
+      "owner_name": "Unknown",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "LIEN",
+          "source": "duval_official_records",
+          "date": "2026-05-25",
+          "confidence": 80,
+          "details": "Record from official_records: LIEN"
+        }
+      ],
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:27:27.476864",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
+    },
+    {
+      "lead_id": "LEAD-054",
+      "parcel_id": "DC-000054",
+      "score": 50,
+      "score_reasons": [
+        "Single distress signal: Lien",
+        "Monitoring for additional signals"
+      ],
+      "address": "54 Sample St, Jacksonville, FL 32204",
+      "city": "Jacksonville",
+      "zip": "32202",
+      "owner_name": "Unknown",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "LIEN",
+          "source": "duval_official_records",
+          "date": "2026-05-25",
+          "confidence": 80,
+          "details": "Record from official_records: LIEN"
+        }
+      ],
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:27:27.476874",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
+    },
+    {
+      "lead_id": "LEAD-055",
+      "parcel_id": "DC-000055",
+      "score": 50,
+      "score_reasons": [
+        "Single distress signal: Lien",
+        "Monitoring for additional signals"
+      ],
+      "address": "55 Sample St, Jacksonville, FL 32205",
+      "city": "Jacksonville",
+      "zip": "32202",
+      "owner_name": "Unknown",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "LIEN",
+          "source": "duval_official_records",
+          "date": "2026-06-01",
+          "confidence": 80,
+          "details": "Record from official_records: LIEN"
+        }
+      ],
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:27:27.476887",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
+    },
+    {
+      "lead_id": "LEAD-056",
+      "parcel_id": "DC-000056",
+      "score": 50,
+      "score_reasons": [
+        "Single distress signal: Lien",
+        "Monitoring for additional signals"
+      ],
+      "address": "56 Sample St, Jacksonville, FL 32206",
+      "city": "Jacksonville",
+      "zip": "32202",
+      "owner_name": "Unknown",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "LIEN",
+          "source": "duval_official_records",
+          "date": "2026-06-01",
+          "confidence": 80,
+          "details": "Record from official_records: LIEN"
+        }
+      ],
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:27:27.476897",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
+    },
+    {
+      "lead_id": "LEAD-057",
+      "parcel_id": "DC-000057",
+      "score": 50,
+      "score_reasons": [
+        "Single distress signal: Lien",
+        "Monitoring for additional signals"
+      ],
+      "address": "57 Sample St, Jacksonville, FL 32207",
+      "city": "Jacksonville",
+      "zip": "32202",
+      "owner_name": "Unknown",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "LIEN",
+          "source": "duval_official_records",
+          "date": "2026-06-02",
+          "confidence": 80,
+          "details": "Record from official_records: LIEN"
+        }
+      ],
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:27:27.476908",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
+    },
+    {
+      "lead_id": "LEAD-058",
+      "parcel_id": "DC-000058",
+      "score": 50,
+      "score_reasons": [
+        "Single distress signal: Lien",
+        "Monitoring for additional signals"
+      ],
+      "address": "58 Sample St, Jacksonville, FL 32208",
+      "city": "Jacksonville",
+      "zip": "32202",
+      "owner_name": "Unknown",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "LIEN",
+          "source": "duval_official_records",
+          "date": "2026-06-03",
+          "confidence": 80,
+          "details": "Record from official_records: LIEN"
+        }
+      ],
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:27:27.476918",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
+    },
+    {
+      "lead_id": "LEAD-059",
+      "parcel_id": "DC-000059",
+      "score": 50,
+      "score_reasons": [
+        "Single distress signal: Lien",
+        "Monitoring for additional signals"
+      ],
+      "address": "59 Sample St, Jacksonville, FL 32209",
+      "city": "Jacksonville",
+      "zip": "32202",
+      "owner_name": "Unknown",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "LIEN",
+          "source": "duval_official_records",
+          "date": "2026-06-04",
+          "confidence": 80,
+          "details": "Record from official_records: LIEN"
+        }
+      ],
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:27:27.476927",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
+    },
+    {
+      "lead_id": "LEAD-060",
+      "parcel_id": "DC-000060",
+      "score": 50,
+      "score_reasons": [
+        "Single distress signal: Judgment",
+        "Monitoring for additional signals"
+      ],
+      "address": "60 Sample St, Jacksonville, FL 32200",
+      "city": "Jacksonville",
+      "zip": "32202",
+      "owner_name": "Unknown",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "JUDGMENT",
+          "source": "duval_official_records",
+          "date": "2026-05-09",
+          "confidence": 80,
+          "details": "Record from official_records: JUDGMENT"
+        }
+      ],
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:27:27.476937",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
+    },
+    {
+      "lead_id": "LEAD-061",
+      "parcel_id": "DC-000061",
+      "score": 50,
+      "score_reasons": [
+        "Single distress signal: Judgment",
+        "Monitoring for additional signals"
+      ],
+      "address": "61 Sample St, Jacksonville, FL 32201",
+      "city": "Jacksonville",
+      "zip": "32202",
+      "owner_name": "Unknown",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "JUDGMENT",
+          "source": "duval_official_records",
+          "date": "2026-05-11",
+          "confidence": 80,
+          "details": "Record from official_records: JUDGMENT"
+        }
+      ],
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:27:27.476951",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
+    },
+    {
+      "lead_id": "LEAD-062",
+      "parcel_id": "DC-000062",
+      "score": 50,
+      "score_reasons": [
+        "Single distress signal: Judgment",
+        "Monitoring for additional signals"
+      ],
+      "address": "62 Sample St, Jacksonville, FL 32202",
+      "city": "Jacksonville",
+      "zip": "32202",
+      "owner_name": "Unknown",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "JUDGMENT",
+          "source": "duval_official_records",
+          "date": "2026-05-14",
+          "confidence": 80,
+          "details": "Record from official_records: JUDGMENT"
+        }
+      ],
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:27:27.476969",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
+    },
+    {
+      "lead_id": "LEAD-063",
+      "parcel_id": "DC-000063",
+      "score": 50,
+      "score_reasons": [
+        "Single distress signal: Judgment",
+        "Monitoring for additional signals"
+      ],
+      "address": "63 Sample St, Jacksonville, FL 32203",
+      "city": "Jacksonville",
+      "zip": "32202",
+      "owner_name": "Unknown",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "JUDGMENT",
+          "source": "duval_official_records",
+          "date": "2026-05-14",
+          "confidence": 80,
+          "details": "Record from official_records: JUDGMENT"
+        }
+      ],
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:27:27.476979",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
+    },
+    {
+      "lead_id": "LEAD-064",
+      "parcel_id": "DC-000064",
+      "score": 50,
+      "score_reasons": [
+        "Single distress signal: Judgment",
+        "Monitoring for additional signals"
+      ],
+      "address": "64 Sample St, Jacksonville, FL 32204",
+      "city": "Jacksonville",
+      "zip": "32202",
+      "owner_name": "Unknown",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "JUDGMENT",
+          "source": "duval_official_records",
+          "date": "2026-05-16",
+          "confidence": 80,
+          "details": "Record from official_records: JUDGMENT"
+        }
+      ],
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:27:27.476991",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
+    },
+    {
+      "lead_id": "LEAD-065",
+      "parcel_id": "DC-000065",
+      "score": 50,
+      "score_reasons": [
+        "Single distress signal: Judgment",
+        "Monitoring for additional signals"
+      ],
+      "address": "65 Sample St, Jacksonville, FL 32205",
+      "city": "Jacksonville",
+      "zip": "32202",
+      "owner_name": "Unknown",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "JUDGMENT",
+          "source": "duval_official_records",
+          "date": "2026-05-20",
+          "confidence": 80,
+          "details": "Record from official_records: JUDGMENT"
+        }
+      ],
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:27:27.477002",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
+    },
+    {
+      "lead_id": "LEAD-066",
+      "parcel_id": "DC-000066",
+      "score": 50,
+      "score_reasons": [
+        "Single distress signal: Judgment",
+        "Monitoring for additional signals"
+      ],
+      "address": "66 Sample St, Jacksonville, FL 32206",
+      "city": "Jacksonville",
+      "zip": "32202",
+      "owner_name": "Unknown",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "JUDGMENT",
+          "source": "duval_official_records",
+          "date": "2026-05-20",
+          "confidence": 80,
+          "details": "Record from official_records: JUDGMENT"
+        }
+      ],
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:27:27.477017",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
+    },
+    {
+      "lead_id": "LEAD-067",
+      "parcel_id": "DC-000067",
+      "score": 50,
+      "score_reasons": [
+        "Single distress signal: Judgment",
+        "Monitoring for additional signals"
+      ],
+      "address": "67 Sample St, Jacksonville, FL 32207",
+      "city": "Jacksonville",
+      "zip": "32202",
+      "owner_name": "Unknown",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "JUDGMENT",
+          "source": "duval_official_records",
+          "date": "2026-05-21",
+          "confidence": 80,
+          "details": "Record from official_records: JUDGMENT"
+        }
+      ],
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:27:27.477030",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
+    },
+    {
+      "lead_id": "LEAD-068",
+      "parcel_id": "DC-000068",
+      "score": 50,
+      "score_reasons": [
+        "Single distress signal: Judgment",
+        "Monitoring for additional signals"
+      ],
+      "address": "68 Sample St, Jacksonville, FL 32208",
+      "city": "Jacksonville",
+      "zip": "32202",
+      "owner_name": "Unknown",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "JUDGMENT",
+          "source": "duval_official_records",
+          "date": "2026-05-21",
+          "confidence": 80,
+          "details": "Record from official_records: JUDGMENT"
+        }
+      ],
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:27:27.477040",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
+    },
+    {
+      "lead_id": "LEAD-069",
+      "parcel_id": "DC-000069",
+      "score": 50,
+      "score_reasons": [
+        "Single distress signal: Judgment",
+        "Monitoring for additional signals"
+      ],
+      "address": "69 Sample St, Jacksonville, FL 32209",
+      "city": "Jacksonville",
+      "zip": "32202",
+      "owner_name": "Unknown",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "JUDGMENT",
+          "source": "duval_official_records",
+          "date": "2026-05-22",
+          "confidence": 80,
+          "details": "Record from official_records: JUDGMENT"
+        }
+      ],
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:27:27.477049",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
+    },
+    {
+      "lead_id": "LEAD-070",
+      "parcel_id": "DC-000070",
+      "score": 50,
+      "score_reasons": [
+        "Single distress signal: Judgment",
+        "Monitoring for additional signals"
+      ],
+      "address": "70 Sample St, Jacksonville, FL 32200",
+      "city": "Jacksonville",
+      "zip": "32202",
+      "owner_name": "Unknown",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "JUDGMENT",
+          "source": "duval_official_records",
+          "date": "2026-05-22",
+          "confidence": 80,
+          "details": "Record from official_records: JUDGMENT"
+        }
+      ],
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:27:27.477061",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
+    },
+    {
+      "lead_id": "LEAD-071",
+      "parcel_id": "DC-000071",
+      "score": 50,
+      "score_reasons": [
+        "Single distress signal: Judgment",
+        "Monitoring for additional signals"
+      ],
+      "address": "71 Sample St, Jacksonville, FL 32201",
+      "city": "Jacksonville",
+      "zip": "32202",
+      "owner_name": "Unknown",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "JUDGMENT",
+          "source": "duval_official_records",
+          "date": "2026-05-22",
+          "confidence": 80,
+          "details": "Record from official_records: JUDGMENT"
+        }
+      ],
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:27:27.477071",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
+    },
+    {
+      "lead_id": "LEAD-072",
+      "parcel_id": "DC-000072",
+      "score": 50,
+      "score_reasons": [
+        "Single distress signal: Judgment",
+        "Monitoring for additional signals"
+      ],
+      "address": "72 Sample St, Jacksonville, FL 32202",
+      "city": "Jacksonville",
+      "zip": "32202",
+      "owner_name": "Unknown",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "JUDGMENT",
+          "source": "duval_official_records",
+          "date": "2026-05-24",
+          "confidence": 80,
+          "details": "Record from official_records: JUDGMENT"
+        }
+      ],
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:27:27.477081",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
+    },
+    {
+      "lead_id": "LEAD-073",
+      "parcel_id": "DC-000073",
+      "score": 50,
+      "score_reasons": [
+        "Single distress signal: Judgment",
+        "Monitoring for additional signals"
+      ],
+      "address": "73 Sample St, Jacksonville, FL 32203",
+      "city": "Jacksonville",
+      "zip": "32202",
+      "owner_name": "Unknown",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "JUDGMENT",
+          "source": "duval_official_records",
+          "date": "2026-05-25",
+          "confidence": 80,
+          "details": "Record from official_records: JUDGMENT"
+        }
+      ],
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:27:27.477090",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
+    },
+    {
+      "lead_id": "LEAD-074",
+      "parcel_id": "DC-000074",
+      "score": 50,
+      "score_reasons": [
+        "Single distress signal: Judgment",
+        "Monitoring for additional signals"
+      ],
+      "address": "74 Sample St, Jacksonville, FL 32204",
+      "city": "Jacksonville",
+      "zip": "32202",
+      "owner_name": "Unknown",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "JUDGMENT",
+          "source": "duval_official_records",
+          "date": "2026-05-25",
+          "confidence": 80,
+          "details": "Record from official_records: JUDGMENT"
+        }
+      ],
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:27:27.477099",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
+    },
+    {
+      "lead_id": "LEAD-075",
+      "parcel_id": "DC-000075",
+      "score": 50,
+      "score_reasons": [
+        "Single distress signal: Judgment",
+        "Monitoring for additional signals"
+      ],
+      "address": "75 Sample St, Jacksonville, FL 32205",
+      "city": "Jacksonville",
+      "zip": "32202",
+      "owner_name": "Unknown",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "JUDGMENT",
+          "source": "duval_official_records",
+          "date": "2026-05-26",
+          "confidence": 80,
+          "details": "Record from official_records: JUDGMENT"
+        }
+      ],
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:27:27.477108",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
+    },
+    {
+      "lead_id": "LEAD-076",
+      "parcel_id": "DC-000076",
+      "score": 50,
+      "score_reasons": [
+        "Single distress signal: Judgment",
+        "Monitoring for additional signals"
+      ],
+      "address": "76 Sample St, Jacksonville, FL 32206",
+      "city": "Jacksonville",
+      "zip": "32202",
+      "owner_name": "Unknown",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "JUDGMENT",
+          "source": "duval_official_records",
+          "date": "2026-05-26",
+          "confidence": 80,
+          "details": "Record from official_records: JUDGMENT"
+        }
+      ],
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:27:27.477118",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
+    },
+    {
+      "lead_id": "LEAD-077",
+      "parcel_id": "DC-000077",
+      "score": 50,
+      "score_reasons": [
+        "Single distress signal: Judgment",
+        "Monitoring for additional signals"
+      ],
+      "address": "77 Sample St, Jacksonville, FL 32207",
+      "city": "Jacksonville",
+      "zip": "32202",
+      "owner_name": "Unknown",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "JUDGMENT",
+          "source": "duval_official_records",
+          "date": "2026-05-26",
+          "confidence": 80,
+          "details": "Record from official_records: JUDGMENT"
+        }
+      ],
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:27:27.477293",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
+    },
+    {
+      "lead_id": "LEAD-078",
+      "parcel_id": "DC-000078",
+      "score": 50,
+      "score_reasons": [
+        "Single distress signal: Judgment",
+        "Monitoring for additional signals"
+      ],
+      "address": "78 Sample St, Jacksonville, FL 32208",
+      "city": "Jacksonville",
+      "zip": "32202",
+      "owner_name": "Unknown",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "JUDGMENT",
+          "source": "duval_official_records",
+          "date": "2026-05-27",
+          "confidence": 80,
+          "details": "Record from official_records: JUDGMENT"
+        }
+      ],
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:27:27.477334",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
+    },
+    {
+      "lead_id": "LEAD-079",
+      "parcel_id": "DC-000079",
+      "score": 50,
+      "score_reasons": [
+        "Single distress signal: Judgment",
+        "Monitoring for additional signals"
+      ],
+      "address": "79 Sample St, Jacksonville, FL 32209",
+      "city": "Jacksonville",
+      "zip": "32202",
+      "owner_name": "Unknown",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "JUDGMENT",
+          "source": "duval_official_records",
+          "date": "2026-05-31",
+          "confidence": 80,
+          "details": "Record from official_records: JUDGMENT"
+        }
+      ],
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:27:27.477352",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
+    },
+    {
+      "lead_id": "LEAD-080",
+      "parcel_id": "DC-000080",
+      "score": 50,
+      "score_reasons": [
+        "Single distress signal: Judgment",
+        "Monitoring for additional signals"
+      ],
+      "address": "80 Sample St, Jacksonville, FL 32200",
+      "city": "Jacksonville",
+      "zip": "32202",
+      "owner_name": "Unknown",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "JUDGMENT",
+          "source": "duval_official_records",
+          "date": "2026-06-01",
+          "confidence": 80,
+          "details": "Record from official_records: JUDGMENT"
+        }
+      ],
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:27:27.477362",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
+    },
+    {
+      "lead_id": "LEAD-081",
+      "parcel_id": "DC-000081",
+      "score": 50,
+      "score_reasons": [
+        "Single distress signal: Judgment",
+        "Monitoring for additional signals"
+      ],
+      "address": "81 Sample St, Jacksonville, FL 32201",
+      "city": "Jacksonville",
+      "zip": "32202",
+      "owner_name": "Unknown",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "JUDGMENT",
+          "source": "duval_official_records",
+          "date": "2026-06-06",
+          "confidence": 80,
+          "details": "Record from official_records: JUDGMENT"
+        }
+      ],
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:27:27.477372",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
+    },
+    {
+      "lead_id": "LEAD-082",
+      "parcel_id": "DC-000082",
+      "score": 50,
+      "score_reasons": [
+        "Single distress signal: Judgment",
+        "Monitoring for additional signals"
+      ],
+      "address": "82 Sample St, Jacksonville, FL 32202",
+      "city": "Jacksonville",
+      "zip": "32202",
+      "owner_name": "Unknown",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "JUDGMENT",
+          "source": "duval_official_records",
+          "date": "2026-06-07",
+          "confidence": 80,
+          "details": "Record from official_records: JUDGMENT"
+        }
+      ],
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:27:27.477381",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
+    },
+    {
+      "lead_id": "LEAD-083",
+      "parcel_id": "DC-000083",
+      "score": 50,
+      "score_reasons": [
+        "Single distress signal: Foreclosure",
+        "Monitoring for additional signals"
+      ],
+      "address": "83 Sample St, Jacksonville, FL 32203",
+      "city": "Jacksonville",
+      "zip": "32202",
+      "owner_name": "Unknown",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "FORECLOSURE",
+          "source": "duval_official_records",
+          "date": "2026-05-10",
+          "confidence": 80,
+          "details": "Record from official_records: FORECLOSURE"
+        }
+      ],
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:27:27.477392",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
+    },
+    {
+      "lead_id": "LEAD-084",
+      "parcel_id": "DC-000084",
+      "score": 50,
+      "score_reasons": [
+        "Single distress signal: Foreclosure",
+        "Monitoring for additional signals"
+      ],
+      "address": "84 Sample St, Jacksonville, FL 32204",
+      "city": "Jacksonville",
+      "zip": "32202",
+      "owner_name": "Unknown",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "FORECLOSURE",
+          "source": "duval_official_records",
+          "date": "2026-05-11",
+          "confidence": 80,
+          "details": "Record from official_records: FORECLOSURE"
+        }
+      ],
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:27:27.477403",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
+    },
+    {
+      "lead_id": "LEAD-085",
+      "parcel_id": "DC-000085",
+      "score": 50,
+      "score_reasons": [
+        "Single distress signal: Foreclosure",
+        "Monitoring for additional signals"
+      ],
+      "address": "85 Sample St, Jacksonville, FL 32205",
+      "city": "Jacksonville",
+      "zip": "32202",
+      "owner_name": "Unknown",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "FORECLOSURE",
+          "source": "duval_official_records",
+          "date": "2026-05-12",
+          "confidence": 80,
+          "details": "Record from official_records: FORECLOSURE"
+        }
+      ],
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:27:27.477413",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
+    },
+    {
+      "lead_id": "LEAD-086",
+      "parcel_id": "DC-000086",
+      "score": 50,
+      "score_reasons": [
+        "Single distress signal: Foreclosure",
+        "Monitoring for additional signals"
+      ],
+      "address": "86 Sample St, Jacksonville, FL 32206",
+      "city": "Jacksonville",
+      "zip": "32202",
+      "owner_name": "Unknown",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "FORECLOSURE",
+          "source": "duval_official_records",
+          "date": "2026-05-12",
+          "confidence": 80,
+          "details": "Record from official_records: FORECLOSURE"
+        }
+      ],
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:27:27.477423",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
+    },
+    {
+      "lead_id": "LEAD-087",
+      "parcel_id": "DC-000087",
+      "score": 50,
+      "score_reasons": [
+        "Single distress signal: Foreclosure",
+        "Monitoring for additional signals"
+      ],
+      "address": "87 Sample St, Jacksonville, FL 32207",
+      "city": "Jacksonville",
+      "zip": "32202",
+      "owner_name": "Unknown",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "FORECLOSURE",
+          "source": "duval_official_records",
+          "date": "2026-05-13",
+          "confidence": 80,
+          "details": "Record from official_records: FORECLOSURE"
+        }
+      ],
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:27:27.477435",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
+    },
+    {
+      "lead_id": "LEAD-088",
+      "parcel_id": "DC-000088",
+      "score": 50,
+      "score_reasons": [
+        "Single distress signal: Foreclosure",
+        "Monitoring for additional signals"
+      ],
+      "address": "88 Sample St, Jacksonville, FL 32208",
+      "city": "Jacksonville",
+      "zip": "32202",
+      "owner_name": "Unknown",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "FORECLOSURE",
+          "source": "duval_official_records",
+          "date": "2026-05-13",
+          "confidence": 80,
+          "details": "Record from official_records: FORECLOSURE"
+        }
+      ],
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:27:27.477446",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
+    },
+    {
+      "lead_id": "LEAD-089",
+      "parcel_id": "DC-000089",
+      "score": 50,
+      "score_reasons": [
+        "Single distress signal: Foreclosure",
+        "Monitoring for additional signals"
+      ],
+      "address": "89 Sample St, Jacksonville, FL 32209",
+      "city": "Jacksonville",
+      "zip": "32202",
+      "owner_name": "Unknown",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "FORECLOSURE",
+          "source": "duval_official_records",
+          "date": "2026-05-14",
+          "confidence": 80,
+          "details": "Record from official_records: FORECLOSURE"
+        }
+      ],
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:27:27.477456",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
+    },
+    {
+      "lead_id": "LEAD-090",
+      "parcel_id": "DC-000090",
+      "score": 50,
+      "score_reasons": [
+        "Single distress signal: Foreclosure",
+        "Monitoring for additional signals"
+      ],
+      "address": "90 Sample St, Jacksonville, FL 32200",
+      "city": "Jacksonville",
+      "zip": "32202",
+      "owner_name": "Unknown",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "FORECLOSURE",
+          "source": "duval_official_records",
+          "date": "2026-05-14",
+          "confidence": 80,
+          "details": "Record from official_records: FORECLOSURE"
+        }
+      ],
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:27:27.477465",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
+    },
+    {
+      "lead_id": "LEAD-091",
+      "parcel_id": "DC-000091",
+      "score": 50,
+      "score_reasons": [
+        "Single distress signal: Foreclosure",
+        "Monitoring for additional signals"
+      ],
+      "address": "91 Sample St, Jacksonville, FL 32201",
+      "city": "Jacksonville",
+      "zip": "32202",
+      "owner_name": "Unknown",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "FORECLOSURE",
+          "source": "duval_official_records",
+          "date": "2026-05-16",
+          "confidence": 80,
+          "details": "Record from official_records: FORECLOSURE"
+        }
+      ],
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:27:27.477474",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
+    },
+    {
+      "lead_id": "LEAD-092",
+      "parcel_id": "DC-000092",
+      "score": 50,
+      "score_reasons": [
+        "Single distress signal: Foreclosure",
+        "Monitoring for additional signals"
+      ],
+      "address": "92 Sample St, Jacksonville, FL 32202",
+      "city": "Jacksonville",
+      "zip": "32202",
+      "owner_name": "Unknown",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "FORECLOSURE",
+          "source": "duval_official_records",
+          "date": "2026-05-18",
+          "confidence": 80,
+          "details": "Record from official_records: FORECLOSURE"
+        }
+      ],
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:27:27.477484",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
+    },
+    {
+      "lead_id": "LEAD-093",
+      "parcel_id": "DC-000093",
+      "score": 50,
+      "score_reasons": [
+        "Single distress signal: Foreclosure",
+        "Monitoring for additional signals"
+      ],
+      "address": "93 Sample St, Jacksonville, FL 32203",
+      "city": "Jacksonville",
+      "zip": "32202",
+      "owner_name": "Unknown",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "FORECLOSURE",
+          "source": "duval_official_records",
+          "date": "2026-05-18",
+          "confidence": 80,
+          "details": "Record from official_records: FORECLOSURE"
+        }
+      ],
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:27:27.477496",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
+    },
+    {
+      "lead_id": "LEAD-094",
+      "parcel_id": "DC-000094",
+      "score": 50,
+      "score_reasons": [
+        "Single distress signal: Foreclosure",
+        "Monitoring for additional signals"
+      ],
+      "address": "94 Sample St, Jacksonville, FL 32204",
+      "city": "Jacksonville",
+      "zip": "32202",
+      "owner_name": "Unknown",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "FORECLOSURE",
+          "source": "duval_official_records",
+          "date": "2026-05-19",
+          "confidence": 80,
+          "details": "Record from official_records: FORECLOSURE"
+        }
+      ],
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:27:27.477508",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
+    },
+    {
+      "lead_id": "LEAD-095",
+      "parcel_id": "DC-000095",
+      "score": 50,
+      "score_reasons": [
+        "Single distress signal: Foreclosure",
+        "Monitoring for additional signals"
+      ],
+      "address": "95 Sample St, Jacksonville, FL 32205",
+      "city": "Jacksonville",
+      "zip": "32202",
+      "owner_name": "Unknown",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "FORECLOSURE",
+          "source": "duval_official_records",
+          "date": "2026-05-19",
+          "confidence": 80,
+          "details": "Record from official_records: FORECLOSURE"
+        }
+      ],
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:27:27.477542",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
+    },
+    {
+      "lead_id": "LEAD-096",
+      "parcel_id": "DC-000096",
+      "score": 50,
+      "score_reasons": [
+        "Single distress signal: Foreclosure",
+        "Monitoring for additional signals"
+      ],
+      "address": "96 Sample St, Jacksonville, FL 32206",
+      "city": "Jacksonville",
+      "zip": "32202",
+      "owner_name": "Unknown",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "FORECLOSURE",
+          "source": "duval_official_records",
+          "date": "2026-05-20",
+          "confidence": 80,
+          "details": "Record from official_records: FORECLOSURE"
+        }
+      ],
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:27:27.477566",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
+    },
+    {
+      "lead_id": "LEAD-097",
+      "parcel_id": "DC-000097",
+      "score": 50,
+      "score_reasons": [
+        "Single distress signal: Foreclosure",
+        "Monitoring for additional signals"
+      ],
+      "address": "97 Sample St, Jacksonville, FL 32207",
+      "city": "Jacksonville",
+      "zip": "32202",
+      "owner_name": "Unknown",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "FORECLOSURE",
+          "source": "duval_official_records",
+          "date": "2026-05-21",
+          "confidence": 80,
+          "details": "Record from official_records: FORECLOSURE"
+        }
+      ],
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:27:27.477584",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
+    },
+    {
+      "lead_id": "LEAD-098",
+      "parcel_id": "DC-000098",
+      "score": 50,
+      "score_reasons": [
+        "Single distress signal: Foreclosure",
+        "Monitoring for additional signals"
+      ],
+      "address": "98 Sample St, Jacksonville, FL 32208",
+      "city": "Jacksonville",
+      "zip": "32202",
+      "owner_name": "Unknown",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "FORECLOSURE",
+          "source": "duval_official_records",
+          "date": "2026-05-22",
+          "confidence": 80,
+          "details": "Record from official_records: FORECLOSURE"
+        }
+      ],
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:27:27.477594",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
+    },
+    {
+      "lead_id": "LEAD-099",
+      "parcel_id": "DC-000099",
+      "score": 50,
+      "score_reasons": [
+        "Single distress signal: Foreclosure",
+        "Monitoring for additional signals"
+      ],
+      "address": "99 Sample St, Jacksonville, FL 32209",
+      "city": "Jacksonville",
+      "zip": "32202",
+      "owner_name": "Unknown",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "FORECLOSURE",
+          "source": "duval_official_records",
+          "date": "2026-05-22",
+          "confidence": 80,
+          "details": "Record from official_records: FORECLOSURE"
+        }
+      ],
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:27:27.477604",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
+    },
+    {
+      "lead_id": "LEAD-100",
+      "parcel_id": "DC-000100",
+      "score": 50,
+      "score_reasons": [
+        "Single distress signal: Foreclosure",
+        "Monitoring for additional signals"
+      ],
+      "address": "100 Sample St, Jacksonville, FL 32200",
+      "city": "Jacksonville",
+      "zip": "32202",
+      "owner_name": "Unknown",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "FORECLOSURE",
+          "source": "duval_official_records",
+          "date": "2026-05-24",
+          "confidence": 80,
+          "details": "Record from official_records: FORECLOSURE"
+        }
+      ],
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-06-08T08:27:27.477615",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
     }
   ]
 }

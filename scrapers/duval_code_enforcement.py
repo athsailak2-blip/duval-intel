@@ -54,7 +54,7 @@ class DuvalCodeEnforcementScraper:
             seed_mode = os.environ.get('SEED_MODE', 'false').lower() == 'true'
             days_back = 30 if seed_mode else 7
         
-        print("Code enforcement refresh requires PRR submission")
+        pass  # PRR required
         portal_status = self._check_prr_portal()
         
         return {
