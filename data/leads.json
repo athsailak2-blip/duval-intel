@@ -1,63 +1,63 @@
 {
   "county": "Duval",
   "state": "FL",
-  "last_refresh": "2026-06-08T08:42:42.103275",
+  "last_refresh": "2026-06-08T08:46:53.528434",
   "framework_version": "v5.3.1",
   "total_leads": 100,
   "high_stack_leads": 100,
   "sources": {
     "official_records": {
       "status": "healthy",
-      "last_refresh": "2026-06-08T08:42:13.069192",
-      "records_count": 320,
+      "last_refresh": "2026-06-08T08:46:26.525585",
+      "records_count": 294,
       "errors": [],
       "note": ""
     },
     "court_records": {
       "status": "healthy",
-      "last_refresh": "2026-06-08T08:42:13.111258",
+      "last_refresh": "2026-06-08T08:46:26.573448",
       "records_count": 0,
       "errors": [],
       "note": ""
     },
     "foreclosure_sales": {
       "status": "healthy",
-      "last_refresh": "2026-06-08T08:42:13.146920",
+      "last_refresh": "2026-06-08T08:46:26.612466",
       "records_count": 0,
       "errors": [],
       "note": ""
     },
     "tax_deed_sales": {
       "status": "healthy",
-      "last_refresh": "2026-06-08T08:42:13.182476",
+      "last_refresh": "2026-06-08T08:46:26.652737",
       "records_count": 0,
       "errors": [],
       "note": ""
     },
     "parcel_master": {
       "status": "healthy",
-      "last_refresh": "2026-06-08T08:42:35.547330",
+      "last_refresh": "2026-06-08T08:46:47.734498",
       "records_count": 0,
       "errors": [],
       "note": ""
     },
     "tax_collector": {
       "status": "healthy",
-      "last_refresh": "2026-06-08T08:42:40.714175",
+      "last_refresh": "2026-06-08T08:46:52.294836",
       "records_count": 0,
       "errors": [],
       "note": ""
     },
     "gis_mapping": {
       "status": "healthy",
-      "last_refresh": "2026-06-08T08:42:40.770220",
+      "last_refresh": "2026-06-08T08:46:52.357899",
       "records_count": 0,
       "errors": [],
       "note": ""
     },
     "code_enforcement": {
       "status": "prr_required",
-      "last_refresh": "2026-06-08T08:42:41.989161",
+      "last_refresh": "2026-06-08T08:46:53.400337",
       "records_count": 0,
       "errors": [],
       "note": ""
@@ -65,7 +65,7 @@
   },
   "leads": [
     {
-      "id": 251,
+      "id": 351,
       "lead_id": "LEAD-001",
       "parcel_id": "DC-000001",
       "score": 85,
@@ -81,11 +81,11 @@
       "deal_path": "wholesale",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-06-08T08:42:42.051285",
+      "last_updated": "2026-06-08T08:46:53.472231",
       "assessed_value": 100000,
       "equity_estimate": 25000,
-      "created_at": "2026-06-08 08:42:42",
-      "updated_at": "2026-06-08T08:42:42.056690",
+      "created_at": "2026-06-08 08:46:53",
+      "updated_at": "2026-06-08T08:46:53.477771",
       "signals": [
         {
           "type": "LIS_PENDENS",
@@ -114,11 +114,18 @@
           "date": "2026-05-09",
           "confidence": 80,
           "details": "Record from official_records: LIS PENDENS"
+        },
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026-05-09",
+          "confidence": 80,
+          "details": "Record from official_records: LIS PENDENS"
         }
       ]
     },
     {
-      "id": 252,
+      "id": 352,
       "lead_id": "LEAD-002",
       "parcel_id": "DC-000002",
       "score": 85,
@@ -134,11 +141,11 @@
       "deal_path": "wholesale",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-06-08T08:42:42.051299",
+      "last_updated": "2026-06-08T08:46:53.472250",
       "assessed_value": 100000,
       "equity_estimate": 25000,
-      "created_at": "2026-06-08 08:42:42",
-      "updated_at": "2026-06-08T08:42:42.056994",
+      "created_at": "2026-06-08 08:46:53",
+      "updated_at": "2026-06-08T08:46:53.478133",
       "signals": [
         {
           "type": "LIS_PENDENS",
@@ -167,11 +174,18 @@
           "date": "2026-05-11",
           "confidence": 80,
           "details": "Record from official_records: LIS PENDENS"
+        },
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026-05-11",
+          "confidence": 80,
+          "details": "Record from official_records: LIS PENDENS"
         }
       ]
     },
     {
-      "id": 253,
+      "id": 353,
       "lead_id": "LEAD-003",
       "parcel_id": "DC-000003",
       "score": 85,
@@ -187,11 +201,11 @@
       "deal_path": "wholesale",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-06-08T08:42:42.051309",
+      "last_updated": "2026-06-08T08:46:53.472285",
       "assessed_value": 100000,
       "equity_estimate": 25000,
-      "created_at": "2026-06-08 08:42:42",
-      "updated_at": "2026-06-08T08:42:42.057019",
+      "created_at": "2026-06-08 08:46:53",
+      "updated_at": "2026-06-08T08:46:53.478159",
       "signals": [
         {
           "type": "LIS_PENDENS",
@@ -220,11 +234,18 @@
           "date": "2026-05-17",
           "confidence": 80,
           "details": "Record from official_records: LIS PENDENS"
+        },
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026-05-12",
+          "confidence": 80,
+          "details": "Record from official_records: LIS PENDENS"
         }
       ]
     },
     {
-      "id": 254,
+      "id": 354,
       "lead_id": "LEAD-004",
       "parcel_id": "DC-000004",
       "score": 85,
@@ -240,11 +261,11 @@
       "deal_path": "wholesale",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-06-08T08:42:42.051320",
+      "last_updated": "2026-06-08T08:46:53.472294",
       "assessed_value": 100000,
       "equity_estimate": 25000,
-      "created_at": "2026-06-08 08:42:42",
-      "updated_at": "2026-06-08T08:42:42.057079",
+      "created_at": "2026-06-08 08:46:53",
+      "updated_at": "2026-06-08T08:46:53.478177",
       "signals": [
         {
           "type": "LIS_PENDENS",
@@ -273,11 +294,18 @@
           "date": "2026-05-17",
           "confidence": 80,
           "details": "Record from official_records: LIS PENDENS"
+        },
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026-05-13",
+          "confidence": 80,
+          "details": "Record from official_records: LIS PENDENS"
         }
       ]
     },
     {
-      "id": 255,
+      "id": 355,
       "lead_id": "LEAD-005",
       "parcel_id": "DC-000005",
       "score": 85,
@@ -293,11 +321,11 @@
       "deal_path": "wholesale",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-06-08T08:42:42.051331",
+      "last_updated": "2026-06-08T08:46:53.472304",
       "assessed_value": 100000,
       "equity_estimate": 25000,
-      "created_at": "2026-06-08 08:42:42",
-      "updated_at": "2026-06-08T08:42:42.057097",
+      "created_at": "2026-06-08 08:46:53",
+      "updated_at": "2026-06-08T08:46:53.478216",
       "signals": [
         {
           "type": "LIS_PENDENS",
@@ -326,11 +354,18 @@
           "date": "2026-05-19",
           "confidence": 80,
           "details": "Record from official_records: LIS PENDENS"
+        },
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026-05-16",
+          "confidence": 80,
+          "details": "Record from official_records: LIS PENDENS"
         }
       ]
     },
     {
-      "id": 256,
+      "id": 356,
       "lead_id": "LEAD-006",
       "parcel_id": "DC-000006",
       "score": 85,
@@ -346,11 +381,11 @@
       "deal_path": "wholesale",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-06-08T08:42:42.051338",
+      "last_updated": "2026-06-08T08:46:53.472312",
       "assessed_value": 100000,
       "equity_estimate": 25000,
-      "created_at": "2026-06-08 08:42:42",
-      "updated_at": "2026-06-08T08:42:42.057112",
+      "created_at": "2026-06-08 08:46:53",
+      "updated_at": "2026-06-08T08:46:53.478231",
       "signals": [
         {
           "type": "LIS_PENDENS",
@@ -379,11 +414,18 @@
           "date": "2026-05-22",
           "confidence": 80,
           "details": "Record from official_records: LIS PENDENS"
+        },
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026-05-17",
+          "confidence": 80,
+          "details": "Record from official_records: LIS PENDENS"
         }
       ]
     },
     {
-      "id": 257,
+      "id": 357,
       "lead_id": "LEAD-007",
       "parcel_id": "DC-000007",
       "score": 85,
@@ -399,11 +441,11 @@
       "deal_path": "wholesale",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-06-08T08:42:42.051347",
+      "last_updated": "2026-06-08T08:46:53.472318",
       "assessed_value": 100000,
       "equity_estimate": 25000,
-      "created_at": "2026-06-08 08:42:42",
-      "updated_at": "2026-06-08T08:42:42.057127",
+      "created_at": "2026-06-08 08:46:53",
+      "updated_at": "2026-06-08T08:46:53.478243",
       "signals": [
         {
           "type": "LIS_PENDENS",
@@ -432,11 +474,18 @@
           "date": "2026-05-22",
           "confidence": 80,
           "details": "Record from official_records: LIS PENDENS"
+        },
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026-05-18",
+          "confidence": 80,
+          "details": "Record from official_records: LIS PENDENS"
         }
       ]
     },
     {
-      "id": 258,
+      "id": 358,
       "lead_id": "LEAD-008",
       "parcel_id": "DC-000008",
       "score": 85,
@@ -452,11 +501,11 @@
       "deal_path": "wholesale",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-06-08T08:42:42.051354",
+      "last_updated": "2026-06-08T08:46:53.472325",
       "assessed_value": 100000,
       "equity_estimate": 25000,
-      "created_at": "2026-06-08 08:42:42",
-      "updated_at": "2026-06-08T08:42:42.057142",
+      "created_at": "2026-06-08 08:46:53",
+      "updated_at": "2026-06-08T08:46:53.478277",
       "signals": [
         {
           "type": "LIS_PENDENS",
@@ -485,11 +534,18 @@
           "date": "2026-05-23",
           "confidence": 80,
           "details": "Record from official_records: LIS PENDENS"
+        },
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026-05-18",
+          "confidence": 80,
+          "details": "Record from official_records: LIS PENDENS"
         }
       ]
     },
     {
-      "id": 259,
+      "id": 359,
       "lead_id": "LEAD-009",
       "parcel_id": "DC-000009",
       "score": 85,
@@ -505,11 +561,11 @@
       "deal_path": "wholesale",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-06-08T08:42:42.051360",
+      "last_updated": "2026-06-08T08:46:53.472332",
       "assessed_value": 100000,
       "equity_estimate": 25000,
-      "created_at": "2026-06-08 08:42:42",
-      "updated_at": "2026-06-08T08:42:42.057156",
+      "created_at": "2026-06-08 08:46:53",
+      "updated_at": "2026-06-08T08:46:53.478290",
       "signals": [
         {
           "type": "LIS_PENDENS",
@@ -538,11 +594,18 @@
           "date": "2026-05-23",
           "confidence": 80,
           "details": "Record from official_records: LIS PENDENS"
+        },
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026-05-19",
+          "confidence": 80,
+          "details": "Record from official_records: LIS PENDENS"
         }
       ]
     },
     {
-      "id": 260,
+      "id": 360,
       "lead_id": "LEAD-010",
       "parcel_id": "DC-000010",
       "score": 85,
@@ -558,11 +621,11 @@
       "deal_path": "wholesale",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-06-08T08:42:42.051367",
+      "last_updated": "2026-06-08T08:46:53.472344",
       "assessed_value": 100000,
       "equity_estimate": 25000,
-      "created_at": "2026-06-08 08:42:42",
-      "updated_at": "2026-06-08T08:42:42.057170",
+      "created_at": "2026-06-08 08:46:53",
+      "updated_at": "2026-06-08T08:46:53.478304",
       "signals": [
         {
           "type": "LIS_PENDENS",
@@ -591,11 +654,18 @@
           "date": "2026-05-23",
           "confidence": 80,
           "details": "Record from official_records: LIS PENDENS"
+        },
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026-05-20",
+          "confidence": 80,
+          "details": "Record from official_records: LIS PENDENS"
         }
       ]
     },
     {
-      "id": 261,
+      "id": 361,
       "lead_id": "LEAD-011",
       "parcel_id": "DC-000011",
       "score": 85,
@@ -611,11 +681,11 @@
       "deal_path": "wholesale",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-06-08T08:42:42.051374",
+      "last_updated": "2026-06-08T08:46:53.472351",
       "assessed_value": 100000,
       "equity_estimate": 25000,
-      "created_at": "2026-06-08 08:42:42",
-      "updated_at": "2026-06-08T08:42:42.057184",
+      "created_at": "2026-06-08 08:46:53",
+      "updated_at": "2026-06-08T08:46:53.478321",
       "signals": [
         {
           "type": "LIS_PENDENS",
@@ -644,11 +714,18 @@
           "date": "2026-05-23",
           "confidence": 80,
           "details": "Record from official_records: LIS PENDENS"
+        },
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026-05-20",
+          "confidence": 80,
+          "details": "Record from official_records: LIS PENDENS"
         }
       ]
     },
     {
-      "id": 262,
+      "id": 362,
       "lead_id": "LEAD-012",
       "parcel_id": "DC-000012",
       "score": 85,
@@ -664,11 +741,11 @@
       "deal_path": "wholesale",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-06-08T08:42:42.051383",
+      "last_updated": "2026-06-08T08:46:53.472358",
       "assessed_value": 100000,
       "equity_estimate": 25000,
-      "created_at": "2026-06-08 08:42:42",
-      "updated_at": "2026-06-08T08:42:42.057198",
+      "created_at": "2026-06-08 08:46:53",
+      "updated_at": "2026-06-08T08:46:53.478334",
       "signals": [
         {
           "type": "LIS_PENDENS",
@@ -697,11 +774,18 @@
           "date": "2026-05-24",
           "confidence": 80,
           "details": "Record from official_records: LIS PENDENS"
+        },
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026-05-21",
+          "confidence": 80,
+          "details": "Record from official_records: LIS PENDENS"
         }
       ]
     },
     {
-      "id": 263,
+      "id": 363,
       "lead_id": "LEAD-013",
       "parcel_id": "DC-000013",
       "score": 85,
@@ -717,11 +801,11 @@
       "deal_path": "wholesale",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-06-08T08:42:42.051389",
+      "last_updated": "2026-06-08T08:46:53.472365",
       "assessed_value": 100000,
       "equity_estimate": 25000,
-      "created_at": "2026-06-08 08:42:42",
-      "updated_at": "2026-06-08T08:42:42.057215",
+      "created_at": "2026-06-08 08:46:53",
+      "updated_at": "2026-06-08T08:46:53.478347",
       "signals": [
         {
           "type": "LIS_PENDENS",
@@ -750,11 +834,18 @@
           "date": "2026-05-25",
           "confidence": 80,
           "details": "Record from official_records: LIS PENDENS"
+        },
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026-05-21",
+          "confidence": 80,
+          "details": "Record from official_records: LIS PENDENS"
         }
       ]
     },
     {
-      "id": 264,
+      "id": 364,
       "lead_id": "LEAD-014",
       "parcel_id": "DC-000014",
       "score": 85,
@@ -770,11 +861,11 @@
       "deal_path": "wholesale",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-06-08T08:42:42.051397",
+      "last_updated": "2026-06-08T08:46:53.472373",
       "assessed_value": 100000,
       "equity_estimate": 25000,
-      "created_at": "2026-06-08 08:42:42",
-      "updated_at": "2026-06-08T08:42:42.057229",
+      "created_at": "2026-06-08 08:46:53",
+      "updated_at": "2026-06-08T08:46:53.478359",
       "signals": [
         {
           "type": "LIS_PENDENS",
@@ -803,11 +894,18 @@
           "date": "2026-05-26",
           "confidence": 80,
           "details": "Record from official_records: LIS PENDENS"
+        },
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026-05-24",
+          "confidence": 80,
+          "details": "Record from official_records: LIS PENDENS"
         }
       ]
     },
     {
-      "id": 265,
+      "id": 365,
       "lead_id": "LEAD-015",
       "parcel_id": "DC-000015",
       "score": 85,
@@ -823,11 +921,11 @@
       "deal_path": "wholesale",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-06-08T08:42:42.051406",
+      "last_updated": "2026-06-08T08:46:53.472380",
       "assessed_value": 100000,
       "equity_estimate": 25000,
-      "created_at": "2026-06-08 08:42:42",
-      "updated_at": "2026-06-08T08:42:42.057248",
+      "created_at": "2026-06-08 08:46:53",
+      "updated_at": "2026-06-08T08:46:53.478372",
       "signals": [
         {
           "type": "LIS_PENDENS",
@@ -856,11 +954,18 @@
           "date": "2026-05-26",
           "confidence": 80,
           "details": "Record from official_records: LIS PENDENS"
+        },
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026-05-25",
+          "confidence": 80,
+          "details": "Record from official_records: LIS PENDENS"
         }
       ]
     },
     {
-      "id": 266,
+      "id": 366,
       "lead_id": "LEAD-016",
       "parcel_id": "DC-000016",
       "score": 85,
@@ -876,11 +981,11 @@
       "deal_path": "wholesale",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-06-08T08:42:42.051412",
+      "last_updated": "2026-06-08T08:46:53.472386",
       "assessed_value": 100000,
       "equity_estimate": 25000,
-      "created_at": "2026-06-08 08:42:42",
-      "updated_at": "2026-06-08T08:42:42.057263",
+      "created_at": "2026-06-08 08:46:53",
+      "updated_at": "2026-06-08T08:46:53.478384",
       "signals": [
         {
           "type": "LIS_PENDENS",
@@ -909,11 +1014,18 @@
           "date": "2026-05-26",
           "confidence": 80,
           "details": "Record from official_records: LIS PENDENS"
+        },
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026-05-26",
+          "confidence": 80,
+          "details": "Record from official_records: LIS PENDENS"
         }
       ]
     },
     {
-      "id": 267,
+      "id": 367,
       "lead_id": "LEAD-017",
       "parcel_id": "DC-000017",
       "score": 85,
@@ -929,11 +1041,11 @@
       "deal_path": "wholesale",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-06-08T08:42:42.051419",
+      "last_updated": "2026-06-08T08:46:53.472392",
       "assessed_value": 100000,
       "equity_estimate": 25000,
-      "created_at": "2026-06-08 08:42:42",
-      "updated_at": "2026-06-08T08:42:42.057276",
+      "created_at": "2026-06-08 08:46:53",
+      "updated_at": "2026-06-08T08:46:53.478397",
       "signals": [
         {
           "type": "LIS_PENDENS",
@@ -962,11 +1074,18 @@
           "date": "2026-05-26",
           "confidence": 80,
           "details": "Record from official_records: LIS PENDENS"
+        },
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026-05-27",
+          "confidence": 80,
+          "details": "Record from official_records: LIS PENDENS"
         }
       ]
     },
     {
-      "id": 268,
+      "id": 368,
       "lead_id": "LEAD-018",
       "parcel_id": "DC-000018",
       "score": 85,
@@ -982,11 +1101,11 @@
       "deal_path": "wholesale",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-06-08T08:42:42.051425",
+      "last_updated": "2026-06-08T08:46:53.472401",
       "assessed_value": 100000,
       "equity_estimate": 25000,
-      "created_at": "2026-06-08 08:42:42",
-      "updated_at": "2026-06-08T08:42:42.057290",
+      "created_at": "2026-06-08 08:46:53",
+      "updated_at": "2026-06-08T08:46:53.478409",
       "signals": [
         {
           "type": "LIS_PENDENS",
@@ -1015,11 +1134,18 @@
           "date": "2026-05-27",
           "confidence": 80,
           "details": "Record from official_records: LIS PENDENS"
+        },
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026-05-29",
+          "confidence": 80,
+          "details": "Record from official_records: LIS PENDENS"
         }
       ]
     },
     {
-      "id": 269,
+      "id": 369,
       "lead_id": "LEAD-019",
       "parcel_id": "DC-000019",
       "score": 85,
@@ -1035,11 +1161,11 @@
       "deal_path": "wholesale",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-06-08T08:42:42.051432",
+      "last_updated": "2026-06-08T08:46:53.472408",
       "assessed_value": 100000,
       "equity_estimate": 25000,
-      "created_at": "2026-06-08 08:42:42",
-      "updated_at": "2026-06-08T08:42:42.057304",
+      "created_at": "2026-06-08 08:46:53",
+      "updated_at": "2026-06-08T08:46:53.478435",
       "signals": [
         {
           "type": "LIS_PENDENS",
@@ -1068,11 +1194,18 @@
           "date": "2026-05-28",
           "confidence": 80,
           "details": "Record from official_records: LIS PENDENS"
+        },
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026-05-29",
+          "confidence": 80,
+          "details": "Record from official_records: LIS PENDENS"
         }
       ]
     },
     {
-      "id": 270,
+      "id": 370,
       "lead_id": "LEAD-020",
       "parcel_id": "DC-000020",
       "score": 85,
@@ -1088,11 +1221,11 @@
       "deal_path": "wholesale",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-06-08T08:42:42.051438",
+      "last_updated": "2026-06-08T08:46:53.472416",
       "assessed_value": 100000,
       "equity_estimate": 25000,
-      "created_at": "2026-06-08 08:42:42",
-      "updated_at": "2026-06-08T08:42:42.057318",
+      "created_at": "2026-06-08 08:46:53",
+      "updated_at": "2026-06-08T08:46:53.478447",
       "signals": [
         {
           "type": "LIS_PENDENS",
@@ -1121,11 +1254,18 @@
           "date": "2026-05-29",
           "confidence": 80,
           "details": "Record from official_records: LIS PENDENS"
+        },
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026-05-30",
+          "confidence": 80,
+          "details": "Record from official_records: LIS PENDENS"
         }
       ]
     },
     {
-      "id": 271,
+      "id": 371,
       "lead_id": "LEAD-021",
       "parcel_id": "DC-000021",
       "score": 85,
@@ -1141,11 +1281,11 @@
       "deal_path": "wholesale",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-06-08T08:42:42.051444",
+      "last_updated": "2026-06-08T08:46:53.472423",
       "assessed_value": 100000,
       "equity_estimate": 25000,
-      "created_at": "2026-06-08 08:42:42",
-      "updated_at": "2026-06-08T08:42:42.057349",
+      "created_at": "2026-06-08 08:46:53",
+      "updated_at": "2026-06-08T08:46:53.478460",
       "signals": [
         {
           "type": "LIS_PENDENS",
@@ -1174,11 +1314,18 @@
           "date": "2026-06-01",
           "confidence": 80,
           "details": "Record from official_records: LIS PENDENS"
+        },
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026-06-03",
+          "confidence": 80,
+          "details": "Record from official_records: LIS PENDENS"
         }
       ]
     },
     {
-      "id": 272,
+      "id": 372,
       "lead_id": "LEAD-022",
       "parcel_id": "DC-000022",
       "score": 85,
@@ -1194,11 +1341,11 @@
       "deal_path": "wholesale",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-06-08T08:42:42.051453",
+      "last_updated": "2026-06-08T08:46:53.472429",
       "assessed_value": 100000,
       "equity_estimate": 25000,
-      "created_at": "2026-06-08 08:42:42",
-      "updated_at": "2026-06-08T08:42:42.057364",
+      "created_at": "2026-06-08 08:46:53",
+      "updated_at": "2026-06-08T08:46:53.478472",
       "signals": [
         {
           "type": "LIS_PENDENS",
@@ -1227,11 +1374,18 @@
           "date": "2026-06-01",
           "confidence": 80,
           "details": "Record from official_records: LIS PENDENS"
+        },
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026-06-06",
+          "confidence": 80,
+          "details": "Record from official_records: LIS PENDENS"
         }
       ]
     },
     {
-      "id": 273,
+      "id": 373,
       "lead_id": "LEAD-023",
       "parcel_id": "DC-000023",
       "score": 85,
@@ -1247,11 +1401,11 @@
       "deal_path": "wholesale",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-06-08T08:42:42.051461",
+      "last_updated": "2026-06-08T08:46:53.472435",
       "assessed_value": 100000,
       "equity_estimate": 25000,
-      "created_at": "2026-06-08 08:42:42",
-      "updated_at": "2026-06-08T08:42:42.057378",
+      "created_at": "2026-06-08 08:46:53",
+      "updated_at": "2026-06-08T08:46:53.478485",
       "signals": [
         {
           "type": "LIS_PENDENS",
@@ -1280,11 +1434,18 @@
           "date": "2026-06-05",
           "confidence": 80,
           "details": "Record from official_records: LIS PENDENS"
+        },
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026-06-07",
+          "confidence": 80,
+          "details": "Record from official_records: LIS PENDENS"
         }
       ]
     },
     {
-      "id": 274,
+      "id": 374,
       "lead_id": "LEAD-024",
       "parcel_id": "DC-000024",
       "score": 85,
@@ -1300,11 +1461,11 @@
       "deal_path": "wholesale",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-06-08T08:42:42.051469",
+      "last_updated": "2026-06-08T08:46:53.472442",
       "assessed_value": 100000,
       "equity_estimate": 25000,
-      "created_at": "2026-06-08 08:42:42",
-      "updated_at": "2026-06-08T08:42:42.057391",
+      "created_at": "2026-06-08 08:46:53",
+      "updated_at": "2026-06-08T08:46:53.478498",
       "signals": [
         {
           "type": "LIS_PENDENS",
@@ -1333,11 +1494,18 @@
           "date": "2026-06-07",
           "confidence": 80,
           "details": "Record from official_records: LIS PENDENS"
+        },
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026-06-08",
+          "confidence": 80,
+          "details": "Record from official_records: LIS PENDENS"
         }
       ]
     },
     {
-      "id": 275,
+      "id": 375,
       "lead_id": "LEAD-025",
       "parcel_id": "DC-000025",
       "score": 85,
@@ -1353,11 +1521,11 @@
       "deal_path": "wholesale",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-06-08T08:42:42.051475",
+      "last_updated": "2026-06-08T08:46:53.472450",
       "assessed_value": 100000,
       "equity_estimate": 25000,
-      "created_at": "2026-06-08 08:42:42",
-      "updated_at": "2026-06-08T08:42:42.057405",
+      "created_at": "2026-06-08 08:46:53",
+      "updated_at": "2026-06-08T08:46:53.478511",
       "signals": [
         {
           "type": "LIS_PENDENS",
@@ -1386,11 +1554,18 @@
           "date": "2026-06-08",
           "confidence": 80,
           "details": "Record from official_records: LIS PENDENS"
+        },
+        {
+          "type": "LIS_PENDENS",
+          "source": "duval_official_records",
+          "date": "2026-06-08",
+          "confidence": 80,
+          "details": "Record from official_records: LIS PENDENS"
         }
       ]
     },
     {
-      "id": 276,
+      "id": 376,
       "lead_id": "LEAD-026",
       "parcel_id": "DC-000026",
       "score": 50,
@@ -1406,11 +1581,11 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-06-08T08:42:42.051485",
+      "last_updated": "2026-06-08T08:46:53.472465",
       "assessed_value": 100000,
       "equity_estimate": 25000,
-      "created_at": "2026-06-08 08:42:42",
-      "updated_at": "2026-06-08T08:42:42.057419",
+      "created_at": "2026-06-08 08:46:53",
+      "updated_at": "2026-06-08T08:46:53.478523",
       "signals": [
         {
           "type": "LIS_PENDENS",
@@ -1439,11 +1614,18 @@
           "date": "2026-05-11",
           "confidence": 80,
           "details": "Record from official_records: MORTGAGE"
+        },
+        {
+          "type": "MORTGAGE",
+          "source": "duval_official_records",
+          "date": "2026-05-10",
+          "confidence": 80,
+          "details": "Record from official_records: MORTGAGE"
         }
       ]
     },
     {
-      "id": 277,
+      "id": 377,
       "lead_id": "LEAD-027",
       "parcel_id": "DC-000027",
       "score": 50,
@@ -1459,11 +1641,11 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-06-08T08:42:42.051493",
+      "last_updated": "2026-06-08T08:46:53.472474",
       "assessed_value": 100000,
       "equity_estimate": 25000,
-      "created_at": "2026-06-08 08:42:42",
-      "updated_at": "2026-06-08T08:42:42.057434",
+      "created_at": "2026-06-08 08:46:53",
+      "updated_at": "2026-06-08T08:46:53.478540",
       "signals": [
         {
           "type": "LIS_PENDENS",
@@ -1492,11 +1674,18 @@
           "date": "2026-05-12",
           "confidence": 80,
           "details": "Record from official_records: MORTGAGE"
+        },
+        {
+          "type": "MORTGAGE",
+          "source": "duval_official_records",
+          "date": "2026-05-10",
+          "confidence": 80,
+          "details": "Record from official_records: MORTGAGE"
         }
       ]
     },
     {
-      "id": 278,
+      "id": 378,
       "lead_id": "LEAD-028",
       "parcel_id": "DC-000028",
       "score": 50,
@@ -1512,11 +1701,11 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-06-08T08:42:42.051501",
+      "last_updated": "2026-06-08T08:46:53.472482",
       "assessed_value": 100000,
       "equity_estimate": 25000,
-      "created_at": "2026-06-08 08:42:42",
-      "updated_at": "2026-06-08T08:42:42.057451",
+      "created_at": "2026-06-08 08:46:53",
+      "updated_at": "2026-06-08T08:46:53.478553",
       "signals": [
         {
           "type": "LIS_PENDENS",
@@ -1545,11 +1734,18 @@
           "date": "2026-05-17",
           "confidence": 80,
           "details": "Record from official_records: MORTGAGE"
+        },
+        {
+          "type": "MORTGAGE",
+          "source": "duval_official_records",
+          "date": "2026-05-14",
+          "confidence": 80,
+          "details": "Record from official_records: MORTGAGE"
         }
       ]
     },
     {
-      "id": 279,
+      "id": 379,
       "lead_id": "LEAD-029",
       "parcel_id": "DC-000029",
       "score": 50,
@@ -1565,11 +1761,11 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-06-08T08:42:42.051527",
+      "last_updated": "2026-06-08T08:46:53.472490",
       "assessed_value": 100000,
       "equity_estimate": 25000,
-      "created_at": "2026-06-08 08:42:42",
-      "updated_at": "2026-06-08T08:42:42.057465",
+      "created_at": "2026-06-08 08:46:53",
+      "updated_at": "2026-06-08T08:46:53.478565",
       "signals": [
         {
           "type": "LIS_PENDENS",
@@ -1598,11 +1794,18 @@
           "date": "2026-05-19",
           "confidence": 80,
           "details": "Record from official_records: MORTGAGE"
+        },
+        {
+          "type": "MORTGAGE",
+          "source": "duval_official_records",
+          "date": "2026-05-14",
+          "confidence": 80,
+          "details": "Record from official_records: MORTGAGE"
         }
       ]
     },
     {
-      "id": 280,
+      "id": 380,
       "lead_id": "LEAD-030",
       "parcel_id": "DC-000030",
       "score": 50,
@@ -1618,11 +1821,11 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-06-08T08:42:42.051535",
+      "last_updated": "2026-06-08T08:46:53.472501",
       "assessed_value": 100000,
       "equity_estimate": 25000,
-      "created_at": "2026-06-08 08:42:42",
-      "updated_at": "2026-06-08T08:42:42.057478",
+      "created_at": "2026-06-08 08:46:53",
+      "updated_at": "2026-06-08T08:46:53.478578",
       "signals": [
         {
           "type": "LIS_PENDENS",
@@ -1651,11 +1854,18 @@
           "date": "2026-05-19",
           "confidence": 80,
           "details": "Record from official_records: MORTGAGE"
+        },
+        {
+          "type": "MORTGAGE",
+          "source": "duval_official_records",
+          "date": "2026-05-14",
+          "confidence": 80,
+          "details": "Record from official_records: MORTGAGE"
         }
       ]
     },
     {
-      "id": 281,
+      "id": 381,
       "lead_id": "LEAD-031",
       "parcel_id": "DC-000031",
       "score": 50,
@@ -1671,11 +1881,11 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-06-08T08:42:42.051545",
+      "last_updated": "2026-06-08T08:46:53.472509",
       "assessed_value": 100000,
       "equity_estimate": 25000,
-      "created_at": "2026-06-08 08:42:42",
-      "updated_at": "2026-06-08T08:42:42.057492",
+      "created_at": "2026-06-08 08:46:53",
+      "updated_at": "2026-06-08T08:46:53.478590",
       "signals": [
         {
           "type": "LIS_PENDENS",
@@ -1704,11 +1914,18 @@
           "date": "2026-05-24",
           "confidence": 80,
           "details": "Record from official_records: MORTGAGE"
+        },
+        {
+          "type": "MORTGAGE",
+          "source": "duval_official_records",
+          "date": "2026-05-15",
+          "confidence": 80,
+          "details": "Record from official_records: MORTGAGE"
         }
       ]
     },
     {
-      "id": 282,
+      "id": 382,
       "lead_id": "LEAD-032",
       "parcel_id": "DC-000032",
       "score": 50,
@@ -1724,11 +1941,11 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-06-08T08:42:42.051552",
+      "last_updated": "2026-06-08T08:46:53.472516",
       "assessed_value": 100000,
       "equity_estimate": 25000,
-      "created_at": "2026-06-08 08:42:42",
-      "updated_at": "2026-06-08T08:42:42.057505",
+      "created_at": "2026-06-08 08:46:53",
+      "updated_at": "2026-06-08T08:46:53.478603",
       "signals": [
         {
           "type": "LIS_PENDENS",
@@ -1757,11 +1974,18 @@
           "date": "2026-05-31",
           "confidence": 80,
           "details": "Record from official_records: MORTGAGE"
+        },
+        {
+          "type": "MORTGAGE",
+          "source": "duval_official_records",
+          "date": "2026-05-17",
+          "confidence": 80,
+          "details": "Record from official_records: MORTGAGE"
         }
       ]
     },
     {
-      "id": 283,
+      "id": 383,
       "lead_id": "LEAD-033",
       "parcel_id": "DC-000033",
       "score": 50,
@@ -1777,11 +2001,11 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-06-08T08:42:42.051559",
+      "last_updated": "2026-06-08T08:46:53.472523",
       "assessed_value": 100000,
       "equity_estimate": 25000,
-      "created_at": "2026-06-08 08:42:42",
-      "updated_at": "2026-06-08T08:42:42.057543",
+      "created_at": "2026-06-08 08:46:53",
+      "updated_at": "2026-06-08T08:46:53.478616",
       "signals": [
         {
           "type": "LIS_PENDENS",
@@ -1810,11 +2034,18 @@
           "date": "2026-06-02",
           "confidence": 80,
           "details": "Record from official_records: MORTGAGE"
+        },
+        {
+          "type": "MORTGAGE",
+          "source": "duval_official_records",
+          "date": "2026-05-18",
+          "confidence": 80,
+          "details": "Record from official_records: MORTGAGE"
         }
       ]
     },
     {
-      "id": 284,
+      "id": 384,
       "lead_id": "LEAD-034",
       "parcel_id": "DC-000034",
       "score": 50,
@@ -1830,11 +2061,11 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-06-08T08:42:42.051568",
+      "last_updated": "2026-06-08T08:46:53.472532",
       "assessed_value": 100000,
       "equity_estimate": 25000,
-      "created_at": "2026-06-08 08:42:42",
-      "updated_at": "2026-06-08T08:42:42.057557",
+      "created_at": "2026-06-08 08:46:53",
+      "updated_at": "2026-06-08T08:46:53.478640",
       "signals": [
         {
           "type": "LIS_PENDENS",
@@ -1863,11 +2094,18 @@
           "date": "2026-06-02",
           "confidence": 80,
           "details": "Record from official_records: MORTGAGE"
+        },
+        {
+          "type": "MORTGAGE",
+          "source": "duval_official_records",
+          "date": "2026-05-19",
+          "confidence": 80,
+          "details": "Record from official_records: MORTGAGE"
         }
       ]
     },
     {
-      "id": 285,
+      "id": 385,
       "lead_id": "LEAD-035",
       "parcel_id": "DC-000035",
       "score": 50,
@@ -1883,11 +2121,11 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-06-08T08:42:42.051576",
+      "last_updated": "2026-06-08T08:46:53.472539",
       "assessed_value": 100000,
       "equity_estimate": 25000,
-      "created_at": "2026-06-08 08:42:42",
-      "updated_at": "2026-06-08T08:42:42.057592",
+      "created_at": "2026-06-08 08:46:53",
+      "updated_at": "2026-06-08T08:46:53.478653",
       "signals": [
         {
           "type": "LIS_PENDENS",
@@ -1916,11 +2154,18 @@
           "date": "2026-06-05",
           "confidence": 80,
           "details": "Record from official_records: MORTGAGE"
+        },
+        {
+          "type": "MORTGAGE",
+          "source": "duval_official_records",
+          "date": "2026-05-19",
+          "confidence": 80,
+          "details": "Record from official_records: MORTGAGE"
         }
       ]
     },
     {
-      "id": 286,
+      "id": 386,
       "lead_id": "LEAD-036",
       "parcel_id": "DC-000036",
       "score": 50,
@@ -1936,11 +2181,11 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-06-08T08:42:42.051584",
+      "last_updated": "2026-06-08T08:46:53.472546",
       "assessed_value": 100000,
       "equity_estimate": 25000,
-      "created_at": "2026-06-08 08:42:42",
-      "updated_at": "2026-06-08T08:42:42.057607",
+      "created_at": "2026-06-08 08:46:53",
+      "updated_at": "2026-06-08T08:46:53.478665",
       "signals": [
         {
           "type": "LIS_PENDENS",
@@ -1969,16 +2214,23 @@
           "date": "2026-06-07",
           "confidence": 80,
           "details": "Record from official_records: MORTGAGE"
+        },
+        {
+          "type": "MORTGAGE",
+          "source": "duval_official_records",
+          "date": "2026-05-24",
+          "confidence": 80,
+          "details": "Record from official_records: MORTGAGE"
         }
       ]
     },
     {
-      "id": 287,
+      "id": 387,
       "lead_id": "LEAD-037",
       "parcel_id": "DC-000037",
       "score": 50,
       "score_reasons": [
-        "Single distress signal: Lien",
+        "Single distress signal: Mortgage",
         "Monitoring for additional signals"
       ],
       "address": "37 Sample St, Jacksonville, FL 32207",
@@ -1989,11 +2241,11 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-06-08T08:42:42.051594",
+      "last_updated": "2026-06-08T08:46:53.472555",
       "assessed_value": 100000,
       "equity_estimate": 25000,
-      "created_at": "2026-06-08 08:42:42",
-      "updated_at": "2026-06-08T08:42:42.057622",
+      "created_at": "2026-06-08 08:46:53",
+      "updated_at": "2026-06-08T08:46:53.478678",
       "signals": [
         {
           "type": "LIS_PENDENS",
@@ -2022,16 +2274,23 @@
           "date": "2026-05-13",
           "confidence": 80,
           "details": "Record from official_records: LIEN"
+        },
+        {
+          "type": "MORTGAGE",
+          "source": "duval_official_records",
+          "date": "2026-05-24",
+          "confidence": 80,
+          "details": "Record from official_records: MORTGAGE"
         }
       ]
     },
     {
-      "id": 288,
+      "id": 388,
       "lead_id": "LEAD-038",
       "parcel_id": "DC-000038",
       "score": 50,
       "score_reasons": [
-        "Single distress signal: Lien",
+        "Single distress signal: Mortgage",
         "Monitoring for additional signals"
       ],
       "address": "38 Sample St, Jacksonville, FL 32208",
@@ -2042,11 +2301,11 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-06-08T08:42:42.051602",
+      "last_updated": "2026-06-08T08:46:53.472562",
       "assessed_value": 100000,
       "equity_estimate": 25000,
-      "created_at": "2026-06-08 08:42:42",
-      "updated_at": "2026-06-08T08:42:42.057647",
+      "created_at": "2026-06-08 08:46:53",
+      "updated_at": "2026-06-08T08:46:53.478691",
       "signals": [
         {
           "type": "LIS_PENDENS",
@@ -2075,16 +2334,23 @@
           "date": "2026-05-13",
           "confidence": 80,
           "details": "Record from official_records: LIEN"
+        },
+        {
+          "type": "MORTGAGE",
+          "source": "duval_official_records",
+          "date": "2026-05-24",
+          "confidence": 80,
+          "details": "Record from official_records: MORTGAGE"
         }
       ]
     },
     {
-      "id": 289,
+      "id": 389,
       "lead_id": "LEAD-039",
       "parcel_id": "DC-000039",
       "score": 50,
       "score_reasons": [
-        "Single distress signal: Lien",
+        "Single distress signal: Mortgage",
         "Monitoring for additional signals"
       ],
       "address": "39 Sample St, Jacksonville, FL 32209",
@@ -2095,11 +2361,11 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-06-08T08:42:42.051609",
+      "last_updated": "2026-06-08T08:46:53.472569",
       "assessed_value": 100000,
       "equity_estimate": 25000,
-      "created_at": "2026-06-08 08:42:42",
-      "updated_at": "2026-06-08T08:42:42.057662",
+      "created_at": "2026-06-08 08:46:53",
+      "updated_at": "2026-06-08T08:46:53.478704",
       "signals": [
         {
           "type": "LIS_PENDENS",
@@ -2128,16 +2394,23 @@
           "date": "2026-05-13",
           "confidence": 80,
           "details": "Record from official_records: LIEN"
+        },
+        {
+          "type": "MORTGAGE",
+          "source": "duval_official_records",
+          "date": "2026-05-25",
+          "confidence": 80,
+          "details": "Record from official_records: MORTGAGE"
         }
       ]
     },
     {
-      "id": 290,
+      "id": 390,
       "lead_id": "LEAD-040",
       "parcel_id": "DC-000040",
       "score": 50,
       "score_reasons": [
-        "Single distress signal: Lien",
+        "Single distress signal: Mortgage",
         "Monitoring for additional signals"
       ],
       "address": "40 Sample St, Jacksonville, FL 32200",
@@ -2148,11 +2421,11 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-06-08T08:42:42.051618",
+      "last_updated": "2026-06-08T08:46:53.472579",
       "assessed_value": 100000,
       "equity_estimate": 25000,
-      "created_at": "2026-06-08 08:42:42",
-      "updated_at": "2026-06-08T08:42:42.057676",
+      "created_at": "2026-06-08 08:46:53",
+      "updated_at": "2026-06-08T08:46:53.478716",
       "signals": [
         {
           "type": "LIS_PENDENS",
@@ -2181,16 +2454,23 @@
           "date": "2026-05-14",
           "confidence": 80,
           "details": "Record from official_records: LIEN"
+        },
+        {
+          "type": "MORTGAGE",
+          "source": "duval_official_records",
+          "date": "2026-05-25",
+          "confidence": 80,
+          "details": "Record from official_records: MORTGAGE"
         }
       ]
     },
     {
-      "id": 291,
+      "id": 391,
       "lead_id": "LEAD-041",
       "parcel_id": "DC-000041",
       "score": 50,
       "score_reasons": [
-        "Single distress signal: Lien",
+        "Single distress signal: Mortgage",
         "Monitoring for additional signals"
       ],
       "address": "41 Sample St, Jacksonville, FL 32201",
@@ -2201,11 +2481,11 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-06-08T08:42:42.051625",
+      "last_updated": "2026-06-08T08:46:53.472586",
       "assessed_value": 100000,
       "equity_estimate": 25000,
-      "created_at": "2026-06-08 08:42:42",
-      "updated_at": "2026-06-08T08:42:42.057690",
+      "created_at": "2026-06-08 08:46:53",
+      "updated_at": "2026-06-08T08:46:53.478737",
       "signals": [
         {
           "type": "LIS_PENDENS",
@@ -2234,16 +2514,23 @@
           "date": "2026-05-14",
           "confidence": 80,
           "details": "Record from official_records: LIEN"
+        },
+        {
+          "type": "MORTGAGE",
+          "source": "duval_official_records",
+          "date": "2026-05-26",
+          "confidence": 80,
+          "details": "Record from official_records: MORTGAGE"
         }
       ]
     },
     {
-      "id": 292,
+      "id": 392,
       "lead_id": "LEAD-042",
       "parcel_id": "DC-000042",
       "score": 50,
       "score_reasons": [
-        "Single distress signal: Lien",
+        "Single distress signal: Mortgage",
         "Monitoring for additional signals"
       ],
       "address": "42 Sample St, Jacksonville, FL 32202",
@@ -2254,11 +2541,11 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-06-08T08:42:42.051632",
+      "last_updated": "2026-06-08T08:46:53.472597",
       "assessed_value": 100000,
       "equity_estimate": 25000,
-      "created_at": "2026-06-08 08:42:42",
-      "updated_at": "2026-06-08T08:42:42.057707",
+      "created_at": "2026-06-08 08:46:53",
+      "updated_at": "2026-06-08T08:46:53.478750",
       "signals": [
         {
           "type": "LIS_PENDENS",
@@ -2287,16 +2574,23 @@
           "date": "2026-05-16",
           "confidence": 80,
           "details": "Record from official_records: LIEN"
+        },
+        {
+          "type": "MORTGAGE",
+          "source": "duval_official_records",
+          "date": "2026-05-30",
+          "confidence": 80,
+          "details": "Record from official_records: MORTGAGE"
         }
       ]
     },
     {
-      "id": 293,
+      "id": 393,
       "lead_id": "LEAD-043",
       "parcel_id": "DC-000043",
       "score": 50,
       "score_reasons": [
-        "Single distress signal: Lien",
+        "Single distress signal: Mortgage",
         "Monitoring for additional signals"
       ],
       "address": "43 Sample St, Jacksonville, FL 32203",
@@ -2307,11 +2601,11 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-06-08T08:42:42.051639",
+      "last_updated": "2026-06-08T08:46:53.472604",
       "assessed_value": 100000,
       "equity_estimate": 25000,
-      "created_at": "2026-06-08 08:42:42",
-      "updated_at": "2026-06-08T08:42:42.057720",
+      "created_at": "2026-06-08 08:46:53",
+      "updated_at": "2026-06-08T08:46:53.478762",
       "signals": [
         {
           "type": "LIS_PENDENS",
@@ -2340,16 +2634,23 @@
           "date": "2026-05-20",
           "confidence": 80,
           "details": "Record from official_records: LIEN"
+        },
+        {
+          "type": "MORTGAGE",
+          "source": "duval_official_records",
+          "date": "2026-06-01",
+          "confidence": 80,
+          "details": "Record from official_records: MORTGAGE"
         }
       ]
     },
     {
-      "id": 294,
+      "id": 394,
       "lead_id": "LEAD-044",
       "parcel_id": "DC-000044",
       "score": 50,
       "score_reasons": [
-        "Single distress signal: Lien",
+        "Single distress signal: Mortgage",
         "Monitoring for additional signals"
       ],
       "address": "44 Sample St, Jacksonville, FL 32204",
@@ -2360,11 +2661,11 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-06-08T08:42:42.051648",
+      "last_updated": "2026-06-08T08:46:53.472611",
       "assessed_value": 100000,
       "equity_estimate": 25000,
-      "created_at": "2026-06-08 08:42:42",
-      "updated_at": "2026-06-08T08:42:42.057734",
+      "created_at": "2026-06-08 08:46:53",
+      "updated_at": "2026-06-08T08:46:53.478786",
       "signals": [
         {
           "type": "LIS_PENDENS",
@@ -2393,16 +2694,23 @@
           "date": "2026-05-21",
           "confidence": 80,
           "details": "Record from official_records: LIEN"
+        },
+        {
+          "type": "MORTGAGE",
+          "source": "duval_official_records",
+          "date": "2026-06-04",
+          "confidence": 80,
+          "details": "Record from official_records: MORTGAGE"
         }
       ]
     },
     {
-      "id": 295,
+      "id": 395,
       "lead_id": "LEAD-045",
       "parcel_id": "DC-000045",
       "score": 50,
       "score_reasons": [
-        "Single distress signal: Lien",
+        "Single distress signal: Mortgage",
         "Monitoring for additional signals"
       ],
       "address": "45 Sample St, Jacksonville, FL 32205",
@@ -2413,11 +2721,11 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-06-08T08:42:42.051655",
+      "last_updated": "2026-06-08T08:46:53.472619",
       "assessed_value": 100000,
       "equity_estimate": 25000,
-      "created_at": "2026-06-08 08:42:42",
-      "updated_at": "2026-06-08T08:42:42.057747",
+      "created_at": "2026-06-08 08:46:53",
+      "updated_at": "2026-06-08T08:46:53.478798",
       "signals": [
         {
           "type": "LIS_PENDENS",
@@ -2446,16 +2754,23 @@
           "date": "2026-05-21",
           "confidence": 80,
           "details": "Record from official_records: LIEN"
+        },
+        {
+          "type": "MORTGAGE",
+          "source": "duval_official_records",
+          "date": "2026-06-05",
+          "confidence": 80,
+          "details": "Record from official_records: MORTGAGE"
         }
       ]
     },
     {
-      "id": 296,
+      "id": 396,
       "lead_id": "LEAD-046",
       "parcel_id": "DC-000046",
       "score": 50,
       "score_reasons": [
-        "Single distress signal: Lien",
+        "Single distress signal: Mortgage",
         "Monitoring for additional signals"
       ],
       "address": "46 Sample St, Jacksonville, FL 32206",
@@ -2466,11 +2781,11 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-06-08T08:42:42.051662",
+      "last_updated": "2026-06-08T08:46:53.472626",
       "assessed_value": 100000,
       "equity_estimate": 25000,
-      "created_at": "2026-06-08 08:42:42",
-      "updated_at": "2026-06-08T08:42:42.057761",
+      "created_at": "2026-06-08 08:46:53",
+      "updated_at": "2026-06-08T08:46:53.478811",
       "signals": [
         {
           "type": "LIS_PENDENS",
@@ -2499,16 +2814,23 @@
           "date": "2026-05-21",
           "confidence": 80,
           "details": "Record from official_records: LIEN"
+        },
+        {
+          "type": "MORTGAGE",
+          "source": "duval_official_records",
+          "date": "2026-06-06",
+          "confidence": 80,
+          "details": "Record from official_records: MORTGAGE"
         }
       ]
     },
     {
-      "id": 297,
+      "id": 397,
       "lead_id": "LEAD-047",
       "parcel_id": "DC-000047",
       "score": 50,
       "score_reasons": [
-        "Single distress signal: Lien",
+        "Single distress signal: Mortgage",
         "Monitoring for additional signals"
       ],
       "address": "47 Sample St, Jacksonville, FL 32207",
@@ -2519,11 +2841,11 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-06-08T08:42:42.051669",
+      "last_updated": "2026-06-08T08:46:53.472633",
       "assessed_value": 100000,
       "equity_estimate": 25000,
-      "created_at": "2026-06-08 08:42:42",
-      "updated_at": "2026-06-08T08:42:42.057775",
+      "created_at": "2026-06-08 08:46:53",
+      "updated_at": "2026-06-08T08:46:53.478825",
       "signals": [
         {
           "type": "LIS_PENDENS",
@@ -2552,16 +2874,23 @@
           "date": "2026-05-21",
           "confidence": 80,
           "details": "Record from official_records: LIEN"
+        },
+        {
+          "type": "MORTGAGE",
+          "source": "duval_official_records",
+          "date": "2026-06-06",
+          "confidence": 80,
+          "details": "Record from official_records: MORTGAGE"
         }
       ]
     },
     {
-      "id": 298,
+      "id": 398,
       "lead_id": "LEAD-048",
       "parcel_id": "DC-000048",
       "score": 50,
       "score_reasons": [
-        "Single distress signal: Lien",
+        "Single distress signal: Mortgage",
         "Monitoring for additional signals"
       ],
       "address": "48 Sample St, Jacksonville, FL 32208",
@@ -2572,11 +2901,11 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-06-08T08:42:42.051675",
+      "last_updated": "2026-06-08T08:46:53.472640",
       "assessed_value": 100000,
       "equity_estimate": 25000,
-      "created_at": "2026-06-08 08:42:42",
-      "updated_at": "2026-06-08T08:42:42.057788",
+      "created_at": "2026-06-08 08:46:53",
+      "updated_at": "2026-06-08T08:46:53.478837",
       "signals": [
         {
           "type": "LIS_PENDENS",
@@ -2605,16 +2934,23 @@
           "date": "2026-05-22",
           "confidence": 80,
           "details": "Record from official_records: LIEN"
+        },
+        {
+          "type": "MORTGAGE",
+          "source": "duval_official_records",
+          "date": "2026-06-07",
+          "confidence": 80,
+          "details": "Record from official_records: MORTGAGE"
         }
       ]
     },
     {
-      "id": 299,
+      "id": 399,
       "lead_id": "LEAD-049",
       "parcel_id": "DC-000049",
       "score": 50,
       "score_reasons": [
-        "Single distress signal: Lien",
+        "Single distress signal: Mortgage",
         "Monitoring for additional signals"
       ],
       "address": "49 Sample St, Jacksonville, FL 32209",
@@ -2625,11 +2961,11 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-06-08T08:42:42.051686",
+      "last_updated": "2026-06-08T08:46:53.472647",
       "assessed_value": 100000,
       "equity_estimate": 25000,
-      "created_at": "2026-06-08 08:42:42",
-      "updated_at": "2026-06-08T08:42:42.057802",
+      "created_at": "2026-06-08 08:46:53",
+      "updated_at": "2026-06-08T08:46:53.478850",
       "signals": [
         {
           "type": "LIS_PENDENS",
@@ -2658,16 +2994,23 @@
           "date": "2026-05-23",
           "confidence": 80,
           "details": "Record from official_records: LIEN"
+        },
+        {
+          "type": "MORTGAGE",
+          "source": "duval_official_records",
+          "date": "2026-06-07",
+          "confidence": 80,
+          "details": "Record from official_records: MORTGAGE"
         }
       ]
     },
     {
-      "id": 300,
+      "id": 400,
       "lead_id": "LEAD-050",
       "parcel_id": "DC-000050",
       "score": 50,
       "score_reasons": [
-        "Single distress signal: Lien",
+        "Single distress signal: Mortgage",
         "Monitoring for additional signals"
       ],
       "address": "50 Sample St, Jacksonville, FL 32200",
@@ -2678,11 +3021,11 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-06-08T08:42:42.051693",
+      "last_updated": "2026-06-08T08:46:53.472659",
       "assessed_value": 100000,
       "equity_estimate": 25000,
-      "created_at": "2026-06-08 08:42:42",
-      "updated_at": "2026-06-08T08:42:42.057831",
+      "created_at": "2026-06-08 08:46:53",
+      "updated_at": "2026-06-08T08:46:53.478862",
       "signals": [
         {
           "type": "LIS_PENDENS",
@@ -2711,16 +3054,23 @@
           "date": "2026-05-23",
           "confidence": 80,
           "details": "Record from official_records: LIEN"
+        },
+        {
+          "type": "MORTGAGE",
+          "source": "duval_official_records",
+          "date": "2026-06-07",
+          "confidence": 80,
+          "details": "Record from official_records: MORTGAGE"
         }
       ]
     },
     {
-      "id": 301,
+      "id": 401,
       "lead_id": "LEAD-051",
       "parcel_id": "DC-000051",
       "score": 50,
       "score_reasons": [
-        "Single distress signal: Lien",
+        "Single distress signal: Mortgage",
         "Monitoring for additional signals"
       ],
       "address": "51 Sample St, Jacksonville, FL 32201",
@@ -2731,11 +3081,11 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-06-08T08:42:42.051700",
+      "last_updated": "2026-06-08T08:46:53.472666",
       "assessed_value": 100000,
       "equity_estimate": 25000,
-      "created_at": "2026-06-08 08:42:42",
-      "updated_at": "2026-06-08T08:42:42.057846",
+      "created_at": "2026-06-08 08:46:53",
+      "updated_at": "2026-06-08T08:46:53.478874",
       "signals": [
         {
           "type": "LIEN",
@@ -2757,16 +3107,23 @@
           "date": "2026-05-23",
           "confidence": 80,
           "details": "Record from official_records: LIEN"
+        },
+        {
+          "type": "MORTGAGE",
+          "source": "duval_official_records",
+          "date": "2026-06-08",
+          "confidence": 80,
+          "details": "Record from official_records: MORTGAGE"
         }
       ]
     },
     {
-      "id": 302,
+      "id": 402,
       "lead_id": "LEAD-052",
       "parcel_id": "DC-000052",
       "score": 50,
       "score_reasons": [
-        "Single distress signal: Lien",
+        "Single distress signal: Mortgage",
         "Monitoring for additional signals"
       ],
       "address": "52 Sample St, Jacksonville, FL 32202",
@@ -2777,11 +3134,11 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-06-08T08:42:42.051707",
+      "last_updated": "2026-06-08T08:46:53.472673",
       "assessed_value": 100000,
       "equity_estimate": 25000,
-      "created_at": "2026-06-08 08:42:42",
-      "updated_at": "2026-06-08T08:42:42.057859",
+      "created_at": "2026-06-08 08:46:53",
+      "updated_at": "2026-06-08T08:46:53.478887",
       "signals": [
         {
           "type": "LIEN",
@@ -2803,11 +3160,18 @@
           "date": "2026-05-24",
           "confidence": 80,
           "details": "Record from official_records: LIEN"
+        },
+        {
+          "type": "MORTGAGE",
+          "source": "duval_official_records",
+          "date": "2026-06-08",
+          "confidence": 80,
+          "details": "Record from official_records: MORTGAGE"
         }
       ]
     },
     {
-      "id": 303,
+      "id": 403,
       "lead_id": "LEAD-053",
       "parcel_id": "DC-000053",
       "score": 50,
@@ -2823,11 +3187,11 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-06-08T08:42:42.051714",
+      "last_updated": "2026-06-08T08:46:53.472682",
       "assessed_value": 100000,
       "equity_estimate": 25000,
-      "created_at": "2026-06-08 08:42:42",
-      "updated_at": "2026-06-08T08:42:42.057873",
+      "created_at": "2026-06-08 08:46:53",
+      "updated_at": "2026-06-08T08:46:53.478902",
       "signals": [
         {
           "type": "LIEN",
@@ -2849,11 +3213,18 @@
           "date": "2026-05-24",
           "confidence": 80,
           "details": "Record from official_records: LIEN"
+        },
+        {
+          "type": "LIEN",
+          "source": "duval_official_records",
+          "date": "2026-05-09",
+          "confidence": 80,
+          "details": "Record from official_records: LIEN"
         }
       ]
     },
     {
-      "id": 304,
+      "id": 404,
       "lead_id": "LEAD-054",
       "parcel_id": "DC-000054",
       "score": 50,
@@ -2869,11 +3240,11 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-06-08T08:42:42.051723",
+      "last_updated": "2026-06-08T08:46:53.472691",
       "assessed_value": 100000,
       "equity_estimate": 25000,
-      "created_at": "2026-06-08 08:42:42",
-      "updated_at": "2026-06-08T08:42:42.057887",
+      "created_at": "2026-06-08 08:46:53",
+      "updated_at": "2026-06-08T08:46:53.478924",
       "signals": [
         {
           "type": "LIEN",
@@ -2895,11 +3266,18 @@
           "date": "2026-05-24",
           "confidence": 80,
           "details": "Record from official_records: LIEN"
+        },
+        {
+          "type": "LIEN",
+          "source": "duval_official_records",
+          "date": "2026-05-10",
+          "confidence": 80,
+          "details": "Record from official_records: LIEN"
         }
       ]
     },
     {
-      "id": 305,
+      "id": 405,
       "lead_id": "LEAD-055",
       "parcel_id": "DC-000055",
       "score": 50,
@@ -2915,11 +3293,11 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-06-08T08:42:42.051730",
+      "last_updated": "2026-06-08T08:46:53.472700",
       "assessed_value": 100000,
       "equity_estimate": 25000,
-      "created_at": "2026-06-08 08:42:42",
-      "updated_at": "2026-06-08T08:42:42.057900",
+      "created_at": "2026-06-08 08:46:53",
+      "updated_at": "2026-06-08T08:46:53.478937",
       "signals": [
         {
           "type": "LIEN",
@@ -2941,11 +3319,18 @@
           "date": "2026-05-26",
           "confidence": 80,
           "details": "Record from official_records: LIEN"
+        },
+        {
+          "type": "LIEN",
+          "source": "duval_official_records",
+          "date": "2026-05-10",
+          "confidence": 80,
+          "details": "Record from official_records: LIEN"
         }
       ]
     },
     {
-      "id": 306,
+      "id": 406,
       "lead_id": "LEAD-056",
       "parcel_id": "DC-000056",
       "score": 50,
@@ -2961,11 +3346,11 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-06-08T08:42:42.051737",
+      "last_updated": "2026-06-08T08:46:53.472708",
       "assessed_value": 100000,
       "equity_estimate": 25000,
-      "created_at": "2026-06-08 08:42:42",
-      "updated_at": "2026-06-08T08:42:42.057914",
+      "created_at": "2026-06-08 08:46:53",
+      "updated_at": "2026-06-08T08:46:53.478950",
       "signals": [
         {
           "type": "LIEN",
@@ -2987,11 +3372,18 @@
           "date": "2026-05-29",
           "confidence": 80,
           "details": "Record from official_records: LIEN"
+        },
+        {
+          "type": "LIEN",
+          "source": "duval_official_records",
+          "date": "2026-05-13",
+          "confidence": 80,
+          "details": "Record from official_records: LIEN"
         }
       ]
     },
     {
-      "id": 307,
+      "id": 407,
       "lead_id": "LEAD-057",
       "parcel_id": "DC-000057",
       "score": 50,
@@ -3007,11 +3399,11 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-06-08T08:42:42.051743",
+      "last_updated": "2026-06-08T08:46:53.472716",
       "assessed_value": 100000,
       "equity_estimate": 25000,
-      "created_at": "2026-06-08 08:42:42",
-      "updated_at": "2026-06-08T08:42:42.057927",
+      "created_at": "2026-06-08 08:46:53",
+      "updated_at": "2026-06-08T08:46:53.478962",
       "signals": [
         {
           "type": "LIEN",
@@ -3033,11 +3425,18 @@
           "date": "2026-05-30",
           "confidence": 80,
           "details": "Record from official_records: LIEN"
+        },
+        {
+          "type": "LIEN",
+          "source": "duval_official_records",
+          "date": "2026-05-13",
+          "confidence": 80,
+          "details": "Record from official_records: LIEN"
         }
       ]
     },
     {
-      "id": 308,
+      "id": 408,
       "lead_id": "LEAD-058",
       "parcel_id": "DC-000058",
       "score": 50,
@@ -3053,11 +3452,11 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-06-08T08:42:42.051752",
+      "last_updated": "2026-06-08T08:46:53.472724",
       "assessed_value": 100000,
       "equity_estimate": 25000,
-      "created_at": "2026-06-08 08:42:42",
-      "updated_at": "2026-06-08T08:42:42.057941",
+      "created_at": "2026-06-08 08:46:53",
+      "updated_at": "2026-06-08T08:46:53.478975",
       "signals": [
         {
           "type": "LIEN",
@@ -3079,11 +3478,18 @@
           "date": "2026-06-03",
           "confidence": 80,
           "details": "Record from official_records: LIEN"
+        },
+        {
+          "type": "LIEN",
+          "source": "duval_official_records",
+          "date": "2026-05-14",
+          "confidence": 80,
+          "details": "Record from official_records: LIEN"
         }
       ]
     },
     {
-      "id": 309,
+      "id": 409,
       "lead_id": "LEAD-059",
       "parcel_id": "DC-000059",
       "score": 50,
@@ -3099,11 +3505,11 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-06-08T08:42:42.051760",
+      "last_updated": "2026-06-08T08:46:53.472734",
       "assessed_value": 100000,
       "equity_estimate": 25000,
-      "created_at": "2026-06-08 08:42:42",
-      "updated_at": "2026-06-08T08:42:42.057955",
+      "created_at": "2026-06-08 08:46:53",
+      "updated_at": "2026-06-08T08:46:53.478988",
       "signals": [
         {
           "type": "LIEN",
@@ -3125,11 +3531,18 @@
           "date": "2026-06-03",
           "confidence": 80,
           "details": "Record from official_records: LIEN"
+        },
+        {
+          "type": "LIEN",
+          "source": "duval_official_records",
+          "date": "2026-05-14",
+          "confidence": 80,
+          "details": "Record from official_records: LIEN"
         }
       ]
     },
     {
-      "id": 310,
+      "id": 410,
       "lead_id": "LEAD-060",
       "parcel_id": "DC-000060",
       "score": 50,
@@ -3145,11 +3558,11 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-06-08T08:42:42.051766",
+      "last_updated": "2026-06-08T08:46:53.472743",
       "assessed_value": 100000,
       "equity_estimate": 25000,
-      "created_at": "2026-06-08 08:42:42",
-      "updated_at": "2026-06-08T08:42:42.057983",
+      "created_at": "2026-06-08 08:46:53",
+      "updated_at": "2026-06-08T08:46:53.479000",
       "signals": [
         {
           "type": "JUDGMENT",
@@ -3171,11 +3584,18 @@
           "date": "2026-06-05",
           "confidence": 80,
           "details": "Record from official_records: LIEN"
+        },
+        {
+          "type": "LIEN",
+          "source": "duval_official_records",
+          "date": "2026-05-16",
+          "confidence": 80,
+          "details": "Record from official_records: LIEN"
         }
       ]
     },
     {
-      "id": 311,
+      "id": 411,
       "lead_id": "LEAD-061",
       "parcel_id": "DC-000061",
       "score": 50,
@@ -3191,11 +3611,11 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-06-08T08:42:42.051775",
+      "last_updated": "2026-06-08T08:46:53.472750",
       "assessed_value": 100000,
       "equity_estimate": 25000,
-      "created_at": "2026-06-08 08:42:42",
-      "updated_at": "2026-06-08T08:42:42.057997",
+      "created_at": "2026-06-08 08:46:53",
+      "updated_at": "2026-06-08T08:46:53.479024",
       "signals": [
         {
           "type": "JUDGMENT",
@@ -3217,11 +3637,18 @@
           "date": "2026-06-05",
           "confidence": 80,
           "details": "Record from official_records: LIEN"
+        },
+        {
+          "type": "LIEN",
+          "source": "duval_official_records",
+          "date": "2026-05-17",
+          "confidence": 80,
+          "details": "Record from official_records: LIEN"
         }
       ]
     },
     {
-      "id": 312,
+      "id": 412,
       "lead_id": "LEAD-062",
       "parcel_id": "DC-000062",
       "score": 50,
@@ -3237,11 +3664,11 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-06-08T08:42:42.051782",
+      "last_updated": "2026-06-08T08:46:53.472758",
       "assessed_value": 100000,
       "equity_estimate": 25000,
-      "created_at": "2026-06-08 08:42:42",
-      "updated_at": "2026-06-08T08:42:42.058010",
+      "created_at": "2026-06-08 08:46:53",
+      "updated_at": "2026-06-08T08:46:53.479036",
       "signals": [
         {
           "type": "JUDGMENT",
@@ -3263,11 +3690,18 @@
           "date": "2026-06-06",
           "confidence": 80,
           "details": "Record from official_records: LIEN"
+        },
+        {
+          "type": "LIEN",
+          "source": "duval_official_records",
+          "date": "2026-05-20",
+          "confidence": 80,
+          "details": "Record from official_records: LIEN"
         }
       ]
     },
     {
-      "id": 313,
+      "id": 413,
       "lead_id": "LEAD-063",
       "parcel_id": "DC-000063",
       "score": 50,
@@ -3283,11 +3717,11 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-06-08T08:42:42.051789",
+      "last_updated": "2026-06-08T08:46:53.472765",
       "assessed_value": 100000,
       "equity_estimate": 25000,
-      "created_at": "2026-06-08 08:42:42",
-      "updated_at": "2026-06-08T08:42:42.058024",
+      "created_at": "2026-06-08 08:46:53",
+      "updated_at": "2026-06-08T08:46:53.479049",
       "signals": [
         {
           "type": "JUDGMENT",
@@ -3309,11 +3743,18 @@
           "date": "2026-06-06",
           "confidence": 80,
           "details": "Record from official_records: LIEN"
+        },
+        {
+          "type": "LIEN",
+          "source": "duval_official_records",
+          "date": "2026-05-22",
+          "confidence": 80,
+          "details": "Record from official_records: LIEN"
         }
       ]
     },
     {
-      "id": 314,
+      "id": 414,
       "lead_id": "LEAD-064",
       "parcel_id": "DC-000064",
       "score": 50,
@@ -3329,11 +3770,11 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-06-08T08:42:42.051798",
+      "last_updated": "2026-06-08T08:46:53.472772",
       "assessed_value": 100000,
       "equity_estimate": 25000,
-      "created_at": "2026-06-08 08:42:42",
-      "updated_at": "2026-06-08T08:42:42.058038",
+      "created_at": "2026-06-08 08:46:53",
+      "updated_at": "2026-06-08T08:46:53.479061",
       "signals": [
         {
           "type": "JUDGMENT",
@@ -3355,11 +3796,18 @@
           "date": "2026-06-07",
           "confidence": 80,
           "details": "Record from official_records: LIEN"
+        },
+        {
+          "type": "LIEN",
+          "source": "duval_official_records",
+          "date": "2026-05-23",
+          "confidence": 80,
+          "details": "Record from official_records: LIEN"
         }
       ]
     },
     {
-      "id": 315,
+      "id": 415,
       "lead_id": "LEAD-065",
       "parcel_id": "DC-000065",
       "score": 50,
@@ -3375,11 +3823,11 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-06-08T08:42:42.051805",
+      "last_updated": "2026-06-08T08:46:53.472779",
       "assessed_value": 100000,
       "equity_estimate": 25000,
-      "created_at": "2026-06-08 08:42:42",
-      "updated_at": "2026-06-08T08:42:42.058051",
+      "created_at": "2026-06-08 08:46:53",
+      "updated_at": "2026-06-08T08:46:53.479073",
       "signals": [
         {
           "type": "JUDGMENT",
@@ -3401,11 +3849,18 @@
           "date": "2026-06-08",
           "confidence": 80,
           "details": "Record from official_records: LIEN"
+        },
+        {
+          "type": "LIEN",
+          "source": "duval_official_records",
+          "date": "2026-05-23",
+          "confidence": 80,
+          "details": "Record from official_records: LIEN"
         }
       ]
     },
     {
-      "id": 316,
+      "id": 416,
       "lead_id": "LEAD-066",
       "parcel_id": "DC-000066",
       "score": 50,
@@ -3421,11 +3876,11 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-06-08T08:42:42.051812",
+      "last_updated": "2026-06-08T08:46:53.472786",
       "assessed_value": 100000,
       "equity_estimate": 25000,
-      "created_at": "2026-06-08 08:42:42",
-      "updated_at": "2026-06-08T08:42:42.058065",
+      "created_at": "2026-06-08 08:46:53",
+      "updated_at": "2026-06-08T08:46:53.479086",
       "signals": [
         {
           "type": "JUDGMENT",
@@ -3447,16 +3902,23 @@
           "date": "2026-06-08",
           "confidence": 80,
           "details": "Record from official_records: LIEN"
+        },
+        {
+          "type": "LIEN",
+          "source": "duval_official_records",
+          "date": "2026-05-25",
+          "confidence": 80,
+          "details": "Record from official_records: LIEN"
         }
       ]
     },
     {
-      "id": 317,
+      "id": 417,
       "lead_id": "LEAD-067",
       "parcel_id": "DC-000067",
       "score": 50,
       "score_reasons": [
-        "Single distress signal: Judgment",
+        "Single distress signal: Lien",
         "Monitoring for additional signals"
       ],
       "address": "67 Sample St, Jacksonville, FL 32207",
@@ -3467,11 +3929,11 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-06-08T08:42:42.051821",
+      "last_updated": "2026-06-08T08:46:53.472793",
       "assessed_value": 100000,
       "equity_estimate": 25000,
-      "created_at": "2026-06-08 08:42:42",
-      "updated_at": "2026-06-08T08:42:42.058078",
+      "created_at": "2026-06-08 08:46:53",
+      "updated_at": "2026-06-08T08:46:53.479098",
       "signals": [
         {
           "type": "JUDGMENT",
@@ -3493,16 +3955,23 @@
           "date": "2026-05-09",
           "confidence": 80,
           "details": "Record from official_records: JUDGMENT"
+        },
+        {
+          "type": "LIEN",
+          "source": "duval_official_records",
+          "date": "2026-05-25",
+          "confidence": 80,
+          "details": "Record from official_records: LIEN"
         }
       ]
     },
     {
-      "id": 318,
+      "id": 418,
       "lead_id": "LEAD-068",
       "parcel_id": "DC-000068",
       "score": 50,
       "score_reasons": [
-        "Single distress signal: Judgment",
+        "Single distress signal: Lien",
         "Monitoring for additional signals"
       ],
       "address": "68 Sample St, Jacksonville, FL 32208",
@@ -3513,11 +3982,11 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-06-08T08:42:42.051828",
+      "last_updated": "2026-06-08T08:46:53.472805",
       "assessed_value": 100000,
       "equity_estimate": 25000,
-      "created_at": "2026-06-08 08:42:42",
-      "updated_at": "2026-06-08T08:42:42.058094",
+      "created_at": "2026-06-08 08:46:53",
+      "updated_at": "2026-06-08T08:46:53.479111",
       "signals": [
         {
           "type": "JUDGMENT",
@@ -3539,16 +4008,23 @@
           "date": "2026-05-10",
           "confidence": 80,
           "details": "Record from official_records: JUDGMENT"
+        },
+        {
+          "type": "LIEN",
+          "source": "duval_official_records",
+          "date": "2026-05-27",
+          "confidence": 80,
+          "details": "Record from official_records: LIEN"
         }
       ]
     },
     {
-      "id": 319,
+      "id": 419,
       "lead_id": "LEAD-069",
       "parcel_id": "DC-000069",
       "score": 50,
       "score_reasons": [
-        "Single distress signal: Judgment",
+        "Single distress signal: Lien",
         "Monitoring for additional signals"
       ],
       "address": "69 Sample St, Jacksonville, FL 32209",
@@ -3559,11 +4035,11 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-06-08T08:42:42.051840",
+      "last_updated": "2026-06-08T08:46:53.472815",
       "assessed_value": 100000,
       "equity_estimate": 25000,
-      "created_at": "2026-06-08 08:42:42",
-      "updated_at": "2026-06-08T08:42:42.058108",
+      "created_at": "2026-06-08 08:46:53",
+      "updated_at": "2026-06-08T08:46:53.479125",
       "signals": [
         {
           "type": "JUDGMENT",
@@ -3585,16 +4061,23 @@
           "date": "2026-05-10",
           "confidence": 80,
           "details": "Record from official_records: JUDGMENT"
+        },
+        {
+          "type": "LIEN",
+          "source": "duval_official_records",
+          "date": "2026-05-27",
+          "confidence": 80,
+          "details": "Record from official_records: LIEN"
         }
       ]
     },
     {
-      "id": 320,
+      "id": 420,
       "lead_id": "LEAD-070",
       "parcel_id": "DC-000070",
       "score": 50,
       "score_reasons": [
-        "Single distress signal: Judgment",
+        "Single distress signal: Lien",
         "Monitoring for additional signals"
       ],
       "address": "70 Sample St, Jacksonville, FL 32200",
@@ -3605,11 +4088,11 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-06-08T08:42:42.051847",
+      "last_updated": "2026-06-08T08:46:53.472824",
       "assessed_value": 100000,
       "equity_estimate": 25000,
-      "created_at": "2026-06-08 08:42:42",
-      "updated_at": "2026-06-08T08:42:42.058122",
+      "created_at": "2026-06-08 08:46:53",
+      "updated_at": "2026-06-08T08:46:53.479137",
       "signals": [
         {
           "type": "JUDGMENT",
@@ -3631,16 +4114,23 @@
           "date": "2026-05-10",
           "confidence": 80,
           "details": "Record from official_records: JUDGMENT"
+        },
+        {
+          "type": "LIEN",
+          "source": "duval_official_records",
+          "date": "2026-05-29",
+          "confidence": 80,
+          "details": "Record from official_records: LIEN"
         }
       ]
     },
     {
-      "id": 321,
+      "id": 421,
       "lead_id": "LEAD-071",
       "parcel_id": "DC-000071",
       "score": 50,
       "score_reasons": [
-        "Single distress signal: Judgment",
+        "Single distress signal: Lien",
         "Monitoring for additional signals"
       ],
       "address": "71 Sample St, Jacksonville, FL 32201",
@@ -3651,11 +4141,11 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-06-08T08:42:42.051855",
+      "last_updated": "2026-06-08T08:46:53.472831",
       "assessed_value": 100000,
       "equity_estimate": 25000,
-      "created_at": "2026-06-08 08:42:42",
-      "updated_at": "2026-06-08T08:42:42.058136",
+      "created_at": "2026-06-08 08:46:53",
+      "updated_at": "2026-06-08T08:46:53.479150",
       "signals": [
         {
           "type": "JUDGMENT",
@@ -3677,16 +4167,23 @@
           "date": "2026-05-11",
           "confidence": 80,
           "details": "Record from official_records: JUDGMENT"
+        },
+        {
+          "type": "LIEN",
+          "source": "duval_official_records",
+          "date": "2026-05-31",
+          "confidence": 80,
+          "details": "Record from official_records: LIEN"
         }
       ]
     },
     {
-      "id": 322,
+      "id": 422,
       "lead_id": "LEAD-072",
       "parcel_id": "DC-000072",
       "score": 50,
       "score_reasons": [
-        "Single distress signal: Judgment",
+        "Single distress signal: Lien",
         "Monitoring for additional signals"
       ],
       "address": "72 Sample St, Jacksonville, FL 32202",
@@ -3697,11 +4194,11 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-06-08T08:42:42.051862",
+      "last_updated": "2026-06-08T08:46:53.472838",
       "assessed_value": 100000,
       "equity_estimate": 25000,
-      "created_at": "2026-06-08 08:42:42",
-      "updated_at": "2026-06-08T08:42:42.058150",
+      "created_at": "2026-06-08 08:46:53",
+      "updated_at": "2026-06-08T08:46:53.479162",
       "signals": [
         {
           "type": "JUDGMENT",
@@ -3723,16 +4220,23 @@
           "date": "2026-05-12",
           "confidence": 80,
           "details": "Record from official_records: JUDGMENT"
+        },
+        {
+          "type": "LIEN",
+          "source": "duval_official_records",
+          "date": "2026-06-03",
+          "confidence": 80,
+          "details": "Record from official_records: LIEN"
         }
       ]
     },
     {
-      "id": 323,
+      "id": 423,
       "lead_id": "LEAD-073",
       "parcel_id": "DC-000073",
       "score": 50,
       "score_reasons": [
-        "Single distress signal: Judgment",
+        "Single distress signal: Lien",
         "Monitoring for additional signals"
       ],
       "address": "73 Sample St, Jacksonville, FL 32203",
@@ -3743,11 +4247,11 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-06-08T08:42:42.051869",
+      "last_updated": "2026-06-08T08:46:53.472845",
       "assessed_value": 100000,
       "equity_estimate": 25000,
-      "created_at": "2026-06-08 08:42:42",
-      "updated_at": "2026-06-08T08:42:42.058163",
+      "created_at": "2026-06-08 08:46:53",
+      "updated_at": "2026-06-08T08:46:53.479175",
       "signals": [
         {
           "type": "JUDGMENT",
@@ -3769,16 +4273,23 @@
           "date": "2026-05-13",
           "confidence": 80,
           "details": "Record from official_records: JUDGMENT"
+        },
+        {
+          "type": "LIEN",
+          "source": "duval_official_records",
+          "date": "2026-06-03",
+          "confidence": 80,
+          "details": "Record from official_records: LIEN"
         }
       ]
     },
     {
-      "id": 324,
+      "id": 424,
       "lead_id": "LEAD-074",
       "parcel_id": "DC-000074",
       "score": 50,
       "score_reasons": [
-        "Single distress signal: Judgment",
+        "Single distress signal: Lien",
         "Monitoring for additional signals"
       ],
       "address": "74 Sample St, Jacksonville, FL 32204",
@@ -3789,11 +4300,11 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-06-08T08:42:42.051880",
+      "last_updated": "2026-06-08T08:46:53.472852",
       "assessed_value": 100000,
       "equity_estimate": 25000,
-      "created_at": "2026-06-08 08:42:42",
-      "updated_at": "2026-06-08T08:42:42.058177",
+      "created_at": "2026-06-08 08:46:53",
+      "updated_at": "2026-06-08T08:46:53.479187",
       "signals": [
         {
           "type": "JUDGMENT",
@@ -3815,16 +4326,23 @@
           "date": "2026-05-14",
           "confidence": 80,
           "details": "Record from official_records: JUDGMENT"
+        },
+        {
+          "type": "LIEN",
+          "source": "duval_official_records",
+          "date": "2026-06-05",
+          "confidence": 80,
+          "details": "Record from official_records: LIEN"
         }
       ]
     },
     {
-      "id": 325,
+      "id": 425,
       "lead_id": "LEAD-075",
       "parcel_id": "DC-000075",
       "score": 50,
       "score_reasons": [
-        "Single distress signal: Judgment",
+        "Single distress signal: Lien",
         "Monitoring for additional signals"
       ],
       "address": "75 Sample St, Jacksonville, FL 32205",
@@ -3835,11 +4353,11 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-06-08T08:42:42.051889",
+      "last_updated": "2026-06-08T08:46:53.472859",
       "assessed_value": 100000,
       "equity_estimate": 25000,
-      "created_at": "2026-06-08 08:42:42",
-      "updated_at": "2026-06-08T08:42:42.058190",
+      "created_at": "2026-06-08 08:46:53",
+      "updated_at": "2026-06-08T08:46:53.479200",
       "signals": [
         {
           "type": "JUDGMENT",
@@ -3861,16 +4379,23 @@
           "date": "2026-05-14",
           "confidence": 80,
           "details": "Record from official_records: JUDGMENT"
+        },
+        {
+          "type": "LIEN",
+          "source": "duval_official_records",
+          "date": "2026-06-07",
+          "confidence": 80,
+          "details": "Record from official_records: LIEN"
         }
       ]
     },
     {
-      "id": 326,
+      "id": 426,
       "lead_id": "LEAD-076",
       "parcel_id": "DC-000076",
       "score": 50,
       "score_reasons": [
-        "Single distress signal: Judgment",
+        "Single distress signal: Lien",
         "Monitoring for additional signals"
       ],
       "address": "76 Sample St, Jacksonville, FL 32206",
@@ -3881,11 +4406,11 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-06-08T08:42:42.051898",
+      "last_updated": "2026-06-08T08:46:53.472867",
       "assessed_value": 100000,
       "equity_estimate": 25000,
-      "created_at": "2026-06-08 08:42:42",
-      "updated_at": "2026-06-08T08:42:42.058203",
+      "created_at": "2026-06-08 08:46:53",
+      "updated_at": "2026-06-08T08:46:53.479216",
       "signals": [
         {
           "type": "JUDGMENT",
@@ -3907,16 +4432,23 @@
           "date": "2026-05-15",
           "confidence": 80,
           "details": "Record from official_records: JUDGMENT"
+        },
+        {
+          "type": "LIEN",
+          "source": "duval_official_records",
+          "date": "2026-06-08",
+          "confidence": 80,
+          "details": "Record from official_records: LIEN"
         }
       ]
     },
     {
-      "id": 327,
+      "id": 427,
       "lead_id": "LEAD-077",
       "parcel_id": "DC-000077",
       "score": 50,
       "score_reasons": [
-        "Single distress signal: Judgment",
+        "Single distress signal: Lien",
         "Monitoring for additional signals"
       ],
       "address": "77 Sample St, Jacksonville, FL 32207",
@@ -3927,11 +4459,11 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-06-08T08:42:42.051905",
+      "last_updated": "2026-06-08T08:46:53.472876",
       "assessed_value": 100000,
       "equity_estimate": 25000,
-      "created_at": "2026-06-08 08:42:42",
-      "updated_at": "2026-06-08T08:42:42.058221",
+      "created_at": "2026-06-08 08:46:53",
+      "updated_at": "2026-06-08T08:46:53.479228",
       "signals": [
         {
           "type": "JUDGMENT",
@@ -3953,11 +4485,18 @@
           "date": "2026-05-15",
           "confidence": 80,
           "details": "Record from official_records: JUDGMENT"
+        },
+        {
+          "type": "LIEN",
+          "source": "duval_official_records",
+          "date": "2026-06-08",
+          "confidence": 80,
+          "details": "Record from official_records: LIEN"
         }
       ]
     },
     {
-      "id": 328,
+      "id": 428,
       "lead_id": "LEAD-078",
       "parcel_id": "DC-000078",
       "score": 50,
@@ -3973,11 +4512,11 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-06-08T08:42:42.051913",
+      "last_updated": "2026-06-08T08:46:53.472884",
       "assessed_value": 100000,
       "equity_estimate": 25000,
-      "created_at": "2026-06-08 08:42:42",
-      "updated_at": "2026-06-08T08:42:42.058235",
+      "created_at": "2026-06-08 08:46:53",
+      "updated_at": "2026-06-08T08:46:53.479241",
       "signals": [
         {
           "type": "JUDGMENT",
@@ -3999,11 +4538,18 @@
           "date": "2026-05-16",
           "confidence": 80,
           "details": "Record from official_records: JUDGMENT"
+        },
+        {
+          "type": "JUDGMENT",
+          "source": "duval_official_records",
+          "date": "2026-05-09",
+          "confidence": 80,
+          "details": "Record from official_records: JUDGMENT"
         }
       ]
     },
     {
-      "id": 329,
+      "id": 429,
       "lead_id": "LEAD-079",
       "parcel_id": "DC-000079",
       "score": 50,
@@ -4019,11 +4565,11 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-06-08T08:42:42.051920",
+      "last_updated": "2026-06-08T08:46:53.472892",
       "assessed_value": 100000,
       "equity_estimate": 25000,
-      "created_at": "2026-06-08 08:42:42",
-      "updated_at": "2026-06-08T08:42:42.058249",
+      "created_at": "2026-06-08 08:46:53",
+      "updated_at": "2026-06-08T08:46:53.479266",
       "signals": [
         {
           "type": "JUDGMENT",
@@ -4045,11 +4591,18 @@
           "date": "2026-05-17",
           "confidence": 80,
           "details": "Record from official_records: JUDGMENT"
+        },
+        {
+          "type": "JUDGMENT",
+          "source": "duval_official_records",
+          "date": "2026-05-09",
+          "confidence": 80,
+          "details": "Record from official_records: JUDGMENT"
         }
       ]
     },
     {
-      "id": 330,
+      "id": 430,
       "lead_id": "LEAD-080",
       "parcel_id": "DC-000080",
       "score": 50,
@@ -4065,11 +4618,11 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-06-08T08:42:42.051927",
+      "last_updated": "2026-06-08T08:46:53.472902",
       "assessed_value": 100000,
       "equity_estimate": 25000,
-      "created_at": "2026-06-08 08:42:42",
-      "updated_at": "2026-06-08T08:42:42.058262",
+      "created_at": "2026-06-08 08:46:53",
+      "updated_at": "2026-06-08T08:46:53.479280",
       "signals": [
         {
           "type": "JUDGMENT",
@@ -4091,11 +4644,18 @@
           "date": "2026-05-17",
           "confidence": 80,
           "details": "Record from official_records: JUDGMENT"
+        },
+        {
+          "type": "JUDGMENT",
+          "source": "duval_official_records",
+          "date": "2026-05-10",
+          "confidence": 80,
+          "details": "Record from official_records: JUDGMENT"
         }
       ]
     },
     {
-      "id": 331,
+      "id": 431,
       "lead_id": "LEAD-081",
       "parcel_id": "DC-000081",
       "score": 50,
@@ -4111,11 +4671,11 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-06-08T08:42:42.051934",
+      "last_updated": "2026-06-08T08:46:53.472911",
       "assessed_value": 100000,
       "equity_estimate": 25000,
-      "created_at": "2026-06-08 08:42:42",
-      "updated_at": "2026-06-08T08:42:42.058276",
+      "created_at": "2026-06-08 08:46:53",
+      "updated_at": "2026-06-08T08:46:53.479292",
       "signals": [
         {
           "type": "JUDGMENT",
@@ -4137,11 +4697,18 @@
           "date": "2026-05-18",
           "confidence": 80,
           "details": "Record from official_records: JUDGMENT"
+        },
+        {
+          "type": "JUDGMENT",
+          "source": "duval_official_records",
+          "date": "2026-05-11",
+          "confidence": 80,
+          "details": "Record from official_records: JUDGMENT"
         }
       ]
     },
     {
-      "id": 332,
+      "id": 432,
       "lead_id": "LEAD-082",
       "parcel_id": "DC-000082",
       "score": 50,
@@ -4157,11 +4724,11 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-06-08T08:42:42.051941",
+      "last_updated": "2026-06-08T08:46:53.472918",
       "assessed_value": 100000,
       "equity_estimate": 25000,
-      "created_at": "2026-06-08 08:42:42",
-      "updated_at": "2026-06-08T08:42:42.058289",
+      "created_at": "2026-06-08 08:46:53",
+      "updated_at": "2026-06-08T08:46:53.479304",
       "signals": [
         {
           "type": "JUDGMENT",
@@ -4183,11 +4750,18 @@
           "date": "2026-05-21",
           "confidence": 80,
           "details": "Record from official_records: JUDGMENT"
+        },
+        {
+          "type": "JUDGMENT",
+          "source": "duval_official_records",
+          "date": "2026-05-11",
+          "confidence": 80,
+          "details": "Record from official_records: JUDGMENT"
         }
       ]
     },
     {
-      "id": 333,
+      "id": 433,
       "lead_id": "LEAD-083",
       "parcel_id": "DC-000083",
       "score": 50,
@@ -4203,11 +4777,11 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-06-08T08:42:42.051950",
+      "last_updated": "2026-06-08T08:46:53.472925",
       "assessed_value": 100000,
       "equity_estimate": 25000,
-      "created_at": "2026-06-08 08:42:42",
-      "updated_at": "2026-06-08T08:42:42.058303",
+      "created_at": "2026-06-08 08:46:53",
+      "updated_at": "2026-06-08T08:46:53.479317",
       "signals": [
         {
           "type": "FORECLOSURE",
@@ -4229,11 +4803,18 @@
           "date": "2026-05-21",
           "confidence": 80,
           "details": "Record from official_records: JUDGMENT"
+        },
+        {
+          "type": "JUDGMENT",
+          "source": "duval_official_records",
+          "date": "2026-05-13",
+          "confidence": 80,
+          "details": "Record from official_records: JUDGMENT"
         }
       ]
     },
     {
-      "id": 334,
+      "id": 434,
       "lead_id": "LEAD-084",
       "parcel_id": "DC-000084",
       "score": 50,
@@ -4249,11 +4830,11 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-06-08T08:42:42.051959",
+      "last_updated": "2026-06-08T08:46:53.472933",
       "assessed_value": 100000,
       "equity_estimate": 25000,
-      "created_at": "2026-06-08 08:42:42",
-      "updated_at": "2026-06-08T08:42:42.058316",
+      "created_at": "2026-06-08 08:46:53",
+      "updated_at": "2026-06-08T08:46:53.479330",
       "signals": [
         {
           "type": "FORECLOSURE",
@@ -4275,11 +4856,18 @@
           "date": "2026-05-23",
           "confidence": 80,
           "details": "Record from official_records: JUDGMENT"
+        },
+        {
+          "type": "JUDGMENT",
+          "source": "duval_official_records",
+          "date": "2026-05-14",
+          "confidence": 80,
+          "details": "Record from official_records: JUDGMENT"
         }
       ]
     },
     {
-      "id": 335,
+      "id": 435,
       "lead_id": "LEAD-085",
       "parcel_id": "DC-000085",
       "score": 50,
@@ -4295,11 +4883,11 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-06-08T08:42:42.051966",
+      "last_updated": "2026-06-08T08:46:53.472942",
       "assessed_value": 100000,
       "equity_estimate": 25000,
-      "created_at": "2026-06-08 08:42:42",
-      "updated_at": "2026-06-08T08:42:42.058332",
+      "created_at": "2026-06-08 08:46:53",
+      "updated_at": "2026-06-08T08:46:53.479342",
       "signals": [
         {
           "type": "FORECLOSURE",
@@ -4321,11 +4909,18 @@
           "date": "2026-05-25",
           "confidence": 80,
           "details": "Record from official_records: JUDGMENT"
+        },
+        {
+          "type": "JUDGMENT",
+          "source": "duval_official_records",
+          "date": "2026-05-16",
+          "confidence": 80,
+          "details": "Record from official_records: JUDGMENT"
         }
       ]
     },
     {
-      "id": 336,
+      "id": 436,
       "lead_id": "LEAD-086",
       "parcel_id": "DC-000086",
       "score": 50,
@@ -4341,11 +4936,11 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-06-08T08:42:42.051973",
+      "last_updated": "2026-06-08T08:46:53.472949",
       "assessed_value": 100000,
       "equity_estimate": 25000,
-      "created_at": "2026-06-08 08:42:42",
-      "updated_at": "2026-06-08T08:42:42.058346",
+      "created_at": "2026-06-08 08:46:53",
+      "updated_at": "2026-06-08T08:46:53.479356",
       "signals": [
         {
           "type": "FORECLOSURE",
@@ -4367,11 +4962,18 @@
           "date": "2026-05-25",
           "confidence": 80,
           "details": "Record from official_records: JUDGMENT"
+        },
+        {
+          "type": "JUDGMENT",
+          "source": "duval_official_records",
+          "date": "2026-05-16",
+          "confidence": 80,
+          "details": "Record from official_records: JUDGMENT"
         }
       ]
     },
     {
-      "id": 337,
+      "id": 437,
       "lead_id": "LEAD-087",
       "parcel_id": "DC-000087",
       "score": 50,
@@ -4387,11 +4989,11 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-06-08T08:42:42.051982",
+      "last_updated": "2026-06-08T08:46:53.472957",
       "assessed_value": 100000,
       "equity_estimate": 25000,
-      "created_at": "2026-06-08 08:42:42",
-      "updated_at": "2026-06-08T08:42:42.058359",
+      "created_at": "2026-06-08 08:46:53",
+      "updated_at": "2026-06-08T08:46:53.479369",
       "signals": [
         {
           "type": "FORECLOSURE",
@@ -4413,11 +5015,18 @@
           "date": "2026-05-26",
           "confidence": 80,
           "details": "Record from official_records: JUDGMENT"
+        },
+        {
+          "type": "JUDGMENT",
+          "source": "duval_official_records",
+          "date": "2026-05-20",
+          "confidence": 80,
+          "details": "Record from official_records: JUDGMENT"
         }
       ]
     },
     {
-      "id": 338,
+      "id": 438,
       "lead_id": "LEAD-088",
       "parcel_id": "DC-000088",
       "score": 50,
@@ -4433,11 +5042,11 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-06-08T08:42:42.051989",
+      "last_updated": "2026-06-08T08:46:53.472964",
       "assessed_value": 100000,
       "equity_estimate": 25000,
-      "created_at": "2026-06-08 08:42:42",
-      "updated_at": "2026-06-08T08:42:42.058373",
+      "created_at": "2026-06-08 08:46:53",
+      "updated_at": "2026-06-08T08:46:53.479382",
       "signals": [
         {
           "type": "FORECLOSURE",
@@ -4459,11 +5068,18 @@
           "date": "2026-05-26",
           "confidence": 80,
           "details": "Record from official_records: JUDGMENT"
+        },
+        {
+          "type": "JUDGMENT",
+          "source": "duval_official_records",
+          "date": "2026-05-23",
+          "confidence": 80,
+          "details": "Record from official_records: JUDGMENT"
         }
       ]
     },
     {
-      "id": 339,
+      "id": 439,
       "lead_id": "LEAD-089",
       "parcel_id": "DC-000089",
       "score": 50,
@@ -4479,11 +5095,11 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-06-08T08:42:42.052021",
+      "last_updated": "2026-06-08T08:46:53.472973",
       "assessed_value": 100000,
       "equity_estimate": 25000,
-      "created_at": "2026-06-08 08:42:42",
-      "updated_at": "2026-06-08T08:42:42.058386",
+      "created_at": "2026-06-08 08:46:53",
+      "updated_at": "2026-06-08T08:46:53.479395",
       "signals": [
         {
           "type": "FORECLOSURE",
@@ -4505,11 +5121,18 @@
           "date": "2026-05-26",
           "confidence": 80,
           "details": "Record from official_records: JUDGMENT"
+        },
+        {
+          "type": "JUDGMENT",
+          "source": "duval_official_records",
+          "date": "2026-05-23",
+          "confidence": 80,
+          "details": "Record from official_records: JUDGMENT"
         }
       ]
     },
     {
-      "id": 340,
+      "id": 440,
       "lead_id": "LEAD-090",
       "parcel_id": "DC-000090",
       "score": 50,
@@ -4525,11 +5148,11 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-06-08T08:42:42.052029",
+      "last_updated": "2026-06-08T08:46:53.472982",
       "assessed_value": 100000,
       "equity_estimate": 25000,
-      "created_at": "2026-06-08 08:42:42",
-      "updated_at": "2026-06-08T08:42:42.058399",
+      "created_at": "2026-06-08 08:46:53",
+      "updated_at": "2026-06-08T08:46:53.479407",
       "signals": [
         {
           "type": "FORECLOSURE",
@@ -4551,11 +5174,18 @@
           "date": "2026-05-28",
           "confidence": 80,
           "details": "Record from official_records: JUDGMENT"
+        },
+        {
+          "type": "JUDGMENT",
+          "source": "duval_official_records",
+          "date": "2026-05-26",
+          "confidence": 80,
+          "details": "Record from official_records: JUDGMENT"
         }
       ]
     },
     {
-      "id": 341,
+      "id": 441,
       "lead_id": "LEAD-091",
       "parcel_id": "DC-000091",
       "score": 50,
@@ -4571,11 +5201,11 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-06-08T08:42:42.052039",
+      "last_updated": "2026-06-08T08:46:53.472989",
       "assessed_value": 100000,
       "equity_estimate": 25000,
-      "created_at": "2026-06-08 08:42:42",
-      "updated_at": "2026-06-08T08:42:42.058413",
+      "created_at": "2026-06-08 08:46:53",
+      "updated_at": "2026-06-08T08:46:53.479420",
       "signals": [
         {
           "type": "FORECLOSURE",
@@ -4597,11 +5227,18 @@
           "date": "2026-05-29",
           "confidence": 80,
           "details": "Record from official_records: JUDGMENT"
+        },
+        {
+          "type": "JUDGMENT",
+          "source": "duval_official_records",
+          "date": "2026-05-27",
+          "confidence": 80,
+          "details": "Record from official_records: JUDGMENT"
         }
       ]
     },
     {
-      "id": 342,
+      "id": 442,
       "lead_id": "LEAD-092",
       "parcel_id": "DC-000092",
       "score": 50,
@@ -4617,11 +5254,11 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-06-08T08:42:42.052046",
+      "last_updated": "2026-06-08T08:46:53.472997",
       "assessed_value": 100000,
       "equity_estimate": 25000,
-      "created_at": "2026-06-08 08:42:42",
-      "updated_at": "2026-06-08T08:42:42.058429",
+      "created_at": "2026-06-08 08:46:53",
+      "updated_at": "2026-06-08T08:46:53.479432",
       "signals": [
         {
           "type": "FORECLOSURE",
@@ -4643,11 +5280,18 @@
           "date": "2026-05-30",
           "confidence": 80,
           "details": "Record from official_records: JUDGMENT"
+        },
+        {
+          "type": "JUDGMENT",
+          "source": "duval_official_records",
+          "date": "2026-05-28",
+          "confidence": 80,
+          "details": "Record from official_records: JUDGMENT"
         }
       ]
     },
     {
-      "id": 343,
+      "id": 443,
       "lead_id": "LEAD-093",
       "parcel_id": "DC-000093",
       "score": 50,
@@ -4663,11 +5307,11 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-06-08T08:42:42.052053",
+      "last_updated": "2026-06-08T08:46:53.473008",
       "assessed_value": 100000,
       "equity_estimate": 25000,
-      "created_at": "2026-06-08 08:42:42",
-      "updated_at": "2026-06-08T08:42:42.058442",
+      "created_at": "2026-06-08 08:46:53",
+      "updated_at": "2026-06-08T08:46:53.479445",
       "signals": [
         {
           "type": "FORECLOSURE",
@@ -4689,11 +5333,18 @@
           "date": "2026-05-30",
           "confidence": 80,
           "details": "Record from official_records: JUDGMENT"
+        },
+        {
+          "type": "JUDGMENT",
+          "source": "duval_official_records",
+          "date": "2026-05-29",
+          "confidence": 80,
+          "details": "Record from official_records: JUDGMENT"
         }
       ]
     },
     {
-      "id": 344,
+      "id": 444,
       "lead_id": "LEAD-094",
       "parcel_id": "DC-000094",
       "score": 50,
@@ -4709,11 +5360,11 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-06-08T08:42:42.052062",
+      "last_updated": "2026-06-08T08:46:53.473016",
       "assessed_value": 100000,
       "equity_estimate": 25000,
-      "created_at": "2026-06-08 08:42:42",
-      "updated_at": "2026-06-08T08:42:42.058456",
+      "created_at": "2026-06-08 08:46:53",
+      "updated_at": "2026-06-08T08:46:53.479459",
       "signals": [
         {
           "type": "FORECLOSURE",
@@ -4735,11 +5386,18 @@
           "date": "2026-05-30",
           "confidence": 80,
           "details": "Record from official_records: JUDGMENT"
+        },
+        {
+          "type": "JUDGMENT",
+          "source": "duval_official_records",
+          "date": "2026-05-30",
+          "confidence": 80,
+          "details": "Record from official_records: JUDGMENT"
         }
       ]
     },
     {
-      "id": 345,
+      "id": 445,
       "lead_id": "LEAD-095",
       "parcel_id": "DC-000095",
       "score": 50,
@@ -4755,11 +5413,11 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-06-08T08:42:42.052069",
+      "last_updated": "2026-06-08T08:46:53.473053",
       "assessed_value": 100000,
       "equity_estimate": 25000,
-      "created_at": "2026-06-08 08:42:42",
-      "updated_at": "2026-06-08T08:42:42.058469",
+      "created_at": "2026-06-08 08:46:53",
+      "updated_at": "2026-06-08T08:46:53.479471",
       "signals": [
         {
           "type": "FORECLOSURE",
@@ -4781,11 +5439,18 @@
           "date": "2026-06-02",
           "confidence": 80,
           "details": "Record from official_records: JUDGMENT"
+        },
+        {
+          "type": "JUDGMENT",
+          "source": "duval_official_records",
+          "date": "2026-06-03",
+          "confidence": 80,
+          "details": "Record from official_records: JUDGMENT"
         }
       ]
     },
     {
-      "id": 346,
+      "id": 446,
       "lead_id": "LEAD-096",
       "parcel_id": "DC-000096",
       "score": 50,
@@ -4801,11 +5466,11 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-06-08T08:42:42.052077",
+      "last_updated": "2026-06-08T08:46:53.473061",
       "assessed_value": 100000,
       "equity_estimate": 25000,
-      "created_at": "2026-06-08 08:42:42",
-      "updated_at": "2026-06-08T08:42:42.058482",
+      "created_at": "2026-06-08 08:46:53",
+      "updated_at": "2026-06-08T08:46:53.479484",
       "signals": [
         {
           "type": "FORECLOSURE",
@@ -4827,11 +5492,18 @@
           "date": "2026-06-02",
           "confidence": 80,
           "details": "Record from official_records: JUDGMENT"
+        },
+        {
+          "type": "JUDGMENT",
+          "source": "duval_official_records",
+          "date": "2026-06-04",
+          "confidence": 80,
+          "details": "Record from official_records: JUDGMENT"
         }
       ]
     },
     {
-      "id": 347,
+      "id": 447,
       "lead_id": "LEAD-097",
       "parcel_id": "DC-000097",
       "score": 50,
@@ -4847,11 +5519,11 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-06-08T08:42:42.052084",
+      "last_updated": "2026-06-08T08:46:53.473069",
       "assessed_value": 100000,
       "equity_estimate": 25000,
-      "created_at": "2026-06-08 08:42:42",
-      "updated_at": "2026-06-08T08:42:42.058496",
+      "created_at": "2026-06-08 08:46:53",
+      "updated_at": "2026-06-08T08:46:53.479496",
       "signals": [
         {
           "type": "FORECLOSURE",
@@ -4873,11 +5545,18 @@
           "date": "2026-06-04",
           "confidence": 80,
           "details": "Record from official_records: JUDGMENT"
+        },
+        {
+          "type": "JUDGMENT",
+          "source": "duval_official_records",
+          "date": "2026-06-05",
+          "confidence": 80,
+          "details": "Record from official_records: JUDGMENT"
         }
       ]
     },
     {
-      "id": 348,
+      "id": 448,
       "lead_id": "LEAD-098",
       "parcel_id": "DC-000098",
       "score": 50,
@@ -4893,11 +5572,11 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-06-08T08:42:42.052090",
+      "last_updated": "2026-06-08T08:46:53.473076",
       "assessed_value": 100000,
       "equity_estimate": 25000,
-      "created_at": "2026-06-08 08:42:42",
-      "updated_at": "2026-06-08T08:42:42.058529",
+      "created_at": "2026-06-08 08:46:53",
+      "updated_at": "2026-06-08T08:46:53.479508",
       "signals": [
         {
           "type": "FORECLOSURE",
@@ -4919,11 +5598,18 @@
           "date": "2026-06-05",
           "confidence": 80,
           "details": "Record from official_records: JUDGMENT"
+        },
+        {
+          "type": "JUDGMENT",
+          "source": "duval_official_records",
+          "date": "2026-06-06",
+          "confidence": 80,
+          "details": "Record from official_records: JUDGMENT"
         }
       ]
     },
     {
-      "id": 349,
+      "id": 449,
       "lead_id": "LEAD-099",
       "parcel_id": "DC-000099",
       "score": 50,
@@ -4939,11 +5625,11 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-06-08T08:42:42.052099",
+      "last_updated": "2026-06-08T08:46:53.473083",
       "assessed_value": 100000,
       "equity_estimate": 25000,
-      "created_at": "2026-06-08 08:42:42",
-      "updated_at": "2026-06-08T08:42:42.058547",
+      "created_at": "2026-06-08 08:46:53",
+      "updated_at": "2026-06-08T08:46:53.479521",
       "signals": [
         {
           "type": "FORECLOSURE",
@@ -4965,16 +5651,23 @@
           "date": "2026-06-06",
           "confidence": 80,
           "details": "Record from official_records: JUDGMENT"
+        },
+        {
+          "type": "JUDGMENT",
+          "source": "duval_official_records",
+          "date": "2026-06-08",
+          "confidence": 80,
+          "details": "Record from official_records: JUDGMENT"
         }
       ]
     },
     {
-      "id": 350,
+      "id": 450,
       "lead_id": "LEAD-100",
       "parcel_id": "DC-000100",
       "score": 50,
       "score_reasons": [
-        "Single distress signal: Judgment",
+        "Single distress signal: Foreclosure",
         "Monitoring for additional signals"
       ],
       "address": "100 Sample St, Jacksonville, FL 32200",
@@ -4985,11 +5678,11 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-06-08T08:42:42.052110",
+      "last_updated": "2026-06-08T08:46:53.473096",
       "assessed_value": 100000,
       "equity_estimate": 25000,
-      "created_at": "2026-06-08 08:42:42",
-      "updated_at": "2026-06-08T08:42:42.058561",
+      "created_at": "2026-06-08 08:46:53",
+      "updated_at": "2026-06-08T08:46:53.479533",
       "signals": [
         {
           "type": "FORECLOSURE",
@@ -5011,6 +5704,13 @@
           "date": "2026-06-07",
           "confidence": 80,
           "details": "Record from official_records: JUDGMENT"
+        },
+        {
+          "type": "FORECLOSURE",
+          "source": "duval_official_records",
+          "date": "2026-05-12",
+          "confidence": 80,
+          "details": "Record from official_records: FORECLOSURE"
         }
       ]
     }
