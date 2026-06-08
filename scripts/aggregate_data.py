@@ -5,8 +5,19 @@ This script combines raw data from all sources, scores leads, and generates the 
 """
 import json
 import os
-from datetime import datetime
 import sys
+from datetime import datetime
+
+# Add parent directory to path for imports
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+# Import database storage if available
+try:
+    from scripts.db_storage import init_db, load_leads_from_json, export_leads_to_json, get_source_health
+    DB_AVAILABLE = True
+except ImportError:
+    DB_AVAILABLE = False
+    print("Warning: db_storage module not available, using JSON-only mode")
 
 def load_scraper_output(filename):
     """Load output from a scraper file."""
@@ -84,6 +95,104 @@ def generate_score_reasons(signals):
         reasons.append("Monitoring for additional signals")
     
     return reasons
+
+def stack_leads(leads):
+    """
+    Cross-reference leads across multiple sources to create stacked leads.
+    A stacked lead has signals from 3+ different sources on the same property.
+    """
+    # Build index by normalized address/parcel for cross-referencing
+    by_address = {}
+    by_parcel = {}
+    by_owner = {}
+    
+    for lead in leads:
+        addr = lead.get("address", "").lower().strip()
+        parcel = lead.get("parcel_id", "").lower().strip()
+        owner = lead.get("owner_name", "").lower().strip()
+        
+        if addr and addr != "unknown":
+            by_address.setdefault(addr, []).append(lead)
+        if parcel and parcel != "unknown":
+            by_parcel.setdefault(parcel, []).append(lead)
+        if owner and owner != "unknown":
+            by_owner.setdefault(owner, []).append(lead)
+    
+    # Find properties that appear in multiple leads (different sources)
+    stacked = []
+    seen_ids = set()
+    
+    # Check by address first (most reliable)
+    for addr, addr_leads in by_address.items():
+        if len(addr_leads) >= 2:
+            # Merge signals from all leads for this address
+            all_signals = []
+            sources_found = set()
+            for l in addr_leads:
+                for sig in l.get("signals", []):
+                    src = sig.get("source", "")
+                    if src not in sources_found:
+                        sources_found.add(src)
+                        all_signals.append(sig)
+            
+            if len(sources_found) >= 2:
+                # Use the lead with highest score as base
+                base = max(addr_leads, key=lambda x: x.get("score", 0))
+                merged = dict(base)
+                merged["signals"] = all_signals
+                merged["score"] = score_lead(all_signals)
+                merged["score_reasons"] = generate_score_reasons(all_signals)
+                merged["stacked_sources"] = list(sources_found)
+                merged["stack_count"] = len(sources_found)
+                merged["is_stacked"] = len(sources_found) >= 3
+                if merged["lead_id"] not in seen_ids:
+                    seen_ids.add(merged["lead_id"])
+                    stacked.append(merged)
+    
+    # Check by parcel for any not already found
+    for parcel, parcel_leads in by_parcel.items():
+        if len(parcel_leads) >= 2:
+            existing = [l for l in stacked if l.get("parcel_id", "").lower() == parcel]
+            if existing:
+                continue
+            all_signals = []
+            sources_found = set()
+            for l in parcel_leads:
+                for sig in l.get("signals", []):
+                    src = sig.get("source", "")
+                    if src not in sources_found:
+                        sources_found.add(src)
+                        all_signals.append(sig)
+            if len(sources_found) >= 2:
+                base = max(parcel_leads, key=lambda x: x.get("score", 0))
+                merged = dict(base)
+                merged["signals"] = all_signals
+                merged["score"] = score_lead(all_signals)
+                merged["score_reasons"] = generate_score_reasons(all_signals)
+                merged["stacked_sources"] = list(sources_found)
+                merged["stack_count"] = len(sources_found)
+                merged["is_stacked"] = len(sources_found) >= 3
+                if merged["lead_id"] not in seen_ids:
+                    seen_ids.add(merged["lead_id"])
+                    stacked.append(merged)
+    
+    # Add non-stacked leads that weren't merged
+    for lead in leads:
+        if lead["lead_id"] not in seen_ids:
+            lead["stacked_sources"] = list(set(s.get("source", "") for s in lead.get("signals", [])))
+            lead["stack_count"] = len(lead["stacked_sources"])
+            lead["is_stacked"] = False
+            stacked.append(lead)
+            seen_ids.add(lead["lead_id"])
+    
+    # Sort by score descending, with stacked leads first
+    stacked.sort(key=lambda x: (x.get("is_stacked", False), x.get("score", 0)), reverse=True)
+    
+    # Reassign IDs
+    for i, lead in enumerate(stacked, 1):
+        lead["lead_id"] = f"LEAD-{i:03d}"
+    
+    return stacked
 
 def aggregate_data():
     """Main aggregation function."""
@@ -203,11 +312,14 @@ def aggregate_data():
     # Sort by score descending
     leads.sort(key=lambda x: x["score"], reverse=True)
     
+    # Apply lead stacking - cross-reference across sources
+    leads = stack_leads(leads)
+    
     # Reassign lead IDs after sorting
     for i, lead in enumerate(leads, 1):
         lead["lead_id"] = f"LEAD-{i:03d}"
     
-    high_stack = sum(1 for l in leads if len(l.get("signals", [])) >= 3)
+    high_stack = sum(1 for l in leads if l.get("is_stacked", False))
     
     result = {
         "county": "Duval",
@@ -223,6 +335,15 @@ def aggregate_data():
     # Write leads.json
     with open("data/leads.json", 'w') as f:
         json.dump(result, f, indent=2)
+    
+    # Also write to database if available
+    if DB_AVAILABLE:
+        try:
+            init_db()
+            load_leads_from_json("data/leads.json")
+            print(f"  Database: leads loaded into SQLite")
+        except Exception as e:
+            print(f"  Database warning: {e}")
     
     print(f"\nAggregation complete:")
     print(f"  Total leads: {len(leads)}")

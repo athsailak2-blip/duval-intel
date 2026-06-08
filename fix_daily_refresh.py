@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+"""Fix daily_refresh.py to actually import and execute all scrapers."""
+
+new_content = '''#!/usr/bin/env python3
 """
 Duval County Lead Intelligence - Daily Refresh Orchestrator
 Runs all scrapers in priority order, aggregates data, and updates dashboard.
@@ -265,3 +268,9 @@ def main():
 
 if __name__ == '__main__':
     main()
+'''
+
+with open('/workspace/scripts/daily_refresh.py', 'w') as f:
+    f.write(new_content)
+
+print("Fixed daily_refresh.py - now imports and executes all scrapers")

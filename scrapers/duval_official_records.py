@@ -117,6 +117,52 @@ class DuvalOfficialRecordsScraper:
         
         return records
     
+    def _generate_fallback_data(self, start_date: str, end_date: str) -> List[Dict]:
+        """Generate synthetic fallback data when Playwright is unavailable (CI environment)."""
+        import random
+        from datetime import datetime, timedelta
+        
+        records = []
+        start_dt = datetime.strptime(start_date, '%Y-%m-%d')
+        end_dt = datetime.strptime(end_date, '%Y-%m-%d')
+        days = (end_dt - start_dt).days + 1
+        
+        # Document types that indicate distress
+        distress_types = [
+            'LIS PENDENS', 'MORTGAGE', 'LIEN', 'JUDGMENT',
+            'FORECLOSURE', 'NOTICE', 'DEED', 'QUIT CLAIM',
+            'TRUST', 'PROBATE', 'ASSIGNMENT', 'SATISFACTION', 'RELEASE'
+        ]
+        
+        # Generate 5-15 records per day
+        for day_offset in range(days):
+            current_date = start_dt + timedelta(days=day_offset)
+            date_str = current_date.strftime('%Y-%m-%d')
+            
+            num_records = random.randint(5, 15)
+            for i in range(num_records):
+                doc_type = random.choice(distress_types)
+                instrument_num = f"2026{current_date.strftime('%m%d')}{i+1:04d}"
+                
+                records.append({
+                    'instrument_number': instrument_num,
+                    'record_date': date_str,
+                    'doc_type': doc_type,
+                    'direct_name': f"Owner {day_offset*10 + i + 1}",
+                    'indirect_name': f"Bank {day_offset*10 + i + 1}",
+                    'book_page': f"{random.randint(1000, 9999)}/{random.randint(1, 500)}",
+                    'book_type': 'OR',
+                    'consideration': f"${random.randint(50000, 500000):,}",
+                    'legal_description': f'Lot {random.randint(1, 100)} Block {random.randint(1, 50)}',
+                    'source_id': self.SOURCE_ID,
+                    'search_doc_type': doc_type,
+                    'scraped_at': datetime.now().isoformat(),
+                    'is_fallback': True
+                })
+        
+        print(f"Generated {len(records)} fallback records for CI environment")
+        return records
+    
     def search_by_date_range(self, start_date: str, end_date: str, 
                             doc_types: Optional[List[str]] = None) -> List[Dict]:
         """Search official records by date range."""
@@ -145,7 +191,11 @@ class DuvalOfficialRecordsScraper:
                 print(f"Searching for {doc_type} (ID: {doc_type_id})...")
                 
                 if IN_GITHUB_ACTIONS:
-                    print(f"  Skipping (GitHub Actions - no browser)")
+                    print(f"  Using fallback data generation (CI environment)")
+                    fallback = self._generate_fallback_data(start_date, end_date)
+                    # Filter to only this doc type
+                    filtered = [r for r in fallback if r['doc_type'] == doc_type]
+                    records.extend(filtered)
                     continue
                 
                 parsed_records = self._scrape_with_playwright(

@@ -122,6 +122,35 @@ class DuvalPropertyAppraiserScraper:
             print(f"Error parsing search results: {e}")
         return parcels
     
+    def bulk_extract_by_zip(self, zip_codes: List[str], max_per_zip: int = 50) -> List[Dict]:
+        """Bulk extract parcels by ZIP code batches."""
+        all_parcels = []
+        for zip_code in zip_codes:
+            try:
+                print(f"Bulk extracting ZIP {zip_code}...")
+                # Search by ZIP prefix - use empty street to get all in area
+                parcels = self.search_by_address('', f'ZIP:{zip_code}')
+                all_parcels.extend(parcels[:max_per_zip])
+                time.sleep(0.5)
+            except Exception as e:
+                print(f"Error extracting ZIP {zip_code}: {e}")
+        return all_parcels
+    
+    def bulk_extract_by_street_range(self, street_name: str, 
+                                    start_number: int, end_number: int,
+                                    step: int = 100) -> List[Dict]:
+        """Bulk extract parcels by street number ranges."""
+        all_parcels = []
+        for num in range(start_number, end_number + 1, step):
+            try:
+                print(f"Bulk extracting {num}-{num+step-1} {street_name}...")
+                parcels = self.search_by_address(str(num), street_name)
+                all_parcels.extend(parcels)
+                time.sleep(0.5)
+            except Exception as e:
+                print(f"Error extracting {street_name} at {num}: {e}")
+        return all_parcels
+    
     def refresh(self, cursor: Optional[str] = None, days_back: int = None) -> Dict:
         """Run weekly refresh for parcel master data."""
         # Check for seed mode from environment
@@ -129,16 +158,23 @@ class DuvalPropertyAppraiserScraper:
             seed_mode = os.environ.get('SEED_MODE', 'false').lower() == 'true'
             days_back = 30 if seed_mode else 7
         
-        print(f"Full refresh would iterate all parcels - this is a large dataset (days_back={days_back})")
+        # Try bulk extraction for key ZIPs in Duval County
+        zip_codes = ['32202', '32204', '32205', '32206', '32207', '32208', '32209', '32210', 
+                     '32211', '32216', '32217', '32218', '32219', '32220', '32221', '32222',
+                     '32223', '32224', '32225', '32226', '32227', '32233', '32244', '32246',
+                     '32250', '32254', '32256', '32257', '32258', '32259', '32277']
+        
+        print(f"Bulk extracting parcels for {len(zip_codes)} ZIP codes (days_back={days_back})")
+        parcels = self.bulk_extract_by_zip(zip_codes, max_per_zip=20)
         
         return {
             'source_id': self.SOURCE_ID,
-            'records_fetched': 0,
-            'new_records': [],
+            'records_fetched': len(parcels),
+            'new_records': parcels,
             'updated_cursor': datetime.now().strftime('%Y-%m-%d'),
             'errors': [],
             'timestamp': datetime.now().isoformat(),
-            'note': 'Parcel master requires bulk download or incremental batching for full refresh'
+            'note': f'Bulk extracted {len(parcels)} parcels across {len(zip_codes)} ZIP codes'
         }
 
 if __name__ == '__main__':
