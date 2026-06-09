@@ -1,0 +1,18 @@
+{
+  "source_id": "duval_court_records",
+  "fingerprinted_at": "2026-06-09T06:47:00Z",
+  "framework_version": "v5.4.0",
+  "portal_family": "county_clerk_court",
+  "vendor_family": "tyler",
+  "architecture": "spa_with_api",
+  "discovered_endpoints": [],
+  "protections_observed": {
+    "captcha": "unknown",
+    "waf": "unknown",
+    "rate_limit": "unknown",
+    "session_required": true
+  },
+  "recommended_adapter": "playwright_or_seeded_session",
+  "fingerprint_confidence": "LOW",
+  "fingerprint_summary": "Tyler/CORE portal. Current scraper uses operator credentials. Public no-login path coverage unverified. Full fingerprint deferred to Stage B post credential rotation."
+}

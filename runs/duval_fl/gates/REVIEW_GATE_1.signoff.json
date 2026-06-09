@@ -1,0 +1,28 @@
+{
+  "gate": "REVIEW_GATE_1",
+  "county_slug": "duval_fl",
+  "framework_version": "v5.4.0",
+  "status": "pending",
+  "verdict": "PARTIALLY_RESOLVED_BUILDABLE",
+  "signoff_by": null,
+  "signoff_at": null,
+  "summary": "Phase 0 recon complete: 1 of 8 sources verified live (duval_official_records), 3 blocked on credential rotation, 3 stubbed, 1 PRR-gated.",
+  "artifacts_reviewed": [
+    "runs/duval_fl/LAUNCH_DUVAL_FL.md",
+    "runs/duval_fl/operator_notes.md",
+    "runs/duval_fl/recon/source_of_record_matrix.json",
+    "runs/duval_fl/recon/source_of_record_matrix.md",
+    "runs/duval_fl/recon/source_coverage_map.md",
+    "runs/duval_fl/recon/api_discovery_report.md",
+    "runs/duval_fl/recon/build_eligibility_report.md",
+    "runs/duval_fl/recon/operator_verified_sources.yml",
+    "runs/duval_fl/recon/fingerprints/"
+  ],
+  "operator_actions_required_before_stage_b": [
+    "Rotate hardcoded password used in duval_court_records, duval_tax_deed_sales, duval_foreclosure_sales_scrappey scrapers and add the new credentials as GitHub repo secrets.",
+    "Rotate Browserless token and add as GitHub repo secret.",
+    "Provide SCRAPPEY_API_KEY as a GitHub repo secret (or decide to retire the Scrappey path).",
+    "Approve Stage B PR scope (official_records thin slice + dashboard 24h default chip)."
+  ],
+  "notes": "Operator flips status to 'accepted', sets signoff_by + signoff_at, and commits the change. Stage B PR may not be opened before this gate is accepted on main."
+}

@@ -1,0 +1,18 @@
+{
+  "source_id": "duval_tax_deed_sales",
+  "fingerprinted_at": "2026-06-09T06:47:00Z",
+  "framework_version": "v5.4.0",
+  "portal_family": "county_clerk_court",
+  "vendor_family": "realauction",
+  "architecture": "spa_with_api",
+  "discovered_endpoints": [],
+  "protections_observed": {
+    "captcha": "likely",
+    "waf": "likely",
+    "rate_limit": "unknown",
+    "session_required": true
+  },
+  "recommended_adapter": "stealth_browser_or_operator_login",
+  "fingerprint_confidence": "LOW",
+  "fingerprint_summary": "RealAuction tax-deed sale calendar. Existing scraper uses hardcoded creds. List of Lands Available may be on a separate public URL — to investigate in Stage B."
+}

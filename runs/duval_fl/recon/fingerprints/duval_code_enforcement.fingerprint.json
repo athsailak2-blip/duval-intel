@@ -1,0 +1,18 @@
+{
+  "source_id": "duval_code_enforcement",
+  "fingerprinted_at": "2026-06-09T06:47:00Z",
+  "framework_version": "v5.4.0",
+  "portal_family": "city_code_enforcement",
+  "vendor_family": "coj_custom",
+  "architecture": "public_records_only",
+  "discovered_endpoints": [],
+  "protections_observed": {
+    "captcha": false,
+    "waf": false,
+    "rate_limit": "n/a",
+    "session_required": false
+  },
+  "recommended_adapter": "manual_assisted_pull_with_prr",
+  "fingerprint_confidence": "MEDIUM",
+  "fingerprint_summary": "Municipal Code Compliance. No live case search. PRR via records.coj.net. §4.23 manual-assisted-pull pattern."
+}

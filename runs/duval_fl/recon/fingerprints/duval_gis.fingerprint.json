@@ -1,0 +1,18 @@
+{
+  "source_id": "duval_gis",
+  "fingerprinted_at": "2026-06-09T06:47:00Z",
+  "framework_version": "v5.4.0",
+  "portal_family": "county_gis",
+  "vendor_family": "arcgis",
+  "architecture": "open_api",
+  "discovered_endpoints": [],
+  "protections_observed": {
+    "captcha": false,
+    "waf": false,
+    "rate_limit": "ArcGIS REST default",
+    "session_required": false
+  },
+  "recommended_adapter": "arcgis_rest_feature_service",
+  "fingerprint_confidence": "LOW",
+  "fingerprint_summary": "ArcGIS-based parcel/zoning/flood viewer. ArcGIS REST feature services very likely available at a services.arcgis.com or maps.coj.net REST endpoint — not yet probed. CURRENT SCRAPER IS A DECEPTIVE STUB: returns status:healthy + records_fetched:0 without making any request. Must be replaced or disabled in Stage C."
+}

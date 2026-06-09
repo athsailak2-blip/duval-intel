@@ -1,0 +1,18 @@
+{
+  "source_id": "duval_foreclosure_sales_scrappey",
+  "fingerprinted_at": "2026-06-09T06:47:00Z",
+  "framework_version": "v5.4.0",
+  "portal_family": "county_clerk_court",
+  "vendor_family": "realauction",
+  "architecture": "spa_with_api",
+  "discovered_endpoints": [],
+  "protections_observed": {
+    "captcha": "likely",
+    "waf": "likely",
+    "rate_limit": "unknown",
+    "session_required": true
+  },
+  "recommended_adapter": "scrappey_or_stealth_browser",
+  "fingerprint_confidence": "LOW",
+  "fingerprint_summary": "RealAuction online judicial-sale calendar. Existing scraper attempts Scrappey vendor; SCRAPPEY_API_KEY missing. Public calendar viewability not confirmed."
+}

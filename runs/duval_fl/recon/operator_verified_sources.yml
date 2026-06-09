@@ -1,0 +1,65 @@
+# Operator-verified sources for duval_fl
+# Per §4.31 universality contract: sources surfaced by the operator are treated as
+# starting candidates, not authority — each must still pass the 5-layer verification.
+# `discovered_by: operator` records provenance only.
+
+verified_at: "2026-06-09T06:47:00Z"
+operator_name: "Sai (athsailak2-blip)"
+framework_version: "v5.4.0"
+
+entries:
+  - source_id: duval_official_records
+    url: "https://or.duvalclerk.com/"
+    discovered_by: operator
+    official_origin_evidence: "Official Duval Clerk subdomain. Linked from duvalclerk.com homepage under Official Records."
+    review_status: accepted
+    notes: "Verified live via GridResults API. P0 PRIMARY_LEAD_SOURCE for partial build."
+
+  - source_id: duval_court_records
+    url: "https://core.duvalclerk.com/"
+    discovered_by: operator
+    official_origin_evidence: "Official Duval Clerk subdomain. CORE = Clerk Of Records Engine."
+    review_status: accepted
+    notes: "Login wall in current scraper. Public path coverage unconfirmed."
+
+  - source_id: duval_foreclosure_sales_scrappey
+    url: "https://www.duval.realforeclose.com/"
+    discovered_by: operator
+    official_origin_evidence: "RealAuction is the Duval Clerk's contracted online sale vendor under Fla. Stat. Ch. 45."
+    review_status: accepted
+    notes: "Public calendar viewability unconfirmed. Hardcoded credentials in current scraper."
+
+  - source_id: duval_tax_deed_sales
+    url: "https://www.duval.realtaxdeed.com/"
+    discovered_by: operator
+    official_origin_evidence: "RealAuction is the Duval Clerk's contracted online tax-deed sale vendor under Fla. Stat. Ch. 197."
+    review_status: accepted
+    notes: "Hardcoded credentials in current scraper."
+
+  - source_id: duval_parcel_master
+    url: "https://paopropertysearch.coj.net/"
+    discovered_by: operator
+    official_origin_evidence: "Duval Property Appraiser official portal (coj.net = City of Jacksonville)."
+    review_status: accepted
+    notes: "Portal open. Current scraper is a stub."
+
+  - source_id: duval_tax_collector
+    url: "https://tclieninfo.coj.net/"
+    discovered_by: operator
+    official_origin_evidence: "Duval Tax Collector lien info portal on coj.net."
+    review_status: accepted
+    notes: "Portal open. Current scraper is a stub."
+
+  - source_id: duval_gis
+    url: "https://maps.coj.net/duvalproperty/"
+    discovered_by: operator
+    official_origin_evidence: "City of Jacksonville GIS property mapper on coj.net."
+    review_status: accepted
+    notes: "Portal open. Current scraper is a deceptive stub (§4.33 violation) — must be replaced or disabled."
+
+  - source_id: duval_code_enforcement
+    url: "https://www.jacksonville.gov/departments/neighborhoods/municipal-code-compliance"
+    discovered_by: operator
+    official_origin_evidence: "City of Jacksonville Municipal Code Compliance Division page."
+    review_status: accepted
+    notes: "Case data requires PRR via records.coj.net. §4.23 manual-assisted-pull path."

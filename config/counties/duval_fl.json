@@ -6,107 +6,25 @@
   "fips_code": "12031",
   "timezone": "America/New_York",
   "slug": "duval_fl",
-  "framework_version": "v5.3.1",
+  "framework_version": "v5.4.0",
+  "state_rule_family": "FL_judicial_foreclosure",
   "geography": {
     "center_lat": 30.3322,
     "center_lng": -81.6557,
     "municipalities": [
-      {
-        "name": "Jacksonville",
-        "type": "city",
-        "fips_place_code": "35000"
-      },
-      {
-        "name": "Jacksonville Beach",
-        "type": "city",
-        "fips_place_code": "35150"
-      },
-      {
-        "name": "Atlantic Beach",
-        "type": "city",
-        "fips_place_code": "02400"
-      },
-      {
-        "name": "Neptune Beach",
-        "type": "city",
-        "fips_place_code": "48150"
-      },
-      {
-        "name": "Baldwin",
-        "type": "town",
-        "fips_place_code": "03600"
-      }
+      {"name": "Jacksonville", "type": "city", "fips_place_code": "35000"},
+      {"name": "Jacksonville Beach", "type": "city", "fips_place_code": "35150"},
+      {"name": "Atlantic Beach", "type": "city", "fips_place_code": "02400"},
+      {"name": "Neptune Beach", "type": "city", "fips_place_code": "48150"},
+      {"name": "Baldwin", "type": "town", "fips_place_code": "03600"}
     ],
-    "zip_codes": [
-      "32009",
-      "32081",
-      "32202",
-      "32204",
-      "32205",
-      "32206",
-      "32207",
-      "32208",
-      "32209",
-      "32210",
-      "32211",
-      "32212",
-      "32216",
-      "32217",
-      "32218",
-      "32219",
-      "32220",
-      "32221",
-      "32222",
-      "32223",
-      "32224",
-      "32225",
-      "32226",
-      "32227",
-      "32233",
-      "32234",
-      "32244",
-      "32246",
-      "32250",
-      "32254",
-      "32256",
-      "32257",
-      "32258",
-      "32259",
-      "32266",
-      "32277"
-    ],
+    "zip_codes": ["32009","32081","32202","32204","32205","32206","32207","32208","32209","32210","32211","32212","32216","32217","32218","32219","32220","32221","32222","32223","32224","32225","32226","32227","32233","32234","32244","32246","32250","32254","32256","32257","32258","32259","32266","32277"],
     "parcel_id_format": "^\\d{2}-\\d{2}-\\d{2}-\\d{3}-\\d{3}(-\\d{3})?$",
     "parcel_id_example": "01-01-01-001-001",
-    "accepted_municipalities": [
-      "Jacksonville",
-      "Jacksonville Beach",
-      "Atlantic Beach",
-      "Neptune Beach",
-      "Baldwin",
-      "Arlington",
-      "San Marco",
-      "Riverside",
-      "Avondale",
-      "Springfield",
-      "Murray Hill",
-      "San Jose",
-      "Mandarin",
-      "Orange Park",
-      "Westside",
-      "Northside",
-      "Southside",
-      "Eastside",
-      "Downtown",
-      "Beaches",
-      "Intracoastal West"
-    ],
+    "accepted_municipalities": ["Jacksonville","Jacksonville Beach","Atlantic Beach","Neptune Beach","Baldwin","Arlington","San Marco","Riverside","Avondale","Springfield","Murray Hill","San Jose","Mandarin","Orange Park","Westside","Northside","Southside","Eastside","Downtown","Beaches","Intracoastal West"],
     "cross_county_policy": {
       "unknown_city_action": "flag_for_review",
-      "neighboring_county_municipalities": [
-        "St. Johns County",
-        "Clay County",
-        "Nassau County"
-      ]
+      "neighboring_county_municipalities": ["St. Johns County","Clay County","Nassau County"]
     },
     "sale_date_rule": {
       "rule_name": "first_tuesday_of_month",
@@ -130,52 +48,13 @@
       "document_access_status": "FULL_TEXT",
       "verification_confidence": "VERIFIED",
       "verification_method": "LIVE_PORTAL",
-      "verification_date": "2026-06-08",
-      "verification_note": "Official records portal searchable by name, instrument number, doc type, record date, consideration, book/page, case number. Records since 1988.",
+      "verification_date": "2026-06-09",
+      "verification_note": "Verified via GridResults API. ~534 records/day typical. P0 PRIMARY_LEAD_SOURCE for partial build under framework v5.4.0.",
       "open_questions": [],
-      "doc_type_synonyms": {
-        "DEED": "DEED",
-        "MTG": "MORTGAGE",
-        "MORTGAGE": "MORTGAGE",
-        "LIS PENDENS": "LIS_PENDENS",
-        "LIS": "LIS_PENDENS",
-        "LIEN": "LIEN",
-        "MECHANICS LIEN": "MECHANICS_LIEN",
-        "JUDGMENT": "JUDGMENT",
-        "SAT": "SATISFACTION",
-        "SATISFACTION": "SATISFACTION",
-        "RELEASE": "RELEASE",
-        "DISCHARGE": "DISCHARGE",
-        "NOTICE": "NOTICE",
-        "FORECLOSURE": "FORECLOSURE",
-        "PROBATE": "PROBATE",
-        "TRUST": "TRUST",
-        "ASSIGNMENT": "ASSIGNMENT",
-        "AGREEMENT": "AGREEMENT",
-        "CANCEL": "CANCELLATION",
-        "CANCELLATION": "CANCELLATION",
-        "SUBSTITUTION": "SUBSTITUTION",
-        "CONVEYANCE": "CONVEYANCE",
-        "WARRANTY DEED": "WARRANTY_DEED",
-        "QUIT CLAIM": "QUIT_CLAIM_DEED",
-        "QUITCLAIM": "QUIT_CLAIM_DEED"
-      },
+      "doc_type_synonyms": {"DEED":"DEED","MTG":"MORTGAGE","MORTGAGE":"MORTGAGE","LIS PENDENS":"LIS_PENDENS","LIS":"LIS_PENDENS","LIEN":"LIEN","MECHANICS LIEN":"MECHANICS_LIEN","JUDGMENT":"JUDGMENT","SAT":"SATISFACTION","SATISFACTION":"SATISFACTION","RELEASE":"RELEASE","DISCHARGE":"DISCHARGE","NOTICE":"NOTICE","FORECLOSURE":"FORECLOSURE","PROBATE":"PROBATE","TRUST":"TRUST","ASSIGNMENT":"ASSIGNMENT","AGREEMENT":"AGREEMENT","CANCEL":"CANCELLATION","CANCELLATION":"CANCELLATION","SUBSTITUTION":"SUBSTITUTION","CONVEYANCE":"CONVEYANCE","WARRANTY DEED":"WARRANTY_DEED","QUIT CLAIM":"QUIT_CLAIM_DEED","QUITCLAIM":"QUIT_CLAIM_DEED"},
       "translator": "csv_static_list",
-      "translator_config": {
-        "date_field": "record_date",
-        "doc_type_field": "doc_type",
-        "party_name_field": "party_name",
-        "parcel_id_field": "parcel_id",
-        "address_field": "address"
-      },
-      "field_map": {
-        "address": "property_address",
-        "doc_number": "instrument_number",
-        "recording_date": "record_date",
-        "party_name": "grantor_grantee",
-        "city": "property_city",
-        "zip": "property_zip"
-      },
+      "translator_config": {"date_field":"record_date","doc_type_field":"doc_type","party_name_field":"party_name","parcel_id_field":"parcel_id","address_field":"address"},
+      "field_map": {"address":"property_address","doc_number":"instrument_number","recording_date":"record_date","party_name":"grantor_grantee","city":"property_city","zip":"property_zip"},
       "refresh_frequency": "daily",
       "cursor_type": "date_range",
       "cursor_field": "record_date",
@@ -192,38 +71,17 @@
       "source_priority": "P0",
       "build_priority": 2,
       "access_method": "web_portal",
-      "public_access_status": "FULLY_OPEN",
-      "document_access_status": "INDEX_ONLY",
-      "verification_confidence": "VERIFIED",
+      "public_access_status": "LOGIN_REQUIRED",
+      "document_access_status": "DOCUMENTS_LOGIN_REQUIRED",
+      "verification_confidence": "LOW",
       "verification_method": "LIVE_PORTAL",
-      "verification_date": "2026-06-08",
-      "verification_note": "CORE portal for court records. Case search by case number or party name. Public viewing available. PDF/A documents. Non-confidential records accessible.",
-      "open_questions": [
-        "Determine if foreclosure case details include property addresses"
-      ],
-      "doc_type_synonyms": {
-        "FORECLOSURE": "FORECLOSURE",
-        "LIS PENDENS": "LIS_PENDENS",
-        "JUDGMENT": "JUDGMENT",
-        "EVICTION": "EVICTION",
-        "SMALL CLAIMS": "SMALL_CLAIMS",
-        "COUNTY CIVIL": "COUNTY_CIVIL",
-        "FAMILY LAW": "FAMILY_LAW",
-        "PROBATE": "PROBATE"
-      },
+      "verification_date": "2026-06-09",
+      "verification_note": "BLOCKED until operator credentials are rotated and added as repo secrets, OR until public no-login path coverage is verified. Reclassified DOCUMENTS_LOGIN_REQUIRED 2026-06-09 (was FULLY_OPEN/INDEX_ONLY).",
+      "open_questions": ["Does the public no-login path on CORE return the same docket records as the logged-in path?","Are foreclosure case detail pages accessible without login?"],
+      "doc_type_synonyms": {"FORECLOSURE":"FORECLOSURE","LIS PENDENS":"LIS_PENDENS","JUDGMENT":"JUDGMENT","EVICTION":"EVICTION","SMALL CLAIMS":"SMALL_CLAIMS","COUNTY CIVIL":"COUNTY_CIVIL","FAMILY LAW":"FAMILY_LAW","PROBATE":"PROBATE"},
       "translator": "csv_static_list",
-      "translator_config": {
-        "date_field": "file_date",
-        "doc_type_field": "case_type",
-        "party_name_field": "party_name",
-        "case_number_field": "case_number"
-      },
-      "field_map": {
-        "case_number": "case_number",
-        "party_name": "party_name",
-        "file_date": "file_date",
-        "case_type": "case_type"
-      },
+      "translator_config": {"date_field":"file_date","doc_type_field":"case_type","party_name_field":"party_name","case_number_field":"case_number"},
+      "field_map": {"case_number":"case_number","party_name":"party_name","file_date":"file_date","case_type":"case_type"},
       "refresh_frequency": "daily",
       "cursor_type": "date_range",
       "cursor_field": "file_date",
@@ -240,37 +98,17 @@
       "source_priority": "P0",
       "build_priority": 3,
       "access_method": "web_portal",
-      "public_access_status": "FULLY_OPEN",
-      "document_access_status": "INDEX_ONLY",
-      "verification_confidence": "VERIFIED",
+      "public_access_status": "LOGIN_REQUIRED",
+      "document_access_status": "DOCUMENTS_LOGIN_REQUIRED",
+      "verification_confidence": "LOW",
       "verification_method": "LIVE_PORTAL",
-      "verification_date": "2026-06-08",
-      "verification_note": "Online foreclosure auctions held Monday-Friday at 11am. RealAuction platform. Registration required to bid, viewing is open. Sales conducted per Chapter 45 Florida Statutes.",
-      "open_questions": [
-        "Determine if sale calendar and property lists are publicly viewable without registration"
-      ],
-      "doc_type_synonyms": {
-        "FORECLOSURE SALE": "FORECLOSURE_SALE",
-        "CERTIFICATE OF SALE": "CERTIFICATE_OF_SALE",
-        "CERTIFICATE OF TITLE": "CERTIFICATE_OF_TITLE"
-      },
+      "verification_date": "2026-06-09",
+      "verification_note": "BLOCKED until SCRAPPEY_API_KEY is provided AND hardcoded operator credentials are rotated. Reclassified LOGIN_REQUIRED 2026-06-09. Public calendar viewability to be re-verified in Stage B.",
+      "open_questions": ["Is the sale calendar viewable without registration?","Are sold-property results publicly listed post-sale?"],
+      "doc_type_synonyms": {"FORECLOSURE SALE":"FORECLOSURE_SALE","CERTIFICATE OF SALE":"CERTIFICATE_OF_SALE","CERTIFICATE OF TITLE":"CERTIFICATE_OF_TITLE"},
       "translator": "foreclosure_notices",
-      "translator_config": {
-        "sale_date_field": "sale_date",
-        "case_number_field": "case_number",
-        "property_address_field": "property_address",
-        "opening_bid_field": "opening_bid",
-        "sale_status_field": "sale_status"
-      },
-      "field_map": {
-        "address": "property_address",
-        "doc_number": "case_number",
-        "recording_year": "sale_year",
-        "recording_month": "sale_month",
-        "city": "property_city",
-        "zip": "property_zip",
-        "layer_id": "sale_id"
-      },
+      "translator_config": {"sale_date_field":"sale_date","case_number_field":"case_number","property_address_field":"property_address","opening_bid_field":"opening_bid","sale_status_field":"sale_status"},
+      "field_map": {"address":"property_address","doc_number":"case_number","recording_year":"sale_year","recording_month":"sale_month","city":"property_city","zip":"property_zip","layer_id":"sale_id"},
       "refresh_frequency": "daily",
       "cursor_type": "date_range",
       "cursor_field": "sale_date",
@@ -287,35 +125,17 @@
       "source_priority": "P0",
       "build_priority": 4,
       "access_method": "web_portal",
-      "public_access_status": "FULLY_OPEN",
-      "document_access_status": "INDEX_ONLY",
-      "verification_confidence": "VERIFIED",
+      "public_access_status": "LOGIN_REQUIRED",
+      "document_access_status": "DOCUMENTS_LOGIN_REQUIRED",
+      "verification_confidence": "LOW",
       "verification_method": "LIVE_PORTAL",
-      "verification_date": "2026-06-08",
-      "verification_note": "Tax deed sales per Chapter 197 Florida Statutes. Sales advertised 4 weeks prior. List of Lands Available for unsold properties. RealAuction platform.",
-      "open_questions": [
-        "Verify if auction calendar and property lists are publicly accessible"
-      ],
-      "doc_type_synonyms": {
-        "TAX DEED": "TAX_DEED",
-        "TAX CERTIFICATE": "TAX_CERTIFICATE",
-        "LIST OF LANDS": "LIST_OF_LANDS_AVAILABLE"
-      },
+      "verification_date": "2026-06-09",
+      "verification_note": "BLOCKED until hardcoded operator credentials are rotated. Reclassified LOGIN_REQUIRED 2026-06-09. Public List of Lands Available URL to be confirmed in Stage B.",
+      "open_questions": ["Is the auction calendar viewable without registration?","Is List of Lands Available exposed on a separate public URL?"],
+      "doc_type_synonyms": {"TAX DEED":"TAX_DEED","TAX CERTIFICATE":"TAX_CERTIFICATE","LIST OF LANDS":"LIST_OF_LANDS_AVAILABLE"},
       "translator": "csv_static_list",
-      "translator_config": {
-        "sale_date_field": "sale_date",
-        "parcel_id_field": "parcel_id",
-        "tax_year_field": "tax_year",
-        "opening_bid_field": "opening_bid"
-      },
-      "field_map": {
-        "address": "property_address",
-        "doc_number": "tax_deed_number",
-        "recording_year": "tax_year",
-        "recording_month": "sale_month",
-        "city": "property_city",
-        "zip": "property_zip"
-      },
+      "translator_config": {"sale_date_field":"sale_date","parcel_id_field":"parcel_id","tax_year_field":"tax_year","opening_bid_field":"opening_bid"},
+      "field_map": {"address":"property_address","doc_number":"tax_deed_number","recording_year":"tax_year","recording_month":"sale_month","city":"property_city","zip":"property_zip"},
       "refresh_frequency": "weekly",
       "cursor_type": "date_range",
       "cursor_field": "sale_date",
@@ -334,60 +154,15 @@
       "access_method": "web_portal",
       "public_access_status": "FULLY_OPEN",
       "document_access_status": "FULL_TEXT",
-      "verification_confidence": "VERIFIED",
+      "verification_confidence": "LOW",
       "verification_method": "LIVE_PORTAL",
-      "verification_date": "2026-06-08",
-      "verification_note": "Property Appraiser basic and advanced search. Search by RE#, owner name, property address. Database includes all real estate parcels in Duval County. Updated daily. Values from last certified Tax Roll (October 2025).",
-      "open_questions": [],
+      "verification_date": "2026-06-09",
+      "verification_note": "Portal is open to public. Current scraper is a stub that does not query the portal. Required for parcel-master enrichment. Stage C work item.",
+      "open_questions": ["Does the portal expose a JSON endpoint behind the search form?","Is bulk download / FTP available for the certified tax roll?"],
       "doc_type_synonyms": {},
       "translator": "parcel_master",
-      "translator_config": {
-        "exemption_codes": {
-          "homestead": [
-            "HS",
-            "HSE",
-            "HSD"
-          ],
-          "over_65": [
-            "OV65",
-            "O65"
-          ],
-          "disabled": [
-            "DIS",
-            "DV"
-          ],
-          "veteran": [
-            "VET",
-            "VETD"
-          ],
-          "agricultural": [
-            "AGR",
-            "AG"
-          ],
-          "save_our_homes": [
-            "SOH",
-            "SOH_P"
-          ]
-        }
-      },
-      "field_map": {
-        "parcel_id": "re_number",
-        "address": "situs_address",
-        "city": "situs_city",
-        "zip": "situs_zip",
-        "owner_name": "owner_name",
-        "owner_mailing_address": "owner_mailing_addr1",
-        "owner_mailing_city": "owner_mailing_city",
-        "owner_mailing_state": "owner_mailing_state",
-        "owner_mailing_zip": "owner_mailing_zip",
-        "assessed_value": "assessed_value",
-        "land_value": "land_value",
-        "improvement_value": "improvement_value",
-        "year_built": "year_built",
-        "property_use": "property_class",
-        "acres": "acreage",
-        "legal_description": "legal_description"
-      },
+      "translator_config": {"exemption_codes":{"homestead":["HS","HSE","HSD"],"over_65":["OV65","O65"],"disabled":["DIS","DV"],"veteran":["VET","VETD"],"agricultural":["AGR","AG"],"save_our_homes":["SOH","SOH_P"]}},
+      "field_map": {"parcel_id":"re_number","address":"situs_address","city":"situs_city","zip":"situs_zip","owner_name":"owner_name","owner_mailing_address":"owner_mailing_addr1","owner_mailing_city":"owner_mailing_city","owner_mailing_state":"owner_mailing_state","owner_mailing_zip":"owner_mailing_zip","assessed_value":"assessed_value","land_value":"land_value","improvement_value":"improvement_value","year_built":"year_built","property_use":"property_class","acres":"acreage","legal_description":"legal_description"},
       "parcel_id_prefix": "DC-",
       "refresh_frequency": "weekly",
       "cursor_type": "full_refresh",
@@ -406,28 +181,15 @@
       "access_method": "web_portal",
       "public_access_status": "FULLY_OPEN",
       "document_access_status": "FULL_TEXT",
-      "verification_confidence": "VERIFIED",
+      "verification_confidence": "LOW",
       "verification_method": "LIVE_PORTAL",
-      "verification_date": "2026-06-08",
-      "verification_note": "Tax Collector Lien Info portal. 24/7 access. Amount Due valid for current month only. Not a title search substitute.",
-      "open_questions": [
-        "Determine if bulk parcel lien data is accessible via API or download"
-      ],
-      "doc_type_synonyms": {
-        "TAX LIEN": "TAX_LIEN",
-        "DELINQUENT": "DELINQUENT_TAX"
-      },
+      "verification_date": "2026-06-09",
+      "verification_note": "Portal is open. Per-parcel current-month query today. Bulk endpoint not identified. Current scraper is a stub. Reclassified LOW confidence 2026-06-09 (was VERIFIED).",
+      "open_questions": ["Is bulk parcel lien data accessible via API or download?","Can per-parcel queries be batched efficiently?"],
+      "doc_type_synonyms": {"TAX LIEN":"TAX_LIEN","DELINQUENT":"DELINQUENT_TAX"},
       "translator": "csv_static_list",
-      "translator_config": {
-        "tax_year_field": "tax_year",
-        "amount_due_field": "amount_due",
-        "parcel_id_field": "parcel_id"
-      },
-      "field_map": {
-        "parcel_id": "re_number",
-        "amount_due": "amount_due",
-        "tax_year": "tax_year"
-      },
+      "translator_config": {"tax_year_field":"tax_year","amount_due_field":"amount_due","parcel_id_field":"parcel_id"},
+      "field_map": {"parcel_id":"re_number","amount_due":"amount_due","tax_year":"tax_year"},
       "refresh_frequency": "weekly",
       "cursor_type": "full_refresh",
       "operator_override": false
@@ -445,94 +207,15 @@
       "access_method": "web_portal",
       "public_access_status": "FULLY_OPEN",
       "document_access_status": "FULL_TEXT",
-      "verification_confidence": "VERIFIED",
+      "verification_confidence": "LOW",
       "verification_method": "LIVE_PORTAL",
-      "verification_date": "2026-06-08",
-      "verification_note": "City of Jacksonville GIS property map. Search by parcel, address, street, EDA. Multiple layers including parcels, sales, zoning, flood zones, CPAC districts. Export to Excel available.",
-      "open_questions": [
-        "Determine if ArcGIS REST API endpoints are exposed for programmatic access"
-      ],
+      "verification_date": "2026-06-09",
+      "verification_note": "FRAMEWORK §4.33 VIOLATION: current scraper returns status:healthy, records_fetched:0 without making any request to the portal. Reclassified LOW confidence 2026-06-09 (was VERIFIED). Must be replaced with a real ArcGIS REST query in Stage C, or disabled from the active source list.",
+      "open_questions": ["What is the ArcGIS REST feature-service URL for Duval parcels?","Are zoning, flood-zone, and CPAC-district layers exposed as separate REST endpoints?"],
       "doc_type_synonyms": {},
       "translator": "csv_static_list",
-      "translator_config": {
-        "parcel_id_field": "re_number",
-        "address_field": "address",
-        "layer_field": "layer_type"
-      },
-      "field_map": {
-        "parcel_id": "re_number",
-        "address": "address",
-        "city": "city",
-        "zip": "zip"
-      },
+      "translator_config": {"parcel_id_field":"re_number","address_field":"address","layer_field":"layer_type"},
+      "field_map": {"parcel_id":"re_number","address":"address","city":"city","zip":"zip"},
       "refresh_frequency": "monthly",
       "cursor_type": "full_refresh",
-      "operator_override": false
-    },
-    "code_enforcement": {
-      "source_id": "duval_code_enforcement",
-      "source_name": "Jacksonville Municipal Code Compliance",
-      "source_url": "https://www.jacksonville.gov/departments/neighborhoods/municipal-code-compliance",
-      "portal_type": "custom_web",
-      "official_status": "OFFICIAL_PRIMARY",
-      "lead_value": "SUPPORTING",
-      "source_role": "TIER_2",
-      "source_priority": "P1",
-      "build_priority": 8,
-      "access_method": "public_records_request",
-      "public_access_status": "REQUEST_REQUIRED",
-      "document_access_status": "INDEX_ONLY",
-      "verification_confidence": "VERIFIED",
-      "verification_method": "LIVE_PORTAL",
-      "verification_date": "2026-06-08",
-      "verification_note": "Municipal Code Compliance Division enforces property maintenance, safety, zoning codes. Public records request required for case details, liens, fines. PRR submitted via records.coj.net.",
-      "open_questions": [
-        "Submit PRR to test response time and data format",
-        "Determine if active case list is published online"
-      ],
-      "doc_type_synonyms": {
-        "CODE VIOLATION": "CODE_VIOLATION",
-        "NUISANCE LIEN": "NUISANCE_LIEN",
-        "DEMOLITION LIEN": "DEMOLITION_LIEN",
-        "ADMINISTRATIVE FINE": "ADMINISTRATIVE_FINE"
-      },
-      "translator": "csv_static_list",
-      "translator_config": {
-        "case_id_field": "case_id",
-        "address_field": "property_address",
-        "violation_type_field": "violation_type",
-        "status_field": "case_status"
-      },
-      "field_map": {
-        "address": "property_address",
-        "city": "property_city",
-        "zip": "property_zip"
-      },
-      "refresh_frequency": "weekly",
-      "cursor_type": "full_refresh",
-      "operator_override": false
-    }
-  },
-  "build_verdict": "READY_TO_BUILD",
-  "build_verdict_reason": "Multiple P0 primary lead sources verified and accessible: Official Records (or.duvalclerk.com), Court Records (CORE), Foreclosure Sales (realforeclose.com), Tax Deed Sales (realtaxdeed.com). Enrichment sources: Property Appraiser, Tax Collector, GIS. Supporting: Code Enforcement (PRR required).",
-  "build_verdict_at": "2026-06-08T06:49:34+05:30",
-  "operator_override_audit": [],
-  "deployment": {
-    "github_repo": "duval-intel",
-    "live_url": "https://athsailak2-blip.github.io/duval-intel/",
-    "scheduled_task_name": "duval-intel-refresh",
-    "watchdog_task_name": "duval-intel-watchdog",
-    "storage_mode": "STATIC_JSON_MODE"
-  },
-  "dashboard": {
-    "title": "Duval County Lead Intelligence",
-    "subtitle": "Jacksonville & Beaches Area",
-    "county_label": "Duval County, Florida",
-    "refresh_label": "Daily Refresh",
-    "theme": {
-      "primary_color": "#1a5276",
-      "accent_color": "#f39c12",
-      "background_color": "#f8f9fa"
-    }
-  }
-}
+      "operator_override":

@@ -1,0 +1,20 @@
+{
+  "source_id": "duval_official_records",
+  "fingerprinted_at": "2026-06-09T06:47:00Z",
+  "framework_version": "v5.4.0",
+  "portal_family": "county_clerk_recorder",
+  "vendor_family": "civilserve_or_county_custom",
+  "architecture": "spa_with_api",
+  "discovered_endpoints": [
+    {"path": "/.../GridResults", "method": "POST", "auth": "none", "response": "JSON paginated record list"}
+  ],
+  "protections_observed": {
+    "captcha": false,
+    "waf": false,
+    "rate_limit": "unknown — treat as ~1 req / 2s",
+    "session_required": false
+  },
+  "recommended_adapter": "http_json_grid_results",
+  "fingerprint_confidence": "HIGH",
+  "fingerprint_summary": "Public JSON grid endpoint, paginated by date range; returns record_date, doc_type, party_name, instrument_number, book/page, consideration, case_number. Drives Stage B daily delta."
+}
