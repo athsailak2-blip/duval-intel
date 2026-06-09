@@ -8,6 +8,7 @@
   "slug": "duval_fl",
   "framework_version": "v5.4.0",
   "state_rule_family": "FL_judicial_foreclosure",
+
   "geography": {
     "center_lat": 30.3322,
     "center_lng": -81.6557,
@@ -32,6 +33,7 @@
       "statute_reference": "Fla. Stat. \u00a7 197.542"
     }
   },
+
   "sources": {
     "official_records": {
       "source_id": "duval_official_records",
@@ -76,7 +78,7 @@
       "verification_confidence": "LOW",
       "verification_method": "LIVE_PORTAL",
       "verification_date": "2026-06-09",
-      "verification_note": "BLOCKED until operator credentials are rotated and added as repo secrets, OR until public no-login path coverage is verified. Reclassified DOCUMENTS_LOGIN_REQUIRED 2026-06-09 (was FULLY_OPEN/INDEX_ONLY).",
+      "verification_note": "BLOCKED until operator credentials are rotated and added as repo secrets, OR until public no-login path coverage is verified. Reclassified 2026-06-09.",
       "open_questions": ["Does the public no-login path on CORE return the same docket records as the logged-in path?","Are foreclosure case detail pages accessible without login?"],
       "doc_type_synonyms": {"FORECLOSURE":"FORECLOSURE","LIS PENDENS":"LIS_PENDENS","JUDGMENT":"JUDGMENT","EVICTION":"EVICTION","SMALL CLAIMS":"SMALL_CLAIMS","COUNTY CIVIL":"COUNTY_CIVIL","FAMILY LAW":"FAMILY_LAW","PROBATE":"PROBATE"},
       "translator": "csv_static_list",
@@ -103,7 +105,7 @@
       "verification_confidence": "LOW",
       "verification_method": "LIVE_PORTAL",
       "verification_date": "2026-06-09",
-      "verification_note": "BLOCKED until SCRAPPEY_API_KEY is provided AND hardcoded operator credentials are rotated. Reclassified LOGIN_REQUIRED 2026-06-09. Public calendar viewability to be re-verified in Stage B.",
+      "verification_note": "BLOCKED until SCRAPPEY_API_KEY is provided AND hardcoded operator credentials are rotated. Reclassified 2026-06-09.",
       "open_questions": ["Is the sale calendar viewable without registration?","Are sold-property results publicly listed post-sale?"],
       "doc_type_synonyms": {"FORECLOSURE SALE":"FORECLOSURE_SALE","CERTIFICATE OF SALE":"CERTIFICATE_OF_SALE","CERTIFICATE OF TITLE":"CERTIFICATE_OF_TITLE"},
       "translator": "foreclosure_notices",
@@ -130,7 +132,7 @@
       "verification_confidence": "LOW",
       "verification_method": "LIVE_PORTAL",
       "verification_date": "2026-06-09",
-      "verification_note": "BLOCKED until hardcoded operator credentials are rotated. Reclassified LOGIN_REQUIRED 2026-06-09. Public List of Lands Available URL to be confirmed in Stage B.",
+      "verification_note": "BLOCKED until hardcoded operator credentials are rotated. Public List of Lands Available URL to be confirmed in Stage B. Reclassified 2026-06-09.",
       "open_questions": ["Is the auction calendar viewable without registration?","Is List of Lands Available exposed on a separate public URL?"],
       "doc_type_synonyms": {"TAX DEED":"TAX_DEED","TAX CERTIFICATE":"TAX_CERTIFICATE","LIST OF LANDS":"LIST_OF_LANDS_AVAILABLE"},
       "translator": "csv_static_list",
@@ -157,8 +159,8 @@
       "verification_confidence": "LOW",
       "verification_method": "LIVE_PORTAL",
       "verification_date": "2026-06-09",
-      "verification_note": "Portal is open to public. Current scraper is a stub that does not query the portal. Required for parcel-master enrichment. Stage C work item.",
-      "open_questions": ["Does the portal expose a JSON endpoint behind the search form?","Is bulk download / FTP available for the certified tax roll?"],
+      "verification_note": "Portal is open. Current scraper is a stub that does not query the portal. Stage C work item. Reclassified 2026-06-09.",
+      "open_questions": ["Does the portal expose a JSON endpoint behind the search form?","Is bulk download or FTP available for the certified tax roll?"],
       "doc_type_synonyms": {},
       "translator": "parcel_master",
       "translator_config": {"exemption_codes":{"homestead":["HS","HSE","HSD"],"over_65":["OV65","O65"],"disabled":["DIS","DV"],"veteran":["VET","VETD"],"agricultural":["AGR","AG"],"save_our_homes":["SOH","SOH_P"]}},
@@ -184,7 +186,7 @@
       "verification_confidence": "LOW",
       "verification_method": "LIVE_PORTAL",
       "verification_date": "2026-06-09",
-      "verification_note": "Portal is open. Per-parcel current-month query today. Bulk endpoint not identified. Current scraper is a stub. Reclassified LOW confidence 2026-06-09 (was VERIFIED).",
+      "verification_note": "Portal is open. Per-parcel current-month query today. Bulk endpoint not identified. Current scraper is a stub. Reclassified 2026-06-09.",
       "open_questions": ["Is bulk parcel lien data accessible via API or download?","Can per-parcel queries be batched efficiently?"],
       "doc_type_synonyms": {"TAX LIEN":"TAX_LIEN","DELINQUENT":"DELINQUENT_TAX"},
       "translator": "csv_static_list",
@@ -210,7 +212,7 @@
       "verification_confidence": "LOW",
       "verification_method": "LIVE_PORTAL",
       "verification_date": "2026-06-09",
-      "verification_note": "FRAMEWORK §4.33 VIOLATION: current scraper returns status:healthy, records_fetched:0 without making any request to the portal. Reclassified LOW confidence 2026-06-09 (was VERIFIED). Must be replaced with a real ArcGIS REST query in Stage C, or disabled from the active source list.",
+      "verification_note": "FRAMEWORK \u00a74.33 VIOLATION: current scraper returns status:healthy, records_fetched:0 without making any request to the portal. Must be replaced with a real ArcGIS REST query in Stage C, or disabled. Reclassified 2026-06-09.",
       "open_questions": ["What is the ArcGIS REST feature-service URL for Duval parcels?","Are zoning, flood-zone, and CPAC-district layers exposed as separate REST endpoints?"],
       "doc_type_synonyms": {},
       "translator": "csv_static_list",
@@ -218,4 +220,146 @@
       "field_map": {"parcel_id":"re_number","address":"address","city":"city","zip":"zip"},
       "refresh_frequency": "monthly",
       "cursor_type": "full_refresh",
-      "operator_override":
+      "operator_override": false
+    },
+    "code_enforcement": {
+      "source_id": "duval_code_enforcement",
+      "source_name": "City of Jacksonville Municipal Code Compliance",
+      "source_url": "https://www.jacksonville.gov/departments/neighborhoods/municipal-code-compliance",
+      "portal_type": "custom_web",
+      "official_status": "OFFICIAL_PRIMARY",
+      "lead_value": "SUPPORTING",
+      "source_role": "TIER_2",
+      "source_priority": "P1",
+      "build_priority": 8,
+      "access_method": "web_portal",
+      "public_access_status": "PARTIAL_OPEN",
+      "document_access_status": "INDEX_ONLY",
+      "verification_confidence": "MEDIUM",
+      "verification_method": "LIVE_PORTAL",
+      "verification_date": "2026-06-09",
+      "verification_note": "Case detail requires PRR via records.coj.net. \u00a74.23 manual-assisted-pull pattern. Not blocking Stage B. Reclassified 2026-06-09.",
+      "open_questions": ["What is the average PRR turnaround for code compliance cases?","Can a recurring PRR be filed for new cases?"],
+      "doc_type_synonyms": {"CODE LIEN":"CODE_LIEN","DEMOLITION":"DEMOLITION","CONDEMNATION":"CONDEMNATION"},
+      "translator": "csv_static_list",
+      "translator_config": {"case_number_field":"case_number","violation_field":"violation","file_date_field":"file_date"},
+      "field_map": {"case_number":"case_number","violation":"violation","file_date":"file_date","address":"property_address"},
+      "refresh_frequency": "weekly",
+      "cursor_type": "date_range",
+      "cursor_field": "file_date",
+      "operator_override": false
+    }
+  },
+
+  "source_of_record_matrix": {
+    "generated_at": "2026-06-09T06:47:00Z",
+    "framework_version": "v5.4.0",
+    "county_build_status": "PARTIAL_BUILD_READY",
+    "artifact_path": "runs/duval_fl/recon/source_of_record_matrix.json",
+    "lead_types_applicable": 24,
+    "lead_types_not_applicable_in_state": 3,
+    "lead_types_live": 11,
+    "lead_types_blocked": 8,
+    "lead_types_stubbed": 3,
+    "lead_types_prr_required": 2,
+    "lead_types_federal_out_of_scope": 1,
+    "selected_primary_source": "duval_official_records",
+    "notes": "FL_judicial_foreclosure: Trustee Sale + Notice of Trustee Sale + Notice of Substitute Trustee Sale are NOT_APPLICABLE_IN_STATE. Full machine-readable matrix in artifact_path."
+  },
+
+  "source_coverage_map": {
+    "generated_at": "2026-06-09T06:47:00Z",
+    "live_sources": ["duval_official_records"],
+    "blocked_sources": ["duval_court_records","duval_tax_deed_sales","duval_foreclosure_sales","duval_parcel_master","duval_tax_collector","duval_gis"],
+    "limited_coverage_sources": ["duval_code_enforcement"],
+    "not_found_lead_types": ["Bankruptcy"],
+    "operator_review_required": ["duval_tax_collector","duval_parcel_master","duval_gis","duval_code_enforcement"],
+    "artifact_path": "runs/duval_fl/recon/source_coverage_map.md"
+  },
+
+  "api_discovery": {
+    "generated_at": "2026-06-09T06:47:00Z",
+    "artifact_path": "runs/duval_fl/recon/api_discovery_report.md",
+    "found_apis": [
+      {
+        "source_id": "duval_official_records",
+        "endpoint_family": "https://or.duvalclerk.com/.../GridResults",
+        "api_type": "REST",
+        "auth_required": false,
+        "rate_limit": "unknown_throttle_2s",
+        "source_role": "PRIMARY_EVENT_SOURCE",
+        "documentation": "none_public"
+      }
+    ],
+    "searched_paths": ["/api","/swagger","/docs","/api-docs","/openapi.json","github","postman"],
+    "backlog": ["services.arcgis.com probe for duval_gis","network-inspect core.duvalclerk.com","network-inspect paopropertysearch.coj.net","network-inspect realtaxdeed.com","network-inspect realforeclose.com"]
+  },
+
+  "auto_resolve_status": {
+    "phase": "PHASE_0_RECON_COMPLETE",
+    "attempted_unblockers": [],
+    "unblockers_succeeded": [],
+    "unblockers_failed": [],
+    "reason": "No auto-unblock actions taken in PR1. Stage B will attempt credential rotation, Scrappey key provisioning, and ArcGIS REST probing."
+  },
+
+  "final_resolution_status": {
+    "verified_live_sources": 1,
+    "blocked_sources": 7,
+    "primary_lead_source": "duval_official_records",
+    "partial_build_ready": true,
+    "full_build_ready": false,
+    "build_label": "PARTIAL_BUILD",
+    "build_label_reason": "Official Records live; 7 other sources sequenced behind credential rotation, stub replacement, and PRR."
+  },
+
+  "build_verdict": "PARTIALLY_RESOLVED_BUILDABLE",
+  "build_verdict_reason": "1 of 8 sources verified live (duval_official_records via GridResults API). 3 sources blocked on credential rotation (court_records, tax_deed_sales, foreclosure_sales). 3 sources stubbed (parcel_master, tax_collector, gis). 1 source PRR-gated (code_enforcement). Partial Build shippable per \u00a74.16 once duval_official_records is rewritten to \u00a74.32 wrapped raw-record shape in Stage B.",
+  "build_verdict_at": "2026-06-09T06:47:00Z",
+
+  "aggregation": {
+    "sla_minutes": 60,
+    "timezone": "America/New_York",
+    "deal_path_threshold": 75,
+    "signal_decay_days": 365
+  },
+
+  "scoring": {
+    "foreclosure_weight": 25,
+    "tax_delinquency_weight": 20,
+    "code_violation_weight": 15,
+    "vacancy_weight": 15,
+    "absentee_owner_weight": 10,
+    "equity_weight": 15,
+    "deal_path_threshold": 75
+  },
+
+  "deployment": {
+    "github_repo": "duval-intel",
+    "github_org": "athsailak2-blip",
+    "live_url": "https://athsailak2-blip.github.io/duval-intel/",
+    "scheduled_task_name": "duval-intel-refresh",
+    "watchdog_task_name": "duval-intel-watchdog",
+    "storage_mode": "STATIC_JSON_MODE"
+  },
+
+  "dashboard": {
+    "title": "Duval County Lead Intelligence",
+    "subtitle": "Jacksonville & Beaches Area",
+    "county_label": "Duval County, Florida",
+    "refresh_label": "Daily Refresh",
+    "primary_color": "#1a5276",
+    "accent_color": "#f39c12",
+    "theme": {
+      "primary_color": "#1a5276",
+      "accent_color": "#f39c12",
+      "background_color": "#f8f9fa"
+    },
+    "default_view": {
+      "name": "new_since_yesterday",
+      "filter": "first_seen_at >= now - 24h",
+      "description": "New leads since yesterday's pipeline run",
+      "acceptance_criteria_source": "Operator 2026-06-09: 'every day the investor should see all the leads that were there in the last day, and it should have all the information.'"
+    }
+  }
+}
