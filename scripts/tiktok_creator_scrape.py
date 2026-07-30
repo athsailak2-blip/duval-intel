@@ -24,8 +24,6 @@ DEFAULT_TERMS = (
     "affiliate", "available on ios", "available on android", "google play",
     "app store", "mobile app",
 )
-
-
 def request_json(path: str, params: dict[str, str], api_key: str, timeout: int = 45) -> dict:
     query = urlencode({key: value for key, value in params.items() if value != ""})
     request = Request(
@@ -69,28 +67,78 @@ def looks_promotional(video: dict, detail: dict, transcript: dict, terms: tuple[
     return bool(matched), matched
 
 
+def search_video(item: dict) -> dict:
+    """Normalize a keyword-search item to the shape used by creator videos."""
+    return item.get("aweme_info") or item.get("video") or item
+
+
+def search_video_id(video: dict) -> str:
+    return first_video_id(video) or str(video.get("aweme_id") or "")
+
+
+def collect_keyword_videos(keywords: tuple[str, ...], region: str, limit: int, api_key: str) -> list[dict]:
+    videos: list[dict] = []
+    seen: set[str] = set()
+    for keyword in keywords:
+        cursor = ""
+        while len(videos) < limit:
+            page = request_json(
+                "/v1/tiktok/search/keyword",
+                {
+                    "query": keyword,
+                    "date_posted": "all-time",
+                    "sort_by": "relevance",
+                    "region": region,
+                    "cursor": cursor,
+                    "trim": "false",
+                },
+                api_key,
+            )
+            batch = page.get("search_item_list") or page.get("aweme_list") or page.get("videos") or []
+            if not batch:
+                break
+            for item in batch:
+                video = search_video(item)
+                identifier = search_video_id(video) or video_url(video)
+                if identifier and identifier not in seen:
+                    seen.add(identifier)
+                    video["search_keyword"] = keyword
+                    videos.append(video)
+                    if len(videos) >= limit:
+                        break
+            next_cursor = str(page.get("cursor") or page.get("max_cursor") or "")
+            if not page.get("has_more", bool(next_cursor)) or not next_cursor or next_cursor == cursor:
+                break
+            cursor = next_cursor
+    return videos
+
+
 def collect(args: argparse.Namespace) -> dict:
     api_key = os.environ.get("SCRAPECREATORS_API_KEY")
     if not api_key:
         raise RuntimeError("SCRAPECREATORS_API_KEY is required and must not be committed")
 
-    profile = request_json("/v1/tiktok/profile", {"user_id": args.user_id, "cache_max_age": "7d"}, api_key)
-    videos: list[dict] = []
-    cursor = ""
-    while len(videos) < args.max_candidates:
-        page = request_json(
-            "/v3/tiktok/profile/videos",
-            {"user_id": args.user_id, "sort_by": "popular", "region": args.region, "max_cursor": cursor},
-            api_key,
-        )
-        batch = page.get("aweme_list") or page.get("videos") or []
-        if not batch:
-            break
-        videos.extend(batch)
-        next_cursor = str(page.get("max_cursor") or "")
-        if not page.get("has_more") or not next_cursor or next_cursor == cursor:
-            break
-        cursor = next_cursor
+    profile = {}
+    if args.keyword:
+        videos = collect_keyword_videos(tuple(args.keyword), args.region, args.max_candidates, api_key)
+    else:
+        profile = request_json("/v1/tiktok/profile", {"user_id": args.user_id, "cache_max_age": "7d"}, api_key)
+        videos = []
+        cursor = ""
+        while len(videos) < args.max_candidates:
+            page = request_json(
+                "/v3/tiktok/profile/videos",
+                {"user_id": args.user_id, "sort_by": "popular", "region": args.region, "max_cursor": cursor},
+                api_key,
+            )
+            batch = page.get("aweme_list") or page.get("videos") or []
+            if not batch:
+                break
+            videos.extend(batch)
+            next_cursor = str(page.get("max_cursor") or "")
+            if not page.get("has_more") or not next_cursor or next_cursor == cursor:
+                break
+            cursor = next_cursor
 
     records = []
     for index, video in enumerate(videos[: args.max_candidates], start=1):
@@ -105,7 +153,8 @@ def collect(args: argparse.Namespace) -> dict:
         records.append({
             "rank": index,
             "source_url": url,
-            "creator_id": args.user_id,
+            "creator_id": args.user_id or (video.get("author") or {}).get("uid", ""),
+            "search_keyword": video.get("search_keyword", ""),
             "region_proxy": args.region,
             "promotional_candidate": promotional,
             "promotion_signals": matched_terms,
@@ -119,7 +168,8 @@ def collect(args: argparse.Namespace) -> dict:
 
     return {
         "schema_version": "tiktok-recreation-research.v1",
-        "creator_id": args.user_id,
+        "creator_id": args.user_id or "",
+        "keywords": args.keyword or [],
         "region": args.region,
         "requested_candidates": args.max_candidates,
         "records": records,
@@ -134,7 +184,9 @@ def collect(args: argparse.Namespace) -> dict:
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--user-id", required=True, help="TikTok numeric user ID")
+    source = parser.add_mutually_exclusive_group(required=True)
+    source.add_argument("--user-id", help="TikTok numeric user ID")
+    source.add_argument("--keyword", action="append", help="TikTok search keyword; repeat for multiple searches")
     parser.add_argument("--output", type=Path, required=True, help="Output JSON path")
     parser.add_argument("--region", default="US", help="Proxy/collection region (default: US)")
     parser.add_argument("--max-candidates", type=int, default=1000)
