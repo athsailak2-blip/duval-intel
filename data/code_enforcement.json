@@ -2,14 +2,18 @@
   "source_id": "duval_code_enforcement",
   "records_fetched": 0,
   "new_records": [],
-  "updated_cursor": "2026-08-09",
+  "updated_cursor": "2026-08-10",
   "errors": [
     "PRR required - manual process"
   ],
-  "timestamp": "2026-08-09T11:28:59.306423",
+  "timestamp": "2026-08-10T11:46:43.372904",
   "prr_portal_status": {
-    "accessible": false,
-    "error": "HTTPSConnectionPool(host='jacksonvillefl.govqa.us', port=443): Read timed out. (read timeout=30)"
+    "accessible": true,
+    "status_code": 200,
+    "url": "https://records.coj.net",
+    "has_search": false,
+    "has_submit": true,
+    "has_form": true
   },
   "note": "Code enforcement data requires Public Records Request (PRR) submission"
 }
