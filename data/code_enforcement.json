@@ -2,14 +2,14 @@
   "source_id": "duval_code_enforcement",
   "records_fetched": 0,
   "new_records": [],
-  "updated_cursor": "2026-09-07",
+  "updated_cursor": "2026-09-08",
   "errors": [
     "PRR required - manual process"
   ],
-  "timestamp": "2026-09-07T16:18:32.946031",
+  "timestamp": "2026-09-08T14:56:04.336327",
   "prr_portal_status": {
     "accessible": false,
-    "error": "HTTPSConnectionPool(host='records.coj.net', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='records.coj.net', port=443) at 0x7f9b6b5ea4e0>, 'Connection to records.coj.net timed out. (connect timeout=30)'))"
+    "error": "HTTPSConnectionPool(host='records.coj.net', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='records.coj.net', port=443) at 0x7f4c81f58d70>, 'Connection to records.coj.net timed out. (connect timeout=30)'))"
   },
   "note": "Code enforcement data requires Public Records Request (PRR) submission"
 }
