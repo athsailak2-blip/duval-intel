@@ -1,19 +1,19 @@
 {
   "county": "Duval",
   "state": "FL",
-  "last_refresh": "2026-09-11T14:50:52.089649",
+  "last_refresh": "2026-09-12T13:53:55.141918",
   "framework_version": "v5.3.1",
   "total_leads": 100,
   "high_stack_leads": 0,
   "sources": {
     "official_records": {
       "status": "healthy",
-      "last_refresh": "2026-09-11T14:50:44.358791",
-      "records_count": 1268
+      "last_refresh": "2026-09-12T13:53:47.124897",
+      "records_count": 817
     },
     "court_records": {
       "status": "healthy",
-      "last_refresh": "2026-09-11T14:50:45.677296",
+      "last_refresh": "2026-09-12T13:53:48.471723",
       "records_count": 0
     },
     "foreclosure_sales": {
@@ -23,27 +23,27 @@
     },
     "tax_deed_sales": {
       "status": "healthy",
-      "last_refresh": "2026-09-11T14:50:47.250680",
+      "last_refresh": "2026-09-12T13:53:50.765051",
       "records_count": 0
     },
     "parcel_master": {
       "status": "healthy",
-      "last_refresh": "2026-09-11T14:50:49.274907",
+      "last_refresh": "2026-09-12T13:53:52.682091",
       "records_count": 0
     },
     "tax_collector": {
       "status": "healthy",
-      "last_refresh": "2026-09-11T14:50:50.517166",
+      "last_refresh": "2026-09-12T13:53:53.876353",
       "records_count": 0
     },
     "gis_mapping": {
       "status": "healthy",
-      "last_refresh": "2026-09-11T14:50:50.635894",
+      "last_refresh": "2026-09-12T13:53:54.030597",
       "records_count": 0
     },
     "code_enforcement": {
       "status": "prr_required",
-      "last_refresh": "2026-09-11T14:50:51.765489",
+      "last_refresh": "2026-09-12T13:53:54.970661",
       "records_count": 0
     }
   },
@@ -65,7 +65,7 @@
         {
           "type": "LIS_PENDENS",
           "source": "duval_official_records",
-          "date": "2026-09-11",
+          "date": "2026-09-12",
           "confidence": 80,
           "details": "Record from official_records: LIS PENDENS"
         }
@@ -73,7 +73,7 @@
       "deal_path": "wholesale",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-09-11T14:50:52.088534",
+      "last_updated": "2026-09-12T13:53:55.140489",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -99,7 +99,7 @@
         {
           "type": "LIS_PENDENS",
           "source": "duval_official_records",
-          "date": "2026-09-11",
+          "date": "2026-09-12",
           "confidence": 80,
           "details": "Record from official_records: LIS PENDENS"
         }
@@ -107,7 +107,7 @@
       "deal_path": "wholesale",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-09-11T14:50:52.088551",
+      "last_updated": "2026-09-12T13:53:55.140509",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -133,7 +133,7 @@
         {
           "type": "LIS_PENDENS",
           "source": "duval_official_records",
-          "date": "2026-09-11",
+          "date": "2026-09-12",
           "confidence": 80,
           "details": "Record from official_records: LIS PENDENS"
         }
@@ -141,7 +141,7 @@
       "deal_path": "wholesale",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-09-11T14:50:52.088561",
+      "last_updated": "2026-09-12T13:53:55.140523",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -167,7 +167,7 @@
         {
           "type": "LIS_PENDENS",
           "source": "duval_official_records",
-          "date": "2026-09-11",
+          "date": "2026-09-12",
           "confidence": 80,
           "details": "Record from official_records: LIS PENDENS"
         }
@@ -175,7 +175,7 @@
       "deal_path": "wholesale",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-09-11T14:50:52.088572",
+      "last_updated": "2026-09-12T13:53:55.140534",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -201,7 +201,7 @@
         {
           "type": "LIS_PENDENS",
           "source": "duval_official_records",
-          "date": "2026-09-11",
+          "date": "2026-09-12",
           "confidence": 80,
           "details": "Record from official_records: LIS PENDENS"
         }
@@ -209,7 +209,7 @@
       "deal_path": "wholesale",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-09-11T14:50:52.088582",
+      "last_updated": "2026-09-12T13:53:55.140545",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -235,7 +235,7 @@
         {
           "type": "LIS_PENDENS",
           "source": "duval_official_records",
-          "date": "2026-09-11",
+          "date": "2026-09-12",
           "confidence": 80,
           "details": "Record from official_records: LIS PENDENS"
         }
@@ -243,7 +243,7 @@
       "deal_path": "wholesale",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-09-11T14:50:52.088592",
+      "last_updated": "2026-09-12T13:53:55.140559",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -269,7 +269,7 @@
         {
           "type": "LIS_PENDENS",
           "source": "duval_official_records",
-          "date": "2026-09-11",
+          "date": "2026-09-12",
           "confidence": 80,
           "details": "Record from official_records: LIS PENDENS"
         }
@@ -277,7 +277,7 @@
       "deal_path": "wholesale",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-09-11T14:50:52.088619",
+      "last_updated": "2026-09-12T13:53:55.140569",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -303,7 +303,7 @@
         {
           "type": "LIS_PENDENS",
           "source": "duval_official_records",
-          "date": "2026-09-11",
+          "date": "2026-09-12",
           "confidence": 80,
           "details": "Record from official_records: LIS PENDENS"
         }
@@ -311,7 +311,7 @@
       "deal_path": "wholesale",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-09-11T14:50:52.088626",
+      "last_updated": "2026-09-12T13:53:55.140579",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -337,7 +337,7 @@
         {
           "type": "LIS_PENDENS",
           "source": "duval_official_records",
-          "date": "2026-09-11",
+          "date": "2026-09-12",
           "confidence": 80,
           "details": "Record from official_records: LIS PENDENS"
         }
@@ -345,7 +345,7 @@
       "deal_path": "wholesale",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-09-11T14:50:52.088634",
+      "last_updated": "2026-09-12T13:53:55.140588",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -371,7 +371,7 @@
         {
           "type": "LIS_PENDENS",
           "source": "duval_official_records",
-          "date": "2026-09-11",
+          "date": "2026-09-12",
           "confidence": 80,
           "details": "Record from official_records: LIS PENDENS"
         }
@@ -379,7 +379,7 @@
       "deal_path": "wholesale",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-09-11T14:50:52.088643",
+      "last_updated": "2026-09-12T13:53:55.140597",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -391,9 +391,9 @@
     {
       "lead_id": "LEAD-011",
       "parcel_id": "DC-000011",
-      "score": 85,
+      "score": 50,
       "score_reasons": [
-        "Single distress signal: Lis Pendens",
+        "Single distress signal: Mortgage",
         "Monitoring for additional signals"
       ],
       "address": "11 Sample St, Jacksonville, FL 32201",
@@ -403,17 +403,17 @@
       "owner_mailing_address": "Unknown",
       "signals": [
         {
-          "type": "LIS_PENDENS",
+          "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-09-11",
+          "date": "2026-09-12",
           "confidence": 80,
-          "details": "Record from official_records: LIS PENDENS"
+          "details": "Record from official_records: MORTGAGE"
         }
       ],
-      "deal_path": "wholesale",
+      "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-09-11T14:50:52.088650",
+      "last_updated": "2026-09-12T13:53:55.140609",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -425,9 +425,9 @@
     {
       "lead_id": "LEAD-012",
       "parcel_id": "DC-000012",
-      "score": 85,
+      "score": 50,
       "score_reasons": [
-        "Single distress signal: Lis Pendens",
+        "Single distress signal: Mortgage",
         "Monitoring for additional signals"
       ],
       "address": "12 Sample St, Jacksonville, FL 32202",
@@ -437,17 +437,17 @@
       "owner_mailing_address": "Unknown",
       "signals": [
         {
-          "type": "LIS_PENDENS",
+          "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-09-11",
+          "date": "2026-09-12",
           "confidence": 80,
-          "details": "Record from official_records: LIS PENDENS"
+          "details": "Record from official_records: MORTGAGE"
         }
       ],
-      "deal_path": "wholesale",
+      "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-09-11T14:50:52.088660",
+      "last_updated": "2026-09-12T13:53:55.140623",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -473,7 +473,7 @@
         {
           "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-09-11",
+          "date": "2026-09-12",
           "confidence": 80,
           "details": "Record from official_records: MORTGAGE"
         }
@@ -481,7 +481,7 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-09-11T14:50:52.088669",
+      "last_updated": "2026-09-12T13:53:55.140650",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -507,7 +507,7 @@
         {
           "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-09-11",
+          "date": "2026-09-12",
           "confidence": 80,
           "details": "Record from official_records: MORTGAGE"
         }
@@ -515,7 +515,7 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-09-11T14:50:52.088678",
+      "last_updated": "2026-09-12T13:53:55.140660",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -541,7 +541,7 @@
         {
           "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-09-11",
+          "date": "2026-09-12",
           "confidence": 80,
           "details": "Record from official_records: MORTGAGE"
         }
@@ -549,7 +549,7 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-09-11T14:50:52.088688",
+      "last_updated": "2026-09-12T13:53:55.140674",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -575,7 +575,7 @@
         {
           "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-09-11",
+          "date": "2026-09-12",
           "confidence": 80,
           "details": "Record from official_records: MORTGAGE"
         }
@@ -583,7 +583,7 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-09-11T14:50:52.088698",
+      "last_updated": "2026-09-12T13:53:55.140688",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -609,7 +609,7 @@
         {
           "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-09-11",
+          "date": "2026-09-12",
           "confidence": 80,
           "details": "Record from official_records: MORTGAGE"
         }
@@ -617,7 +617,7 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-09-11T14:50:52.088706",
+      "last_updated": "2026-09-12T13:53:55.140699",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -643,7 +643,7 @@
         {
           "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-09-11",
+          "date": "2026-09-12",
           "confidence": 80,
           "details": "Record from official_records: MORTGAGE"
         }
@@ -651,7 +651,7 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-09-11T14:50:52.088713",
+      "last_updated": "2026-09-12T13:53:55.140711",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -677,7 +677,7 @@
         {
           "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-09-11",
+          "date": "2026-09-12",
           "confidence": 80,
           "details": "Record from official_records: MORTGAGE"
         }
@@ -685,7 +685,7 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-09-11T14:50:52.088721",
+      "last_updated": "2026-09-12T13:53:55.140721",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -711,7 +711,7 @@
         {
           "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-09-11",
+          "date": "2026-09-12",
           "confidence": 80,
           "details": "Record from official_records: MORTGAGE"
         }
@@ -719,7 +719,7 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-09-11T14:50:52.088730",
+      "last_updated": "2026-09-12T13:53:55.140731",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -745,7 +745,7 @@
         {
           "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-09-11",
+          "date": "2026-09-12",
           "confidence": 80,
           "details": "Record from official_records: MORTGAGE"
         }
@@ -753,7 +753,7 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-09-11T14:50:52.088738",
+      "last_updated": "2026-09-12T13:53:55.140741",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -779,7 +779,7 @@
         {
           "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-09-11",
+          "date": "2026-09-12",
           "confidence": 80,
           "details": "Record from official_records: MORTGAGE"
         }
@@ -787,7 +787,7 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-09-11T14:50:52.088747",
+      "last_updated": "2026-09-12T13:53:55.140751",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -813,7 +813,7 @@
         {
           "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-09-11",
+          "date": "2026-09-12",
           "confidence": 80,
           "details": "Record from official_records: MORTGAGE"
         }
@@ -821,7 +821,7 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-09-11T14:50:52.088755",
+      "last_updated": "2026-09-12T13:53:55.140763",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -847,7 +847,7 @@
         {
           "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-09-11",
+          "date": "2026-09-12",
           "confidence": 80,
           "details": "Record from official_records: MORTGAGE"
         }
@@ -855,7 +855,7 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-09-11T14:50:52.088763",
+      "last_updated": "2026-09-12T13:53:55.140773",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -881,7 +881,7 @@
         {
           "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-09-11",
+          "date": "2026-09-12",
           "confidence": 80,
           "details": "Record from official_records: MORTGAGE"
         }
@@ -889,7 +889,7 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-09-11T14:50:52.088772",
+      "last_updated": "2026-09-12T13:53:55.140783",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -915,7 +915,7 @@
         {
           "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-09-11",
+          "date": "2026-09-12",
           "confidence": 80,
           "details": "Record from official_records: MORTGAGE"
         }
@@ -923,7 +923,7 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-09-11T14:50:52.088780",
+      "last_updated": "2026-09-12T13:53:55.140794",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -949,7 +949,7 @@
         {
           "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-09-11",
+          "date": "2026-09-12",
           "confidence": 80,
           "details": "Record from official_records: MORTGAGE"
         }
@@ -957,7 +957,7 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-09-11T14:50:52.088788",
+      "last_updated": "2026-09-12T13:53:55.140805",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -983,7 +983,7 @@
         {
           "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-09-11",
+          "date": "2026-09-12",
           "confidence": 80,
           "details": "Record from official_records: MORTGAGE"
         }
@@ -991,7 +991,7 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-09-11T14:50:52.088812",
+      "last_updated": "2026-09-12T13:53:55.140814",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -1017,7 +1017,7 @@
         {
           "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-09-11",
+          "date": "2026-09-12",
           "confidence": 80,
           "details": "Record from official_records: MORTGAGE"
         }
@@ -1025,7 +1025,7 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-09-11T14:50:52.088821",
+      "last_updated": "2026-09-12T13:53:55.140828",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -1051,7 +1051,7 @@
         {
           "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-09-11",
+          "date": "2026-09-12",
           "confidence": 80,
           "details": "Record from official_records: MORTGAGE"
         }
@@ -1059,7 +1059,7 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-09-11T14:50:52.088829",
+      "last_updated": "2026-09-12T13:53:55.140838",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -1085,7 +1085,7 @@
         {
           "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-09-11",
+          "date": "2026-09-12",
           "confidence": 80,
           "details": "Record from official_records: MORTGAGE"
         }
@@ -1093,7 +1093,7 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-09-11T14:50:52.088836",
+      "last_updated": "2026-09-12T13:53:55.140848",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -1119,7 +1119,7 @@
         {
           "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-09-11",
+          "date": "2026-09-12",
           "confidence": 80,
           "details": "Record from official_records: MORTGAGE"
         }
@@ -1127,7 +1127,7 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-09-11T14:50:52.088844",
+      "last_updated": "2026-09-12T13:53:55.140858",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -1153,7 +1153,7 @@
         {
           "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-09-11",
+          "date": "2026-09-12",
           "confidence": 80,
           "details": "Record from official_records: MORTGAGE"
         }
@@ -1161,7 +1161,7 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-09-11T14:50:52.088851",
+      "last_updated": "2026-09-12T13:53:55.140869",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -1187,7 +1187,7 @@
         {
           "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-09-11",
+          "date": "2026-09-12",
           "confidence": 80,
           "details": "Record from official_records: MORTGAGE"
         }
@@ -1195,7 +1195,7 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-09-11T14:50:52.088862",
+      "last_updated": "2026-09-12T13:53:55.140879",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -1221,7 +1221,7 @@
         {
           "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-09-11",
+          "date": "2026-09-12",
           "confidence": 80,
           "details": "Record from official_records: MORTGAGE"
         }
@@ -1229,7 +1229,7 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-09-11T14:50:52.088872",
+      "last_updated": "2026-09-12T13:53:55.140891",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -1255,7 +1255,7 @@
         {
           "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-09-11",
+          "date": "2026-09-12",
           "confidence": 80,
           "details": "Record from official_records: MORTGAGE"
         }
@@ -1263,7 +1263,7 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-09-11T14:50:52.088879",
+      "last_updated": "2026-09-12T13:53:55.140903",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -1289,7 +1289,7 @@
         {
           "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-09-11",
+          "date": "2026-09-12",
           "confidence": 80,
           "details": "Record from official_records: MORTGAGE"
         }
@@ -1297,7 +1297,7 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-09-11T14:50:52.088887",
+      "last_updated": "2026-09-12T13:53:55.140913",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -1323,7 +1323,7 @@
         {
           "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-09-11",
+          "date": "2026-09-12",
           "confidence": 80,
           "details": "Record from official_records: MORTGAGE"
         }
@@ -1331,7 +1331,7 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-09-11T14:50:52.088894",
+      "last_updated": "2026-09-12T13:53:55.140923",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -1357,7 +1357,7 @@
         {
           "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-09-11",
+          "date": "2026-09-12",
           "confidence": 80,
           "details": "Record from official_records: MORTGAGE"
         }
@@ -1365,7 +1365,7 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-09-11T14:50:52.088902",
+      "last_updated": "2026-09-12T13:53:55.140932",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -1391,7 +1391,7 @@
         {
           "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-09-11",
+          "date": "2026-09-12",
           "confidence": 80,
           "details": "Record from official_records: MORTGAGE"
         }
@@ -1399,7 +1399,7 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-09-11T14:50:52.088913",
+      "last_updated": "2026-09-12T13:53:55.140942",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -1425,7 +1425,7 @@
         {
           "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-09-11",
+          "date": "2026-09-12",
           "confidence": 80,
           "details": "Record from official_records: MORTGAGE"
         }
@@ -1433,7 +1433,7 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-09-11T14:50:52.088920",
+      "last_updated": "2026-09-12T13:53:55.140954",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -1459,7 +1459,7 @@
         {
           "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-09-11",
+          "date": "2026-09-12",
           "confidence": 80,
           "details": "Record from official_records: MORTGAGE"
         }
@@ -1467,7 +1467,7 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-09-11T14:50:52.088928",
+      "last_updated": "2026-09-12T13:53:55.140966",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -1493,7 +1493,7 @@
         {
           "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-09-11",
+          "date": "2026-09-12",
           "confidence": 80,
           "details": "Record from official_records: MORTGAGE"
         }
@@ -1501,7 +1501,7 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-09-11T14:50:52.088936",
+      "last_updated": "2026-09-12T13:53:55.140976",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -1527,7 +1527,7 @@
         {
           "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-09-11",
+          "date": "2026-09-12",
           "confidence": 80,
           "details": "Record from official_records: MORTGAGE"
         }
@@ -1535,7 +1535,7 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-09-11T14:50:52.088943",
+      "last_updated": "2026-09-12T13:53:55.140986",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -1561,7 +1561,7 @@
         {
           "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-09-11",
+          "date": "2026-09-12",
           "confidence": 80,
           "details": "Record from official_records: MORTGAGE"
         }
@@ -1569,7 +1569,7 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-09-11T14:50:52.088953",
+      "last_updated": "2026-09-12T13:53:55.140996",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -1595,7 +1595,7 @@
         {
           "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-09-11",
+          "date": "2026-09-12",
           "confidence": 80,
           "details": "Record from official_records: MORTGAGE"
         }
@@ -1603,7 +1603,7 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-09-11T14:50:52.088968",
+      "last_updated": "2026-09-12T13:53:55.141008",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -1629,7 +1629,7 @@
         {
           "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-09-11",
+          "date": "2026-09-12",
           "confidence": 80,
           "details": "Record from official_records: MORTGAGE"
         }
@@ -1637,7 +1637,7 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-09-11T14:50:52.088975",
+      "last_updated": "2026-09-12T13:53:55.141020",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -1663,7 +1663,7 @@
         {
           "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-09-11",
+          "date": "2026-09-12",
           "confidence": 80,
           "details": "Record from official_records: MORTGAGE"
         }
@@ -1671,7 +1671,7 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-09-11T14:50:52.088983",
+      "last_updated": "2026-09-12T13:53:55.141030",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -1697,7 +1697,7 @@
         {
           "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-09-11",
+          "date": "2026-09-12",
           "confidence": 80,
           "details": "Record from official_records: MORTGAGE"
         }
@@ -1705,7 +1705,7 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-09-11T14:50:52.088990",
+      "last_updated": "2026-09-12T13:53:55.141039",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -1731,7 +1731,7 @@
         {
           "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-09-11",
+          "date": "2026-09-12",
           "confidence": 80,
           "details": "Record from official_records: MORTGAGE"
         }
@@ -1739,7 +1739,7 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-09-11T14:50:52.088998",
+      "last_updated": "2026-09-12T13:53:55.141049",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -1765,7 +1765,7 @@
         {
           "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-09-11",
+          "date": "2026-09-12",
           "confidence": 80,
           "details": "Record from official_records: MORTGAGE"
         }
@@ -1773,7 +1773,7 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-09-11T14:50:52.089006",
+      "last_updated": "2026-09-12T13:53:55.141061",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -1799,7 +1799,7 @@
         {
           "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-09-11",
+          "date": "2026-09-12",
           "confidence": 80,
           "details": "Record from official_records: MORTGAGE"
         }
@@ -1807,7 +1807,7 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-09-11T14:50:52.089016",
+      "last_updated": "2026-09-12T13:53:55.141071",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -1833,7 +1833,7 @@
         {
           "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-09-11",
+          "date": "2026-09-12",
           "confidence": 80,
           "details": "Record from official_records: MORTGAGE"
         }
@@ -1841,7 +1841,7 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-09-11T14:50:52.089024",
+      "last_updated": "2026-09-12T13:53:55.141083",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -1867,7 +1867,7 @@
         {
           "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-09-11",
+          "date": "2026-09-12",
           "confidence": 80,
           "details": "Record from official_records: MORTGAGE"
         }
@@ -1875,7 +1875,7 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-09-11T14:50:52.089031",
+      "last_updated": "2026-09-12T13:53:55.141099",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -1901,7 +1901,7 @@
         {
           "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-09-11",
+          "date": "2026-09-12",
           "confidence": 80,
           "details": "Record from official_records: MORTGAGE"
         }
@@ -1909,7 +1909,7 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-09-11T14:50:52.089041",
+      "last_updated": "2026-09-12T13:53:55.141109",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -1935,7 +1935,7 @@
         {
           "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-09-11",
+          "date": "2026-09-12",
           "confidence": 80,
           "details": "Record from official_records: MORTGAGE"
         }
@@ -1943,7 +1943,7 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-09-11T14:50:52.089049",
+      "last_updated": "2026-09-12T13:53:55.141121",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -1969,7 +1969,7 @@
         {
           "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-09-11",
+          "date": "2026-09-12",
           "confidence": 80,
           "details": "Record from official_records: MORTGAGE"
         }
@@ -1977,7 +1977,7 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-09-11T14:50:52.089056",
+      "last_updated": "2026-09-12T13:53:55.141131",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -2003,7 +2003,7 @@
         {
           "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-09-11",
+          "date": "2026-09-12",
           "confidence": 80,
           "details": "Record from official_records: MORTGAGE"
         }
@@ -2011,7 +2011,7 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-09-11T14:50:52.089068",
+      "last_updated": "2026-09-12T13:53:55.141143",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -2037,7 +2037,7 @@
         {
           "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-09-11",
+          "date": "2026-09-12",
           "confidence": 80,
           "details": "Record from official_records: MORTGAGE"
         }
@@ -2045,7 +2045,7 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-09-11T14:50:52.089076",
+      "last_updated": "2026-09-12T13:53:55.141154",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -2071,7 +2071,7 @@
         {
           "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-09-11",
+          "date": "2026-09-12",
           "confidence": 80,
           "details": "Record from official_records: MORTGAGE"
         }
@@ -2079,7 +2079,7 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-09-11T14:50:52.089084",
+      "last_updated": "2026-09-12T13:53:55.141163",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -2105,7 +2105,7 @@
         {
           "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-09-11",
+          "date": "2026-09-12",
           "confidence": 80,
           "details": "Record from official_records: MORTGAGE"
         }
@@ -2113,7 +2113,7 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-09-11T14:50:52.089091",
+      "last_updated": "2026-09-12T13:53:55.141173",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -2139,7 +2139,7 @@
         {
           "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-09-11",
+          "date": "2026-09-12",
           "confidence": 80,
           "details": "Record from official_records: MORTGAGE"
         }
@@ -2147,7 +2147,7 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-09-11T14:50:52.089099",
+      "last_updated": "2026-09-12T13:53:55.141182",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -2173,7 +2173,7 @@
         {
           "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-09-11",
+          "date": "2026-09-12",
           "confidence": 80,
           "details": "Record from official_records: MORTGAGE"
         }
@@ -2181,7 +2181,7 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-09-11T14:50:52.089106",
+      "last_updated": "2026-09-12T13:53:55.141192",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -2207,7 +2207,7 @@
         {
           "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-09-11",
+          "date": "2026-09-12",
           "confidence": 80,
           "details": "Record from official_records: MORTGAGE"
         }
@@ -2215,7 +2215,7 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-09-11T14:50:52.089116",
+      "last_updated": "2026-09-12T13:53:55.141204",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -2241,7 +2241,7 @@
         {
           "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-09-11",
+          "date": "2026-09-12",
           "confidence": 80,
           "details": "Record from official_records: MORTGAGE"
         }
@@ -2249,7 +2249,7 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-09-11T14:50:52.089125",
+      "last_updated": "2026-09-12T13:53:55.141214",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -2275,7 +2275,7 @@
         {
           "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-09-11",
+          "date": "2026-09-12",
           "confidence": 80,
           "details": "Record from official_records: MORTGAGE"
         }
@@ -2283,7 +2283,7 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-09-11T14:50:52.089133",
+      "last_updated": "2026-09-12T13:53:55.141226",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -2309,7 +2309,7 @@
         {
           "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-09-11",
+          "date": "2026-09-12",
           "confidence": 80,
           "details": "Record from official_records: MORTGAGE"
         }
@@ -2317,7 +2317,7 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-09-11T14:50:52.089140",
+      "last_updated": "2026-09-12T13:53:55.141237",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -2343,7 +2343,7 @@
         {
           "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-09-11",
+          "date": "2026-09-12",
           "confidence": 80,
           "details": "Record from official_records: MORTGAGE"
         }
@@ -2351,7 +2351,7 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-09-11T14:50:52.089148",
+      "last_updated": "2026-09-12T13:53:55.141247",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -2377,7 +2377,7 @@
         {
           "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-09-11",
+          "date": "2026-09-12",
           "confidence": 80,
           "details": "Record from official_records: MORTGAGE"
         }
@@ -2385,7 +2385,7 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-09-11T14:50:52.089157",
+      "last_updated": "2026-09-12T13:53:55.141257",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -2411,7 +2411,7 @@
         {
           "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-09-11",
+          "date": "2026-09-12",
           "confidence": 80,
           "details": "Record from official_records: MORTGAGE"
         }
@@ -2419,7 +2419,7 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-09-11T14:50:52.089165",
+      "last_updated": "2026-09-12T13:53:55.141268",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -2445,7 +2445,7 @@
         {
           "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-09-11",
+          "date": "2026-09-12",
           "confidence": 80,
           "details": "Record from official_records: MORTGAGE"
         }
@@ -2453,7 +2453,7 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-09-11T14:50:52.089174",
+      "last_updated": "2026-09-12T13:53:55.141278",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -2479,7 +2479,7 @@
         {
           "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-09-11",
+          "date": "2026-09-12",
           "confidence": 80,
           "details": "Record from official_records: MORTGAGE"
         }
@@ -2487,7 +2487,7 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-09-11T14:50:52.089182",
+      "last_updated": "2026-09-12T13:53:55.141288",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -2513,7 +2513,7 @@
         {
           "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-09-11",
+          "date": "2026-09-12",
           "confidence": 80,
           "details": "Record from official_records: MORTGAGE"
         }
@@ -2521,7 +2521,7 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-09-11T14:50:52.089189",
+      "last_updated": "2026-09-12T13:53:55.141297",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -2547,7 +2547,7 @@
         {
           "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-09-11",
+          "date": "2026-09-12",
           "confidence": 80,
           "details": "Record from official_records: MORTGAGE"
         }
@@ -2555,7 +2555,7 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-09-11T14:50:52.089197",
+      "last_updated": "2026-09-12T13:53:55.141307",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -2581,7 +2581,7 @@
         {
           "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-09-11",
+          "date": "2026-09-12",
           "confidence": 80,
           "details": "Record from official_records: MORTGAGE"
         }
@@ -2589,7 +2589,7 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-09-11T14:50:52.089207",
+      "last_updated": "2026-09-12T13:53:55.141317",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -2615,7 +2615,7 @@
         {
           "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-09-11",
+          "date": "2026-09-12",
           "confidence": 80,
           "details": "Record from official_records: MORTGAGE"
         }
@@ -2623,7 +2623,7 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-09-11T14:50:52.089215",
+      "last_updated": "2026-09-12T13:53:55.141331",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -2649,7 +2649,7 @@
         {
           "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-09-11",
+          "date": "2026-09-12",
           "confidence": 80,
           "details": "Record from official_records: MORTGAGE"
         }
@@ -2657,7 +2657,7 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-09-11T14:50:52.089225",
+      "last_updated": "2026-09-12T13:53:55.141341",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -2683,7 +2683,7 @@
         {
           "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-09-11",
+          "date": "2026-09-12",
           "confidence": 80,
           "details": "Record from official_records: MORTGAGE"
         }
@@ -2691,7 +2691,7 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-09-11T14:50:52.089233",
+      "last_updated": "2026-09-12T13:53:55.141353",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -2717,7 +2717,7 @@
         {
           "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-09-11",
+          "date": "2026-09-12",
           "confidence": 80,
           "details": "Record from official_records: MORTGAGE"
         }
@@ -2725,7 +2725,7 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-09-11T14:50:52.089241",
+      "last_updated": "2026-09-12T13:53:55.141363",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -2751,7 +2751,7 @@
         {
           "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-09-11",
+          "date": "2026-09-12",
           "confidence": 80,
           "details": "Record from official_records: MORTGAGE"
         }
@@ -2759,7 +2759,7 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-09-11T14:50:52.089248",
+      "last_updated": "2026-09-12T13:53:55.141375",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -2785,7 +2785,7 @@
         {
           "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-09-11",
+          "date": "2026-09-12",
           "confidence": 80,
           "details": "Record from official_records: MORTGAGE"
         }
@@ -2793,7 +2793,7 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-09-11T14:50:52.089256",
+      "last_updated": "2026-09-12T13:53:55.141385",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -2819,7 +2819,7 @@
         {
           "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-09-11",
+          "date": "2026-09-12",
           "confidence": 80,
           "details": "Record from official_records: MORTGAGE"
         }
@@ -2827,7 +2827,7 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-09-11T14:50:52.089265",
+      "last_updated": "2026-09-12T13:53:55.141397",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -2853,7 +2853,7 @@
         {
           "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-09-11",
+          "date": "2026-09-12",
           "confidence": 80,
           "details": "Record from official_records: MORTGAGE"
         }
@@ -2861,7 +2861,7 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-09-11T14:50:52.089273",
+      "last_updated": "2026-09-12T13:53:55.141409",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -2887,7 +2887,7 @@
         {
           "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-09-11",
+          "date": "2026-09-12",
           "confidence": 80,
           "details": "Record from official_records: MORTGAGE"
         }
@@ -2895,7 +2895,7 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-09-11T14:50:52.089280",
+      "last_updated": "2026-09-12T13:53:55.141419",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -2921,7 +2921,7 @@
         {
           "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-09-11",
+          "date": "2026-09-12",
           "confidence": 80,
           "details": "Record from official_records: MORTGAGE"
         }
@@ -2929,7 +2929,7 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-09-11T14:50:52.089290",
+      "last_updated": "2026-09-12T13:53:55.141429",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -2955,7 +2955,7 @@
         {
           "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-09-11",
+          "date": "2026-09-12",
           "confidence": 80,
           "details": "Record from official_records: MORTGAGE"
         }
@@ -2963,7 +2963,7 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-09-11T14:50:52.089299",
+      "last_updated": "2026-09-12T13:53:55.141440",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -2989,7 +2989,7 @@
         {
           "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-09-11",
+          "date": "2026-09-12",
           "confidence": 80,
           "details": "Record from official_records: MORTGAGE"
         }
@@ -2997,7 +2997,7 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-09-11T14:50:52.089307",
+      "last_updated": "2026-09-12T13:53:55.141450",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -3023,7 +3023,7 @@
         {
           "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-09-11",
+          "date": "2026-09-12",
           "confidence": 80,
           "details": "Record from official_records: MORTGAGE"
         }
@@ -3031,7 +3031,7 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-09-11T14:50:52.089316",
+      "last_updated": "2026-09-12T13:53:55.141462",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -3057,7 +3057,7 @@
         {
           "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-09-11",
+          "date": "2026-09-12",
           "confidence": 80,
           "details": "Record from official_records: MORTGAGE"
         }
@@ -3065,7 +3065,7 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-09-11T14:50:52.089324",
+      "last_updated": "2026-09-12T13:53:55.141472",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -3091,7 +3091,7 @@
         {
           "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-09-11",
+          "date": "2026-09-12",
           "confidence": 80,
           "details": "Record from official_records: MORTGAGE"
         }
@@ -3099,7 +3099,7 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-09-11T14:50:52.089332",
+      "last_updated": "2026-09-12T13:53:55.141482",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -3125,7 +3125,7 @@
         {
           "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-09-11",
+          "date": "2026-09-12",
           "confidence": 80,
           "details": "Record from official_records: MORTGAGE"
         }
@@ -3133,7 +3133,7 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-09-11T14:50:52.089339",
+      "last_updated": "2026-09-12T13:53:55.141491",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -3159,7 +3159,7 @@
         {
           "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-09-11",
+          "date": "2026-09-12",
           "confidence": 80,
           "details": "Record from official_records: MORTGAGE"
         }
@@ -3167,7 +3167,7 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-09-11T14:50:52.089346",
+      "last_updated": "2026-09-12T13:53:55.141501",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -3193,7 +3193,7 @@
         {
           "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-09-11",
+          "date": "2026-09-12",
           "confidence": 80,
           "details": "Record from official_records: MORTGAGE"
         }
@@ -3201,7 +3201,7 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-09-11T14:50:52.089356",
+      "last_updated": "2026-09-12T13:53:55.141516",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -3227,7 +3227,7 @@
         {
           "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-09-11",
+          "date": "2026-09-12",
           "confidence": 80,
           "details": "Record from official_records: MORTGAGE"
         }
@@ -3235,7 +3235,7 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-09-11T14:50:52.089363",
+      "last_updated": "2026-09-12T13:53:55.141526",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -3261,7 +3261,7 @@
         {
           "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-09-11",
+          "date": "2026-09-12",
           "confidence": 80,
           "details": "Record from official_records: MORTGAGE"
         }
@@ -3269,7 +3269,7 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-09-11T14:50:52.089373",
+      "last_updated": "2026-09-12T13:53:55.141536",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -3295,7 +3295,7 @@
         {
           "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-09-11",
+          "date": "2026-09-12",
           "confidence": 80,
           "details": "Record from official_records: MORTGAGE"
         }
@@ -3303,7 +3303,7 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-09-11T14:50:52.089380",
+      "last_updated": "2026-09-12T13:53:55.141548",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -3329,7 +3329,7 @@
         {
           "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-09-11",
+          "date": "2026-09-12",
           "confidence": 80,
           "details": "Record from official_records: MORTGAGE"
         }
@@ -3337,7 +3337,7 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-09-11T14:50:52.089389",
+      "last_updated": "2026-09-12T13:53:55.141558",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -3363,7 +3363,7 @@
         {
           "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-09-11",
+          "date": "2026-09-12",
           "confidence": 80,
           "details": "Record from official_records: MORTGAGE"
         }
@@ -3371,7 +3371,7 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-09-11T14:50:52.089397",
+      "last_updated": "2026-09-12T13:53:55.141567",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -3397,7 +3397,7 @@
         {
           "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-09-11",
+          "date": "2026-09-12",
           "confidence": 80,
           "details": "Record from official_records: MORTGAGE"
         }
@@ -3405,7 +3405,7 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-09-11T14:50:52.089404",
+      "last_updated": "2026-09-12T13:53:55.141579",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -3431,7 +3431,7 @@
         {
           "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-09-11",
+          "date": "2026-09-12",
           "confidence": 80,
           "details": "Record from official_records: MORTGAGE"
         }
@@ -3439,7 +3439,7 @@
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-09-11T14:50:52.089414",
+      "last_updated": "2026-09-12T13:53:55.141590",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
