@@ -1,19 +1,19 @@
 {
   "county": "Duval",
   "state": "FL",
-  "last_refresh": "2026-11-22T18:14:45.872509",
+  "last_refresh": "2026-11-23T22:28:03.811250",
   "framework_version": "v5.3.1",
-  "total_leads": 61,
+  "total_leads": 100,
   "high_stack_leads": 0,
   "sources": {
     "official_records": {
       "status": "healthy",
-      "last_refresh": "2026-11-22T18:14:37.924795",
-      "records_count": 61
+      "last_refresh": "2026-11-23T22:27:26.344436",
+      "records_count": 838
     },
     "court_records": {
       "status": "healthy",
-      "last_refresh": "2026-11-22T18:14:39.032877",
+      "last_refresh": "2026-11-23T22:27:27.516184",
       "records_count": 0
     },
     "foreclosure_sales": {
@@ -23,27 +23,27 @@
     },
     "tax_deed_sales": {
       "status": "healthy",
-      "last_refresh": "2026-11-22T18:14:40.401865",
+      "last_refresh": "2026-11-23T22:27:28.906719",
       "records_count": 0
     },
     "parcel_master": {
       "status": "healthy",
-      "last_refresh": "2026-11-22T18:14:42.976708",
+      "last_refresh": "2026-11-23T22:27:31.482787",
       "records_count": 0
     },
     "tax_collector": {
       "status": "healthy",
-      "last_refresh": "2026-11-22T18:14:44.104862",
+      "last_refresh": "2026-11-23T22:27:32.820140",
       "records_count": 0
     },
     "gis_mapping": {
       "status": "healthy",
-      "last_refresh": "2026-11-22T18:14:44.226120",
+      "last_refresh": "2026-11-23T22:27:32.972391",
       "records_count": 0
     },
     "code_enforcement": {
       "status": "prr_required",
-      "last_refresh": "2026-11-22T18:14:45.613457",
+      "last_refresh": "2026-11-23T22:28:03.677268",
       "records_count": 0
     }
   },
@@ -65,7 +65,7 @@
         {
           "type": "LIS_PENDENS",
           "source": "duval_official_records",
-          "date": "2026-11-22",
+          "date": "2026-11-23",
           "confidence": 80,
           "details": "Record from official_records: LIS PENDENS"
         }
@@ -73,7 +73,7 @@
       "deal_path": "wholesale",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-11-22T18:14:45.871760",
+      "last_updated": "2026-11-23T22:28:03.809800",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -85,9 +85,9 @@
     {
       "lead_id": "LEAD-002",
       "parcel_id": "DC-000002",
-      "score": 50,
+      "score": 85,
       "score_reasons": [
-        "Single distress signal: Mortgage",
+        "Single distress signal: Lis Pendens",
         "Monitoring for additional signals"
       ],
       "address": "2 Sample St, Jacksonville, FL 32202",
@@ -97,17 +97,17 @@
       "owner_mailing_address": "Unknown",
       "signals": [
         {
-          "type": "MORTGAGE",
+          "type": "LIS_PENDENS",
           "source": "duval_official_records",
-          "date": "2026-11-22",
+          "date": "2026-11-23",
           "confidence": 80,
-          "details": "Record from official_records: MORTGAGE"
+          "details": "Record from official_records: LIS PENDENS"
         }
       ],
-      "deal_path": "creative_finance",
+      "deal_path": "wholesale",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-11-22T18:14:45.871779",
+      "last_updated": "2026-11-23T22:28:03.809820",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -119,9 +119,9 @@
     {
       "lead_id": "LEAD-003",
       "parcel_id": "DC-000003",
-      "score": 50,
+      "score": 85,
       "score_reasons": [
-        "Single distress signal: Mortgage",
+        "Single distress signal: Lis Pendens",
         "Monitoring for additional signals"
       ],
       "address": "3 Sample St, Jacksonville, FL 32203",
@@ -131,17 +131,17 @@
       "owner_mailing_address": "Unknown",
       "signals": [
         {
-          "type": "MORTGAGE",
+          "type": "LIS_PENDENS",
           "source": "duval_official_records",
-          "date": "2026-11-22",
+          "date": "2026-11-23",
           "confidence": 80,
-          "details": "Record from official_records: MORTGAGE"
+          "details": "Record from official_records: LIS PENDENS"
         }
       ],
-      "deal_path": "creative_finance",
+      "deal_path": "wholesale",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-11-22T18:14:45.871790",
+      "last_updated": "2026-11-23T22:28:03.809835",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -153,9 +153,9 @@
     {
       "lead_id": "LEAD-004",
       "parcel_id": "DC-000004",
-      "score": 50,
+      "score": 85,
       "score_reasons": [
-        "Single distress signal: Mortgage",
+        "Single distress signal: Lis Pendens",
         "Monitoring for additional signals"
       ],
       "address": "4 Sample St, Jacksonville, FL 32204",
@@ -165,17 +165,17 @@
       "owner_mailing_address": "Unknown",
       "signals": [
         {
-          "type": "MORTGAGE",
+          "type": "LIS_PENDENS",
           "source": "duval_official_records",
-          "date": "2026-11-22",
+          "date": "2026-11-23",
           "confidence": 80,
-          "details": "Record from official_records: MORTGAGE"
+          "details": "Record from official_records: LIS PENDENS"
         }
       ],
-      "deal_path": "creative_finance",
+      "deal_path": "wholesale",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-11-22T18:14:45.871799",
+      "last_updated": "2026-11-23T22:28:03.809847",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -187,9 +187,9 @@
     {
       "lead_id": "LEAD-005",
       "parcel_id": "DC-000005",
-      "score": 50,
+      "score": 85,
       "score_reasons": [
-        "Single distress signal: Mortgage",
+        "Single distress signal: Lis Pendens",
         "Monitoring for additional signals"
       ],
       "address": "5 Sample St, Jacksonville, FL 32205",
@@ -199,17 +199,17 @@
       "owner_mailing_address": "Unknown",
       "signals": [
         {
-          "type": "MORTGAGE",
+          "type": "LIS_PENDENS",
           "source": "duval_official_records",
-          "date": "2026-11-22",
+          "date": "2026-11-23",
           "confidence": 80,
-          "details": "Record from official_records: MORTGAGE"
+          "details": "Record from official_records: LIS PENDENS"
         }
       ],
-      "deal_path": "creative_finance",
+      "deal_path": "wholesale",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-11-22T18:14:45.871808",
+      "last_updated": "2026-11-23T22:28:03.809863",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -221,9 +221,9 @@
     {
       "lead_id": "LEAD-006",
       "parcel_id": "DC-000006",
-      "score": 50,
+      "score": 85,
       "score_reasons": [
-        "Single distress signal: Mortgage",
+        "Single distress signal: Lis Pendens",
         "Monitoring for additional signals"
       ],
       "address": "6 Sample St, Jacksonville, FL 32206",
@@ -233,17 +233,17 @@
       "owner_mailing_address": "Unknown",
       "signals": [
         {
-          "type": "MORTGAGE",
+          "type": "LIS_PENDENS",
           "source": "duval_official_records",
-          "date": "2026-11-22",
+          "date": "2026-11-23",
           "confidence": 80,
-          "details": "Record from official_records: MORTGAGE"
+          "details": "Record from official_records: LIS PENDENS"
         }
       ],
-      "deal_path": "creative_finance",
+      "deal_path": "wholesale",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-11-22T18:14:45.871880",
+      "last_updated": "2026-11-23T22:28:03.809875",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -255,9 +255,9 @@
     {
       "lead_id": "LEAD-007",
       "parcel_id": "DC-000007",
-      "score": 50,
+      "score": 85,
       "score_reasons": [
-        "Single distress signal: Mortgage",
+        "Single distress signal: Lis Pendens",
         "Monitoring for additional signals"
       ],
       "address": "7 Sample St, Jacksonville, FL 32207",
@@ -267,17 +267,17 @@
       "owner_mailing_address": "Unknown",
       "signals": [
         {
-          "type": "MORTGAGE",
+          "type": "LIS_PENDENS",
           "source": "duval_official_records",
-          "date": "2026-11-22",
+          "date": "2026-11-23",
           "confidence": 80,
-          "details": "Record from official_records: MORTGAGE"
+          "details": "Record from official_records: LIS PENDENS"
         }
       ],
-      "deal_path": "creative_finance",
+      "deal_path": "wholesale",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-11-22T18:14:45.871891",
+      "last_updated": "2026-11-23T22:28:03.809885",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -289,9 +289,9 @@
     {
       "lead_id": "LEAD-008",
       "parcel_id": "DC-000008",
-      "score": 50,
+      "score": 85,
       "score_reasons": [
-        "Single distress signal: Mortgage",
+        "Single distress signal: Lis Pendens",
         "Monitoring for additional signals"
       ],
       "address": "8 Sample St, Jacksonville, FL 32208",
@@ -301,17 +301,17 @@
       "owner_mailing_address": "Unknown",
       "signals": [
         {
-          "type": "MORTGAGE",
+          "type": "LIS_PENDENS",
           "source": "duval_official_records",
-          "date": "2026-11-22",
+          "date": "2026-11-23",
           "confidence": 80,
-          "details": "Record from official_records: MORTGAGE"
+          "details": "Record from official_records: LIS PENDENS"
         }
       ],
-      "deal_path": "creative_finance",
+      "deal_path": "wholesale",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-11-22T18:14:45.871899",
+      "last_updated": "2026-11-23T22:28:03.809895",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -323,9 +323,9 @@
     {
       "lead_id": "LEAD-009",
       "parcel_id": "DC-000009",
-      "score": 50,
+      "score": 85,
       "score_reasons": [
-        "Single distress signal: Mortgage",
+        "Single distress signal: Lis Pendens",
         "Monitoring for additional signals"
       ],
       "address": "9 Sample St, Jacksonville, FL 32209",
@@ -335,17 +335,17 @@
       "owner_mailing_address": "Unknown",
       "signals": [
         {
-          "type": "MORTGAGE",
+          "type": "LIS_PENDENS",
           "source": "duval_official_records",
-          "date": "2026-11-22",
+          "date": "2026-11-23",
           "confidence": 80,
-          "details": "Record from official_records: MORTGAGE"
+          "details": "Record from official_records: LIS PENDENS"
         }
       ],
-      "deal_path": "creative_finance",
+      "deal_path": "wholesale",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-11-22T18:14:45.871907",
+      "last_updated": "2026-11-23T22:28:03.809904",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -357,9 +357,9 @@
     {
       "lead_id": "LEAD-010",
       "parcel_id": "DC-000010",
-      "score": 50,
+      "score": 85,
       "score_reasons": [
-        "Single distress signal: Lien",
+        "Single distress signal: Lis Pendens",
         "Monitoring for additional signals"
       ],
       "address": "10 Sample St, Jacksonville, FL 32200",
@@ -369,17 +369,17 @@
       "owner_mailing_address": "Unknown",
       "signals": [
         {
-          "type": "LIEN",
+          "type": "LIS_PENDENS",
           "source": "duval_official_records",
-          "date": "2026-11-22",
+          "date": "2026-11-23",
           "confidence": 80,
-          "details": "Record from official_records: LIEN"
+          "details": "Record from official_records: LIS PENDENS"
         }
       ],
-      "deal_path": "creative_finance",
+      "deal_path": "wholesale",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-11-22T18:14:45.871917",
+      "last_updated": "2026-11-23T22:28:03.809914",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -393,7 +393,7 @@
       "parcel_id": "DC-000011",
       "score": 50,
       "score_reasons": [
-        "Single distress signal: Judgment",
+        "Single distress signal: Mortgage",
         "Monitoring for additional signals"
       ],
       "address": "11 Sample St, Jacksonville, FL 32201",
@@ -403,17 +403,17 @@
       "owner_mailing_address": "Unknown",
       "signals": [
         {
-          "type": "JUDGMENT",
+          "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-11-22",
+          "date": "2026-11-23",
           "confidence": 80,
-          "details": "Record from official_records: JUDGMENT"
+          "details": "Record from official_records: MORTGAGE"
         }
       ],
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-11-22T18:14:45.871925",
+      "last_updated": "2026-11-23T22:28:03.809929",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -427,7 +427,7 @@
       "parcel_id": "DC-000012",
       "score": 50,
       "score_reasons": [
-        "Single distress signal: Judgment",
+        "Single distress signal: Mortgage",
         "Monitoring for additional signals"
       ],
       "address": "12 Sample St, Jacksonville, FL 32202",
@@ -437,17 +437,17 @@
       "owner_mailing_address": "Unknown",
       "signals": [
         {
-          "type": "JUDGMENT",
+          "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-11-22",
+          "date": "2026-11-23",
           "confidence": 80,
-          "details": "Record from official_records: JUDGMENT"
+          "details": "Record from official_records: MORTGAGE"
         }
       ],
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-11-22T18:14:45.871938",
+      "last_updated": "2026-11-23T22:28:03.809942",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -461,7 +461,7 @@
       "parcel_id": "DC-000013",
       "score": 50,
       "score_reasons": [
-        "Single distress signal: Judgment",
+        "Single distress signal: Mortgage",
         "Monitoring for additional signals"
       ],
       "address": "13 Sample St, Jacksonville, FL 32203",
@@ -471,17 +471,17 @@
       "owner_mailing_address": "Unknown",
       "signals": [
         {
-          "type": "JUDGMENT",
+          "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-11-22",
+          "date": "2026-11-23",
           "confidence": 80,
-          "details": "Record from official_records: JUDGMENT"
+          "details": "Record from official_records: MORTGAGE"
         }
       ],
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-11-22T18:14:45.871946",
+      "last_updated": "2026-11-23T22:28:03.809953",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -495,7 +495,7 @@
       "parcel_id": "DC-000014",
       "score": 50,
       "score_reasons": [
-        "Single distress signal: Judgment",
+        "Single distress signal: Mortgage",
         "Monitoring for additional signals"
       ],
       "address": "14 Sample St, Jacksonville, FL 32204",
@@ -505,17 +505,17 @@
       "owner_mailing_address": "Unknown",
       "signals": [
         {
-          "type": "JUDGMENT",
+          "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-11-22",
+          "date": "2026-11-23",
           "confidence": 80,
-          "details": "Record from official_records: JUDGMENT"
+          "details": "Record from official_records: MORTGAGE"
         }
       ],
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-11-22T18:14:45.871954",
+      "last_updated": "2026-11-23T22:28:03.809964",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -529,7 +529,7 @@
       "parcel_id": "DC-000015",
       "score": 50,
       "score_reasons": [
-        "Single distress signal: Judgment",
+        "Single distress signal: Mortgage",
         "Monitoring for additional signals"
       ],
       "address": "15 Sample St, Jacksonville, FL 32205",
@@ -539,17 +539,17 @@
       "owner_mailing_address": "Unknown",
       "signals": [
         {
-          "type": "JUDGMENT",
+          "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-11-22",
+          "date": "2026-11-23",
           "confidence": 80,
-          "details": "Record from official_records: JUDGMENT"
+          "details": "Record from official_records: MORTGAGE"
         }
       ],
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-11-22T18:14:45.871961",
+      "last_updated": "2026-11-23T22:28:03.809979",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -563,7 +563,7 @@
       "parcel_id": "DC-000016",
       "score": 50,
       "score_reasons": [
-        "Single distress signal: Judgment",
+        "Single distress signal: Mortgage",
         "Monitoring for additional signals"
       ],
       "address": "16 Sample St, Jacksonville, FL 32206",
@@ -573,17 +573,17 @@
       "owner_mailing_address": "Unknown",
       "signals": [
         {
-          "type": "JUDGMENT",
+          "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-11-22",
+          "date": "2026-11-23",
           "confidence": 80,
-          "details": "Record from official_records: JUDGMENT"
+          "details": "Record from official_records: MORTGAGE"
         }
       ],
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-11-22T18:14:45.871969",
+      "last_updated": "2026-11-23T22:28:03.809990",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -597,7 +597,7 @@
       "parcel_id": "DC-000017",
       "score": 50,
       "score_reasons": [
-        "Single distress signal: Judgment",
+        "Single distress signal: Mortgage",
         "Monitoring for additional signals"
       ],
       "address": "17 Sample St, Jacksonville, FL 32207",
@@ -607,17 +607,17 @@
       "owner_mailing_address": "Unknown",
       "signals": [
         {
-          "type": "JUDGMENT",
+          "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-11-22",
+          "date": "2026-11-23",
           "confidence": 80,
-          "details": "Record from official_records: JUDGMENT"
+          "details": "Record from official_records: MORTGAGE"
         }
       ],
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-11-22T18:14:45.871976",
+      "last_updated": "2026-11-23T22:28:03.810001",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -631,7 +631,7 @@
       "parcel_id": "DC-000018",
       "score": 50,
       "score_reasons": [
-        "Single distress signal: Judgment",
+        "Single distress signal: Mortgage",
         "Monitoring for additional signals"
       ],
       "address": "18 Sample St, Jacksonville, FL 32208",
@@ -641,17 +641,17 @@
       "owner_mailing_address": "Unknown",
       "signals": [
         {
-          "type": "JUDGMENT",
+          "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-11-22",
+          "date": "2026-11-23",
           "confidence": 80,
-          "details": "Record from official_records: JUDGMENT"
+          "details": "Record from official_records: MORTGAGE"
         }
       ],
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-11-22T18:14:45.871986",
+      "last_updated": "2026-11-23T22:28:03.810014",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -665,7 +665,7 @@
       "parcel_id": "DC-000019",
       "score": 50,
       "score_reasons": [
-        "Single distress signal: Judgment",
+        "Single distress signal: Mortgage",
         "Monitoring for additional signals"
       ],
       "address": "19 Sample St, Jacksonville, FL 32209",
@@ -675,17 +675,17 @@
       "owner_mailing_address": "Unknown",
       "signals": [
         {
-          "type": "JUDGMENT",
+          "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-11-22",
+          "date": "2026-11-23",
           "confidence": 80,
-          "details": "Record from official_records: JUDGMENT"
+          "details": "Record from official_records: MORTGAGE"
         }
       ],
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-11-22T18:14:45.871994",
+      "last_updated": "2026-11-23T22:28:03.810025",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -699,7 +699,7 @@
       "parcel_id": "DC-000020",
       "score": 50,
       "score_reasons": [
-        "Single distress signal: Judgment",
+        "Single distress signal: Mortgage",
         "Monitoring for additional signals"
       ],
       "address": "20 Sample St, Jacksonville, FL 32200",
@@ -709,17 +709,17 @@
       "owner_mailing_address": "Unknown",
       "signals": [
         {
-          "type": "JUDGMENT",
+          "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-11-22",
+          "date": "2026-11-23",
           "confidence": 80,
-          "details": "Record from official_records: JUDGMENT"
+          "details": "Record from official_records: MORTGAGE"
         }
       ],
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-11-22T18:14:45.872003",
+      "last_updated": "2026-11-23T22:28:03.810035",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -733,7 +733,7 @@
       "parcel_id": "DC-000021",
       "score": 50,
       "score_reasons": [
-        "Single distress signal: Judgment",
+        "Single distress signal: Mortgage",
         "Monitoring for additional signals"
       ],
       "address": "21 Sample St, Jacksonville, FL 32201",
@@ -743,17 +743,17 @@
       "owner_mailing_address": "Unknown",
       "signals": [
         {
-          "type": "JUDGMENT",
+          "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-11-22",
+          "date": "2026-11-23",
           "confidence": 80,
-          "details": "Record from official_records: JUDGMENT"
+          "details": "Record from official_records: MORTGAGE"
         }
       ],
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-11-22T18:14:45.872011",
+      "last_updated": "2026-11-23T22:28:03.810046",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -767,7 +767,7 @@
       "parcel_id": "DC-000022",
       "score": 50,
       "score_reasons": [
-        "Single distress signal: Judgment",
+        "Single distress signal: Mortgage",
         "Monitoring for additional signals"
       ],
       "address": "22 Sample St, Jacksonville, FL 32202",
@@ -777,17 +777,17 @@
       "owner_mailing_address": "Unknown",
       "signals": [
         {
-          "type": "JUDGMENT",
+          "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-11-22",
+          "date": "2026-11-23",
           "confidence": 80,
-          "details": "Record from official_records: JUDGMENT"
+          "details": "Record from official_records: MORTGAGE"
         }
       ],
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-11-22T18:14:45.872020",
+      "last_updated": "2026-11-23T22:28:03.810056",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -801,7 +801,7 @@
       "parcel_id": "DC-000023",
       "score": 50,
       "score_reasons": [
-        "Single distress signal: Foreclosure",
+        "Single distress signal: Mortgage",
         "Monitoring for additional signals"
       ],
       "address": "23 Sample St, Jacksonville, FL 32203",
@@ -811,17 +811,17 @@
       "owner_mailing_address": "Unknown",
       "signals": [
         {
-          "type": "FORECLOSURE",
+          "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-11-22",
+          "date": "2026-11-23",
           "confidence": 80,
-          "details": "Record from official_records: FORECLOSURE"
+          "details": "Record from official_records: MORTGAGE"
         }
       ],
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-11-22T18:14:45.872028",
+      "last_updated": "2026-11-23T22:28:03.810068",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -835,7 +835,7 @@
       "parcel_id": "DC-000024",
       "score": 50,
       "score_reasons": [
-        "Single distress signal: Deed",
+        "Single distress signal: Mortgage",
         "Monitoring for additional signals"
       ],
       "address": "24 Sample St, Jacksonville, FL 32204",
@@ -845,17 +845,17 @@
       "owner_mailing_address": "Unknown",
       "signals": [
         {
-          "type": "DEED",
+          "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-11-22",
+          "date": "2026-11-23",
           "confidence": 80,
-          "details": "Record from official_records: DEED"
+          "details": "Record from official_records: MORTGAGE"
         }
       ],
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-11-22T18:14:45.872039",
+      "last_updated": "2026-11-23T22:28:03.810079",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -869,7 +869,7 @@
       "parcel_id": "DC-000025",
       "score": 50,
       "score_reasons": [
-        "Single distress signal: Deed",
+        "Single distress signal: Mortgage",
         "Monitoring for additional signals"
       ],
       "address": "25 Sample St, Jacksonville, FL 32205",
@@ -879,17 +879,17 @@
       "owner_mailing_address": "Unknown",
       "signals": [
         {
-          "type": "DEED",
+          "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-11-22",
+          "date": "2026-11-23",
           "confidence": 80,
-          "details": "Record from official_records: DEED"
+          "details": "Record from official_records: MORTGAGE"
         }
       ],
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-11-22T18:14:45.872047",
+      "last_updated": "2026-11-23T22:28:03.810091",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -903,7 +903,7 @@
       "parcel_id": "DC-000026",
       "score": 50,
       "score_reasons": [
-        "Single distress signal: Deed",
+        "Single distress signal: Mortgage",
         "Monitoring for additional signals"
       ],
       "address": "26 Sample St, Jacksonville, FL 32206",
@@ -913,17 +913,17 @@
       "owner_mailing_address": "Unknown",
       "signals": [
         {
-          "type": "DEED",
+          "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-11-22",
+          "date": "2026-11-23",
           "confidence": 80,
-          "details": "Record from official_records: DEED"
+          "details": "Record from official_records: MORTGAGE"
         }
       ],
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-11-22T18:14:45.872054",
+      "last_updated": "2026-11-23T22:28:03.810102",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -937,7 +937,7 @@
       "parcel_id": "DC-000027",
       "score": 50,
       "score_reasons": [
-        "Single distress signal: Deed",
+        "Single distress signal: Mortgage",
         "Monitoring for additional signals"
       ],
       "address": "27 Sample St, Jacksonville, FL 32207",
@@ -947,17 +947,17 @@
       "owner_mailing_address": "Unknown",
       "signals": [
         {
-          "type": "DEED",
+          "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-11-22",
+          "date": "2026-11-23",
           "confidence": 80,
-          "details": "Record from official_records: DEED"
+          "details": "Record from official_records: MORTGAGE"
         }
       ],
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-11-22T18:14:45.872062",
+      "last_updated": "2026-11-23T22:28:03.810112",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -971,7 +971,7 @@
       "parcel_id": "DC-000028",
       "score": 50,
       "score_reasons": [
-        "Single distress signal: Deed",
+        "Single distress signal: Mortgage",
         "Monitoring for additional signals"
       ],
       "address": "28 Sample St, Jacksonville, FL 32208",
@@ -981,17 +981,17 @@
       "owner_mailing_address": "Unknown",
       "signals": [
         {
-          "type": "DEED",
+          "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-11-22",
+          "date": "2026-11-23",
           "confidence": 80,
-          "details": "Record from official_records: DEED"
+          "details": "Record from official_records: MORTGAGE"
         }
       ],
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-11-22T18:14:45.872070",
+      "last_updated": "2026-11-23T22:28:03.810125",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -1005,7 +1005,7 @@
       "parcel_id": "DC-000029",
       "score": 50,
       "score_reasons": [
-        "Single distress signal: Deed",
+        "Single distress signal: Mortgage",
         "Monitoring for additional signals"
       ],
       "address": "29 Sample St, Jacksonville, FL 32209",
@@ -1015,17 +1015,17 @@
       "owner_mailing_address": "Unknown",
       "signals": [
         {
-          "type": "DEED",
+          "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-11-22",
+          "date": "2026-11-23",
           "confidence": 80,
-          "details": "Record from official_records: DEED"
+          "details": "Record from official_records: MORTGAGE"
         }
       ],
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-11-22T18:14:45.872077",
+      "last_updated": "2026-11-23T22:28:03.810135",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -1039,7 +1039,7 @@
       "parcel_id": "DC-000030",
       "score": 50,
       "score_reasons": [
-        "Single distress signal: Deed",
+        "Single distress signal: Mortgage",
         "Monitoring for additional signals"
       ],
       "address": "30 Sample St, Jacksonville, FL 32200",
@@ -1049,17 +1049,17 @@
       "owner_mailing_address": "Unknown",
       "signals": [
         {
-          "type": "DEED",
+          "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-11-22",
+          "date": "2026-11-23",
           "confidence": 80,
-          "details": "Record from official_records: DEED"
+          "details": "Record from official_records: MORTGAGE"
         }
       ],
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-11-22T18:14:45.872084",
+      "last_updated": "2026-11-23T22:28:03.810147",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -1073,7 +1073,7 @@
       "parcel_id": "DC-000031",
       "score": 50,
       "score_reasons": [
-        "Single distress signal: Deed",
+        "Single distress signal: Mortgage",
         "Monitoring for additional signals"
       ],
       "address": "31 Sample St, Jacksonville, FL 32201",
@@ -1083,17 +1083,17 @@
       "owner_mailing_address": "Unknown",
       "signals": [
         {
-          "type": "DEED",
+          "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-11-22",
+          "date": "2026-11-23",
           "confidence": 80,
-          "details": "Record from official_records: DEED"
+          "details": "Record from official_records: MORTGAGE"
         }
       ],
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-11-22T18:14:45.872094",
+      "last_updated": "2026-11-23T22:28:03.810157",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -1107,7 +1107,7 @@
       "parcel_id": "DC-000032",
       "score": 50,
       "score_reasons": [
-        "Single distress signal: Deed",
+        "Single distress signal: Mortgage",
         "Monitoring for additional signals"
       ],
       "address": "32 Sample St, Jacksonville, FL 32202",
@@ -1117,17 +1117,17 @@
       "owner_mailing_address": "Unknown",
       "signals": [
         {
-          "type": "DEED",
+          "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-11-22",
+          "date": "2026-11-23",
           "confidence": 80,
-          "details": "Record from official_records: DEED"
+          "details": "Record from official_records: MORTGAGE"
         }
       ],
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-11-22T18:14:45.872103",
+      "last_updated": "2026-11-23T22:28:03.810168",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -1141,7 +1141,7 @@
       "parcel_id": "DC-000033",
       "score": 50,
       "score_reasons": [
-        "Single distress signal: Deed",
+        "Single distress signal: Mortgage",
         "Monitoring for additional signals"
       ],
       "address": "33 Sample St, Jacksonville, FL 32203",
@@ -1151,17 +1151,17 @@
       "owner_mailing_address": "Unknown",
       "signals": [
         {
-          "type": "DEED",
+          "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-11-22",
+          "date": "2026-11-23",
           "confidence": 80,
-          "details": "Record from official_records: DEED"
+          "details": "Record from official_records: MORTGAGE"
         }
       ],
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-11-22T18:14:45.872113",
+      "last_updated": "2026-11-23T22:28:03.810178",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -1175,7 +1175,7 @@
       "parcel_id": "DC-000034",
       "score": 50,
       "score_reasons": [
-        "Single distress signal: Quit Claim",
+        "Single distress signal: Mortgage",
         "Monitoring for additional signals"
       ],
       "address": "34 Sample St, Jacksonville, FL 32204",
@@ -1185,17 +1185,17 @@
       "owner_mailing_address": "Unknown",
       "signals": [
         {
-          "type": "QUIT_CLAIM",
+          "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-11-22",
+          "date": "2026-11-23",
           "confidence": 80,
-          "details": "Record from official_records: QUIT CLAIM"
+          "details": "Record from official_records: MORTGAGE"
         }
       ],
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-11-22T18:14:45.872122",
+      "last_updated": "2026-11-23T22:28:03.810188",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -1209,7 +1209,7 @@
       "parcel_id": "DC-000035",
       "score": 50,
       "score_reasons": [
-        "Single distress signal: Quit Claim",
+        "Single distress signal: Mortgage",
         "Monitoring for additional signals"
       ],
       "address": "35 Sample St, Jacksonville, FL 32205",
@@ -1219,17 +1219,17 @@
       "owner_mailing_address": "Unknown",
       "signals": [
         {
-          "type": "QUIT_CLAIM",
+          "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-11-22",
+          "date": "2026-11-23",
           "confidence": 80,
-          "details": "Record from official_records: QUIT CLAIM"
+          "details": "Record from official_records: MORTGAGE"
         }
       ],
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-11-22T18:14:45.872129",
+      "last_updated": "2026-11-23T22:28:03.810201",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -1243,7 +1243,7 @@
       "parcel_id": "DC-000036",
       "score": 50,
       "score_reasons": [
-        "Single distress signal: Quit Claim",
+        "Single distress signal: Mortgage",
         "Monitoring for additional signals"
       ],
       "address": "36 Sample St, Jacksonville, FL 32206",
@@ -1253,17 +1253,17 @@
       "owner_mailing_address": "Unknown",
       "signals": [
         {
-          "type": "QUIT_CLAIM",
+          "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-11-22",
+          "date": "2026-11-23",
           "confidence": 80,
-          "details": "Record from official_records: QUIT CLAIM"
+          "details": "Record from official_records: MORTGAGE"
         }
       ],
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-11-22T18:14:45.872139",
+      "last_updated": "2026-11-23T22:28:03.810213",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -1277,7 +1277,7 @@
       "parcel_id": "DC-000037",
       "score": 50,
       "score_reasons": [
-        "Single distress signal: Quit Claim",
+        "Single distress signal: Mortgage",
         "Monitoring for additional signals"
       ],
       "address": "37 Sample St, Jacksonville, FL 32207",
@@ -1287,17 +1287,17 @@
       "owner_mailing_address": "Unknown",
       "signals": [
         {
-          "type": "QUIT_CLAIM",
+          "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-11-22",
+          "date": "2026-11-23",
           "confidence": 80,
-          "details": "Record from official_records: QUIT CLAIM"
+          "details": "Record from official_records: MORTGAGE"
         }
       ],
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-11-22T18:14:45.872147",
+      "last_updated": "2026-11-23T22:28:03.810223",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -1311,7 +1311,7 @@
       "parcel_id": "DC-000038",
       "score": 50,
       "score_reasons": [
-        "Single distress signal: Quit Claim",
+        "Single distress signal: Mortgage",
         "Monitoring for additional signals"
       ],
       "address": "38 Sample St, Jacksonville, FL 32208",
@@ -1321,17 +1321,17 @@
       "owner_mailing_address": "Unknown",
       "signals": [
         {
-          "type": "QUIT_CLAIM",
+          "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-11-22",
+          "date": "2026-11-23",
           "confidence": 80,
-          "details": "Record from official_records: QUIT CLAIM"
+          "details": "Record from official_records: MORTGAGE"
         }
       ],
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-11-22T18:14:45.872155",
+      "last_updated": "2026-11-23T22:28:03.810234",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -1345,7 +1345,7 @@
       "parcel_id": "DC-000039",
       "score": 50,
       "score_reasons": [
-        "Single distress signal: Quit Claim",
+        "Single distress signal: Mortgage",
         "Monitoring for additional signals"
       ],
       "address": "39 Sample St, Jacksonville, FL 32209",
@@ -1355,17 +1355,17 @@
       "owner_mailing_address": "Unknown",
       "signals": [
         {
-          "type": "QUIT_CLAIM",
+          "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-11-22",
+          "date": "2026-11-23",
           "confidence": 80,
-          "details": "Record from official_records: QUIT CLAIM"
+          "details": "Record from official_records: MORTGAGE"
         }
       ],
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-11-22T18:14:45.872163",
+      "last_updated": "2026-11-23T22:28:03.810244",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -1379,7 +1379,7 @@
       "parcel_id": "DC-000040",
       "score": 50,
       "score_reasons": [
-        "Single distress signal: Quit Claim",
+        "Single distress signal: Mortgage",
         "Monitoring for additional signals"
       ],
       "address": "40 Sample St, Jacksonville, FL 32200",
@@ -1389,17 +1389,17 @@
       "owner_mailing_address": "Unknown",
       "signals": [
         {
-          "type": "QUIT_CLAIM",
+          "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-11-22",
+          "date": "2026-11-23",
           "confidence": 80,
-          "details": "Record from official_records: QUIT CLAIM"
+          "details": "Record from official_records: MORTGAGE"
         }
       ],
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-11-22T18:14:45.872170",
+      "last_updated": "2026-11-23T22:28:03.810254",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -1413,7 +1413,7 @@
       "parcel_id": "DC-000041",
       "score": 50,
       "score_reasons": [
-        "Single distress signal: Quit Claim",
+        "Single distress signal: Mortgage",
         "Monitoring for additional signals"
       ],
       "address": "41 Sample St, Jacksonville, FL 32201",
@@ -1423,17 +1423,17 @@
       "owner_mailing_address": "Unknown",
       "signals": [
         {
-          "type": "QUIT_CLAIM",
+          "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-11-22",
+          "date": "2026-11-23",
           "confidence": 80,
-          "details": "Record from official_records: QUIT CLAIM"
+          "details": "Record from official_records: MORTGAGE"
         }
       ],
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-11-22T18:14:45.872178",
+      "last_updated": "2026-11-23T22:28:03.810267",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -1447,7 +1447,7 @@
       "parcel_id": "DC-000042",
       "score": 50,
       "score_reasons": [
-        "Single distress signal: Quit Claim",
+        "Single distress signal: Mortgage",
         "Monitoring for additional signals"
       ],
       "address": "42 Sample St, Jacksonville, FL 32202",
@@ -1457,17 +1457,17 @@
       "owner_mailing_address": "Unknown",
       "signals": [
         {
-          "type": "QUIT_CLAIM",
+          "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-11-22",
+          "date": "2026-11-23",
           "confidence": 80,
-          "details": "Record from official_records: QUIT CLAIM"
+          "details": "Record from official_records: MORTGAGE"
         }
       ],
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-11-22T18:14:45.872190",
+      "last_updated": "2026-11-23T22:28:03.810279",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -1481,7 +1481,7 @@
       "parcel_id": "DC-000043",
       "score": 50,
       "score_reasons": [
-        "Single distress signal: Quit Claim",
+        "Single distress signal: Mortgage",
         "Monitoring for additional signals"
       ],
       "address": "43 Sample St, Jacksonville, FL 32203",
@@ -1491,17 +1491,17 @@
       "owner_mailing_address": "Unknown",
       "signals": [
         {
-          "type": "QUIT_CLAIM",
+          "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-11-22",
+          "date": "2026-11-23",
           "confidence": 80,
-          "details": "Record from official_records: QUIT CLAIM"
+          "details": "Record from official_records: MORTGAGE"
         }
       ],
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-11-22T18:14:45.872197",
+      "last_updated": "2026-11-23T22:28:03.810290",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -1515,7 +1515,7 @@
       "parcel_id": "DC-000044",
       "score": 50,
       "score_reasons": [
-        "Single distress signal: Trust",
+        "Single distress signal: Mortgage",
         "Monitoring for additional signals"
       ],
       "address": "44 Sample St, Jacksonville, FL 32204",
@@ -1525,17 +1525,17 @@
       "owner_mailing_address": "Unknown",
       "signals": [
         {
-          "type": "TRUST",
+          "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-11-22",
+          "date": "2026-11-23",
           "confidence": 80,
-          "details": "Record from official_records: TRUST"
+          "details": "Record from official_records: MORTGAGE"
         }
       ],
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-11-22T18:14:45.872205",
+      "last_updated": "2026-11-23T22:28:03.810302",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -1549,7 +1549,7 @@
       "parcel_id": "DC-000045",
       "score": 50,
       "score_reasons": [
-        "Single distress signal: Trust",
+        "Single distress signal: Mortgage",
         "Monitoring for additional signals"
       ],
       "address": "45 Sample St, Jacksonville, FL 32205",
@@ -1559,17 +1559,17 @@
       "owner_mailing_address": "Unknown",
       "signals": [
         {
-          "type": "TRUST",
+          "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-11-22",
+          "date": "2026-11-23",
           "confidence": 80,
-          "details": "Record from official_records: TRUST"
+          "details": "Record from official_records: MORTGAGE"
         }
       ],
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-11-22T18:14:45.872213",
+      "last_updated": "2026-11-23T22:28:03.810314",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -1583,7 +1583,7 @@
       "parcel_id": "DC-000046",
       "score": 50,
       "score_reasons": [
-        "Single distress signal: Trust",
+        "Single distress signal: Mortgage",
         "Monitoring for additional signals"
       ],
       "address": "46 Sample St, Jacksonville, FL 32206",
@@ -1593,17 +1593,17 @@
       "owner_mailing_address": "Unknown",
       "signals": [
         {
-          "type": "TRUST",
+          "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-11-22",
+          "date": "2026-11-23",
           "confidence": 80,
-          "details": "Record from official_records: TRUST"
+          "details": "Record from official_records: MORTGAGE"
         }
       ],
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-11-22T18:14:45.872221",
+      "last_updated": "2026-11-23T22:28:03.810325",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -1617,7 +1617,7 @@
       "parcel_id": "DC-000047",
       "score": 50,
       "score_reasons": [
-        "Single distress signal: Trust",
+        "Single distress signal: Mortgage",
         "Monitoring for additional signals"
       ],
       "address": "47 Sample St, Jacksonville, FL 32207",
@@ -1627,17 +1627,17 @@
       "owner_mailing_address": "Unknown",
       "signals": [
         {
-          "type": "TRUST",
+          "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-11-22",
+          "date": "2026-11-23",
           "confidence": 80,
-          "details": "Record from official_records: TRUST"
+          "details": "Record from official_records: MORTGAGE"
         }
       ],
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-11-22T18:14:45.872228",
+      "last_updated": "2026-11-23T22:28:03.810343",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -1651,7 +1651,7 @@
       "parcel_id": "DC-000048",
       "score": 50,
       "score_reasons": [
-        "Single distress signal: Trust",
+        "Single distress signal: Mortgage",
         "Monitoring for additional signals"
       ],
       "address": "48 Sample St, Jacksonville, FL 32208",
@@ -1661,17 +1661,17 @@
       "owner_mailing_address": "Unknown",
       "signals": [
         {
-          "type": "TRUST",
+          "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-11-22",
+          "date": "2026-11-23",
           "confidence": 80,
-          "details": "Record from official_records: TRUST"
+          "details": "Record from official_records: MORTGAGE"
         }
       ],
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-11-22T18:14:45.872237",
+      "last_updated": "2026-11-23T22:28:03.810353",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -1685,7 +1685,7 @@
       "parcel_id": "DC-000049",
       "score": 50,
       "score_reasons": [
-        "Single distress signal: Assignment",
+        "Single distress signal: Mortgage",
         "Monitoring for additional signals"
       ],
       "address": "49 Sample St, Jacksonville, FL 32209",
@@ -1695,17 +1695,17 @@
       "owner_mailing_address": "Unknown",
       "signals": [
         {
-          "type": "ASSIGNMENT",
+          "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-11-22",
+          "date": "2026-11-23",
           "confidence": 80,
-          "details": "Record from official_records: ASSIGNMENT"
+          "details": "Record from official_records: MORTGAGE"
         }
       ],
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-11-22T18:14:45.872247",
+      "last_updated": "2026-11-23T22:28:03.810363",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -1719,7 +1719,7 @@
       "parcel_id": "DC-000050",
       "score": 50,
       "score_reasons": [
-        "Single distress signal: Satisfaction",
+        "Single distress signal: Mortgage",
         "Monitoring for additional signals"
       ],
       "address": "50 Sample St, Jacksonville, FL 32200",
@@ -1729,17 +1729,17 @@
       "owner_mailing_address": "Unknown",
       "signals": [
         {
-          "type": "SATISFACTION",
+          "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-11-22",
+          "date": "2026-11-23",
           "confidence": 80,
-          "details": "Record from official_records: SATISFACTION"
+          "details": "Record from official_records: MORTGAGE"
         }
       ],
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-11-22T18:14:45.872255",
+      "last_updated": "2026-11-23T22:28:03.810373",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -1753,7 +1753,7 @@
       "parcel_id": "DC-000051",
       "score": 50,
       "score_reasons": [
-        "Single distress signal: Satisfaction",
+        "Single distress signal: Mortgage",
         "Monitoring for additional signals"
       ],
       "address": "51 Sample St, Jacksonville, FL 32201",
@@ -1763,17 +1763,17 @@
       "owner_mailing_address": "Unknown",
       "signals": [
         {
-          "type": "SATISFACTION",
+          "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-11-22",
+          "date": "2026-11-23",
           "confidence": 80,
-          "details": "Record from official_records: SATISFACTION"
+          "details": "Record from official_records: MORTGAGE"
         }
       ],
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-11-22T18:14:45.872263",
+      "last_updated": "2026-11-23T22:28:03.810383",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -1787,7 +1787,7 @@
       "parcel_id": "DC-000052",
       "score": 50,
       "score_reasons": [
-        "Single distress signal: Satisfaction",
+        "Single distress signal: Mortgage",
         "Monitoring for additional signals"
       ],
       "address": "52 Sample St, Jacksonville, FL 32202",
@@ -1797,17 +1797,17 @@
       "owner_mailing_address": "Unknown",
       "signals": [
         {
-          "type": "SATISFACTION",
+          "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-11-22",
+          "date": "2026-11-23",
           "confidence": 80,
-          "details": "Record from official_records: SATISFACTION"
+          "details": "Record from official_records: MORTGAGE"
         }
       ],
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-11-22T18:14:45.872272",
+      "last_updated": "2026-11-23T22:28:03.810394",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -1821,7 +1821,7 @@
       "parcel_id": "DC-000053",
       "score": 50,
       "score_reasons": [
-        "Single distress signal: Satisfaction",
+        "Single distress signal: Mortgage",
         "Monitoring for additional signals"
       ],
       "address": "53 Sample St, Jacksonville, FL 32203",
@@ -1831,17 +1831,17 @@
       "owner_mailing_address": "Unknown",
       "signals": [
         {
-          "type": "SATISFACTION",
+          "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-11-22",
+          "date": "2026-11-23",
           "confidence": 80,
-          "details": "Record from official_records: SATISFACTION"
+          "details": "Record from official_records: MORTGAGE"
         }
       ],
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-11-22T18:14:45.872280",
+      "last_updated": "2026-11-23T22:28:03.810406",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -1855,7 +1855,7 @@
       "parcel_id": "DC-000054",
       "score": 50,
       "score_reasons": [
-        "Single distress signal: Satisfaction",
+        "Single distress signal: Mortgage",
         "Monitoring for additional signals"
       ],
       "address": "54 Sample St, Jacksonville, FL 32204",
@@ -1865,17 +1865,17 @@
       "owner_mailing_address": "Unknown",
       "signals": [
         {
-          "type": "SATISFACTION",
+          "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-11-22",
+          "date": "2026-11-23",
           "confidence": 80,
-          "details": "Record from official_records: SATISFACTION"
+          "details": "Record from official_records: MORTGAGE"
         }
       ],
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-11-22T18:14:45.872287",
+      "last_updated": "2026-11-23T22:28:03.810418",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -1889,7 +1889,7 @@
       "parcel_id": "DC-000055",
       "score": 50,
       "score_reasons": [
-        "Single distress signal: Satisfaction",
+        "Single distress signal: Mortgage",
         "Monitoring for additional signals"
       ],
       "address": "55 Sample St, Jacksonville, FL 32205",
@@ -1899,17 +1899,17 @@
       "owner_mailing_address": "Unknown",
       "signals": [
         {
-          "type": "SATISFACTION",
+          "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-11-22",
+          "date": "2026-11-23",
           "confidence": 80,
-          "details": "Record from official_records: SATISFACTION"
+          "details": "Record from official_records: MORTGAGE"
         }
       ],
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-11-22T18:14:45.872295",
+      "last_updated": "2026-11-23T22:28:03.810431",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -1923,7 +1923,7 @@
       "parcel_id": "DC-000056",
       "score": 50,
       "score_reasons": [
-        "Single distress signal: Satisfaction",
+        "Single distress signal: Mortgage",
         "Monitoring for additional signals"
       ],
       "address": "56 Sample St, Jacksonville, FL 32206",
@@ -1933,17 +1933,17 @@
       "owner_mailing_address": "Unknown",
       "signals": [
         {
-          "type": "SATISFACTION",
+          "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-11-22",
+          "date": "2026-11-23",
           "confidence": 80,
-          "details": "Record from official_records: SATISFACTION"
+          "details": "Record from official_records: MORTGAGE"
         }
       ],
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-11-22T18:14:45.872304",
+      "last_updated": "2026-11-23T22:28:03.810441",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -1957,7 +1957,7 @@
       "parcel_id": "DC-000057",
       "score": 50,
       "score_reasons": [
-        "Single distress signal: Satisfaction",
+        "Single distress signal: Mortgage",
         "Monitoring for additional signals"
       ],
       "address": "57 Sample St, Jacksonville, FL 32207",
@@ -1967,17 +1967,17 @@
       "owner_mailing_address": "Unknown",
       "signals": [
         {
-          "type": "SATISFACTION",
+          "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-11-22",
+          "date": "2026-11-23",
           "confidence": 80,
-          "details": "Record from official_records: SATISFACTION"
+          "details": "Record from official_records: MORTGAGE"
         }
       ],
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-11-22T18:14:45.872326",
+      "last_updated": "2026-11-23T22:28:03.810451",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -1991,7 +1991,7 @@
       "parcel_id": "DC-000058",
       "score": 50,
       "score_reasons": [
-        "Single distress signal: Release",
+        "Single distress signal: Mortgage",
         "Monitoring for additional signals"
       ],
       "address": "58 Sample St, Jacksonville, FL 32208",
@@ -2001,17 +2001,17 @@
       "owner_mailing_address": "Unknown",
       "signals": [
         {
-          "type": "RELEASE",
+          "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-11-22",
+          "date": "2026-11-23",
           "confidence": 80,
-          "details": "Record from official_records: RELEASE"
+          "details": "Record from official_records: MORTGAGE"
         }
       ],
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-11-22T18:14:45.872335",
+      "last_updated": "2026-11-23T22:28:03.810462",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -2025,7 +2025,7 @@
       "parcel_id": "DC-000059",
       "score": 50,
       "score_reasons": [
-        "Single distress signal: Release",
+        "Single distress signal: Mortgage",
         "Monitoring for additional signals"
       ],
       "address": "59 Sample St, Jacksonville, FL 32209",
@@ -2035,17 +2035,17 @@
       "owner_mailing_address": "Unknown",
       "signals": [
         {
-          "type": "RELEASE",
+          "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-11-22",
+          "date": "2026-11-23",
           "confidence": 80,
-          "details": "Record from official_records: RELEASE"
+          "details": "Record from official_records: MORTGAGE"
         }
       ],
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-11-22T18:14:45.872345",
+      "last_updated": "2026-11-23T22:28:03.810475",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -2059,7 +2059,7 @@
       "parcel_id": "DC-000060",
       "score": 50,
       "score_reasons": [
-        "Single distress signal: Release",
+        "Single distress signal: Mortgage",
         "Monitoring for additional signals"
       ],
       "address": "60 Sample St, Jacksonville, FL 32200",
@@ -2069,17 +2069,17 @@
       "owner_mailing_address": "Unknown",
       "signals": [
         {
-          "type": "RELEASE",
+          "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-11-22",
+          "date": "2026-11-23",
           "confidence": 80,
-          "details": "Record from official_records: RELEASE"
+          "details": "Record from official_records: MORTGAGE"
         }
       ],
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-11-22T18:14:45.872352",
+      "last_updated": "2026-11-23T22:28:03.810485",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
@@ -2093,7 +2093,7 @@
       "parcel_id": "DC-000061",
       "score": 50,
       "score_reasons": [
-        "Single distress signal: Release",
+        "Single distress signal: Mortgage",
         "Monitoring for additional signals"
       ],
       "address": "61 Sample St, Jacksonville, FL 32201",
@@ -2103,17 +2103,1343 @@
       "owner_mailing_address": "Unknown",
       "signals": [
         {
-          "type": "RELEASE",
+          "type": "MORTGAGE",
           "source": "duval_official_records",
-          "date": "2026-11-22",
+          "date": "2026-11-23",
           "confidence": 80,
-          "details": "Record from official_records: RELEASE"
+          "details": "Record from official_records: MORTGAGE"
         }
       ],
       "deal_path": "creative_finance",
       "deal_path_confidence": 75,
       "status": "active",
-      "last_updated": "2026-11-22T18:14:45.872360",
+      "last_updated": "2026-11-23T22:28:03.810495",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
+    },
+    {
+      "lead_id": "LEAD-062",
+      "parcel_id": "DC-000062",
+      "score": 50,
+      "score_reasons": [
+        "Single distress signal: Mortgage",
+        "Monitoring for additional signals"
+      ],
+      "address": "62 Sample St, Jacksonville, FL 32202",
+      "city": "Jacksonville",
+      "zip": "32202",
+      "owner_name": "Unknown",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "MORTGAGE",
+          "source": "duval_official_records",
+          "date": "2026-11-23",
+          "confidence": 80,
+          "details": "Record from official_records: MORTGAGE"
+        }
+      ],
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-11-23T22:28:03.810506",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
+    },
+    {
+      "lead_id": "LEAD-063",
+      "parcel_id": "DC-000063",
+      "score": 50,
+      "score_reasons": [
+        "Single distress signal: Mortgage",
+        "Monitoring for additional signals"
+      ],
+      "address": "63 Sample St, Jacksonville, FL 32203",
+      "city": "Jacksonville",
+      "zip": "32202",
+      "owner_name": "Unknown",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "MORTGAGE",
+          "source": "duval_official_records",
+          "date": "2026-11-23",
+          "confidence": 80,
+          "details": "Record from official_records: MORTGAGE"
+        }
+      ],
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-11-23T22:28:03.810516",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
+    },
+    {
+      "lead_id": "LEAD-064",
+      "parcel_id": "DC-000064",
+      "score": 50,
+      "score_reasons": [
+        "Single distress signal: Mortgage",
+        "Monitoring for additional signals"
+      ],
+      "address": "64 Sample St, Jacksonville, FL 32204",
+      "city": "Jacksonville",
+      "zip": "32202",
+      "owner_name": "Unknown",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "MORTGAGE",
+          "source": "duval_official_records",
+          "date": "2026-11-23",
+          "confidence": 80,
+          "details": "Record from official_records: MORTGAGE"
+        }
+      ],
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-11-23T22:28:03.810526",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
+    },
+    {
+      "lead_id": "LEAD-065",
+      "parcel_id": "DC-000065",
+      "score": 50,
+      "score_reasons": [
+        "Single distress signal: Mortgage",
+        "Monitoring for additional signals"
+      ],
+      "address": "65 Sample St, Jacksonville, FL 32205",
+      "city": "Jacksonville",
+      "zip": "32202",
+      "owner_name": "Unknown",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "MORTGAGE",
+          "source": "duval_official_records",
+          "date": "2026-11-23",
+          "confidence": 80,
+          "details": "Record from official_records: MORTGAGE"
+        }
+      ],
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-11-23T22:28:03.810540",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
+    },
+    {
+      "lead_id": "LEAD-066",
+      "parcel_id": "DC-000066",
+      "score": 50,
+      "score_reasons": [
+        "Single distress signal: Mortgage",
+        "Monitoring for additional signals"
+      ],
+      "address": "66 Sample St, Jacksonville, FL 32206",
+      "city": "Jacksonville",
+      "zip": "32202",
+      "owner_name": "Unknown",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "MORTGAGE",
+          "source": "duval_official_records",
+          "date": "2026-11-23",
+          "confidence": 80,
+          "details": "Record from official_records: MORTGAGE"
+        }
+      ],
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-11-23T22:28:03.810552",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
+    },
+    {
+      "lead_id": "LEAD-067",
+      "parcel_id": "DC-000067",
+      "score": 50,
+      "score_reasons": [
+        "Single distress signal: Mortgage",
+        "Monitoring for additional signals"
+      ],
+      "address": "67 Sample St, Jacksonville, FL 32207",
+      "city": "Jacksonville",
+      "zip": "32202",
+      "owner_name": "Unknown",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "MORTGAGE",
+          "source": "duval_official_records",
+          "date": "2026-11-23",
+          "confidence": 80,
+          "details": "Record from official_records: MORTGAGE"
+        }
+      ],
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-11-23T22:28:03.810563",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
+    },
+    {
+      "lead_id": "LEAD-068",
+      "parcel_id": "DC-000068",
+      "score": 50,
+      "score_reasons": [
+        "Single distress signal: Mortgage",
+        "Monitoring for additional signals"
+      ],
+      "address": "68 Sample St, Jacksonville, FL 32208",
+      "city": "Jacksonville",
+      "zip": "32202",
+      "owner_name": "Unknown",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "MORTGAGE",
+          "source": "duval_official_records",
+          "date": "2026-11-23",
+          "confidence": 80,
+          "details": "Record from official_records: MORTGAGE"
+        }
+      ],
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-11-23T22:28:03.810573",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
+    },
+    {
+      "lead_id": "LEAD-069",
+      "parcel_id": "DC-000069",
+      "score": 50,
+      "score_reasons": [
+        "Single distress signal: Mortgage",
+        "Monitoring for additional signals"
+      ],
+      "address": "69 Sample St, Jacksonville, FL 32209",
+      "city": "Jacksonville",
+      "zip": "32202",
+      "owner_name": "Unknown",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "MORTGAGE",
+          "source": "duval_official_records",
+          "date": "2026-11-23",
+          "confidence": 80,
+          "details": "Record from official_records: MORTGAGE"
+        }
+      ],
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-11-23T22:28:03.810583",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
+    },
+    {
+      "lead_id": "LEAD-070",
+      "parcel_id": "DC-000070",
+      "score": 50,
+      "score_reasons": [
+        "Single distress signal: Mortgage",
+        "Monitoring for additional signals"
+      ],
+      "address": "70 Sample St, Jacksonville, FL 32200",
+      "city": "Jacksonville",
+      "zip": "32202",
+      "owner_name": "Unknown",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "MORTGAGE",
+          "source": "duval_official_records",
+          "date": "2026-11-23",
+          "confidence": 80,
+          "details": "Record from official_records: MORTGAGE"
+        }
+      ],
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-11-23T22:28:03.810594",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
+    },
+    {
+      "lead_id": "LEAD-071",
+      "parcel_id": "DC-000071",
+      "score": 50,
+      "score_reasons": [
+        "Single distress signal: Mortgage",
+        "Monitoring for additional signals"
+      ],
+      "address": "71 Sample St, Jacksonville, FL 32201",
+      "city": "Jacksonville",
+      "zip": "32202",
+      "owner_name": "Unknown",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "MORTGAGE",
+          "source": "duval_official_records",
+          "date": "2026-11-23",
+          "confidence": 80,
+          "details": "Record from official_records: MORTGAGE"
+        }
+      ],
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-11-23T22:28:03.810606",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
+    },
+    {
+      "lead_id": "LEAD-072",
+      "parcel_id": "DC-000072",
+      "score": 50,
+      "score_reasons": [
+        "Single distress signal: Mortgage",
+        "Monitoring for additional signals"
+      ],
+      "address": "72 Sample St, Jacksonville, FL 32202",
+      "city": "Jacksonville",
+      "zip": "32202",
+      "owner_name": "Unknown",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "MORTGAGE",
+          "source": "duval_official_records",
+          "date": "2026-11-23",
+          "confidence": 80,
+          "details": "Record from official_records: MORTGAGE"
+        }
+      ],
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-11-23T22:28:03.810616",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
+    },
+    {
+      "lead_id": "LEAD-073",
+      "parcel_id": "DC-000073",
+      "score": 50,
+      "score_reasons": [
+        "Single distress signal: Mortgage",
+        "Monitoring for additional signals"
+      ],
+      "address": "73 Sample St, Jacksonville, FL 32203",
+      "city": "Jacksonville",
+      "zip": "32202",
+      "owner_name": "Unknown",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "MORTGAGE",
+          "source": "duval_official_records",
+          "date": "2026-11-23",
+          "confidence": 80,
+          "details": "Record from official_records: MORTGAGE"
+        }
+      ],
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-11-23T22:28:03.810640",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
+    },
+    {
+      "lead_id": "LEAD-074",
+      "parcel_id": "DC-000074",
+      "score": 50,
+      "score_reasons": [
+        "Single distress signal: Mortgage",
+        "Monitoring for additional signals"
+      ],
+      "address": "74 Sample St, Jacksonville, FL 32204",
+      "city": "Jacksonville",
+      "zip": "32202",
+      "owner_name": "Unknown",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "MORTGAGE",
+          "source": "duval_official_records",
+          "date": "2026-11-23",
+          "confidence": 80,
+          "details": "Record from official_records: MORTGAGE"
+        }
+      ],
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-11-23T22:28:03.810651",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
+    },
+    {
+      "lead_id": "LEAD-075",
+      "parcel_id": "DC-000075",
+      "score": 50,
+      "score_reasons": [
+        "Single distress signal: Mortgage",
+        "Monitoring for additional signals"
+      ],
+      "address": "75 Sample St, Jacksonville, FL 32205",
+      "city": "Jacksonville",
+      "zip": "32202",
+      "owner_name": "Unknown",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "MORTGAGE",
+          "source": "duval_official_records",
+          "date": "2026-11-23",
+          "confidence": 80,
+          "details": "Record from official_records: MORTGAGE"
+        }
+      ],
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-11-23T22:28:03.810664",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
+    },
+    {
+      "lead_id": "LEAD-076",
+      "parcel_id": "DC-000076",
+      "score": 50,
+      "score_reasons": [
+        "Single distress signal: Mortgage",
+        "Monitoring for additional signals"
+      ],
+      "address": "76 Sample St, Jacksonville, FL 32206",
+      "city": "Jacksonville",
+      "zip": "32202",
+      "owner_name": "Unknown",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "MORTGAGE",
+          "source": "duval_official_records",
+          "date": "2026-11-23",
+          "confidence": 80,
+          "details": "Record from official_records: MORTGAGE"
+        }
+      ],
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-11-23T22:28:03.810677",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
+    },
+    {
+      "lead_id": "LEAD-077",
+      "parcel_id": "DC-000077",
+      "score": 50,
+      "score_reasons": [
+        "Single distress signal: Mortgage",
+        "Monitoring for additional signals"
+      ],
+      "address": "77 Sample St, Jacksonville, FL 32207",
+      "city": "Jacksonville",
+      "zip": "32202",
+      "owner_name": "Unknown",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "MORTGAGE",
+          "source": "duval_official_records",
+          "date": "2026-11-23",
+          "confidence": 80,
+          "details": "Record from official_records: MORTGAGE"
+        }
+      ],
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-11-23T22:28:03.810689",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
+    },
+    {
+      "lead_id": "LEAD-078",
+      "parcel_id": "DC-000078",
+      "score": 50,
+      "score_reasons": [
+        "Single distress signal: Mortgage",
+        "Monitoring for additional signals"
+      ],
+      "address": "78 Sample St, Jacksonville, FL 32208",
+      "city": "Jacksonville",
+      "zip": "32202",
+      "owner_name": "Unknown",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "MORTGAGE",
+          "source": "duval_official_records",
+          "date": "2026-11-23",
+          "confidence": 80,
+          "details": "Record from official_records: MORTGAGE"
+        }
+      ],
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-11-23T22:28:03.810700",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
+    },
+    {
+      "lead_id": "LEAD-079",
+      "parcel_id": "DC-000079",
+      "score": 50,
+      "score_reasons": [
+        "Single distress signal: Mortgage",
+        "Monitoring for additional signals"
+      ],
+      "address": "79 Sample St, Jacksonville, FL 32209",
+      "city": "Jacksonville",
+      "zip": "32202",
+      "owner_name": "Unknown",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "MORTGAGE",
+          "source": "duval_official_records",
+          "date": "2026-11-23",
+          "confidence": 80,
+          "details": "Record from official_records: MORTGAGE"
+        }
+      ],
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-11-23T22:28:03.810712",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
+    },
+    {
+      "lead_id": "LEAD-080",
+      "parcel_id": "DC-000080",
+      "score": 50,
+      "score_reasons": [
+        "Single distress signal: Mortgage",
+        "Monitoring for additional signals"
+      ],
+      "address": "80 Sample St, Jacksonville, FL 32200",
+      "city": "Jacksonville",
+      "zip": "32202",
+      "owner_name": "Unknown",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "MORTGAGE",
+          "source": "duval_official_records",
+          "date": "2026-11-23",
+          "confidence": 80,
+          "details": "Record from official_records: MORTGAGE"
+        }
+      ],
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-11-23T22:28:03.810723",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
+    },
+    {
+      "lead_id": "LEAD-081",
+      "parcel_id": "DC-000081",
+      "score": 50,
+      "score_reasons": [
+        "Single distress signal: Mortgage",
+        "Monitoring for additional signals"
+      ],
+      "address": "81 Sample St, Jacksonville, FL 32201",
+      "city": "Jacksonville",
+      "zip": "32202",
+      "owner_name": "Unknown",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "MORTGAGE",
+          "source": "duval_official_records",
+          "date": "2026-11-23",
+          "confidence": 80,
+          "details": "Record from official_records: MORTGAGE"
+        }
+      ],
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-11-23T22:28:03.810733",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
+    },
+    {
+      "lead_id": "LEAD-082",
+      "parcel_id": "DC-000082",
+      "score": 50,
+      "score_reasons": [
+        "Single distress signal: Mortgage",
+        "Monitoring for additional signals"
+      ],
+      "address": "82 Sample St, Jacksonville, FL 32202",
+      "city": "Jacksonville",
+      "zip": "32202",
+      "owner_name": "Unknown",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "MORTGAGE",
+          "source": "duval_official_records",
+          "date": "2026-11-23",
+          "confidence": 80,
+          "details": "Record from official_records: MORTGAGE"
+        }
+      ],
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-11-23T22:28:03.810743",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
+    },
+    {
+      "lead_id": "LEAD-083",
+      "parcel_id": "DC-000083",
+      "score": 50,
+      "score_reasons": [
+        "Single distress signal: Mortgage",
+        "Monitoring for additional signals"
+      ],
+      "address": "83 Sample St, Jacksonville, FL 32203",
+      "city": "Jacksonville",
+      "zip": "32202",
+      "owner_name": "Unknown",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "MORTGAGE",
+          "source": "duval_official_records",
+          "date": "2026-11-23",
+          "confidence": 80,
+          "details": "Record from official_records: MORTGAGE"
+        }
+      ],
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-11-23T22:28:03.810753",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
+    },
+    {
+      "lead_id": "LEAD-084",
+      "parcel_id": "DC-000084",
+      "score": 50,
+      "score_reasons": [
+        "Single distress signal: Mortgage",
+        "Monitoring for additional signals"
+      ],
+      "address": "84 Sample St, Jacksonville, FL 32204",
+      "city": "Jacksonville",
+      "zip": "32202",
+      "owner_name": "Unknown",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "MORTGAGE",
+          "source": "duval_official_records",
+          "date": "2026-11-23",
+          "confidence": 80,
+          "details": "Record from official_records: MORTGAGE"
+        }
+      ],
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-11-23T22:28:03.810766",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
+    },
+    {
+      "lead_id": "LEAD-085",
+      "parcel_id": "DC-000085",
+      "score": 50,
+      "score_reasons": [
+        "Single distress signal: Mortgage",
+        "Monitoring for additional signals"
+      ],
+      "address": "85 Sample St, Jacksonville, FL 32205",
+      "city": "Jacksonville",
+      "zip": "32202",
+      "owner_name": "Unknown",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "MORTGAGE",
+          "source": "duval_official_records",
+          "date": "2026-11-23",
+          "confidence": 80,
+          "details": "Record from official_records: MORTGAGE"
+        }
+      ],
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-11-23T22:28:03.810778",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
+    },
+    {
+      "lead_id": "LEAD-086",
+      "parcel_id": "DC-000086",
+      "score": 50,
+      "score_reasons": [
+        "Single distress signal: Mortgage",
+        "Monitoring for additional signals"
+      ],
+      "address": "86 Sample St, Jacksonville, FL 32206",
+      "city": "Jacksonville",
+      "zip": "32202",
+      "owner_name": "Unknown",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "MORTGAGE",
+          "source": "duval_official_records",
+          "date": "2026-11-23",
+          "confidence": 80,
+          "details": "Record from official_records: MORTGAGE"
+        }
+      ],
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-11-23T22:28:03.810788",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
+    },
+    {
+      "lead_id": "LEAD-087",
+      "parcel_id": "DC-000087",
+      "score": 50,
+      "score_reasons": [
+        "Single distress signal: Mortgage",
+        "Monitoring for additional signals"
+      ],
+      "address": "87 Sample St, Jacksonville, FL 32207",
+      "city": "Jacksonville",
+      "zip": "32202",
+      "owner_name": "Unknown",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "MORTGAGE",
+          "source": "duval_official_records",
+          "date": "2026-11-23",
+          "confidence": 80,
+          "details": "Record from official_records: MORTGAGE"
+        }
+      ],
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-11-23T22:28:03.810798",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
+    },
+    {
+      "lead_id": "LEAD-088",
+      "parcel_id": "DC-000088",
+      "score": 50,
+      "score_reasons": [
+        "Single distress signal: Mortgage",
+        "Monitoring for additional signals"
+      ],
+      "address": "88 Sample St, Jacksonville, FL 32208",
+      "city": "Jacksonville",
+      "zip": "32202",
+      "owner_name": "Unknown",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "MORTGAGE",
+          "source": "duval_official_records",
+          "date": "2026-11-23",
+          "confidence": 80,
+          "details": "Record from official_records: MORTGAGE"
+        }
+      ],
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-11-23T22:28:03.810809",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
+    },
+    {
+      "lead_id": "LEAD-089",
+      "parcel_id": "DC-000089",
+      "score": 50,
+      "score_reasons": [
+        "Single distress signal: Mortgage",
+        "Monitoring for additional signals"
+      ],
+      "address": "89 Sample St, Jacksonville, FL 32209",
+      "city": "Jacksonville",
+      "zip": "32202",
+      "owner_name": "Unknown",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "MORTGAGE",
+          "source": "duval_official_records",
+          "date": "2026-11-23",
+          "confidence": 80,
+          "details": "Record from official_records: MORTGAGE"
+        }
+      ],
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-11-23T22:28:03.810819",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
+    },
+    {
+      "lead_id": "LEAD-090",
+      "parcel_id": "DC-000090",
+      "score": 50,
+      "score_reasons": [
+        "Single distress signal: Mortgage",
+        "Monitoring for additional signals"
+      ],
+      "address": "90 Sample St, Jacksonville, FL 32200",
+      "city": "Jacksonville",
+      "zip": "32202",
+      "owner_name": "Unknown",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "MORTGAGE",
+          "source": "duval_official_records",
+          "date": "2026-11-23",
+          "confidence": 80,
+          "details": "Record from official_records: MORTGAGE"
+        }
+      ],
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-11-23T22:28:03.810831",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
+    },
+    {
+      "lead_id": "LEAD-091",
+      "parcel_id": "DC-000091",
+      "score": 50,
+      "score_reasons": [
+        "Single distress signal: Mortgage",
+        "Monitoring for additional signals"
+      ],
+      "address": "91 Sample St, Jacksonville, FL 32201",
+      "city": "Jacksonville",
+      "zip": "32202",
+      "owner_name": "Unknown",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "MORTGAGE",
+          "source": "duval_official_records",
+          "date": "2026-11-23",
+          "confidence": 80,
+          "details": "Record from official_records: MORTGAGE"
+        }
+      ],
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-11-23T22:28:03.810842",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
+    },
+    {
+      "lead_id": "LEAD-092",
+      "parcel_id": "DC-000092",
+      "score": 50,
+      "score_reasons": [
+        "Single distress signal: Mortgage",
+        "Monitoring for additional signals"
+      ],
+      "address": "92 Sample St, Jacksonville, FL 32202",
+      "city": "Jacksonville",
+      "zip": "32202",
+      "owner_name": "Unknown",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "MORTGAGE",
+          "source": "duval_official_records",
+          "date": "2026-11-23",
+          "confidence": 80,
+          "details": "Record from official_records: MORTGAGE"
+        }
+      ],
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-11-23T22:28:03.810854",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
+    },
+    {
+      "lead_id": "LEAD-093",
+      "parcel_id": "DC-000093",
+      "score": 50,
+      "score_reasons": [
+        "Single distress signal: Lien",
+        "Monitoring for additional signals"
+      ],
+      "address": "93 Sample St, Jacksonville, FL 32203",
+      "city": "Jacksonville",
+      "zip": "32202",
+      "owner_name": "Unknown",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "LIEN",
+          "source": "duval_official_records",
+          "date": "2026-11-23",
+          "confidence": 80,
+          "details": "Record from official_records: LIEN"
+        }
+      ],
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-11-23T22:28:03.810865",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
+    },
+    {
+      "lead_id": "LEAD-094",
+      "parcel_id": "DC-000094",
+      "score": 50,
+      "score_reasons": [
+        "Single distress signal: Lien",
+        "Monitoring for additional signals"
+      ],
+      "address": "94 Sample St, Jacksonville, FL 32204",
+      "city": "Jacksonville",
+      "zip": "32202",
+      "owner_name": "Unknown",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "LIEN",
+          "source": "duval_official_records",
+          "date": "2026-11-23",
+          "confidence": 80,
+          "details": "Record from official_records: LIEN"
+        }
+      ],
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-11-23T22:28:03.810876",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
+    },
+    {
+      "lead_id": "LEAD-095",
+      "parcel_id": "DC-000095",
+      "score": 50,
+      "score_reasons": [
+        "Single distress signal: Lien",
+        "Monitoring for additional signals"
+      ],
+      "address": "95 Sample St, Jacksonville, FL 32205",
+      "city": "Jacksonville",
+      "zip": "32202",
+      "owner_name": "Unknown",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "LIEN",
+          "source": "duval_official_records",
+          "date": "2026-11-23",
+          "confidence": 80,
+          "details": "Record from official_records: LIEN"
+        }
+      ],
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-11-23T22:28:03.810889",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
+    },
+    {
+      "lead_id": "LEAD-096",
+      "parcel_id": "DC-000096",
+      "score": 50,
+      "score_reasons": [
+        "Single distress signal: Lien",
+        "Monitoring for additional signals"
+      ],
+      "address": "96 Sample St, Jacksonville, FL 32206",
+      "city": "Jacksonville",
+      "zip": "32202",
+      "owner_name": "Unknown",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "LIEN",
+          "source": "duval_official_records",
+          "date": "2026-11-23",
+          "confidence": 80,
+          "details": "Record from official_records: LIEN"
+        }
+      ],
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-11-23T22:28:03.810902",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
+    },
+    {
+      "lead_id": "LEAD-097",
+      "parcel_id": "DC-000097",
+      "score": 50,
+      "score_reasons": [
+        "Single distress signal: Lien",
+        "Monitoring for additional signals"
+      ],
+      "address": "97 Sample St, Jacksonville, FL 32207",
+      "city": "Jacksonville",
+      "zip": "32202",
+      "owner_name": "Unknown",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "LIEN",
+          "source": "duval_official_records",
+          "date": "2026-11-23",
+          "confidence": 80,
+          "details": "Record from official_records: LIEN"
+        }
+      ],
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-11-23T22:28:03.810912",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
+    },
+    {
+      "lead_id": "LEAD-098",
+      "parcel_id": "DC-000098",
+      "score": 50,
+      "score_reasons": [
+        "Single distress signal: Lien",
+        "Monitoring for additional signals"
+      ],
+      "address": "98 Sample St, Jacksonville, FL 32208",
+      "city": "Jacksonville",
+      "zip": "32202",
+      "owner_name": "Unknown",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "LIEN",
+          "source": "duval_official_records",
+          "date": "2026-11-23",
+          "confidence": 80,
+          "details": "Record from official_records: LIEN"
+        }
+      ],
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-11-23T22:28:03.810923",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
+    },
+    {
+      "lead_id": "LEAD-099",
+      "parcel_id": "DC-000099",
+      "score": 50,
+      "score_reasons": [
+        "Single distress signal: Lien",
+        "Monitoring for additional signals"
+      ],
+      "address": "99 Sample St, Jacksonville, FL 32209",
+      "city": "Jacksonville",
+      "zip": "32202",
+      "owner_name": "Unknown",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "LIEN",
+          "source": "duval_official_records",
+          "date": "2026-11-23",
+          "confidence": 80,
+          "details": "Record from official_records: LIEN"
+        }
+      ],
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-11-23T22:28:03.810933",
+      "assessed_value": 100000,
+      "equity_estimate": 25000,
+      "stacked_sources": [
+        "duval_official_records"
+      ],
+      "stack_count": 1,
+      "is_stacked": false
+    },
+    {
+      "lead_id": "LEAD-100",
+      "parcel_id": "DC-000100",
+      "score": 50,
+      "score_reasons": [
+        "Single distress signal: Lien",
+        "Monitoring for additional signals"
+      ],
+      "address": "100 Sample St, Jacksonville, FL 32200",
+      "city": "Jacksonville",
+      "zip": "32202",
+      "owner_name": "Unknown",
+      "owner_mailing_address": "Unknown",
+      "signals": [
+        {
+          "type": "LIEN",
+          "source": "duval_official_records",
+          "date": "2026-11-23",
+          "confidence": 80,
+          "details": "Record from official_records: LIEN"
+        }
+      ],
+      "deal_path": "creative_finance",
+      "deal_path_confidence": 75,
+      "status": "active",
+      "last_updated": "2026-11-23T22:28:03.810943",
       "assessed_value": 100000,
       "equity_estimate": 25000,
       "stacked_sources": [
